@@ -55,6 +55,21 @@ export default {
           "cream-warm": "hsl(var(--brand-cream-warm))",
           ink: "hsl(var(--brand-ink))",
         },
+        toret: {
+          green: "hsl(var(--toret-green))",
+          "green-deep": "hsl(var(--toret-green-deep))",
+          "green-soft": "hsl(var(--toret-green-soft))",
+          gold: "hsl(var(--toret-gold))",
+          "gold-warm": "hsl(var(--toret-gold-warm))",
+          "gold-pale": "hsl(var(--toret-gold-pale))",
+          cream: "hsl(var(--toret-cream))",
+          ivory: "hsl(var(--toret-ivory))",
+          paper: "hsl(var(--toret-paper))",
+          walnut: "hsl(var(--toret-walnut))",
+          ink: "hsl(var(--toret-ink))",
+          "ink-soft": "hsl(var(--toret-ink-soft))",
+          "ink-muted": "hsl(var(--toret-ink-muted))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -65,6 +80,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        serif: ['"Playfair Display"', '"Cormorant Garamond"', "Georgia", "serif"],
+        sans: ['"Inter"', "-apple-system", "system-ui", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -2,81 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Caffè Torèt — Modern Classic design system. All colors HSL. */
+/* Caffè Torèt — Bistrot torinese caldo. All colors HSL. */
 
 @layer base {
   :root {
-    --brand-dark: 168 80% 8%;         /* #01261C */
-    --brand-green: 166 84% 10%;       /* #013224 */
-    --brand-gold: 38 50% 56%;         /* #C5A059 */
-    --brand-gold-soft: 36 40% 43%;    /* #9A7B41 */
-    --brand-cream: 40 50% 98%;        /* #FDFBF7 */
-    --brand-cream-warm: 40 100% 98%;
-    --brand-ink: 168 80% 6%;
+    /* === Brand palette (warm bistrot) === */
+    --toret-green:        148 87% 18%;   /* #06542D */
+    --toret-green-deep:   148 81% 12%;   /* #04381E */
+    --toret-green-soft:   148 75% 23%;   /* #0A6B3A */
+    --toret-gold:         47 61% 57%;    /* #D5B74F */
+    --toret-gold-warm:    44 60% 48%;    /* #C39E33 */
+    --toret-gold-pale:    47 65% 80%;    /* #ECDFAF */
+    --toret-cream:        42 47% 94%;    /* #F7F2E8 */
+    --toret-ivory:        60 18% 98%;    /* #FAFAF7 */
+    --toret-paper:        45 100% 98%;   /* #FFFDF8 */
+    --toret-walnut:       28 41% 25%;    /* #5C4326 */
+    --toret-ink:          0 0% 10%;      /* #1A1A1A */
+    --toret-ink-soft:     27 9% 21%;     /* #3A3631 */
+    --toret-ink-muted:    36 9% 39%;     /* #6B655B */
 
-    --background: var(--brand-dark);
-    --foreground: var(--brand-cream);
+    /* === Backwards-compat brand-* tokens (used in some components) === */
+    --brand-dark: var(--toret-green-deep);
+    --brand-green: var(--toret-green);
+    --brand-gold: var(--toret-gold);
+    --brand-gold-soft: var(--toret-gold-warm);
+    --brand-cream: var(--toret-cream);
+    --brand-cream-warm: var(--toret-paper);
+    --brand-ink: var(--toret-ink);
 
-    --card: var(--brand-green);
-    --card-foreground: var(--brand-cream);
+    /* === shadcn semantic tokens, remapped to warm light === */
+    --background: var(--toret-ivory);
+    --foreground: var(--toret-ink);
 
-    --popover: var(--brand-green);
-    --popover-foreground: var(--brand-cream);
+    --card: var(--toret-paper);
+    --card-foreground: var(--toret-ink);
 
-    --primary: var(--brand-gold);
-    --primary-foreground: var(--brand-dark);
+    --popover: var(--toret-paper);
+    --popover-foreground: var(--toret-ink);
 
-    --secondary: var(--brand-green);
-    --secondary-foreground: var(--brand-cream);
+    --primary: var(--toret-green);
+    --primary-foreground: var(--toret-paper);
 
-    --muted: 166 50% 14%;
-    --muted-foreground: 40 30% 75%;
+    --secondary: var(--toret-cream);
+    --secondary-foreground: var(--toret-ink);
 
-    --accent: var(--brand-gold);
-    --accent-foreground: var(--brand-dark);
+    --muted: 42 30% 90%;
+    --muted-foreground: var(--toret-ink-muted);
 
-    --destructive: 0 70% 55%;
-    --destructive-foreground: var(--brand-cream);
+    --accent: var(--toret-gold-warm);
+    --accent-foreground: var(--toret-green-deep);
 
-    --border: 38 40% 56%;
-    --input: 38 40% 56%;
-    --ring: var(--brand-gold);
+    --destructive: 9 70% 39%;
+    --destructive-foreground: var(--toret-paper);
 
-    --radius: 1.25rem;
+    --border: 28 41% 25%;
+    --input: 28 41% 25%;
+    --ring: var(--toret-gold);
 
-    --gradient-hero: linear-gradient(180deg, hsl(var(--brand-dark) / 0) 0%, hsl(var(--brand-dark) / 0.95) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(var(--brand-gold)) 0%, hsl(var(--brand-gold-soft)) 100%);
-    --gradient-gold-soft: linear-gradient(135deg, hsl(var(--brand-gold) / 0.25), hsl(var(--brand-gold) / 0.05));
-    --gradient-dark: linear-gradient(160deg, hsl(var(--brand-dark)) 0%, hsl(var(--brand-green)) 100%);
+    --radius: 0.75rem;
 
-    --shadow-card: 0 12px 40px -16px hsl(0 0% 0% / 0.6);
-    --shadow-soft: 0 4px 16px -6px hsl(0 0% 0% / 0.4);
-    --shadow-gold: 0 10px 30px -10px hsl(var(--brand-gold) / 0.45);
-    --shadow-nav: 0 20px 50px -10px hsl(0 0% 0% / 0.7);
+    /* === Gradients & shadows === */
+    --gradient-hero: linear-gradient(180deg, transparent 35%, hsl(var(--toret-green-deep) / 0.85) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(var(--toret-gold)) 0%, hsl(var(--toret-gold-warm)) 100%);
+    --gradient-green: linear-gradient(160deg, hsl(var(--toret-green)) 0%, hsl(var(--toret-green-deep)) 100%);
 
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-1: 0 1px 2px hsl(28 41% 14% / 0.06), 0 1px 1px hsl(28 41% 14% / 0.04);
+    --shadow-2: 0 2px 8px hsl(28 41% 14% / 0.07), 0 1px 2px hsl(28 41% 14% / 0.05);
+    --shadow-3: 0 8px 24px hsl(28 41% 14% / 0.10), 0 2px 6px hsl(28 41% 14% / 0.05);
+    --shadow-4: 0 18px 40px hsl(28 41% 14% / 0.16), 0 4px 12px hsl(28 41% 14% / 0.08);
+    --shadow-gold: 0 10px 28px hsl(var(--toret-gold) / 0.32);
+    --shadow-nav: 0 -2px 20px hsl(28 41% 14% / 0.12), 0 10px 30px hsl(28 41% 14% / 0.18);
 
-    --sidebar-background: 168 80% 8%;
-    --sidebar-foreground: 40 50% 98%;
-    --sidebar-primary: 38 50% 56%;
-    --sidebar-primary-foreground: 168 80% 8%;
-    --sidebar-accent: 166 84% 10%;
-    --sidebar-accent-foreground: 40 50% 98%;
-    --sidebar-border: 38 40% 56%;
-    --sidebar-ring: 38 50% 56%;
+    /* Aliases (legacy names some components still use) */
+    --shadow-card: var(--shadow-3);
+    --shadow-soft: var(--shadow-2);
+
+    --ease-soft: cubic-bezier(0.32, 0.72, 0, 1);
+    --transition-smooth: all 0.22s var(--ease-soft);
+
+    --sidebar-background: var(--toret-ivory);
+    --sidebar-foreground: var(--toret-ink);
+    --sidebar-primary: var(--toret-green);
+    --sidebar-primary-foreground: var(--toret-paper);
+    --sidebar-accent: var(--toret-cream);
+    --sidebar-accent-foreground: var(--toret-ink);
+    --sidebar-border: 28 41% 25%;
+    --sidebar-ring: var(--toret-gold);
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
-    border-color: hsl(var(--brand-gold) / 0.15);
+    border-color: hsl(var(--toret-walnut) / 0.12);
+  }
+
+  html, body {
+    background-color: hsl(var(--toret-ivory));
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
-    font-family: "Montserrat", "Inter", system-ui, sans-serif;
-    background-color: #000;
+    @apply text-foreground antialiased;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    font-feature-settings: "kern", "liga", "calt";
   }
 
   h1, h2, h3, h4, .font-serif {
@@ -87,19 +114,48 @@
 
 @layer components {
   .app-shell {
-    @apply mx-auto min-h-screen w-full max-w-[440px] bg-background relative;
-    box-shadow: 0 0 80px hsl(0 0% 0% / 0.5);
+    @apply mx-auto min-h-screen w-full max-w-[440px] relative;
+    background-color: hsl(var(--toret-ivory));
+    box-shadow: 0 0 80px hsl(28 41% 14% / 0.12);
+  }
+  .eyebrow {
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: hsl(var(--toret-gold-warm));
   }
   .price-tag {
-    @apply font-serif text-lg font-bold;
-    color: hsl(var(--brand-gold));
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: hsl(var(--toret-gold-warm));
+  }
+  .warm-border {
+    border: 1px solid hsl(var(--toret-walnut) / 0.12);
+  }
+  .warm-border-strong {
+    border: 1px solid hsl(var(--toret-walnut) / 0.22);
   }
   .gold-border {
-    border: 1px solid hsl(var(--brand-gold) / 0.2);
+    border: 1px solid hsl(var(--toret-gold) / 0.45);
   }
   .gold-border-strong {
-    border: 1px solid hsl(var(--brand-gold) / 0.4);
+    border: 1px solid hsl(var(--toret-gold) / 0.7);
   }
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 }
+
+@keyframes toret-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: toret-fade-in 360ms var(--ease-soft) both; }
+
+@keyframes heart-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+.heart-pulse { animation: heart-pulse 280ms var(--ease-soft); }
