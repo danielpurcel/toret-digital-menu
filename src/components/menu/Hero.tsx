@@ -19,7 +19,6 @@ export const Hero = () => {
       />
       <div className="relative h-full flex flex-col justify-end px-6 pb-8 text-brand-cream">
         <span className="text-[10px] uppercase tracking-[0.3em] text-brand-gold font-semibold mb-3">
-          {siteConfig.city} · Dal 1928
         </span>
         <h1 className="font-serif text-[2.6rem] leading-[1.05] italic mb-2">
           {siteConfig.welcome[locale]}
