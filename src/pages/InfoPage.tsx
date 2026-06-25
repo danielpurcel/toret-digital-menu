@@ -37,7 +37,14 @@ const InfoPage = () => {
         </InfoCard>
 
         <InfoCard icon={<MapPin className="h-4 w-4" />} title={t("address")}>
-          <p>{siteConfig.contact.address}</p>
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteConfig.contact.address)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-brand-gold transition-colors"
+          >
+            {siteConfig.contact.address}
+          </a>
         </InfoCard>
 
         <InfoCard icon={<Phone className="h-4 w-4" />} title={t("contacts")}>
