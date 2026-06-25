@@ -35,26 +35,27 @@ export const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-primary text-primary-foreground">
-      <div className="flex items-center justify-between px-4 h-16">
+    <header className="sticky top-0 z-40 bg-background/90 backdrop-blur-md text-foreground">
+      <div className="flex items-center justify-between px-5 h-16">
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger
             aria-label="Open menu"
-            className="p-2 rounded-full hover:bg-secondary/40 transition-colors"
+            className="w-9 h-9 flex flex-col justify-center items-start gap-1.5 group"
           >
-            <MenuIcon className="h-5 w-5" />
+            <span className="block w-6 h-px bg-brand-gold transition-all group-hover:w-7" />
+            <span className="block w-4 h-px bg-brand-gold transition-all group-hover:w-7" />
           </SheetTrigger>
-          <SheetContent side="left" className="bg-primary text-primary-foreground border-0 w-72">
+          <SheetContent side="left" className="bg-background text-foreground border-r border-brand-gold/20 w-72">
             <SheetHeader>
-              <SheetTitle className="font-serif text-2xl text-brand-gold">Caffè Torèt</SheetTitle>
+              <SheetTitle className="font-serif text-3xl italic text-brand-gold">Caffè Torèt</SheetTitle>
             </SheetHeader>
-            <nav className="mt-8 flex flex-col gap-1">
+            <nav className="mt-10 flex flex-col gap-1">
               {navItems.map((item) => (
                 <Link
                   key={item.to}
                   to={item.to}
                   onClick={() => setOpen(false)}
-                  className="font-serif text-xl py-3 px-3 rounded-md hover:bg-secondary/30 transition-colors"
+                  className="font-serif text-2xl italic py-3 border-b border-brand-gold/10 hover:text-brand-gold transition-colors"
                 >
                   {item.label}
                 </Link>
@@ -63,30 +64,34 @@ export const Header = () => {
           </SheetContent>
         </Sheet>
 
-        <Link to="/" aria-label="Caffè Torèt home" className="flex items-center">
+        <Link
+          to="/"
+          aria-label="Caffè Torèt home"
+          className="flex items-center justify-center w-14 h-14 rounded-full bg-background border border-brand-gold/40 shadow-[var(--shadow-soft)]"
+        >
           <img
             src={siteConfig.logo}
             alt="Caffè Torèt logo"
             width={48}
             height={48}
-            className="h-12 w-12"
+            className="h-11 w-11 object-contain"
           />
         </Link>
 
         <DropdownMenu>
           <DropdownMenuTrigger
             aria-label="Select language"
-            className="p-2 rounded-full hover:bg-secondary/40 transition-colors flex items-center gap-1"
+            className="flex items-center gap-1.5 border border-brand-gold/40 rounded-full px-2.5 py-1.5 hover:border-brand-gold/70 transition-colors"
           >
-            <Globe className="h-4 w-4" />
-            <span className="text-xs font-medium uppercase tracking-wider">{locale}</span>
+            <Globe className="h-3 w-3 text-brand-gold" />
+            <span className="text-[10px] font-bold uppercase tracking-widest">{locale}</span>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="bg-card">
+          <DropdownMenuContent align="end" className="bg-card text-card-foreground border-brand-gold/20">
             {locales.map((l) => (
               <DropdownMenuItem
                 key={l.code}
                 onClick={() => setLocale(l.code)}
-                className={locale === l.code ? "font-semibold text-accent" : ""}
+                className={locale === l.code ? "font-semibold text-brand-gold" : ""}
               >
                 {l.label}
               </DropdownMenuItem>

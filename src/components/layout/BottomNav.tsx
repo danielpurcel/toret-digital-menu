@@ -14,26 +14,41 @@ export const BottomNav = () => {
   ];
 
   return (
-    <nav className="sticky bottom-0 z-40 bg-primary text-primary-foreground border-t border-secondary/40">
-      <ul className="grid grid-cols-4 h-16 px-2">
+    <nav className="fixed bottom-5 left-1/2 -translate-x-1/2 w-[92%] max-w-[400px] z-50">
+      <div
+        className="bg-brand-green/85 backdrop-blur-2xl rounded-full px-3 py-3 flex justify-around items-center"
+        style={{
+          boxShadow: "var(--shadow-nav)",
+          border: "1px solid hsl(var(--brand-gold) / 0.25)",
+        }}
+      >
         {items.map(({ to, label, icon: Icon, end }) => (
-          <li key={to}>
-            <NavLink
-              to={to}
-              end={end}
-              className={({ isActive }) =>
-                cn(
-                  "flex flex-col items-center justify-center h-full gap-1 transition-colors text-[10px] font-medium uppercase tracking-wider",
-                  isActive ? "text-accent" : "text-primary-foreground/70 hover:text-primary-foreground",
-                )
-              }
-            >
-              <Icon className="h-5 w-5" />
-              <span>{label}</span>
-            </NavLink>
-          </li>
+          <NavLink
+            key={to}
+            to={to}
+            end={end}
+            className={({ isActive }) =>
+              cn(
+                "flex flex-col items-center justify-center gap-1 flex-1 py-1 transition-all",
+                isActive ? "text-brand-gold" : "text-brand-cream/50 hover:text-brand-cream",
+              )
+            }
+          >
+            {({ isActive }) => (
+              <>
+                <Icon className="h-[18px] w-[18px]" strokeWidth={isActive ? 2 : 1.5} />
+                <span className="text-[8px] uppercase tracking-[0.15em] font-semibold">{label}</span>
+                <span
+                  className={cn(
+                    "w-1 h-1 rounded-full transition-all",
+                    isActive ? "bg-brand-gold" : "bg-transparent",
+                  )}
+                />
+              </>
+            )}
+          </NavLink>
         ))}
-      </ul>
+      </div>
     </nav>
   );
 };

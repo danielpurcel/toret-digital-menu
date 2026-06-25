@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { ChevronRight } from "lucide-react";
 import { AppShell } from "@/components/layout/AppShell";
 import { Hero } from "@/components/menu/Hero";
 import { PromoBanner } from "@/components/menu/PromoBanner";
@@ -29,47 +28,50 @@ const Index = () => {
     <AppShell>
       <Hero />
 
-      <section className="px-4 mt-6">
-        <div className="flex items-end justify-between mb-3">
-          <h2 className="font-serif text-2xl">{t("chooseMoment")}</h2>
+      {/* Category cards — horizontal scroll */}
+      <section className="px-5 py-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="font-serif text-xl italic">{t("chooseMoment")}</h2>
+          <span className="h-px flex-1 ml-4 bg-brand-gold/15" />
         </div>
-        <div className="space-y-3">
+        <div className="flex gap-4 overflow-x-auto no-scrollbar -mx-5 px-5 pb-2">
           {cats.map((c) => (
             <Link
               key={c.id}
               to={c.to}
-              className="block relative rounded-2xl overflow-hidden h-28 shadow-[var(--shadow-card)] group"
+              className="flex-none w-28 group"
             >
-              <img
-                src={c.image}
-                alt={macroLabels[c.id][locale]}
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div
-                className="absolute inset-0"
-                style={{ background: "linear-gradient(90deg, hsl(var(--brand-dark) / 0.85) 0%, hsl(var(--brand-dark) / 0.2) 100%)" }}
-              />
-              <div className="relative h-full flex items-center justify-between px-5 text-brand-cream-warm">
-                <h3 className="font-serif text-2xl">{macroLabels[c.id][locale]}</h3>
-                <ChevronRight className="h-5 w-5 text-brand-gold" />
+              <div className="h-32 rounded-2xl overflow-hidden mb-3 gold-border-strong shadow-[var(--shadow-soft)] transition-transform group-active:scale-95">
+                <img
+                  src={c.image}
+                  alt={macroLabels[c.id][locale]}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
               </div>
+              <p className="text-center font-serif text-base italic text-brand-cream">
+                {macroLabels[c.id][locale]}
+              </p>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="px-4 mt-8">
-        <h2 className="font-serif text-2xl mb-3">{t("mostLoved")}</h2>
-        <div className="space-y-3">
-          {featured.map((p) => (
+      {/* Featured */}
+      <section className="px-5 pt-2">
+        <div className="flex items-center justify-between mb-5">
+          <h2 className="font-serif text-xl italic">{t("mostLoved")}</h2>
+          <span className="h-px flex-1 ml-4 bg-brand-gold/15" />
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          {featured.slice(0, 4).map((p) => (
             <ProductCard key={p.id} product={p} onOpen={setSelected} />
           ))}
         </div>
       </section>
 
       {promo && (
-        <section className="px-4 mt-8 mb-6">
+        <section className="px-5 mt-6">
           <PromoBanner promo={promo} />
         </section>
       )}

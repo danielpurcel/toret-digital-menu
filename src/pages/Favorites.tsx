@@ -15,21 +15,23 @@ const Favorites = () => {
 
   return (
     <AppShell>
-      <div className="px-4 pt-6 pb-2">
-        <p className="text-xs uppercase tracking-[0.3em] text-brand-gold mb-1">{t("favorites")}</p>
-        <h1 className="font-serif text-4xl">{t("favorites")}</h1>
+      <div className="px-5 pt-8 pb-2">
+        <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold mb-2">{t("favorites")}</p>
+        <h1 className="font-serif text-4xl italic">{t("favorites")}</h1>
       </div>
 
-      <div className="p-4 space-y-3">
+      <div className="px-5 py-5">
         {items.length === 0 ? (
           <div className="flex flex-col items-center justify-center text-center py-20 px-6">
-            <div className="h-16 w-16 rounded-full bg-card grid place-items-center border border-border/60 mb-4">
+            <div className="h-16 w-16 rounded-full bg-brand-green/60 grid place-items-center gold-border-strong mb-4">
               <Heart className="h-7 w-7 text-brand-gold" />
             </div>
-            <p className="text-muted-foreground max-w-xs">{t("noFavorites")}</p>
+            <p className="text-brand-cream/60 max-w-xs">{t("noFavorites")}</p>
           </div>
         ) : (
-          items.map((p) => <ProductCard key={p.id} product={p} onOpen={setSelected} />)
+          <div className="grid grid-cols-2 gap-3">
+            {items.map((p) => <ProductCard key={p.id} product={p} onOpen={setSelected} />)}
+          </div>
         )}
       </div>
 
