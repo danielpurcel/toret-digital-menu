@@ -23,7 +23,7 @@ export const ProductModal = ({ product, onClose }: Props) => {
 
   return (
     <Drawer open={open} onOpenChange={(o) => !o && onClose()}>
-      <DrawerContent className="bg-card border-0 max-h-[92vh]">
+      <DrawerContent className="bg-brand-green text-brand-cream border-t border-brand-gold/30 max-h-[92vh]">
         {product && tr && (
           <div className="mx-auto w-full max-w-[480px]">
             <div className="relative h-64 -mt-1">
@@ -32,30 +32,31 @@ export const ProductModal = ({ product, onClose }: Props) => {
                 alt={tr.name}
                 className="absolute inset-0 h-full w-full object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-green via-transparent to-transparent" />
               <button
                 onClick={onClose}
                 aria-label={t("close")}
-                className="absolute top-3 right-3 h-9 w-9 rounded-full bg-card/95 grid place-items-center shadow-[var(--shadow-soft)]"
+                className="absolute top-3 right-3 h-9 w-9 rounded-full bg-brand-dark/80 backdrop-blur grid place-items-center gold-border text-brand-cream"
               >
                 <X className="h-4 w-4" />
               </button>
               <button
                 onClick={() => toggle(product.id)}
                 aria-label={t("addToFavorites")}
-                className="absolute top-3 left-3 h-9 w-9 rounded-full bg-card/95 grid place-items-center shadow-[var(--shadow-soft)]"
+                className="absolute top-3 left-3 h-9 w-9 rounded-full bg-brand-dark/80 backdrop-blur grid place-items-center gold-border"
               >
-                <Heart className={cn("h-4 w-4", fav ? "fill-destructive text-destructive" : "text-foreground/60")} />
+                <Heart className={cn("h-4 w-4", fav ? "fill-brand-gold text-brand-gold" : "text-brand-cream/70")} />
               </button>
             </div>
 
             <div className="p-6 pb-10">
               <div className="flex items-start justify-between gap-4 mb-2">
-                <h2 className="font-serif text-3xl leading-tight">{tr.name}</h2>
+                <h2 className="font-serif text-3xl italic leading-tight">{tr.name}</h2>
                 <span className="price-tag text-2xl whitespace-nowrap">
                   {formatPrice(product.price)}
                 </span>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">{tr.description}</p>
+              <p className="text-sm text-brand-cream/70 leading-relaxed">{tr.description}</p>
 
               {product.allergens && product.allergens.length > 0 && (
                 <div className="mt-6">
@@ -66,7 +67,7 @@ export const ProductModal = ({ product, onClose }: Props) => {
                     {product.allergens.map((a) => (
                       <span
                         key={a}
-                        className="text-xs bg-muted text-foreground/80 px-2.5 py-1 rounded-full border border-border/60 capitalize"
+                        className="text-xs bg-brand-dark/60 text-brand-cream/80 px-2.5 py-1 rounded-full gold-border capitalize"
                       >
                         {a}
                       </span>
