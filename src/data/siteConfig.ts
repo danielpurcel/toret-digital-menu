@@ -20,7 +20,7 @@ export const siteConfig = {
     closed: { it: "Domenica chiuso", en: "Closed on Sunday", fr: "Fermé le dimanche" },
   },
   contact: {
-    phone: "+39\u00a0 3517679689",
+    phone: "+39\u00a0 351 767 9689",
     email: "bartoretturin@gmail.com",
     address: "Corso Palestro 2/F, 10122 Torino",
     instagram: "caffe_toret_turin",
