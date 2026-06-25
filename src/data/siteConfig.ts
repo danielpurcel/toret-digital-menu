@@ -20,10 +20,10 @@ export const siteConfig = {
     closed: { it: "Domenica chiuso", en: "Closed on Sunday", fr: "Fermé le dimanche" },
   },
   contact: {
-    phone: "+39 011 000 0000",
-    email: "ciao@caffetoret.it",
-    address: "Via Roma 1, 10121 Torino",
-    instagram: "@caffetoret",
+    phone: "+39 3517679689",
+    email: "bartoretturin@gmail.com",
+    address: "Corso Palestro 2/F, 10122 Torino",
+    instagram: "caffe_toret_turin",
   },
   allergensNote: {
     it: "Per informazioni su allergeni e intolleranze chiedi al personale. Le materie prime possono contenere tracce di glutine, frutta a guscio, latte, uova, soia, pesce, crostacei.",
