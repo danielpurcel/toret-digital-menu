@@ -42,13 +42,13 @@ const InfoPage = () => {
 
         <InfoCard icon={<Phone className="h-4 w-4" />} title={t("contacts")}>
           <p className="flex items-center gap-2">
-            <Phone className="h-3.5 w-3.5 text-brand-gold" /> {siteConfig.contact.phone}
+            <Phone className="h-3.5 w-3.5 text-brand-gold" />{siteConfig.contact.phone}
           </p>
           <p className="flex items-center gap-2">
-            <Mail className="h-3.5 w-3.5 text-brand-gold" /> {siteConfig.contact.email}
+            <Mail className="h-3.5 w-3.5 text-brand-gold" />{siteConfig.contact.email}
           </p>
           <p className="flex items-center gap-2">
-            <Instagram className="h-3.5 w-3.5 text-brand-gold" /> {siteConfig.contact.instagram}
+            <Instagram className="h-3.5 w-3.5 text-brand-gold" />{siteConfig.contact.instagram}
           </p>
         </InfoCard>
 
