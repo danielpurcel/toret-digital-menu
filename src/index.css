@@ -2,107 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Caffè Torèt — Modern Classic design system. All colors HSL. */
 
 @layer base {
   :root {
-    /* Caffè Torèt — brand palette
-       verde bottiglia #002F24, verde #064735, oro #D6B35A,
-       crema #F4EEDF, testo chiaro #FFF9ED, testo scuro #17120B */
-    --brand-dark: 169 100% 7%;        /* #002F24 */
-    --brand-green: 162 76% 15%;       /* #064735 */
-    --brand-gold: 40 56% 60%;         /* #D6B35A */
-    --brand-gold-soft: 40 50% 70%;
-    --brand-cream: 42 53% 92%;        /* #F4EEDF */
-    --brand-cream-warm: 40 100% 96%;  /* #FFF9ED */
-    --brand-ink: 33 24% 5%;           /* #17120B */
+    --brand-dark: 168 80% 8%;         /* #01261C */
+    --brand-green: 166 84% 10%;       /* #013224 */
+    --brand-gold: 38 50% 56%;         /* #C5A059 */
+    --brand-gold-soft: 36 40% 43%;    /* #9A7B41 */
+    --brand-cream: 40 50% 98%;        /* #FDFBF7 */
+    --brand-cream-warm: 40 100% 98%;
+    --brand-ink: 168 80% 6%;
 
-    --background: var(--brand-cream);
-    --foreground: var(--brand-ink);
+    --background: var(--brand-dark);
+    --foreground: var(--brand-cream);
 
-    --card: var(--brand-cream-warm);
-    --card-foreground: var(--brand-ink);
+    --card: var(--brand-green);
+    --card-foreground: var(--brand-cream);
 
-    --popover: var(--brand-cream-warm);
-    --popover-foreground: var(--brand-ink);
+    --popover: var(--brand-green);
+    --popover-foreground: var(--brand-cream);
 
-    --primary: var(--brand-dark);
-    --primary-foreground: var(--brand-cream-warm);
+    --primary: var(--brand-gold);
+    --primary-foreground: var(--brand-dark);
 
     --secondary: var(--brand-green);
-    --secondary-foreground: var(--brand-cream-warm);
+    --secondary-foreground: var(--brand-cream);
 
-    --muted: 42 30% 86%;
-    --muted-foreground: 33 12% 30%;
+    --muted: 166 50% 14%;
+    --muted-foreground: 40 30% 75%;
 
     --accent: var(--brand-gold);
     --accent-foreground: var(--brand-dark);
 
-    --destructive: 0 70% 45%;
-    --destructive-foreground: var(--brand-cream-warm);
+    --destructive: 0 70% 55%;
+    --destructive-foreground: var(--brand-cream);
 
-    --border: 42 25% 80%;
-    --input: 42 25% 80%;
+    --border: 38 40% 56%;
+    --input: 38 40% 56%;
     --ring: var(--brand-gold);
 
-    --radius: 1.1rem;
+    --radius: 1.25rem;
 
-    --gradient-hero: linear-gradient(180deg, hsl(var(--brand-dark) / 0) 0%, hsl(var(--brand-dark) / 0.85) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(var(--brand-dark) / 0) 0%, hsl(var(--brand-dark) / 0.95) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(var(--brand-gold)) 0%, hsl(var(--brand-gold-soft)) 100%);
+    --gradient-gold-soft: linear-gradient(135deg, hsl(var(--brand-gold) / 0.25), hsl(var(--brand-gold) / 0.05));
     --gradient-dark: linear-gradient(160deg, hsl(var(--brand-dark)) 0%, hsl(var(--brand-green)) 100%);
 
-    --shadow-card: 0 6px 24px -10px hsl(var(--brand-dark) / 0.18);
-    --shadow-soft: 0 2px 12px -4px hsl(var(--brand-dark) / 0.12);
-    --shadow-gold: 0 8px 24px -8px hsl(var(--brand-gold) / 0.45);
+    --shadow-card: 0 12px 40px -16px hsl(0 0% 0% / 0.6);
+    --shadow-soft: 0 4px 16px -6px hsl(0 0% 0% / 0.4);
+    --shadow-gold: 0 10px 30px -10px hsl(var(--brand-gold) / 0.45);
+    --shadow-nav: 0 20px 50px -10px hsl(0 0% 0% / 0.7);
 
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 168 80% 8%;
+    --sidebar-foreground: 40 50% 98%;
+    --sidebar-primary: 38 50% 56%;
+    --sidebar-primary-foreground: 168 80% 8%;
+    --sidebar-accent: 166 84% 10%;
+    --sidebar-accent-foreground: 40 50% 98%;
+    --sidebar-border: 38 40% 56%;
+    --sidebar-ring: 38 50% 56%;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+    border-color: hsl(var(--brand-gold) / 0.15);
   }
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: "Inter", system-ui, sans-serif;
-    /* App shell background — outside the mobile frame */
-    background-color: hsl(var(--brand-dark));
+    font-family: "Montserrat", "Inter", system-ui, sans-serif;
+    background-color: #000;
   }
 
   h1, h2, h3, h4, .font-serif {
-    font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
-    letter-spacing: -0.005em;
+    font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+    letter-spacing: -0.01em;
   }
 }
 
 @layer components {
   .app-shell {
-    @apply mx-auto min-h-screen w-full max-w-[480px] bg-background relative overflow-hidden;
-    box-shadow: 0 0 60px hsl(0 0% 0% / 0.35);
+    @apply mx-auto min-h-screen w-full max-w-[440px] bg-background relative;
+    box-shadow: 0 0 80px hsl(0 0% 0% / 0.5);
   }
   .price-tag {
-    @apply font-serif text-lg font-semibold;
+    @apply font-serif text-lg font-bold;
     color: hsl(var(--brand-gold));
+  }
+  .gold-border {
+    border: 1px solid hsl(var(--brand-gold) / 0.2);
+  }
+  .gold-border-strong {
+    border: 1px solid hsl(var(--brand-gold) / 0.4);
   }
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
