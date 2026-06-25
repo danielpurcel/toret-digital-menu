@@ -34,7 +34,7 @@ const MacroPage = () => {
 
   return (
     <AppShell>
-      <div className="px-5 pt-5 pb-3 flex items-center gap-3">
+      <div className="px-5 pt-3 pb-3 flex items-center gap-3">
         <Link
           to="/menu"
           aria-label="Back"

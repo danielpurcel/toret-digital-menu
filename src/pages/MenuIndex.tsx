@@ -18,7 +18,7 @@ const MenuIndex = () => {
 
   return (
     <AppShell>
-      <div className="px-5 pt-8 pb-3">
+      <div className="px-5 pt-4 pb-3">
         <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold mb-2">{t("menu")}</p>
         <h1 className="font-serif text-4xl italic">{t("discoverMenu")}</h1>
       </div>

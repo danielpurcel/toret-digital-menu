@@ -15,7 +15,7 @@ const Favorites = () => {
 
   return (
     <AppShell>
-      <div className="px-5 pt-8 pb-2">
+      <div className="px-5 pt-4 pb-2">
         <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold mb-2">{t("favorites")}</p>
         <h1 className="font-serif text-4xl italic">{t("favorites")}</h1>
       </div>
