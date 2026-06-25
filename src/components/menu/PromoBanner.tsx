@@ -11,24 +11,27 @@ export const PromoBanner = ({ promo }: { promo: Promo }) => {
 
   return (
     <div
-      className="relative rounded-2xl p-4 flex justify-between items-center text-brand-dark shadow-[var(--shadow-gold)]"
-      style={{ background: "var(--gradient-gold)" }}
+      className="relative rounded-2xl p-4 flex justify-between items-center text-toret-paper shadow-[var(--shadow-3)] overflow-hidden"
+      style={{ background: "var(--gradient-green)" }}
     >
       <div className="flex-1 min-w-0">
-        <p className="text-[9px] font-bold uppercase tracking-[0.25em] mb-1 opacity-80">
+        <p className="eyebrow !text-[hsl(var(--toret-gold))] mb-1.5">
           {t("promoBadge")}
         </p>
-        <h3 className="font-serif font-bold text-lg italic leading-tight">
+        <h3 className="font-serif text-[20px] leading-tight text-toret-paper">
           {tr.title}
         </h3>
-        <p className="text-[11px] opacity-75 mt-0.5 truncate">{tr.subtitle}</p>
+        <p className="text-[12px] text-toret-paper/75 mt-0.5 truncate">{tr.subtitle}</p>
       </div>
-      <div className="flex flex-col items-end gap-2 ml-3">
-        <span className="font-serif text-xl font-bold leading-none">
+      <div className="flex flex-col items-end gap-2 ml-3 shrink-0">
+        <span
+          className="font-serif text-2xl leading-none"
+          style={{ color: "hsl(var(--toret-gold))", fontVariantNumeric: "tabular-nums" }}
+        >
           {formatPrice(promo.price)}
         </span>
-        <div className="bg-brand-dark text-brand-cream p-1.5 rounded-full">
-          <ChevronRight className="h-3.5 w-3.5" />
+        <div className="h-7 w-7 rounded-full grid place-items-center bg-toret-gold text-toret-green-deep">
+          <ChevronRight className="h-4 w-4" strokeWidth={2} />
         </div>
       </div>
     </div>
