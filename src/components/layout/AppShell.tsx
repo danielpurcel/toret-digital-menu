@@ -3,11 +3,19 @@ import { cn } from "@/lib/utils";
 import { Header } from "./Header";
 import { BottomNav } from "./BottomNav";
 
-export const AppShell = ({ children, noTopPadding }: { children: ReactNode; noTopPadding?: boolean }) => {
+export const AppShell = ({
+  children,
+  noTopPadding,
+  transparentHeader,
+}: {
+  children: ReactNode;
+  noTopPadding?: boolean;
+  transparentHeader?: boolean;
+}) => {
   return (
     <div className="app-shell flex flex-col">
-      <Header />
-      <main className={cn("flex-1 pb-32", !noTopPadding && "pt-20")}>{children}</main>
+      <Header transparent={transparentHeader} />
+      <main className={cn("flex-1 pb-32", !noTopPadding && "pt-[64px]")}>{children}</main>
       <BottomNav />
     </div>
   );
