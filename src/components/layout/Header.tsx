@@ -35,8 +35,8 @@ export const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-background/90 backdrop-blur-md text-foreground">
-      <div className="flex items-center justify-between px-5 h-20">
+    <header className="fixed top-0 left-0 right-0 z-40 text-foreground bg-gradient-to-b from-[#002F24]/70 via-[#002F24]/30 to-transparent">
+      <div className="mx-auto max-w-[480px] flex items-center justify-between px-5 h-20">
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger
             aria-label="Open menu"
