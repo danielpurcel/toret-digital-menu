@@ -1,5 +1,5 @@
 import { Clock } from "lucide-react";
-import heroCafe from "@/assets/hero-cafe.jpg";
+import heroCafe from "@/assets/hero-interior.jpg.asset.json";
 import { siteConfig } from "@/data/siteConfig";
 import { useLocale } from "@/i18n/LocaleContext";
 
@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <section className="relative h-[340px] overflow-hidden">
       <img
-        src={heroCafe}
+        src={heroCafe.url}
         alt="Caffè Torèt"
         className="absolute inset-0 h-full w-full object-cover opacity-65"
       />
