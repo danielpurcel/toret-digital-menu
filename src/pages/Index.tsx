@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Clock } from "lucide-react";
 import { AppShell } from "@/components/layout/AppShell";
 import { Hero } from "@/components/menu/Hero";
 import { PromoBanner } from "@/components/menu/PromoBanner";
@@ -19,51 +20,70 @@ const Index = () => {
   const promo = getPromoByMacro("colazione");
 
   const cats = [
-    { id: "colazione", image: catColazione, to: "/menu/colazione" },
-    { id: "pranzo", image: catPranzo, to: "/menu/pranzo" },
-    { id: "aperitivo", image: catAperitivo, to: "/menu/aperitivo" },
+    { id: "colazione", image: catColazione, to: "/menu/colazione", time: "07:30 – 11:00" },
+    { id: "pranzo", image: catPranzo, to: "/menu/pranzo", time: "12:00 – 15:00" },
+    { id: "aperitivo", image: catAperitivo, to: "/menu/aperitivo", time: "18:00 – 22:00" },
   ] as const;
 
   return (
-    <AppShell noTopPadding>
+    <AppShell noTopPadding transparentHeader>
       <Hero />
 
-      {/* Category cards — horizontal scroll */}
-      <section className="px-5 py-6">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="font-serif text-xl italic">{t("chooseMoment")}</h2>
-          <span className="h-px flex-1 ml-4 bg-brand-gold/15" />
+      {/* Status pill */}
+      <section className="px-5 -mt-8 relative z-10">
+        <div className="rounded-2xl bg-toret-paper warm-border px-4 py-3 flex items-center gap-2 shadow-[var(--shadow-3)]">
+          <span className="h-7 w-7 rounded-full bg-toret-cream grid place-items-center">
+            <Clock className="h-3.5 w-3.5 text-toret-green" strokeWidth={1.5} />
+          </span>
+          <p className="text-[13px] text-toret-ink-soft">
+            <span className="font-semibold text-toret-green">{t("openNow")}</span>
+            <span className="text-toret-ink-muted"> · {t("kitchenUntil")}</span>
+          </p>
         </div>
-        <div className="grid grid-cols-3 gap-3 pb-2">
-          {cats.map((c) => (
+      </section>
+
+      {/* Moments */}
+      <section className="px-5 pt-7">
+        <p className="eyebrow mb-1">{t("whatYouLookFor")}</p>
+        <h2 className="font-serif text-[28px] leading-tight text-toret-ink mb-4">
+          {t("chooseMoment")}
+        </h2>
+        <div className="grid grid-cols-2 gap-3">
+          {cats.map((c, i) => (
             <Link
               key={c.id}
               to={c.to}
-              className="w-full group"
+              className={`group relative h-36 rounded-2xl overflow-hidden warm-border shadow-[var(--shadow-2)] ${
+                i === cats.length - 1 ? "col-span-2 h-32" : ""
+              }`}
             >
-              <div className="h-32 rounded-2xl overflow-hidden mb-3 gold-border-strong shadow-[var(--shadow-soft)] transition-transform group-active:scale-95">
-                <img
-                  src={c.image}
-                  alt={macroLabels[c.id][locale]}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+              <img
+                src={c.image}
+                alt={macroLabels[c.id][locale]}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-toret-green-deep/85 via-toret-green-deep/15 to-transparent" />
+              <div className="relative h-full flex flex-col justify-end p-3 text-toret-paper">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-toret-gold">
+                  {c.time}
+                </span>
+                <h3 className="font-serif text-[22px] leading-tight">
+                  {macroLabels[c.id][locale]}
+                </h3>
               </div>
-              <p className="text-center font-serif text-base italic text-brand-cream">
-                {macroLabels[c.id][locale]}
-              </p>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* Featured */}
-      <section className="px-5 pt-2">
-        <div className="flex items-center justify-between mb-5">
-          <h2 className="font-serif text-xl italic">{t("mostLoved")}</h2>
-          <span className="h-px flex-1 ml-4 bg-brand-gold/15" />
-        </div>
-        <div className="grid grid-cols-2 gap-3">
+      {/* Suggestions */}
+      <section className="px-5 pt-8">
+        <p className="eyebrow mb-1">{t("dontMiss")}</p>
+        <h2 className="font-serif text-[26px] leading-tight text-toret-ink mb-4">
+          {t("mostLoved")}
+        </h2>
+        <div className="flex flex-col gap-3">
           {featured.slice(0, 4).map((p) => (
             <ProductCard key={p.id} product={p} onOpen={setSelected} />
           ))}
