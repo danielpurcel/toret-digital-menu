@@ -8,7 +8,7 @@ const InfoPage = () => {
 
   return (
     <AppShell>
-      <div className="px-6 pt-12 pb-8 flex flex-col items-center text-center bg-gradient-to-b from-brand-green/40 to-transparent">
+      <div className="px-6 pt-28 pb-8 flex flex-col items-center text-center bg-gradient-to-b from-brand-green/40 to-transparent">
         <h1 className="font-serif text-4xl italic">{siteConfig.name}</h1>
         <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold mt-2">
           {siteConfig.city}
