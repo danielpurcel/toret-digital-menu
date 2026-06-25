@@ -46,7 +46,7 @@ export const categoriesByMacro: Record<MacroCategory, { id: string; label: { it:
   ],
   pranzo: [
     { id: "all", label: { it: "Tutti", en: "All", fr: "Tous" } },
-    { id: "piatti-caldi", label: { it: "Piatti Caldi", en: "Hot Dishes", fr: "Plats Chauds" } },
+    { id: "piatti-caldi", label: { it: "MENU DEL GIORNO", en: "Daily Menu", fr: "Menu du Jour" } },
     { id: "panini", label: { it: "Panini & Snack", en: "Sandwiches & Snacks", fr: "Sandwichs" } },
     { id: "insalate", label: { it: "Insalate", en: "Salads", fr: "Salades" } },
     { id: "dolci", label: { it: "Dolci", en: "Sweet", fr: "Sucré" } },
