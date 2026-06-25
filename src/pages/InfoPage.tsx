@@ -8,15 +8,8 @@ const InfoPage = () => {
 
   return (
     <AppShell>
-      <div className="px-6 pt-8 pb-10 flex flex-col items-center text-center bg-gradient-to-b from-brand-green/40 to-transparent">
-        <img
-          src={siteConfig.logo}
-          alt="Caffè Torèt"
-          width={140}
-          height={140}
-          className="h-28 w-28 mb-4 rounded-full gold-border-strong p-1"
-        />
-        <h1 className="font-serif text-3xl italic">{siteConfig.name}</h1>
+      <div className="px-6 pt-12 pb-8 flex flex-col items-center text-center bg-gradient-to-b from-brand-green/40 to-transparent">
+        <h1 className="font-serif text-4xl italic">{siteConfig.name}</h1>
         <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold mt-2">
           {siteConfig.city}
         </p>
