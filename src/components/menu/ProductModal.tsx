@@ -4,6 +4,7 @@ import { useFavorites } from "@/hooks/useFavorites";
 import { useLocale } from "@/i18n/LocaleContext";
 import type { Product } from "@/data/menu";
 import { Drawer, DrawerContent } from "@/components/ui/drawer";
+import { getPromoForProduct } from "@/data/promos";
 
 const formatPrice = (price: number) =>
   `€ ${price.toFixed(2).replace(".", ",")}`;
@@ -20,6 +21,8 @@ export const ProductModal = ({ product, onClose }: Props) => {
   const open = !!product;
   const tr = product?.translations[locale];
   const fav = product ? isFavorite(product.id) : false;
+  const promo = product ? getPromoForProduct(product.id) : undefined;
+  const promoTr = promo?.translations[locale];
 
   return (
     <Drawer open={open} onOpenChange={(o) => !o && onClose()}>
@@ -72,6 +75,32 @@ export const ProductModal = ({ product, onClose }: Props) => {
                         {a}
                       </span>
                     ))}
+                  </div>
+                </div>
+              )}
+
+              {promo && promoTr && (
+                <div className="mt-6">
+                  <p className="text-xs uppercase tracking-[0.2em] text-brand-gold font-medium mb-2">
+                    {t("pairWithPromo")}
+                  </p>
+                  <div className="flex items-center gap-3 bg-brand-dark/60 gold-border rounded-2xl p-3">
+                    <img
+                      src={promo.image}
+                      alt={promoTr.title}
+                      className="h-20 w-20 rounded-xl object-cover flex-none"
+                    />
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-serif italic text-lg leading-tight text-brand-cream truncate">
+                        {promoTr.title}
+                      </h3>
+                      <p className="text-xs text-brand-cream/70 leading-snug mt-0.5">
+                        {promoTr.subtitle}
+                      </p>
+                    </div>
+                    <span className="price-tag text-base whitespace-nowrap">
+                      {formatPrice(promo.price)}
+                    </span>
                   </div>
                 </div>
               )}
