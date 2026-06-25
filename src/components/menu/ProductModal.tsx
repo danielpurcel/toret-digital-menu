@@ -1,4 +1,4 @@
-import { Heart, X, Share2, Plus, Star } from "lucide-react";
+import { Heart, X, Share2, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useLocale } from "@/i18n/LocaleContext";
@@ -100,13 +100,6 @@ export const ProductModal = ({ product, onClose }: Props) => {
                 </div>
               </div>
 
-              <button
-                onClick={() => toggle(product.id)}
-                className="mt-5 w-full h-14 rounded-full bg-toret-green text-toret-paper font-medium text-[15px] inline-flex items-center justify-center gap-2 shadow-[var(--shadow-2)] active:scale-[0.98] transition-transform"
-              >
-                <Plus className="h-5 w-5" strokeWidth={2} />
-                {fav ? t("addedToFavorites") : t("addToFavoritesCta")}
-              </button>
 
               {product.allergens && product.allergens.length > 0 && (
                 <div className="mt-6">
