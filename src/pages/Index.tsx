@@ -25,7 +25,7 @@ const Index = () => {
   ] as const;
 
   return (
-    <AppShell>
+    <AppShell noTopPadding>
       <Hero />
 
       {/* Category cards — horizontal scroll */}
