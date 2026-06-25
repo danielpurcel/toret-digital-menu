@@ -36,7 +36,7 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-40 bg-background/90 backdrop-blur-md text-foreground">
-      <div className="flex items-center justify-between px-5 h-16">
+      <div className="flex items-center justify-between px-5 h-20">
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger
             aria-label="Open menu"
@@ -67,14 +67,14 @@ export const Header = () => {
         <Link
           to="/"
           aria-label="Caffè Torèt home"
-          className="flex items-center justify-center w-14 h-14 rounded-full bg-background border border-brand-gold/40 shadow-[var(--shadow-soft)]"
+          className="flex items-center justify-center w-20 h-20 rounded-full overflow-hidden border border-brand-gold/40 shadow-[var(--shadow-soft)] -my-2"
         >
           <img
             src={siteConfig.logo}
             alt="Caffè Torèt logo"
-            width={48}
-            height={48}
-            className="h-11 w-11 object-contain"
+            width={80}
+            height={80}
+            className="h-full w-full object-cover"
           />
         </Link>
 
