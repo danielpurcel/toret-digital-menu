@@ -1,4 +1,5 @@
-import logo from "@/assets/logo.png";
+import logoAsset from "@/assets/logo-toret.jpg.asset.json";
+const logo = logoAsset.url;
 
 export const siteConfig = {
   name: "Caffè Torèt",
