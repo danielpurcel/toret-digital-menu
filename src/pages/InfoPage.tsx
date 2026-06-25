@@ -48,15 +48,29 @@ const InfoPage = () => {
         </InfoCard>
 
         <InfoCard icon={<Phone className="h-4 w-4" />} title={t("contacts")}>
-          <p className="flex items-center gap-2">
-            <Phone className="h-3.5 w-3.5 text-brand-gold" />{siteConfig.contact.phone}
-          </p>
-          <p className="flex items-center gap-2">
-            <Mail className="h-3.5 w-3.5 text-brand-gold" />{siteConfig.contact.email}
-          </p>
-          <p className="flex items-center gap-2">
-            <Instagram className="h-3.5 w-3.5 text-brand-gold" />{siteConfig.contact.instagram}
-          </p>
+          <a
+            href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+            className="flex items-center gap-2 hover:text-brand-gold transition-colors"
+          >
+            <Phone className="h-3.5 w-3.5 text-brand-gold" />
+            {siteConfig.contact.phone}
+          </a>
+          <a
+            href={`mailto:${siteConfig.contact.email}`}
+            className="flex items-center gap-2 hover:text-brand-gold transition-colors"
+          >
+            <Mail className="h-3.5 w-3.5 text-brand-gold" />
+            {siteConfig.contact.email}
+          </a>
+          <a
+            href={`https://instagram.com/${siteConfig.contact.instagram}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-brand-gold transition-colors"
+          >
+            <Instagram className="h-3.5 w-3.5 text-brand-gold" />
+            {siteConfig.contact.instagram}
+          </a>
         </InfoCard>
 
         <InfoCard icon={<span className="text-xs font-bold">!</span>} title={t("allergens")}>
