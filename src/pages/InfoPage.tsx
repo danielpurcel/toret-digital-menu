@@ -8,25 +8,23 @@ const InfoPage = () => {
 
   return (
     <AppShell>
-      <div className="px-6 pt-6 pb-8 flex flex-col items-center text-center bg-gradient-to-b from-brand-green/40 to-transparent">
-        <h1 className="font-serif text-4xl italic">{siteConfig.name}</h1>
-        <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold mt-2">
-          {siteConfig.city}
-        </p>
-        <p className="text-sm text-brand-cream/70 mt-4 max-w-xs leading-relaxed">
+      <div className="px-5 pt-6 pb-4">
+        <p className="eyebrow mb-1">{siteConfig.city}</p>
+        <h1 className="font-serif text-[34px] leading-tight text-toret-ink">{siteConfig.name}</h1>
+        <p className="text-[14px] text-toret-ink-muted mt-3 leading-relaxed">
           {siteConfig.tagline[locale]}
         </p>
       </div>
 
-      <div className="px-5 py-4 space-y-3">
+      <div className="px-5 py-3 space-y-3">
         <InfoCard icon={<Clock className="h-4 w-4" />} title={t("openingHours")}>
           <p>
-            <span className="font-medium text-brand-cream">
+            <span className="font-semibold text-toret-ink">
               {siteConfig.hours.label[locale]}
-            </span>{" "}
-            · {siteConfig.hours.time}
+            </span>
+            <span className="text-toret-ink-muted"> · {siteConfig.hours.time}</span>
           </p>
-          <p className="text-brand-cream/60 text-sm">{siteConfig.hours.closed[locale]}</p>
+          <p className="text-toret-ink-muted text-[13px]">{siteConfig.hours.closed[locale]}</p>
         </InfoCard>
 
         <InfoCard icon={<MapPin className="h-4 w-4" />} title={t("address")}>
@@ -34,7 +32,7 @@ const InfoPage = () => {
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteConfig.contact.address)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:text-brand-gold transition-colors"
+            className="text-toret-ink hover:text-toret-green transition-colors underline underline-offset-2 decoration-toret-gold/50"
           >
             {siteConfig.contact.address}
           </a>
@@ -43,31 +41,31 @@ const InfoPage = () => {
         <InfoCard icon={<Phone className="h-4 w-4" />} title={t("contacts")}>
           <a
             href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
-            className="flex items-center gap-2 hover:text-brand-gold transition-colors"
+            className="flex items-center gap-2.5 py-1 text-toret-ink hover:text-toret-green transition-colors"
           >
-            <Phone className="h-3.5 w-3.5 text-brand-gold" />
+            <Phone className="h-4 w-4 text-toret-gold-warm" strokeWidth={1.5} />
             {siteConfig.contact.phone}
           </a>
           <a
             href={`mailto:${siteConfig.contact.email}`}
-            className="flex items-center gap-2 hover:text-brand-gold transition-colors"
+            className="flex items-center gap-2.5 py-1 text-toret-ink hover:text-toret-green transition-colors"
           >
-            <Mail className="h-3.5 w-3.5 text-brand-gold" />
+            <Mail className="h-4 w-4 text-toret-gold-warm" strokeWidth={1.5} />
             {siteConfig.contact.email}
           </a>
           <a
             href={`https://instagram.com/${siteConfig.contact.instagram}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-brand-gold transition-colors"
+            className="flex items-center gap-2.5 py-1 text-toret-ink hover:text-toret-green transition-colors"
           >
-            <Instagram className="h-3.5 w-3.5 text-brand-gold" />
+            <Instagram className="h-4 w-4 text-toret-gold-warm" strokeWidth={1.5} />
             {siteConfig.contact.instagram}
           </a>
         </InfoCard>
 
         <InfoCard icon={<span className="text-xs font-bold">!</span>} title={t("allergens")}>
-          <p className="text-sm text-brand-cream/60 leading-relaxed">
+          <p className="text-[13px] text-toret-ink-muted leading-relaxed">
             {siteConfig.allergensNote[locale]}
           </p>
         </InfoCard>
@@ -85,14 +83,17 @@ const InfoCard = ({
   title: string;
   children: React.ReactNode;
 }) => (
-  <section className="bg-brand-green/60 rounded-2xl p-5 shadow-[var(--shadow-soft)] gold-border">
-    <div className="flex items-center gap-2 mb-3">
-      <span className="h-7 w-7 rounded-full bg-brand-gold text-brand-dark grid place-items-center">
+  <section
+    className="bg-toret-paper rounded-2xl p-5 warm-border"
+    style={{ boxShadow: "var(--shadow-1)" }}
+  >
+    <div className="flex items-center gap-2.5 mb-3">
+      <span className="h-8 w-8 rounded-full bg-toret-cream text-toret-green grid place-items-center">
         {icon}
       </span>
-      <h2 className="font-serif text-lg italic text-brand-cream">{title}</h2>
+      <h2 className="font-serif text-[18px] text-toret-ink">{title}</h2>
     </div>
-    <div className="space-y-1 text-brand-cream/90 text-sm">{children}</div>
+    <div className="space-y-1 text-toret-ink text-[14px]">{children}</div>
   </section>
 );
 

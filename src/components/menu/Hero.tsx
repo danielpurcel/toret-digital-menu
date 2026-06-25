@@ -1,35 +1,30 @@
-import { Clock } from "lucide-react";
 import heroCafe from "@/assets/hero-interior.jpg.asset.json";
-import { siteConfig } from "@/data/siteConfig";
 import { useLocale } from "@/i18n/LocaleContext";
 
 export const Hero = () => {
-  const { locale } = useLocale();
+  const { t } = useLocale();
 
   return (
-    <section className="relative h-[340px] overflow-hidden">
+    <section className="relative h-[460px] overflow-hidden">
       <img
         src={heroCafe.url}
-        alt="Caffè Torèt"
-        className="absolute inset-0 h-full w-full object-cover opacity-65"
+        alt="Caffè Torèt — interno"
+        className="absolute inset-0 h-full w-full object-cover"
       />
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none"
         style={{ background: "var(--gradient-hero)" }}
       />
-      <div className="relative h-full flex flex-col justify-end px-6 pb-8 text-brand-cream">
-        <h1 className="font-serif text-[2.6rem] leading-[1.05] italic mb-2">
-          {siteConfig.welcome[locale]}
+      <div className="relative h-full flex flex-col justify-end px-6 pb-8 text-toret-paper">
+        <span className="eyebrow text-[11px] !text-[hsl(var(--toret-gold))] mb-2">
+          Caffè Torèt · Turin
+        </span>
+        <h1 className="font-serif text-[3.2rem] leading-[1.0] font-normal mb-3">
+          {t("goodMorning")}
         </h1>
-        <p className="text-sm text-brand-cream/75 max-w-[20rem] leading-relaxed mb-4">
-          {siteConfig.tagline[locale]}
+        <p className="text-sm text-toret-paper/85 max-w-[22rem] leading-relaxed">
+          {t("bistrotTagline")}
         </p>
-        <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-brand-gold/90">
-          <Clock className="h-3 w-3" />
-          <span>
-            {siteConfig.hours.label[locale]} · {siteConfig.hours.time}
-          </span>
-        </div>
       </div>
     </section>
   );

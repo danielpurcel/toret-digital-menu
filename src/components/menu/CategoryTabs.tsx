@@ -14,9 +14,9 @@ export const CategoryTabs = ({ macro, value, onChange }: Props) => {
   const cats = categoriesByMacro[macro];
 
   return (
-    <div className="sticky top-16 z-30 bg-background/95 backdrop-blur-md border-b border-brand-gold/10">
+    <div className="bg-toret-ivory">
       <div className="overflow-x-auto no-scrollbar">
-        <div className="flex gap-6 px-5 py-4 min-w-max">
+        <div className="flex gap-2 px-5 py-3 min-w-max">
           {cats.map((c) => {
             const active = c.id === value;
             return (
@@ -24,10 +24,10 @@ export const CategoryTabs = ({ macro, value, onChange }: Props) => {
                 key={c.id}
                 onClick={() => onChange(c.id)}
                 className={cn(
-                  "text-[11px] font-semibold uppercase tracking-[0.15em] whitespace-nowrap pb-1 border-b transition-all",
+                  "px-4 h-9 rounded-full text-[11px] font-semibold uppercase tracking-[0.14em] whitespace-nowrap transition-all",
                   active
-                    ? "text-brand-gold border-brand-gold"
-                    : "text-brand-cream/50 border-transparent hover:text-brand-cream",
+                    ? "bg-toret-green text-toret-paper shadow-[var(--shadow-1)]"
+                    : "bg-toret-paper text-toret-ink warm-border hover:bg-toret-cream",
                 )}
               >
                 {c.label[locale]}
