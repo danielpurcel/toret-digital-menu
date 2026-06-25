@@ -23,6 +23,7 @@ const dict = {
     chooseMoment: "Scegli il tuo momento",
     promoBadge: "Offerta",
     from: "da",
+    pairWithPromo: "Abbinalo alla promo",
   },
   en: {
     home: "Home",
@@ -43,6 +44,7 @@ const dict = {
     chooseMoment: "Choose your moment",
     promoBadge: "Special",
     from: "from",
+    pairWithPromo: "Pair it with the deal",
   },
   fr: {
     home: "Accueil",
@@ -63,6 +65,7 @@ const dict = {
     chooseMoment: "Choisissez votre moment",
     promoBadge: "Offre",
     from: "à partir de",
+    pairWithPromo: "Associez-le à l'offre",
   },
 } as const;
 
