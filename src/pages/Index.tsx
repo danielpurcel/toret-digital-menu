@@ -34,12 +34,12 @@ const Index = () => {
           <h2 className="font-serif text-xl italic">{t("chooseMoment")}</h2>
           <span className="h-px flex-1 ml-4 bg-brand-gold/15" />
         </div>
-        <div className="flex gap-4 overflow-x-auto no-scrollbar -mx-5 px-5 pb-2">
+        <div className="grid grid-cols-3 gap-3 pb-2">
           {cats.map((c) => (
             <Link
               key={c.id}
               to={c.to}
-              className="flex-none w-28 group"
+              className="w-full group"
             >
               <div className="h-32 rounded-2xl overflow-hidden mb-3 gold-border-strong shadow-[var(--shadow-soft)] transition-transform group-active:scale-95">
                 <img
