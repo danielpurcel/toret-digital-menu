@@ -34,28 +34,28 @@ const MacroPage = () => {
 
   return (
     <AppShell>
-      <div className="px-4 pt-5 pb-3 flex items-center gap-3">
+      <div className="px-5 pt-5 pb-3 flex items-center gap-3">
         <Link
           to="/menu"
           aria-label="Back"
-          className="h-9 w-9 rounded-full grid place-items-center bg-card border border-border/60"
+          className="h-9 w-9 rounded-full grid place-items-center bg-brand-green/60 gold-border-strong text-brand-gold"
         >
           <ChevronLeft className="h-4 w-4" />
         </Link>
-        <h1 className="font-serif text-3xl">{macroLabels[macroKey][locale]}</h1>
+        <h1 className="font-serif text-3xl italic">{macroLabels[macroKey][locale]}</h1>
       </div>
 
       <CategoryTabs macro={macroKey} value={activeCat} onChange={setActiveCat} />
 
-      <div className="p-4 space-y-3">
-        {promo && (activeCat === "all" || activeCat === promo.macroCategory) && (
-          <PromoBanner promo={promo} />
-        )}
-        {filtered.map((p) => (
-          <ProductCard key={p.id} product={p} onOpen={setSelected} />
-        ))}
+      <div className="px-5 py-5 space-y-5">
+        {promo && activeCat === "all" && <PromoBanner promo={promo} />}
+        <div className="grid grid-cols-2 gap-3">
+          {filtered.map((p) => (
+            <ProductCard key={p.id} product={p} onOpen={setSelected} />
+          ))}
+        </div>
         {filtered.length === 0 && (
-          <p className="text-center text-muted-foreground py-10">—</p>
+          <p className="text-center text-brand-cream/50 py-10">—</p>
         )}
       </div>
 
