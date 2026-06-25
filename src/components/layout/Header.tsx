@@ -1,15 +1,8 @@
-import { Menu as MenuIcon, Globe } from "lucide-react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Search, Globe } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { cn } from "@/lib/utils";
 import { siteConfig, type Locale } from "@/data/siteConfig";
 import { useLocale } from "@/i18n/LocaleContext";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetHeader,
-  SheetTitle,
-} from "@/components/ui/sheet";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -23,81 +16,89 @@ const locales: { code: Locale; label: string }[] = [
   { code: "fr", label: "Français" },
 ];
 
-export const Header = () => {
+export const Header = ({ transparent }: { transparent?: boolean }) => {
   const { locale, setLocale, t } = useLocale();
-  const [open, setOpen] = useState(false);
-
-  const navItems = [
-    { to: "/", label: t("home") },
-    { to: "/menu", label: t("menu") },
-    { to: "/preferiti", label: t("favorites") },
-    { to: "/info", label: t("info") },
-  ];
+  const navigate = useNavigate();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 text-foreground bg-gradient-to-b from-[#002F24]/70 via-[#002F24]/30 to-transparent">
-      <div className="mx-auto max-w-[480px] flex items-center justify-between px-5 h-20">
-        <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger
-            aria-label="Open menu"
-            className="w-9 h-9 flex flex-col justify-center items-start gap-1.5 group"
-          >
-            <span className="block w-6 h-px bg-brand-gold transition-all group-hover:w-7" />
-            <span className="block w-4 h-px bg-brand-gold transition-all group-hover:w-7" />
-          </SheetTrigger>
-          <SheetContent side="left" className="bg-background text-foreground border-r border-brand-gold/20 w-72">
-            <SheetHeader>
-              <SheetTitle className="font-serif text-3xl italic text-brand-gold">Caffè Torèt</SheetTitle>
-            </SheetHeader>
-            <nav className="mt-10 flex flex-col gap-1">
-              {navItems.map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  onClick={() => setOpen(false)}
-                  className="font-serif text-2xl italic py-3 border-b border-brand-gold/10 hover:text-brand-gold transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </SheetContent>
-        </Sheet>
-
-        <Link
-          to="/"
-          aria-label="Caffè Torèt home"
-          className="flex items-center justify-center w-20 h-20 rounded-full overflow-hidden border border-brand-gold/40 shadow-[var(--shadow-soft)] -my-2"
-        >
-          <img
-            src={siteConfig.logo}
-            alt="Caffè Torèt logo"
-            width={80}
-            height={80}
-            className="h-full w-full object-cover"
-          />
+    <header
+      className={cn(
+        "fixed top-0 left-1/2 -translate-x-1/2 z-40 w-full max-w-[440px]",
+        transparent
+          ? "bg-transparent"
+          : "bg-[hsl(var(--toret-ivory)/0.82)] backdrop-blur-xl backdrop-saturate-150 border-b warm-border",
+      )}
+    >
+      <div className="flex items-center justify-between px-4 h-16">
+        {/* Left: mini logo + name */}
+        <Link to="/" aria-label="Caffè Torèt" className="flex items-center gap-2.5 min-w-0">
+          <span className="relative h-10 w-10 rounded-full overflow-hidden gold-border shrink-0 bg-[hsl(var(--toret-green-deep))]">
+            <img
+              src={siteConfig.logo}
+              alt=""
+              className="h-full w-full object-cover"
+              width={40}
+              height={40}
+            />
+          </span>
+          <span className="flex flex-col leading-tight min-w-0">
+            <span
+              className={cn(
+                "font-serif text-[17px] font-semibold truncate",
+                transparent ? "text-toret-paper" : "text-toret-ink",
+              )}
+            >
+              {siteConfig.name}
+            </span>
+            <span className="eyebrow text-[10px]">
+              {t("turin")} · {t("open")}
+            </span>
+          </span>
         </Link>
 
-        <DropdownMenu>
-          <DropdownMenuTrigger
-            aria-label="Select language"
-            className="flex items-center gap-1.5 border border-brand-gold/40 rounded-full px-2.5 py-1.5 hover:border-brand-gold/70 transition-colors"
+        {/* Right: search + locale */}
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            type="button"
+            aria-label={t("search")}
+            onClick={() => navigate("/cerca")}
+            className={cn(
+              "h-9 w-9 rounded-full grid place-items-center warm-border bg-toret-paper hover:bg-toret-cream transition-colors",
+              transparent && "bg-toret-paper/90",
+            )}
           >
-            <Globe className="h-3 w-3 text-brand-gold" />
-            <span className="text-[10px] font-bold uppercase tracking-widest">{locale}</span>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="bg-card text-card-foreground border-brand-gold/20">
-            {locales.map((l) => (
-              <DropdownMenuItem
-                key={l.code}
-                onClick={() => setLocale(l.code)}
-                className={locale === l.code ? "font-semibold text-brand-gold" : ""}
-              >
-                {l.label}
-              </DropdownMenuItem>
-            ))}
-          </DropdownMenuContent>
-        </DropdownMenu>
+            <Search className="h-[18px] w-[18px] text-toret-ink-soft" strokeWidth={1.5} />
+          </button>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              aria-label="Select language"
+              className={cn(
+                "h-9 rounded-full px-3 inline-flex items-center gap-1.5 warm-border bg-toret-paper hover:bg-toret-cream transition-colors",
+                transparent && "bg-toret-paper/90",
+              )}
+            >
+              <Globe className="h-[14px] w-[14px] text-toret-ink-soft" strokeWidth={1.5} />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-toret-ink">
+                {locale}
+              </span>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="bg-toret-paper text-toret-ink warm-border">
+              {locales.map((l) => (
+                <DropdownMenuItem
+                  key={l.code}
+                  onClick={() => setLocale(l.code)}
+                  className={cn(
+                    "cursor-pointer",
+                    locale === l.code && "font-semibold text-toret-green",
+                  )}
+                >
+                  {l.label}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       </div>
     </header>
   );
