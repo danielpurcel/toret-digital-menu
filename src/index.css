@@ -104,4 +104,6 @@ All colors MUST be HSL.
     @apply font-serif text-lg font-semibold;
     color: hsl(var(--brand-gold));
   }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 }
