@@ -1,0 +1,67 @@
+import { useMemo, useState } from "react";
+import { Link, useParams, Navigate } from "react-router-dom";
+import { ChevronLeft } from "lucide-react";
+import { AppShell } from "@/components/layout/AppShell";
+import { CategoryTabs } from "@/components/menu/CategoryTabs";
+import { ProductCard } from "@/components/menu/ProductCard";
+import { ProductModal } from "@/components/menu/ProductModal";
+import { PromoBanner } from "@/components/menu/PromoBanner";
+import { useLocale } from "@/i18n/LocaleContext";
+import {
+  getProductsByMacro,
+  macroLabels,
+  type MacroCategory,
+  type Product,
+} from "@/data/menu";
+import { getPromoByMacro } from "@/data/promos";
+
+const validMacros: MacroCategory[] = ["colazione", "pranzo", "aperitivo"];
+
+const MacroPage = () => {
+  const { macro } = useParams<{ macro: string }>();
+  const { locale } = useLocale();
+  const [activeCat, setActiveCat] = useState("all");
+  const [selected, setSelected] = useState<Product | null>(null);
+
+  if (!macro || !validMacros.includes(macro as MacroCategory)) {
+    return <Navigate to="/menu" replace />;
+  }
+
+  const macroKey = macro as MacroCategory;
+  const products = useMemo(() => getProductsByMacro(macroKey), [macroKey]);
+  const filtered = activeCat === "all" ? products : products.filter((p) => p.category === activeCat);
+  const promo = getPromoByMacro(macroKey);
+
+  return (
+    <AppShell>
+      <div className="px-4 pt-5 pb-3 flex items-center gap-3">
+        <Link
+          to="/menu"
+          aria-label="Back"
+          className="h-9 w-9 rounded-full grid place-items-center bg-card border border-border/60"
+        >
+          <ChevronLeft className="h-4 w-4" />
+        </Link>
+        <h1 className="font-serif text-3xl">{macroLabels[macroKey][locale]}</h1>
+      </div>
+
+      <CategoryTabs macro={macroKey} value={activeCat} onChange={setActiveCat} />
+
+      <div className="p-4 space-y-3">
+        {promo && (activeCat === "all" || activeCat === promo.macroCategory) && (
+          <PromoBanner promo={promo} />
+        )}
+        {filtered.map((p) => (
+          <ProductCard key={p.id} product={p} onOpen={setSelected} />
+        ))}
+        {filtered.length === 0 && (
+          <p className="text-center text-muted-foreground py-10">—</p>
+        )}
+      </div>
+
+      <ProductModal product={selected} onClose={() => setSelected(null)} />
+    </AppShell>
+  );
+};
+
+export default MacroPage;
