@@ -1,5 +1,5 @@
-import { Search, Globe } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Globe } from "lucide-react";
+import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { siteConfig, type Locale } from "@/data/siteConfig";
 import { useLocale } from "@/i18n/LocaleContext";
@@ -18,7 +18,7 @@ const locales: { code: Locale; label: string }[] = [
 
 export const Header = ({ transparent }: { transparent?: boolean }) => {
   const { locale, setLocale, t } = useLocale();
-  const navigate = useNavigate();
+  
 
   return (
     <header
@@ -30,20 +30,8 @@ export const Header = ({ transparent }: { transparent?: boolean }) => {
       )}
     >
       <div className="relative flex items-center justify-between px-4 h-full">
-        {/* Left: search */}
-        <div className="flex items-center gap-2 shrink-0">
-          <button
-            type="button"
-            aria-label={t("search")}
-            onClick={() => navigate("/cerca")}
-            className={cn(
-              "h-9 w-9 rounded-full grid place-items-center warm-border bg-toret-paper hover:bg-toret-cream transition-colors",
-              transparent && "bg-toret-paper/90",
-            )}
-          >
-            <Search className="h-[18px] w-[18px] text-toret-ink-soft" strokeWidth={1.5} />
-          </button>
-        </div>
+        {/* Left spacer */}
+        <div className="w-9 shrink-0" />
 
         {/* Center: logo + name */}
         <Link
