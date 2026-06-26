@@ -26,10 +26,10 @@ export const ProductModal = ({ product, onClose }: Props) => {
 
   return (
     <Drawer open={open} onOpenChange={(o) => !o && onClose()}>
-      <DrawerContent className="bg-toret-paper text-toret-ink border-t-0 max-h-[94vh] p-0 overflow-hidden">
+      <DrawerContent className="bg-toret-paper text-toret-ink border-t-0 h-[100dvh] max-h-[100dvh] mt-0 rounded-none p-0 overflow-hidden">
         {product && tr && (
-          <div className="mx-auto w-full max-w-[440px] flex flex-col max-h-[94vh]">
-            <div className="relative h-[300px] shrink-0">
+          <div className="mx-auto w-full max-w-[440px] flex flex-col h-[100dvh]">
+            <div className="relative h-[44vh] min-h-[300px] shrink-0">
               <img
                 src={product.image}
                 alt={tr.name}
