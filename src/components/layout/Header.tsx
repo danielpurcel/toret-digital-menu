@@ -18,7 +18,9 @@ const locales: { code: Locale; label: string }[] = [
 
 export const Header = ({ transparent }: { transparent?: boolean }) => {
   const { locale, setLocale, t } = useLocale();
-  
+  const navigate = useNavigate();
+  const location = useLocation();
+  const showBack = location.pathname !== "/";
 
   return (
     <header
