@@ -73,7 +73,7 @@ const InfoPage = () => {
           <p className="text-[13px] text-toret-ink-muted leading-relaxed">
             {allergenComplianceNote[locale]}
           </p>
-          <div className="flex flex-wrap gap-1.5 pt-2">
+          <div className="flex flex-wrap items-center gap-2 pt-2">
             {euAllergens.map((allergen) => (
               <AllergenBadge key={allergen} allergen={allergen} locale={locale} compact />
             ))}
