@@ -1,4 +1,4 @@
-import { Clock, MapPin, Phone, Mail, Instagram } from "lucide-react";
+import { Clock, MapPin, Phone, Mail, Instagram, ShieldCheck } from "lucide-react";
 import { AppShell } from "@/components/layout/AppShell";
 import { siteConfig } from "@/data/siteConfig";
 import { allergenComplianceNote, euAllergens } from "@/data/allergens";
@@ -66,7 +66,7 @@ const InfoPage = () => {
           </a>
         </InfoCard>
 
-        <InfoCard icon={<span className="text-xs font-bold">!</span>} title={t("allergens")}>
+        <InfoCard icon={<ShieldCheck className="h-4 w-4" />} title={t("allergens")}>
           <p className="text-[13px] text-toret-ink-muted leading-relaxed">
             {siteConfig.allergensNote[locale]}
           </p>
