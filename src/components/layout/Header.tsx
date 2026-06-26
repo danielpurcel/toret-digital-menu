@@ -67,10 +67,10 @@ export const Header = ({ transparent }: { transparent?: boolean }) => {
                 transparent ? "text-toret-paper" : "text-toret-ink",
               )}
             >
-              {siteConfig.name}
+              {"\u00a0"}
             </span>
             <span className="eyebrow text-[10px]">
-              {t("turin")} · {t("open")}
+              {"\n"}
             </span>
           </span>
         </Link>

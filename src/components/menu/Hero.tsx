@@ -17,7 +17,7 @@ export const Hero = () => {
       />
       <div className="relative h-full flex flex-col justify-end px-6 pb-8 text-toret-paper">
         <span className="eyebrow text-[11px] !text-[hsl(var(--toret-gold))] mb-2">
-          Caffè Torèt · Turin
+          {"\n"}
         </span>
         <h1 className="font-serif text-[3.2rem] leading-[1.0] font-normal mb-3">
           {t("goodMorning")}
