@@ -20,7 +20,7 @@ export const Header = ({ transparent }: { transparent?: boolean }) => {
   const { locale, setLocale, t } = useLocale();
   const navigate = useNavigate();
   const location = useLocation();
-  const showBack = location.pathname !== "/";
+  const showBack = location.pathname !== "/" && !location.pathname.startsWith("/menu/");
 
   return (
     <header
