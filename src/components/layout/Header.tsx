@@ -23,22 +23,41 @@ export const Header = ({ transparent }: { transparent?: boolean }) => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-1/2 -translate-x-1/2 z-40 w-full max-w-[440px]",
+        "fixed top-0 left-1/2 -translate-x-1/2 z-40 w-full max-w-[440px] h-20",
         transparent
           ? "bg-transparent"
           : "bg-[hsl(var(--toret-ivory)/0.82)] backdrop-blur-xl backdrop-saturate-150 border-b warm-border",
       )}
     >
-      <div className="flex items-center justify-between px-4 h-16">
-        {/* Left: mini logo + name */}
-        <Link to="/" aria-label="Caffè Torèt" className="flex items-center gap-2.5 min-w-0">
-          <span className="relative h-10 w-10 rounded-full overflow-hidden gold-border shrink-0 bg-[hsl(var(--toret-green-deep))]">
+      <div className="relative flex items-center justify-between px-4 h-full">
+        {/* Left: search */}
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            type="button"
+            aria-label={t("search")}
+            onClick={() => navigate("/cerca")}
+            className={cn(
+              "h-9 w-9 rounded-full grid place-items-center warm-border bg-toret-paper hover:bg-toret-cream transition-colors",
+              transparent && "bg-toret-paper/90",
+            )}
+          >
+            <Search className="h-[18px] w-[18px] text-toret-ink-soft" strokeWidth={1.5} />
+          </button>
+        </div>
+
+        {/* Center: logo + name */}
+        <Link
+          to="/"
+          aria-label="Caffè Torèt"
+          className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2.5"
+        >
+          <span className="relative h-14 w-14 rounded-full overflow-hidden gold-border shrink-0 bg-[hsl(var(--toret-green-deep))]">
             <img
               src={siteConfig.logo}
               alt=""
               className="h-full w-full object-cover"
-              width={40}
-              height={40}
+              width={56}
+              height={56}
             />
           </span>
           <span className="flex flex-col leading-tight min-w-0">
@@ -56,20 +75,8 @@ export const Header = ({ transparent }: { transparent?: boolean }) => {
           </span>
         </Link>
 
-        {/* Right: search + locale */}
+        {/* Right: locale */}
         <div className="flex items-center gap-2 shrink-0">
-          <button
-            type="button"
-            aria-label={t("search")}
-            onClick={() => navigate("/cerca")}
-            className={cn(
-              "h-9 w-9 rounded-full grid place-items-center warm-border bg-toret-paper hover:bg-toret-cream transition-colors",
-              transparent && "bg-toret-paper/90",
-            )}
-          >
-            <Search className="h-[18px] w-[18px] text-toret-ink-soft" strokeWidth={1.5} />
-          </button>
-
           <DropdownMenu>
             <DropdownMenuTrigger
               aria-label="Select language"
