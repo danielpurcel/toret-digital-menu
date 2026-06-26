@@ -2,7 +2,6 @@ import { useMemo, useState } from "react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
 import { AppShell } from "@/components/layout/AppShell";
-import { CategoryTabs } from "@/components/menu/CategoryTabs";
 import { ProductCard } from "@/components/menu/ProductCard";
 import { ProductModal } from "@/components/menu/ProductModal";
 import { PromoBanner } from "@/components/menu/PromoBanner";
@@ -53,7 +52,6 @@ const macroMeta: Record<MacroCategory, { image: string; time: string; tagline: {
 const MacroPage = () => {
   const { macro } = useParams<{ macro: string }>();
   const { locale, t } = useLocale();
-  const [activeCat, setActiveCat] = useState("all");
   const [selected, setSelected] = useState<Product | null>(null);
 
   if (!macro || !validMacros.includes(macro as MacroCategory)) {
@@ -63,7 +61,6 @@ const MacroPage = () => {
   const macroKey = macro as MacroCategory;
   const meta = macroMeta[macroKey];
   const products = useMemo(() => getProductsByMacro(macroKey), [macroKey]);
-  const filtered = activeCat === "all" ? products : products.filter((p) => p.category === activeCat);
   const promo = getPromoByMacro(macroKey);
 
   return (
@@ -96,20 +93,16 @@ const MacroPage = () => {
         </div>
       </section>
 
-      <div className="pt-3">
-        <CategoryTabs macro={macroKey} value={activeCat} onChange={setActiveCat} />
-      </div>
-
       <div className="px-5 py-4 space-y-3">
-        {promo && activeCat === "all" && (
+        {promo && (
           <div className="mb-2">
             <PromoBanner promo={promo} />
           </div>
         )}
-        {filtered.map((p) => (
+        {products.map((p) => (
           <ProductCard key={p.id} product={p} onOpen={setSelected} />
         ))}
-        {filtered.length === 0 && (
+        {products.length === 0 && (
           <p className="text-center text-toret-ink-muted py-10 text-sm">—</p>
         )}
       </div>
