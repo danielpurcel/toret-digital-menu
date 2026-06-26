@@ -30,7 +30,7 @@ const dict = {
     openNow: "Aperto ora",
     kitchenUntil: "cucina fino alle 22:30",
     goodMorning: "Buongiorno",
-    bistrotTagline: "Bistrot torinese · colazione, pranzo e aperitivo dal mattino alla sera",
+    bistrotTagline: "Caffeteria · colazione, pranzo e aperitivo dal mattino alla sera",
     turin: "Turin",
     open: "Aperto",
     searchPlaceholder: "Cerca un piatto, una bevanda...",
