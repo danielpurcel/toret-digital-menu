@@ -62,7 +62,7 @@
     --radius: 0.75rem;
 
     /* === Gradients & shadows === */
-    --gradient-hero: linear-gradient(180deg, transparent 35%, hsl(var(--toret-green-deep) / 0.85) 100%);
+    --gradient-hero: linear-gradient(180deg, transparent 55%, hsl(var(--toret-green-deep) / 0.55) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(var(--toret-gold)) 0%, hsl(var(--toret-gold-warm)) 100%);
     --gradient-green: linear-gradient(160deg, hsl(var(--toret-green)) 0%, hsl(var(--toret-green-deep)) 100%);
 
