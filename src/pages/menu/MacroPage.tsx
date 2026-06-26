@@ -1,6 +1,5 @@
 import { useMemo, useState } from "react";
-import { Link, useParams, Navigate } from "react-router-dom";
-import { ChevronLeft } from "lucide-react";
+import { useParams, Navigate } from "react-router-dom";
 import { AppShell } from "@/components/layout/AppShell";
 import { ProductCard } from "@/components/menu/ProductCard";
 import { ProductModal } from "@/components/menu/ProductModal";
@@ -73,13 +72,6 @@ const MacroPage = () => {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-toret-green-deep/90 via-toret-green-deep/35 to-toret-green-deep/40" />
-        <Link
-          to="/menu"
-          aria-label={t("back")}
-          className="absolute top-4 left-4 z-10 h-10 w-10 rounded-full bg-toret-paper/95 backdrop-blur grid place-items-center shadow-[var(--shadow-2)] text-toret-ink"
-        >
-          <ChevronLeft className="h-[18px] w-[18px]" strokeWidth={1.5} />
-        </Link>
         <div className="relative h-full flex flex-col justify-end px-6 pb-6 text-toret-paper pt-20">
           <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-toret-gold mb-1">
             {meta.time}
