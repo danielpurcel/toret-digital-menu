@@ -51,13 +51,13 @@ export const Header = ({ transparent }: { transparent?: boolean }) => {
           aria-label="Caffè Torèt"
           className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2.5"
         >
-          <span className="relative h-14 w-14 rounded-full overflow-hidden gold-border shrink-0 bg-[hsl(var(--toret-green-deep))]">
+          <span className="relative h-[72px] w-[72px] rounded-full overflow-hidden gold-border shrink-0 bg-[hsl(var(--toret-green-deep))]">
             <img
               src={siteConfig.logo}
               alt=""
               className="h-full w-full object-cover"
-              width={56}
-              height={56}
+              width={72}
+              height={72}
             />
           </span>
           <span className="flex flex-col leading-tight min-w-0">
