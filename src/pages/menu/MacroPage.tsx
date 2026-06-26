@@ -52,7 +52,6 @@ const macroMeta: Record<MacroCategory, { image: string; time: string; tagline: {
 const MacroPage = () => {
   const { macro } = useParams<{ macro: string }>();
   const { locale, t } = useLocale();
-  const [activeCat, setActiveCat] = useState("all");
   const [selected, setSelected] = useState<Product | null>(null);
 
   if (!macro || !validMacros.includes(macro as MacroCategory)) {
