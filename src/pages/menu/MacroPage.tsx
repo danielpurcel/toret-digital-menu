@@ -61,7 +61,6 @@ const MacroPage = () => {
   const macroKey = macro as MacroCategory;
   const meta = macroMeta[macroKey];
   const products = useMemo(() => getProductsByMacro(macroKey), [macroKey]);
-  const filtered = activeCat === "all" ? products : products.filter((p) => p.category === activeCat);
   const promo = getPromoByMacro(macroKey);
 
   return (
@@ -94,20 +93,16 @@ const MacroPage = () => {
         </div>
       </section>
 
-      <div className="pt-3">
-        <CategoryTabs macro={macroKey} value={activeCat} onChange={setActiveCat} />
-      </div>
-
       <div className="px-5 py-4 space-y-3">
-        {promo && activeCat === "all" && (
+        {promo && (
           <div className="mb-2">
             <PromoBanner promo={promo} />
           </div>
         )}
-        {filtered.map((p) => (
+        {products.map((p) => (
           <ProductCard key={p.id} product={p} onOpen={setSelected} />
         ))}
-        {filtered.length === 0 && (
+        {products.length === 0 && (
           <p className="text-center text-toret-ink-muted py-10 text-sm">—</p>
         )}
       </div>
