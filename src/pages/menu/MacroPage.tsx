@@ -2,7 +2,6 @@ import { useMemo, useState } from "react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
 import { AppShell } from "@/components/layout/AppShell";
-import { CategoryTabs } from "@/components/menu/CategoryTabs";
 import { ProductCard } from "@/components/menu/ProductCard";
 import { ProductModal } from "@/components/menu/ProductModal";
 import { PromoBanner } from "@/components/menu/PromoBanner";
