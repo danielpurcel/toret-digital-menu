@@ -111,7 +111,7 @@ export const ProductModal = ({ product, onClose }: Props) => {
               <div className="mt-6">
                 <p className="eyebrow mb-2">{t("allergens")}</p>
                 {product.allergens && product.allergens.length > 0 ? (
-                  <div className="flex flex-wrap gap-1.5">
+                  <div className="flex flex-wrap items-center gap-2">
                     {product.allergens.map((a) => (
                       <AllergenBadge key={a} allergen={a} locale={locale} />
                     ))}

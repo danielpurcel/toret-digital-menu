@@ -34,7 +34,7 @@ export const AllergenBadge = ({ allergen, locale, compact = false }: Props) => {
           type="button"
           className={cn(
             sizeClass,
-            "inline-flex shrink-0 items-center justify-center rounded-full border border-toret-gold/30 bg-toret-paper transition-transform active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-toret-gold-warm focus-visible:ring-offset-2",
+            "inline-flex shrink-0 items-center justify-center rounded-full border-2 border-toret-gold-warm/70 bg-toret-paper shadow-[var(--shadow-1)] transition-transform active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-toret-gold-warm focus-visible:ring-offset-2",
           )}
           title={label}
           aria-label={description ? `${label}: ${description}` : label}
