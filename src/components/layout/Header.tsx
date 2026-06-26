@@ -1,5 +1,5 @@
-import { Globe } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Globe, ChevronLeft } from "lucide-react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { siteConfig, type Locale } from "@/data/siteConfig";
 import { useLocale } from "@/i18n/LocaleContext";
