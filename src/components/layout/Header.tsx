@@ -23,7 +23,7 @@ export const Header = ({ transparent }: { transparent?: boolean }) => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-1/2 -translate-x-1/2 z-40 w-full max-w-[440px] h-20",
+        "fixed top-0 left-1/2 -translate-x-1/2 z-40 w-full max-w-[440px] h-[96px]",
         transparent
           ? "bg-transparent"
           : "bg-[hsl(var(--toret-ivory)/0.82)] backdrop-blur-xl backdrop-saturate-150 border-b warm-border",
@@ -51,13 +51,13 @@ export const Header = ({ transparent }: { transparent?: boolean }) => {
           aria-label="Caffè Torèt"
           className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2.5"
         >
-          <span className="relative h-[72px] w-[72px] rounded-full overflow-hidden gold-border shrink-0 bg-[hsl(var(--toret-green-deep))]">
+          <span className="relative h-[84px] w-[84px] rounded-full overflow-hidden gold-border shrink-0 bg-[hsl(var(--toret-green-deep))]">
             <img
               src={siteConfig.logo}
               alt=""
               className="h-full w-full object-cover"
-              width={72}
-              height={72}
+              width={84}
+              height={84}
             />
           </span>
           <span className="flex flex-col leading-tight min-w-0">
