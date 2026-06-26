@@ -15,7 +15,7 @@ export const AppShell = ({
   return (
     <div className="app-shell flex flex-col">
       <Header transparent={transparentHeader} />
-      <main className={cn("flex-1 pb-32", !noTopPadding && "pt-[64px]")}>{children}</main>
+      <main className={cn("flex-1 pb-32", !noTopPadding && "pt-[80px]")}>{children}</main>
       <BottomNav />
     </div>
   );
