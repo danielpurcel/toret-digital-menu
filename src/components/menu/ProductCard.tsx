@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+import { Heart, Utensils } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLocale } from "@/i18n/LocaleContext";
 import { useFavorites } from "@/hooks/useFavorites";
@@ -27,12 +27,18 @@ export const ProductCard = ({ product, onOpen, badge }: Props) => {
       style={{ boxShadow: "var(--shadow-1)" }}
     >
       <div className="relative h-[88px] w-[88px] shrink-0 rounded-xl overflow-hidden bg-toret-cream">
-        <img
-          src={product.image}
-          alt={tr.name}
-          loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
+        {product.image ? (
+          <img
+            src={product.image}
+            alt={tr.name}
+            loading="lazy"
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        ) : (
+          <div className="h-full w-full grid place-items-center text-toret-gold-warm">
+            <Utensils className="h-7 w-7" strokeWidth={1.5} aria-hidden="true" />
+          </div>
+        )}
       </div>
 
       <div className="flex-1 min-w-0 flex flex-col">

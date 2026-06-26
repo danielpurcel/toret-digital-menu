@@ -6,11 +6,12 @@ import { ProductModal } from "@/components/menu/ProductModal";
 import { PromoBanner } from "@/components/menu/PromoBanner";
 import { useLocale } from "@/i18n/LocaleContext";
 import {
-  getProductsByMacro,
+  categoriesByMacro,
   macroLabels,
   type MacroCategory,
   type Product,
 } from "@/data/menu";
+import { byMacro, useMenuProducts } from "@/hooks/useMenuProducts";
 import { getPromoByMacro } from "@/data/promos";
 import catColazione from "@/assets/cat-colazione.jpg";
 import catPranzo from "@/assets/cat-pranzo.jpg";
@@ -52,15 +53,22 @@ const MacroPage = () => {
   const { macro } = useParams<{ macro: string }>();
   const { locale, t } = useLocale();
   const [selected, setSelected] = useState<Product | null>(null);
+  const [category, setCategory] = useState("all");
+  const { data: allProducts, isFetching } = useMenuProducts();
+  const macroKey = validMacros.includes(macro as MacroCategory)
+    ? (macro as MacroCategory)
+    : "colazione";
+  const meta = macroMeta[macroKey];
+  const products = useMemo(() => {
+    const macroProducts = byMacro(allProducts, macroKey);
+    if (category === "all") return macroProducts;
+    return macroProducts.filter((p) => p.category === category);
+  }, [allProducts, macroKey, category]);
+  const promo = getPromoByMacro(macroKey);
 
   if (!macro || !validMacros.includes(macro as MacroCategory)) {
     return <Navigate to="/menu" replace />;
   }
-
-  const macroKey = macro as MacroCategory;
-  const meta = macroMeta[macroKey];
-  const products = useMemo(() => getProductsByMacro(macroKey), [macroKey]);
-  const promo = getPromoByMacro(macroKey);
 
   return (
     <AppShell noTopPadding transparentHeader>
@@ -86,6 +94,25 @@ const MacroPage = () => {
       </section>
 
       <div className="px-5 py-4 space-y-3">
+        <div className="flex gap-2 overflow-x-auto no-scrollbar pb-1" aria-label={t("menu")}>
+          {categoriesByMacro[macroKey].map((item) => (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => setCategory(item.id)}
+              className={`shrink-0 rounded-full px-3.5 py-2 text-[12px] font-semibold warm-border transition-colors ${
+                category === item.id
+                  ? "bg-toret-green text-toret-paper"
+                  : "bg-toret-paper text-toret-ink-soft"
+              }`}
+            >
+              {item.label[locale]}
+            </button>
+          ))}
+        </div>
+        {isFetching && (
+          <p className="text-[12px] text-toret-ink-muted px-1">{t("updatingMenu")}</p>
+        )}
         {promo && (
           <div className="mb-2">
             <PromoBanner promo={promo} />

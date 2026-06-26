@@ -1,4 +1,4 @@
-import heroCafe from "@/assets/hero-interior.jpg.asset.json";
+import heroInterno from "@/assets/hero-interno.jpg";
 import { useLocale } from "@/i18n/LocaleContext";
 
 export const Hero = () => {
@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <section className="relative h-[460px] overflow-hidden">
       <img
-        src={heroCafe.url}
+        src={heroInterno}
         alt="Caffè Torèt — interno"
         className="absolute inset-0 h-full w-full object-cover"
       />

@@ -1,10 +1,12 @@
-import { Heart, X, Share2, Star } from "lucide-react";
+import { Heart, X, Share2, Star, Utensils } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useLocale } from "@/i18n/LocaleContext";
 import type { Product } from "@/data/menu";
 import { Drawer, DrawerContent, DrawerTitle, DrawerDescription } from "@/components/ui/drawer";
 import { getPromoForProduct } from "@/data/promos";
+import { allergenFallback } from "@/data/allergens";
+import { AllergenBadge } from "@/components/menu/AllergenBadge";
 
 const formatPrice = (price: number) =>
   `€ ${price.toFixed(2).replace(".", ",")}`;
@@ -29,12 +31,18 @@ export const ProductModal = ({ product, onClose }: Props) => {
       <DrawerContent className="bg-toret-paper text-toret-ink border-t-0 h-[100dvh] max-h-[100dvh] mt-0 rounded-none p-0 overflow-hidden">
         {product && tr && (
           <div className="mx-auto w-full max-w-[440px] flex flex-col h-[100dvh]">
-            <div className="relative h-[44vh] min-h-[300px] shrink-0">
-              <img
-                src={product.image}
-                alt={tr.name}
-                className="absolute inset-0 h-full w-full object-cover"
-              />
+            <div className="relative h-[34vh] min-h-[220px] shrink-0 bg-toret-cream">
+              {product.image ? (
+                <img
+                  src={product.image}
+                  alt={tr.name}
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              ) : (
+                <div className="absolute inset-0 grid place-items-center text-toret-gold-warm">
+                  <Utensils className="h-12 w-12" strokeWidth={1.5} aria-hidden="true" />
+                </div>
+              )}
               <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-toret-paper to-transparent" />
               <button
                 onClick={onClose}
@@ -100,22 +108,20 @@ export const ProductModal = ({ product, onClose }: Props) => {
                 </div>
               </div>
 
-
-              {product.allergens && product.allergens.length > 0 && (
-                <div className="mt-6">
-                  <p className="eyebrow mb-2">{t("allergens")}</p>
+              <div className="mt-6">
+                <p className="eyebrow mb-2">{t("allergens")}</p>
+                {product.allergens && product.allergens.length > 0 ? (
                   <div className="flex flex-wrap gap-1.5">
                     {product.allergens.map((a) => (
-                      <span
-                        key={a}
-                        className="text-[12px] bg-toret-cream text-toret-ink-soft px-2.5 py-1 rounded-full warm-border capitalize"
-                      >
-                        {a}
-                      </span>
+                      <AllergenBadge key={a} allergen={a} locale={locale} />
                     ))}
                   </div>
-                </div>
-              )}
+                ) : (
+                  <p className="text-[13px] text-toret-ink-muted leading-snug">
+                    {allergenFallback[locale]}
+                  </p>
+                )}
+              </div>
 
               {promo && promoTr && (
                 <div className="mt-6">

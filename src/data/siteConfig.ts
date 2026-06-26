@@ -1,5 +1,4 @@
-import logoAsset from "@/assets/logo-toret.jpg.asset.json";
-const logo = logoAsset.url;
+import logo from "@/assets/logo-toret.jpg";
 
 export const siteConfig = {
   name: "Caffè Torèt",
@@ -26,9 +25,9 @@ export const siteConfig = {
     instagram: "caffe_toret_turin",
   },
   allergensNote: {
-    it: "Per informazioni su allergeni e intolleranze chiedi al personale. Le materie prime possono contenere tracce di glutine, frutta a guscio, latte, uova, soia, pesce, crostacei.",
-    en: "Please ask our staff for allergen information. Ingredients may contain traces of gluten, nuts, milk, eggs, soy, fish, shellfish.",
-    fr: "Veuillez demander au personnel pour les allergènes. Les ingrédients peuvent contenir des traces de gluten, fruits à coque, lait, œufs, soja, poisson, crustacés.",
+    it: "Le informazioni sugli allergeni devono essere riferibili a ciascun alimento. In caso di allergie o intolleranze, avvisa il personale prima dell'ordine.",
+    en: "Allergen information must be linked to each food item. In case of allergies or intolerances, please inform our staff before ordering.",
+    fr: "Les informations sur les allergènes doivent être liées à chaque aliment. En cas d'allergies ou d'intolérances, veuillez prévenir le personnel avant de commander.",
   },
   logo,
 } as const;

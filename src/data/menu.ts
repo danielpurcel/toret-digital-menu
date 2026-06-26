@@ -23,12 +23,14 @@ export interface Translations {
 
 export interface Product {
   id: string;
+  xanoId?: number;
+  source?: "static" | "xano";
   macroCategory: MacroCategory;
   category: string; // e.g. "caffetteria", "dolci"
   name: string;
   description: string;
   price: number;
-  image: string;
+  image?: string;
   tags?: string[];
   allergens?: string[];
   available: boolean;

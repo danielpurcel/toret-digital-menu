@@ -5,13 +5,15 @@ import { ProductCard } from "@/components/menu/ProductCard";
 import { ProductModal } from "@/components/menu/ProductModal";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useLocale } from "@/i18n/LocaleContext";
-import { getProductById, type Product } from "@/data/menu";
+import { type Product } from "@/data/menu";
+import { byId, useMenuProducts } from "@/hooks/useMenuProducts";
 
 const Favorites = () => {
   const { t } = useLocale();
   const { favorites } = useFavorites();
   const [selected, setSelected] = useState<Product | null>(null);
-  const items = favorites.map(getProductById).filter((p): p is Product => !!p);
+  const { data: products } = useMenuProducts();
+  const items = favorites.map((id) => byId(products, id)).filter((p): p is Product => !!p);
 
   return (
     <AppShell>

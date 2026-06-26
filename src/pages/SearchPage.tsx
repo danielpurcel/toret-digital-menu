@@ -4,12 +4,15 @@ import { AppShell } from "@/components/layout/AppShell";
 import { ProductCard } from "@/components/menu/ProductCard";
 import { ProductModal } from "@/components/menu/ProductModal";
 import { useLocale } from "@/i18n/LocaleContext";
-import { products, type Product } from "@/data/menu";
+import { type Product } from "@/data/menu";
+import { useMenuProducts } from "@/hooks/useMenuProducts";
+import { includesSearch } from "@/lib/search";
 
 const SearchPage = () => {
   const { locale, t } = useLocale();
   const [q, setQ] = useState("");
   const [selected, setSelected] = useState<Product | null>(null);
+  const { data: products } = useMenuProducts();
 
   const results = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -17,12 +20,14 @@ const SearchPage = () => {
     return products.filter((p) => {
       const tr = p.translations[locale];
       return (
-        tr.name.toLowerCase().includes(query) ||
-        tr.description.toLowerCase().includes(query) ||
-        p.category.toLowerCase().includes(query)
+        includesSearch(tr.name, query) ||
+        includesSearch(tr.description, query) ||
+        includesSearch(p.category, query) ||
+        p.tags?.some((tag) => includesSearch(tag, query)) ||
+        p.allergens?.some((allergen) => includesSearch(allergen, query))
       );
     });
-  }, [q, locale]);
+  }, [q, locale, products]);
 
   return (
     <AppShell>
@@ -37,6 +42,7 @@ const SearchPage = () => {
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder={t("searchPlaceholder")}
+            aria-label={t("search")}
             className="flex-1 bg-transparent outline-none text-[14px] text-toret-ink placeholder:text-toret-ink-muted"
           />
         </label>

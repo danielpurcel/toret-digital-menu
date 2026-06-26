@@ -7,7 +7,8 @@ import { PromoBanner } from "@/components/menu/PromoBanner";
 import { ProductCard } from "@/components/menu/ProductCard";
 import { ProductModal } from "@/components/menu/ProductModal";
 import { useLocale } from "@/i18n/LocaleContext";
-import { getFeatured, macroLabels, type Product } from "@/data/menu";
+import { macroLabels, type Product } from "@/data/menu";
+import { featuredProducts, useMenuProducts } from "@/hooks/useMenuProducts";
 import { getPromoByMacro } from "@/data/promos";
 import catColazione from "@/assets/cat-colazione.jpg";
 import catPranzo from "@/assets/cat-pranzo.jpg";
@@ -16,7 +17,8 @@ import catAperitivo from "@/assets/cat-aperitivo.jpg";
 const Index = () => {
   const { locale, t } = useLocale();
   const [selected, setSelected] = useState<Product | null>(null);
-  const featured = getFeatured();
+  const { data: products } = useMenuProducts();
+  const featured = featuredProducts(products);
   const promo = getPromoByMacro("colazione");
 
   const cats = [

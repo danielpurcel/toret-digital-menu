@@ -1,6 +1,8 @@
 import { Clock, MapPin, Phone, Mail, Instagram } from "lucide-react";
 import { AppShell } from "@/components/layout/AppShell";
 import { siteConfig } from "@/data/siteConfig";
+import { allergenComplianceNote, euAllergens } from "@/data/allergens";
+import { AllergenBadge } from "@/components/menu/AllergenBadge";
 import { useLocale } from "@/i18n/LocaleContext";
 
 const InfoPage = () => {
@@ -68,6 +70,14 @@ const InfoPage = () => {
           <p className="text-[13px] text-toret-ink-muted leading-relaxed">
             {siteConfig.allergensNote[locale]}
           </p>
+          <p className="text-[13px] text-toret-ink-muted leading-relaxed">
+            {allergenComplianceNote[locale]}
+          </p>
+          <div className="flex flex-wrap gap-1.5 pt-2">
+            {euAllergens.map((allergen) => (
+              <AllergenBadge key={allergen} allergen={allergen} locale={locale} compact />
+            ))}
+          </div>
         </InfoCard>
       </div>
     </AppShell>

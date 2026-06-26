@@ -40,6 +40,7 @@ const dict = {
     promoBadge: "Offerta",
     from: "da",
     pairWithPromo: "Abbinalo alla promo",
+    updatingMenu: "Aggiorno il menu reale...",
   },
   en: {
     home: "Home",
@@ -77,6 +78,7 @@ const dict = {
     promoBadge: "Special",
     from: "from",
     pairWithPromo: "Pair it with the deal",
+    updatingMenu: "Updating the live menu...",
   },
   fr: {
     home: "Accueil",
@@ -114,6 +116,7 @@ const dict = {
     promoBadge: "Offre",
     from: "à partir de",
     pairWithPromo: "Associez-le à l'offre",
+    updatingMenu: "Mise à jour du menu réel...",
   },
 } as const;
 
