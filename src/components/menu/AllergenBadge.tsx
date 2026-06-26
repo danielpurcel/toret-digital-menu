@@ -10,6 +10,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
 
 interface Props {
   allergen: string;
@@ -23,13 +24,18 @@ export const AllergenBadge = ({ allergen, locale, compact = false }: Props) => {
   const description = allergenDescriptions[key]?.[locale];
   const iconPath = allergenIconPaths[key];
   const sizeClass = compact ? "h-9 w-9" : "h-10 w-10";
+  const iconClass =
+    "h-full w-full rounded-full object-contain p-0.5 [filter:none]";
 
   return (
     <Popover>
       <PopoverTrigger asChild>
         <button
           type="button"
-          className={`${sizeClass} inline-flex shrink-0 items-center justify-center rounded-full bg-toret-paper transition-transform active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-toret-gold-warm focus-visible:ring-offset-2`}
+          className={cn(
+            sizeClass,
+            "inline-flex shrink-0 items-center justify-center rounded-full border border-toret-gold/30 bg-toret-paper transition-transform active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-toret-gold-warm focus-visible:ring-offset-2",
+          )}
           title={label}
           aria-label={description ? `${label}: ${description}` : label}
         >
@@ -37,7 +43,7 @@ export const AllergenBadge = ({ allergen, locale, compact = false }: Props) => {
             <img
               src={iconPath}
               alt=""
-              className="h-full w-full rounded-full object-cover"
+              className={iconClass}
               loading="lazy"
               aria-hidden="true"
             />
@@ -54,7 +60,7 @@ export const AllergenBadge = ({ allergen, locale, compact = false }: Props) => {
             <img
               src={iconPath}
               alt=""
-              className="h-10 w-10 shrink-0 rounded-full object-cover"
+              className="h-10 w-10 shrink-0 rounded-full border border-toret-gold/30 bg-toret-paper object-contain p-0.5 [filter:none]"
               aria-hidden="true"
             />
           )}
