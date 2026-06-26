@@ -32,8 +32,21 @@ export const Header = ({ transparent }: { transparent?: boolean }) => {
       )}
     >
       <div className="relative flex items-center justify-between px-4 h-full">
-        {/* Left spacer */}
-        <div className="w-9 shrink-0" />
+        {/* Left: back button */}
+        {showBack ? (
+          <button
+            aria-label="Indietro"
+            onClick={() => navigate(-1)}
+            className={cn(
+              "h-9 w-9 rounded-full inline-flex items-center justify-center warm-border bg-toret-paper hover:bg-toret-cream transition-colors shrink-0",
+              transparent && "bg-toret-paper/90",
+            )}
+          >
+            <ChevronLeft className="h-[14px] w-[14px] text-toret-ink" strokeWidth={1.5} />
+          </button>
+        ) : (
+          <div className="w-9 shrink-0" />
+        )}
 
         {/* Center: logo + name */}
         <Link
