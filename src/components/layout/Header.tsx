@@ -1,4 +1,4 @@
-import { Search, Globe } from "lucide-react";
+import { Globe } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { siteConfig, type Locale } from "@/data/siteConfig";
