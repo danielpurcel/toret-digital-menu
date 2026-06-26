@@ -1,8 +1,8 @@
 import {
-  products as fallbackProducts,
   type MacroCategory,
   type Product,
 } from "@/data/menu";
+import { importedProducts as fallbackProducts } from "@/data/importedProducts";
 
 const XANO_ENDPOINT =
   import.meta.env.VITE_XANO_ERP_ENDPOINT ||
@@ -88,7 +88,12 @@ const fetchPage = async (page: number) => {
       "Content-Type": "application/json",
       "x-api-key": XANO_API_KEY,
     },
-    body: JSON.stringify({ action: "list", table: "menu_products", page }),
+    body: JSON.stringify({
+      action: "list",
+      table: "menu_products",
+      limit: 100,
+      offset: (page - 1) * 100,
+    }),
   });
 
   if (!response.ok) throw new Error(`Xano menu request failed: ${response.status}`);

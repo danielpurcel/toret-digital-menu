@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchXanoMenuProducts } from "@/data/xanoMenu";
 import {
-  products as fallbackProducts,
   type MacroCategory,
   type Product,
 } from "@/data/menu";
+import { importedProducts } from "@/data/importedProducts";
 
 export const useMenuProducts = () =>
   useQuery({
@@ -13,7 +13,7 @@ export const useMenuProducts = () =>
     staleTime: 1000 * 60 * 10,
     gcTime: 1000 * 60 * 30,
     retry: 1,
-    initialData: fallbackProducts,
+    initialData: importedProducts,
   });
 
 export const byMacro = (items: Product[], macro: MacroCategory) =>

@@ -24,7 +24,7 @@ export interface Translations {
 export interface Product {
   id: string;
   xanoId?: number;
-  source?: "static" | "xano";
+  source?: "static" | "xano" | "xano-import";
   macroCategory: MacroCategory;
   category: string; // e.g. "caffetteria", "dolci"
   name: string;
