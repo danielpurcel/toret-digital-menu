@@ -85,6 +85,9 @@ const categoryMap: Record<number, { macroCategory: MacroCategory; category: stri
 /** ID da SKIPPARE (non vanno nel menu) */
 const CATEGORIES_TO_SKIP = new Set([4]); // Generali
 
+/** Prodotti Xano da mostrare come featured (suggeriti) */
+const FEATURED_IDS = new Set([26, 28, 29, 44, 54, 70, 71, 75]);
+
 const slugify = (value: string) =>
   value
     .normalize("NFD")
@@ -132,6 +135,7 @@ const toProduct = (item: XanoProduct): Product | null => {
     price: Number.isFinite(price) ? price : 0,
     image: item.image_url || undefined,
     available: true,
+    featured: FEATURED_IDS.has(item.id),
     allergens: parseAllergens(item.allergens),
     translations: {
       it: { name: item.name, description },
