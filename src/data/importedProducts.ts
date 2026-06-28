@@ -89,7 +89,7 @@ export const importedProducts: Product[] = [
     macroCategory: "colazione",
     category: "caffetteria",
     name: "Caffè Decaffeinato",
-    description: "Tutto l'aroma del nostro espresso Costadoro, senza caffeina. Decaffeinato naturale",
+    description: "Tutto l'aroma del nostro espresso Costadoro Lab, senza caffeina. Decaffeinato naturale",
     price: 1.5,
     available: true,
     translations: {
@@ -121,7 +121,7 @@ export const importedProducts: Product[] = [
     macroCategory: "colazione",
     category: "caffetteria",
     name: "Vaniglia iced coffee",
-    description: "Caffè freddo Costadoro con latte e vaniglia. Cremoso, rinfrescante e avvolgente",
+    description: "Caffè freddo Costadoro Lab con latte e vaniglia. Cremoso, rinfrescante e avvolgente",
     price: 2.5,
     available: true,
     translations: {
@@ -201,7 +201,7 @@ export const importedProducts: Product[] = [
     macroCategory: "colazione",
     category: "caffetteria",
     name: "Caffè",
-    description: "Espresso 100% Arabica Costadoro, estratto al momento per un gusto intenso e avvolgente",
+    description: "Espresso 100% Arabica Costadoro Lab, estratto al momento per un gusto intenso e avvolgente",
     price: 1.3,
     available: true,
     featured: true,
@@ -282,7 +282,7 @@ export const importedProducts: Product[] = [
     macroCategory: "colazione",
     category: "caffetteria",
     name: "Crema caffè Piccola",
-    description: "Crema d'oro Costadoro, una deliziosa mousse di caffè da gustare al cucchiaio",
+    description: "Crema d'oro Costadoro Lab, una deliziosa mousse di caffè da gustare al cucchiaio",
     price: 2.5,
     available: true,
     translations: {
@@ -330,7 +330,7 @@ export const importedProducts: Product[] = [
     macroCategory: "colazione",
     category: "caffetteria",
     name: "Caffè corretto",
-    description: "Caffè espresso Costadoro con una selezione di liquori. Perfetto dopo pasto",
+    description: "Caffè espresso Costadoro Lab con una selezione di liquori. Perfetto dopo pasto",
     price: 1.6,
     available: true,
     translations: {
@@ -751,7 +751,7 @@ export const importedProducts: Product[] = [
     macroCategory: "colazione",
     category: "caffetteria",
     name: "Caramel iced coffee",
-    description: "Caffè freddo Costadoro con latte e sciroppo al caramello. Dolce e rinfrescante",
+    description: "Caffè freddo Costadoro Lab con latte e sciroppo al caramello. Dolce e rinfrescante",
     price: 2.5,
     available: true,
     translations: {
@@ -767,7 +767,7 @@ export const importedProducts: Product[] = [
     macroCategory: "colazione",
     category: "caffetteria",
     name: "Caffè leccese",
-    description: "Caffè espresso Costadoro con latte di mandorla e ghiaccio. Freschezza salentina in città",
+    description: "Caffè espresso Costadoro Lab con latte di mandorla e ghiaccio. Freschezza salentina in città",
     price: 2.5,
     available: true,
     translations: {
@@ -783,7 +783,7 @@ export const importedProducts: Product[] = [
     macroCategory: "colazione",
     category: "caffetteria",
     name: "Espresso tonic",
-    description: "Espresso Costadoro con tonica e ghiaccio. L'aperitivo che non ti aspetti",
+    description: "Espresso Costadoro Lab con tonica e ghiaccio. L'aperitivo che non ti aspetti",
     price: 3.5,
     available: true,
     translations: {
@@ -799,7 +799,7 @@ export const importedProducts: Product[] = [
     macroCategory: "colazione",
     category: "caffetteria",
     name: "Crema caffè Grande",
-    description: "Crema d'oro Costadoro in formato generoso. Un morbido abbraccio di caffè",
+    description: "Crema d'oro Costadoro Lab in formato generoso. Un morbido abbraccio di caffè",
     price: 4.0,
     available: true,
     translations: {
@@ -895,7 +895,7 @@ export const importedProducts: Product[] = [
     macroCategory: "colazione",
     category: "caffetteria",
     name: "Caffè shakerato",
-    description: "Espresso Costadoro shakerato con ghiaccio. Schiumoso, freddo, intenso",
+    description: "Espresso Costadoro Lab shakerato con ghiaccio. Schiumoso, freddo, intenso",
     price: 2.5,
     available: true,
     translations: {
