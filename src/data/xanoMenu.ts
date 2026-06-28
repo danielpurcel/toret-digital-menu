@@ -26,6 +26,12 @@ interface XanoProduct {
   is_active?: boolean;
   image_url?: string | null;
   allergens?: string[] | string | null;
+  name_en?: string | null;
+  name_fr?: string | null;
+  name_es?: string | null;
+  description_en?: string | null;
+  description_fr?: string | null;
+  description_es?: string | null;
 }
 
 interface XanoListResponse {
@@ -108,6 +114,13 @@ const toProduct = (item: XanoProduct): Product | null => {
   const description = item.description || "Prodotto del giorno Caffè Torèt.";
   const id = `xano-${item.id}-${slugify(item.name)}`;
 
+  const nameEN = item.name_en?.trim() || item.name;
+  const nameFR = item.name_fr?.trim() || item.name;
+  const nameES = item.name_es?.trim() || item.name;
+  const descEN = item.description_en?.trim() || description;
+  const descFR = item.description_fr?.trim() || description;
+  const descES = item.description_es?.trim() || description;
+
   return {
     id,
     xanoId: item.id,
@@ -122,8 +135,9 @@ const toProduct = (item: XanoProduct): Product | null => {
     allergens: parseAllergens(item.allergens),
     translations: {
       it: { name: item.name, description },
-      en: { name: item.name, description },
-      fr: { name: item.name, description },
+      en: { name: nameEN, description: descEN },
+      fr: { name: nameFR, description: descFR },
+      es: { name: nameES, description: descES },
     },
   };
 };
