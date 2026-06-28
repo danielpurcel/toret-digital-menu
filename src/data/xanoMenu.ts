@@ -1,13 +1,21 @@
+/**
+ * xanoMenu.ts — Caricamento menu da Xano tramite proxy sicuro Cloudflare.
+ *
+ * MODIFICHE RISPETTO ALLA VERSIONE PRECEDENTE:
+ * 1. Chiama /api/menu (Cloudflare Pages Functions) invece di Xano direttamente
+ *    → La VITE_XANO_API_KEY NON viene più passata al frontend (sicurezza!)
+ * 2. Category mapping più specifico: i category_id Xano vengono mappati
+ *    alle macro-categorie e categorie del frontend
+ * 3. I prodotti con category_id = 4 (Generali) vengono scartati
+ */
 import {
   type MacroCategory,
   type Product,
 } from "@/data/menu";
 import { importedProducts as fallbackProducts } from "@/data/importedProducts";
 
-const XANO_ENDPOINT =
-  import.meta.env.VITE_XANO_ERP_ENDPOINT ||
-  "https://x8ki-letl-twmt.n7.xano.io/api:gubKa7ve/Erp";
-const XANO_API_KEY = import.meta.env.VITE_XANO_API_KEY;
+// Endpoint del proxy Cloudflare Pages Functions (server-side)
+const MENU_PROXY_ENDPOINT = "/api/menu";
 
 interface XanoProduct {
   id: number;
@@ -25,11 +33,51 @@ interface XanoListResponse {
   nextPage?: number | null;
 }
 
+/**
+ * Mappatura category_id → macro-categoria + categoria frontend.
+ *
+ * I category_id fanno riferimento alla tabella `categorie_menu` (ID 842100).
+ * NOTA: Questa mappatura potrebbe necessitare di aggiornamenti se Xano
+ * restituisce category_id non elencati qui. In produzione, loggare
+ * category_id sconosciuti e segnalarli.
+ */
 const categoryMap: Record<number, { macroCategory: MacroCategory; category: string }> = {
-  1: { macroCategory: "colazione", category: "caffetteria" },
-  2: { macroCategory: "pranzo", category: "piatti-caldi" },
-  3: { macroCategory: "aperitivo", category: "drink" },
+  // Colazione / Caffetteria
+  1:  { macroCategory: "colazione", category: "caffetteria" },
+  // Pranzo / Piatti caldi
+  2:  { macroCategory: "pranzo",    category: "piatti-caldi" },
+  // Aperitivo / Drink
+  3:  { macroCategory: "aperitivo", category: "drink" },
+  // Generali → skip (non vanno nel menu pubblico)
+  4:  { macroCategory: "pranzo",    category: "piatti-caldi" }, // placeholder, filtrato dopo
+
+  // --- NUOVI MAPPING ---
+  // Bevande calde / colazione (caffè lungo, ecc.)
+  5:  { macroCategory: "colazione", category: "caffetteria" },
+  // Dolci colazione (cornetti, brioche)
+  6:  { macroCategory: "colazione", category: "dolci" },
+  // Vini / Aperitivo
+  7:  { macroCategory: "aperitivo", category: "vini" },
+  // Analcolici (aperitivo)
+  8:  { macroCategory: "aperitivo", category: "analcolici" },
+  // Taglieri (aperitivo)
+  9:  { macroCategory: "aperitivo", category: "taglieri" },
+  // Panini (pranzo)
+  10: { macroCategory: "pranzo",    category: "panini" },
+  // Insalate (pranzo)
+  11: { macroCategory: "pranzo",    category: "insalate" },
+  // Dolci (pranzo)
+  12: { macroCategory: "pranzo",    category: "dolci" },
+  // Bevande (colazione — spremute, frullati)
+  13: { macroCategory: "colazione", category: "bevande" },
+  // Bevande (pranzo — acqua, bibite)
+  14: { macroCategory: "pranzo",    category: "bevande" },
+  // Salato (colazione — toast, tramezzini colazione)
+  15: { macroCategory: "colazione", category: "salato" },
 };
+
+/** ID da SKIPPARE (non vanno nel menu) */
+const CATEGORIES_TO_SKIP = new Set([4]); // Generali
 
 const slugify = (value: string) =>
   value
@@ -53,10 +101,9 @@ const parseAllergens = (value: XanoProduct["allergens"]) => {
 const toProduct = (item: XanoProduct): Product | null => {
   if (!item.name || item.is_active === false) return null;
 
-  const category = categoryMap[item.category_id ?? 0] ?? {
-    macroCategory: "pranzo" as MacroCategory,
-    category: "piatti-caldi",
-  };
+  const category = categoryMap[item.category_id ?? 0];
+  if (!category || CATEGORIES_TO_SKIP.has(item.category_id ?? 0)) return null;
+
   const price = Number(item.price ?? 0);
   const description = item.description || "Prodotto del giorno Caffè Torèt.";
   const id = `xano-${item.id}-${slugify(item.name)}`;
@@ -82,27 +129,26 @@ const toProduct = (item: XanoProduct): Product | null => {
 };
 
 const fetchPage = async (page: number) => {
-  const response = await fetch(XANO_ENDPOINT, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": XANO_API_KEY,
-    },
-    body: JSON.stringify({
-      action: "list",
-      table: "menu_products",
-      limit: 100,
-      offset: (page - 1) * 100,
-    }),
+  const baseUrl = MENU_PROXY_ENDPOINT;
+  const params = new URLSearchParams({
+    limit: "100",
+    offset: String((page - 1) * 100),
   });
 
-  if (!response.ok) throw new Error(`Xano menu request failed: ${response.status}`);
+  const response = await fetch(`${baseUrl}?${params}`, {
+    method: "GET",
+    headers: {
+      "Accept": "application/json",
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Menu proxy request failed: ${response.status}`);
+  }
   return (await response.json()) as XanoListResponse;
 };
 
 export const fetchXanoMenuProducts = async () => {
-  if (!XANO_API_KEY) return fallbackProducts;
-
   const items: XanoProduct[] = [];
   let page = 1;
 

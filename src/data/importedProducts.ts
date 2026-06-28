@@ -8,13 +8,13 @@ export const importedProducts: Product[] = [
     macroCategory: "pranzo",
     category: "piatti-caldi",
     name: "Riso basmati, quinoa e bulgur con rucola, bresaola e grana",
-    description: "Insalata di riso basmati, quinoa e bulgur con rucola, bresaola e scaglie di grana. Fresco e nutriente",
+    description: "Acqua, limone fresco e menta. La nostra acqua Torèt Fresh, dissetante e naturale",
     price: 8.0,
     available: true,
     translations: {
-      it: { name: "Riso basmati, quinoa e bulgur con rucola, bresaola e grana", description: "Tavola calda - tutti i giorni" },
-      en: { name: "Riso basmati, quinoa e bulgur con rucola, bresaola e grana", description: "Tavola calda - tutti i giorni" },
-      fr: { name: "Riso basmati, quinoa e bulgur con rucola, bresaola e grana", description: "Tavola calda - tutti i giorni" },
+      it: { name: "Riso basmati, quinoa e bulgur con rucola, bresaola e grana", description: "Acqua, limone fresco e menta. La nostra acqua Torèt Fresh, dissetante e naturale" },
+      en: { name: "Riso basmati, quinoa e bulgur con rucola, bresaola e grana", description: "Acqua, limone fresco e menta. La nostra acqua Torèt Fresh, dissetante e naturale" },
+      fr: { name: "Riso basmati, quinoa e bulgur con rucola, bresaola e grana", description: "Acqua, limone fresco e menta. La nostra acqua Torèt Fresh, dissetante e naturale" },
     },
   },
   {
@@ -28,9 +28,9 @@ export const importedProducts: Product[] = [
     price: 9.0,
     available: true,
     translations: {
-      it: { name: "Scaloppine di vitello, grana, rucola e pomodori", description: "Tavola calda - tutti i giorni" },
-      en: { name: "Scaloppine di vitello, grana, rucola e pomodori", description: "Tavola calda - tutti i giorni" },
-      fr: { name: "Scaloppine di vitello, grana, rucola e pomodori", description: "Tavola calda - tutti i giorni" },
+      it: { name: "Scaloppine di vitello, grana, rucola e pomodori", description: "Scaloppine di vitello saltate in padella con grana, rucola e pomodori. Un grande classico" },
+      en: { name: "Scaloppine di vitello, grana, rucola e pomodori", description: "Scaloppine di vitello saltate in padella con grana, rucola e pomodori. Un grande classico" },
+      fr: { name: "Scaloppine di vitello, grana, rucola e pomodori", description: "Scaloppine di vitello saltate in padella con grana, rucola e pomodori. Un grande classico" },
     },
   },
   {
@@ -44,9 +44,9 @@ export const importedProducts: Product[] = [
     price: 6.0,
     available: true,
     translations: {
-      it: { name: "Frittata più contorni", description: "Tavola calda - tutti i giorni" },
-      en: { name: "Frittata più contorni", description: "Tavola calda - tutti i giorni" },
-      fr: { name: "Frittata più contorni", description: "Tavola calda - tutti i giorni" },
+      it: { name: "Frittata più contorni", description: "Frittata fresca accompagnata da una selezione di contorni di stagione" },
+      en: { name: "Frittata più contorni", description: "Frittata fresca accompagnata da una selezione di contorni di stagione" },
+      fr: { name: "Frittata più contorni", description: "Frittata fresca accompagnata da una selezione di contorni di stagione" },
     },
   },
   {
@@ -77,9 +77,9 @@ export const importedProducts: Product[] = [
     available: true,
     featured: true,
     translations: {
-      it: { name: "Cocktail", description: "Prodotto Caffè Torèt." },
-      en: { name: "Cocktail", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Cocktail", description: "Prodotto Caffè Torèt." },
+      it: { name: "Cocktail", description: "I nostri cocktail preparati al momento con ingredienti freschi. Scegli il tuo preferito" },
+      en: { name: "Cocktail", description: "I nostri cocktail preparati al momento con ingredienti freschi. Scegli il tuo preferito" },
+      fr: { name: "Cocktail", description: "I nostri cocktail preparati al momento con ingredienti freschi. Scegli il tuo preferito" },
     },
   },
   {
@@ -93,9 +93,9 @@ export const importedProducts: Product[] = [
     price: 1.5,
     available: true,
     translations: {
-      it: { name: "Caffè Decaffeinato", description: "Prodotto Caffè Torèt." },
-      en: { name: "Caffè Decaffeinato", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Caffè Decaffeinato", description: "Prodotto Caffè Torèt." },
+      it: { name: "Caffè Decaffeinato", description: "Tutto l'aroma del nostro espresso Costadoro Lab, senza caffeina. Decaffeinato naturale" },
+      en: { name: "Caffè Decaffeinato", description: "Tutto l'aroma del nostro espresso Costadoro Lab, senza caffeina. Decaffeinato naturale" },
+      fr: { name: "Caffè Decaffeinato", description: "Tutto l'aroma del nostro espresso Costadoro Lab, senza caffeina. Decaffeinato naturale" },
     },
   },
   {
@@ -109,9 +109,9 @@ export const importedProducts: Product[] = [
     price: 6.0,
     available: true,
     translations: {
-      it: { name: "Frittata", description: "Prodotto Caffè Torèt." },
-      en: { name: "Frittata", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Frittata", description: "Prodotto Caffè Torèt." },
+      it: { name: "Frittata", description: "Frittata fresca preparata con uova di qualità. Semplice, genuina e gustosa" },
+      en: { name: "Frittata", description: "Frittata fresca preparata con uova di qualità. Semplice, genuina e gustosa" },
+      fr: { name: "Frittata", description: "Frittata fresca preparata con uova di qualità. Semplice, genuina e gustosa" },
     },
   },
   {
@@ -125,9 +125,9 @@ export const importedProducts: Product[] = [
     price: 2.5,
     available: true,
     translations: {
-      it: { name: "Vaniglia iced coffee", description: "Prodotto Caffè Torèt." },
-      en: { name: "Vaniglia iced coffee", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Vaniglia iced coffee", description: "Prodotto Caffè Torèt." },
+      it: { name: "Vaniglia iced coffee", description: "Caffè freddo Costadoro Lab con latte e vaniglia. Cremoso, rinfrescante e avvolgente" },
+      en: { name: "Vaniglia iced coffee", description: "Caffè freddo Costadoro Lab con latte e vaniglia. Cremoso, rinfrescante e avvolgente" },
+      fr: { name: "Vaniglia iced coffee", description: "Caffè freddo Costadoro Lab con latte e vaniglia. Cremoso, rinfrescante e avvolgente" },
     },
   },
   {
@@ -141,9 +141,9 @@ export const importedProducts: Product[] = [
     price: 2.5,
     available: true,
     translations: {
-      it: { name: "Mignon", description: "Prodotto Caffè Torèt." },
-      en: { name: "Mignon", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Mignon", description: "Prodotto Caffè Torèt." },
+      it: { name: "Mignon", description: "Porzione piccola e sfiziosa, ideale per un morso goloso in ogni momento" },
+      en: { name: "Mignon", description: "Porzione piccola e sfiziosa, ideale per un morso goloso in ogni momento" },
+      fr: { name: "Mignon", description: "Porzione piccola e sfiziosa, ideale per un morso goloso in ogni momento" },
     },
   },
   {
@@ -157,9 +157,9 @@ export const importedProducts: Product[] = [
     price: 5.0,
     available: true,
     translations: {
-      it: { name: "Panino carne", description: "Prodotto Caffè Torèt." },
-      en: { name: "Panino carne", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Panino carne", description: "Prodotto Caffè Torèt." },
+      it: { name: "Panino carne", description: "Panino farcito con carne, insalata e pomodoro. Saporito e sostanzioso" },
+      en: { name: "Panino carne", description: "Panino farcito con carne, insalata e pomodoro. Saporito e sostanzioso" },
+      fr: { name: "Panino carne", description: "Panino farcito con carne, insalata e pomodoro. Saporito e sostanzioso" },
     },
   },
   {
@@ -173,9 +173,9 @@ export const importedProducts: Product[] = [
     price: 2.5,
     available: true,
     translations: {
-      it: { name: "Tramezzino", description: "Prodotto Caffè Torèt." },
-      en: { name: "Tramezzino", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Tramezzino", description: "Prodotto Caffè Torèt." },
+      it: { name: "Tramezzino", description: "Tramezzino fresco farcito con ingredienti di qualità. Leggero e gustoso" },
+      en: { name: "Tramezzino", description: "Tramezzino fresco farcito con ingredienti di qualità. Leggero e gustoso" },
+      fr: { name: "Tramezzino", description: "Tramezzino fresco farcito con ingredienti di qualità. Leggero e gustoso" },
     },
   },
   {
@@ -189,9 +189,9 @@ export const importedProducts: Product[] = [
     price: 3.5,
     available: true,
     translations: {
-      it: { name: "Prosecco DOC Extra Dry", description: "Prodotto Caffè Torèt." },
-      en: { name: "Prosecco DOC Extra Dry", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Prosecco DOC Extra Dry", description: "Prodotto Caffè Torèt." },
+      it: { name: "Prosecco DOC Extra Dry", description: "Prosecco DOC Extra Dry, fresco e frizzante. Il calice perfetto per l'aperitivo" },
+      en: { name: "Prosecco DOC Extra Dry", description: "Prosecco DOC Extra Dry, fresco e frizzante. Il calice perfetto per l'aperitivo" },
+      fr: { name: "Prosecco DOC Extra Dry", description: "Prosecco DOC Extra Dry, fresco e frizzante. Il calice perfetto per l'aperitivo" },
     },
   },
   {
@@ -206,9 +206,9 @@ export const importedProducts: Product[] = [
     available: true,
     featured: true,
     translations: {
-      it: { name: "Caffè", description: "Prodotto Caffè Torèt." },
-      en: { name: "Caffè", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Caffè", description: "Prodotto Caffè Torèt." },
+      it: { name: "Caffè", description: "Espresso 100% Arabica Costadoro Lab, estratto al momento per un gusto intenso e avvolgente" },
+      en: { name: "Caffè", description: "Espresso 100% Arabica Costadoro Lab, estratto al momento per un gusto intenso e avvolgente" },
+      fr: { name: "Caffè", description: "Espresso 100% Arabica Costadoro Lab, estratto al momento per un gusto intenso e avvolgente" },
     },
   },
   {
@@ -270,9 +270,9 @@ export const importedProducts: Product[] = [
     price: 1.8,
     available: true,
     translations: {
-      it: { name: "Latte macchiato", description: "Prodotto Caffè Torèt." },
-      en: { name: "Latte macchiato", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Latte macchiato", description: "Prodotto Caffè Torèt." },
+      it: { name: "Latte macchiato", description: "Latte caldo e cremoso con una macchia di caffè. Morbido e avvolgente" },
+      en: { name: "Latte macchiato", description: "Latte caldo e cremoso con una macchia di caffè. Morbido e avvolgente" },
+      fr: { name: "Latte macchiato", description: "Latte caldo e cremoso con una macchia di caffè. Morbido e avvolgente" },
     },
   },
   {
@@ -286,9 +286,9 @@ export const importedProducts: Product[] = [
     price: 2.5,
     available: true,
     translations: {
-      it: { name: "Crema caffè Piccola", description: "Prodotto Caffè Torèt." },
-      en: { name: "Crema caffè Piccola", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Crema caffè Piccola", description: "Prodotto Caffè Torèt." },
+      it: { name: "Crema caffè Piccola", description: "Crema d'oro Costadoro Lab, una deliziosa mousse di caffè da gustare al cucchiaio" },
+      en: { name: "Crema caffè Piccola", description: "Crema d'oro Costadoro Lab, una deliziosa mousse di caffè da gustare al cucchiaio" },
+      fr: { name: "Crema caffè Piccola", description: "Crema d'oro Costadoro Lab, una deliziosa mousse di caffè da gustare al cucchiaio" },
     },
   },
   {
@@ -351,9 +351,9 @@ export const importedProducts: Product[] = [
     available: true,
     featured: true,
     translations: {
-      it: { name: "Spremuta", description: "Prodotto Caffè Torèt." },
-      en: { name: "Spremuta", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Spremuta", description: "Prodotto Caffè Torèt." },
+      it: { name: "Spremuta", description: "Spremuta d'arancia fresca preparata al momento. Vitamina C allo stato puro" },
+      en: { name: "Spremuta", description: "Spremuta d'arancia fresca preparata al momento. Vitamina C allo stato puro" },
+      fr: { name: "Spremuta", description: "Spremuta d'arancia fresca preparata al momento. Vitamina C allo stato puro" },
     },
   },
   {
@@ -367,9 +367,9 @@ export const importedProducts: Product[] = [
     price: 1.4,
     available: true,
     translations: {
-      it: { name: "Orzo/Ginseng Piccolo", description: "Prodotto Caffè Torèt." },
-      en: { name: "Orzo/Ginseng Piccolo", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Orzo/Ginseng Piccolo", description: "Prodotto Caffè Torèt." },
+      it: { name: "Orzo/Ginseng Piccolo", description: "Orzo o ginseng caldo e avvolgente. L'alternativa dolce al caffè" },
+      en: { name: "Orzo/Ginseng Piccolo", description: "Orzo o ginseng caldo e avvolgente. L'alternativa dolce al caffè" },
+      fr: { name: "Orzo/Ginseng Piccolo", description: "Orzo o ginseng caldo e avvolgente. L'alternativa dolce al caffè" },
     },
   },
   {
@@ -399,9 +399,9 @@ export const importedProducts: Product[] = [
     price: 2.5,
     available: true,
     translations: {
-      it: { name: "Tè/Infuso", description: "Prodotto Caffè Torèt." },
-      en: { name: "Tè/Infuso", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Tè/Infuso", description: "Prodotto Caffè Torèt." },
+      it: { name: "Tè/Infuso", description: "Selezione di tè e infusi caldi, per una pausa leggera e profumata" },
+      en: { name: "Tè/Infuso", description: "Selezione di tè e infusi caldi, per una pausa leggera e profumata" },
+      fr: { name: "Tè/Infuso", description: "Selezione di tè e infusi caldi, per una pausa leggera e profumata" },
     },
   },
   {
@@ -415,9 +415,9 @@ export const importedProducts: Product[] = [
     price: 5.0,
     available: true,
     translations: {
-      it: { name: "Frullato di frutta fresca", description: "Prodotto Caffè Torèt." },
-      en: { name: "Frullato di frutta fresca", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Frullato di frutta fresca", description: "Prodotto Caffè Torèt." },
+      it: { name: "Frullato di frutta fresca", description: "Frullato cremoso preparato al momento con frutta fresca di stagione. Tutta la bontà della natura" },
+      en: { name: "Frullato di frutta fresca", description: "Frullato cremoso preparato al momento con frutta fresca di stagione. Tutta la bontà della natura" },
+      fr: { name: "Frullato di frutta fresca", description: "Frullato cremoso preparato al momento con frutta fresca di stagione. Tutta la bontà della natura" },
     },
   },
   {
@@ -447,9 +447,9 @@ export const importedProducts: Product[] = [
     price: 2.5,
     available: true,
     translations: {
-      it: { name: "Succo frutta", description: "Prodotto Caffè Torèt." },
-      en: { name: "Succo frutta", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Succo frutta", description: "Prodotto Caffè Torèt." },
+      it: { name: "Succo frutta", description: "Succo di frutta di alta qualità, perfetto per una pausa leggera e dissetante" },
+      en: { name: "Succo frutta", description: "Succo di frutta di alta qualità, perfetto per una pausa leggera e dissetante" },
+      fr: { name: "Succo frutta", description: "Succo di frutta di alta qualità, perfetto per una pausa leggera e dissetante" },
     },
   },
   {
@@ -480,9 +480,9 @@ export const importedProducts: Product[] = [
     price: 4.0,
     available: true,
     translations: {
-      it: { name: "Toast", description: "Prodotto Caffè Torèt." },
-      en: { name: "Toast", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Toast", description: "Prodotto Caffè Torèt." },
+      it: { name: "Toast", description: "Toast caldo croccante con prosciutto cotto e formaggio filante. Sempre una garanzia" },
+      en: { name: "Toast", description: "Toast caldo croccante con prosciutto cotto e formaggio filante. Sempre una garanzia" },
+      fr: { name: "Toast", description: "Toast caldo croccante con prosciutto cotto e formaggio filante. Sempre una garanzia" },
     },
   },
   {
@@ -675,9 +675,9 @@ export const importedProducts: Product[] = [
     available: true,
     featured: true,
     translations: {
-      it: { name: "Bicerin", description: "Prodotto Caffè Torèt." },
-      en: { name: "Bicerin", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Bicerin", description: "Prodotto Caffè Torèt." },
+      it: { name: "Bicerin", description: "Storico bicerin torinese: caffè Costadoro Lab, cioccolata e crema di latte. Dal 1763, una tradizione" },
+      en: { name: "Bicerin", description: "Storico bicerin torinese: caffè Costadoro Lab, cioccolata e crema di latte. Dal 1763, una tradizione" },
+      fr: { name: "Bicerin", description: "Storico bicerin torinese: caffè Costadoro Lab, cioccolata e crema di latte. Dal 1763, una tradizione" },
     },
   },
   {
@@ -691,9 +691,9 @@ export const importedProducts: Product[] = [
     price: 3.5,
     available: true,
     translations: {
-      it: { name: "Cioccolata calda", description: "Prodotto Caffè Torèt." },
-      en: { name: "Cioccolata calda", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Cioccolata calda", description: "Prodotto Caffè Torèt." },
+      it: { name: "Cioccolata calda", description: "Cioccolata calda densa e avvolgente, preparata con cacao pregiato. Una coccola vera" },
+      en: { name: "Cioccolata calda", description: "Cioccolata calda densa e avvolgente, preparata con cacao pregiato. Una coccola vera" },
+      fr: { name: "Cioccolata calda", description: "Cioccolata calda densa e avvolgente, preparata con cacao pregiato. Una coccola vera" },
     },
   },
   {
@@ -707,9 +707,9 @@ export const importedProducts: Product[] = [
     price: 4.0,
     available: true,
     translations: {
-      it: { name: "Cioccolata calda con panna", description: "Prodotto Caffè Torèt." },
-      en: { name: "Cioccolata calda con panna", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Cioccolata calda con panna", description: "Prodotto Caffè Torèt." },
+      it: { name: "Cioccolata calda con panna", description: "Cioccolata calda arricchita con panna montata fresca. Il massimo della golosità" },
+      en: { name: "Cioccolata calda con panna", description: "Cioccolata calda arricchita con panna montata fresca. Il massimo della golosità" },
+      fr: { name: "Cioccolata calda con panna", description: "Cioccolata calda arricchita con panna montata fresca. Il massimo della golosità" },
     },
   },
   {
@@ -723,9 +723,9 @@ export const importedProducts: Product[] = [
     price: 1.6,
     available: true,
     translations: {
-      it: { name: "Orzo/Ginseng Grande", description: "Prodotto Caffè Torèt." },
-      en: { name: "Orzo/Ginseng Grande", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Orzo/Ginseng Grande", description: "Prodotto Caffè Torèt." },
+      it: { name: "Orzo/Ginseng Grande", description: "Orzo o ginseng caldo in formato grande. Gusto pieno e avvolgente" },
+      en: { name: "Orzo/Ginseng Grande", description: "Orzo o ginseng caldo in formato grande. Gusto pieno e avvolgente" },
+      fr: { name: "Orzo/Ginseng Grande", description: "Orzo o ginseng caldo in formato grande. Gusto pieno e avvolgente" },
     },
   },
   {
@@ -739,9 +739,9 @@ export const importedProducts: Product[] = [
     price: 1.7,
     available: true,
     translations: {
-      it: { name: "Cappuccino soia/vena", description: "deck/ginseng/orzo" },
-      en: { name: "Cappuccino soia/vena", description: "deck/ginseng/orzo" },
-      fr: { name: "Cappuccino soia/vena", description: "deck/ginseng/orzo" },
+      it: { name: "Cappuccino soia/vena", description: "Cappuccino con latte di soia o avena. Leggero e gustoso, per ogni esigenza" },
+      en: { name: "Cappuccino soia/vena", description: "Cappuccino con latte di soia o avena. Leggero e gustoso, per ogni esigenza" },
+      fr: { name: "Cappuccino soia/vena", description: "Cappuccino con latte di soia o avena. Leggero e gustoso, per ogni esigenza" },
     },
   },
   {
@@ -755,9 +755,9 @@ export const importedProducts: Product[] = [
     price: 2.5,
     available: true,
     translations: {
-      it: { name: "Caramel iced coffee", description: "Prodotto Caffè Torèt." },
-      en: { name: "Caramel iced coffee", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Caramel iced coffee", description: "Prodotto Caffè Torèt." },
+      it: { name: "Caramel iced coffee", description: "Caffè freddo Costadoro Lab con latte e sciroppo al caramello. Dolce e rinfrescante" },
+      en: { name: "Caramel iced coffee", description: "Caffè freddo Costadoro Lab con latte e sciroppo al caramello. Dolce e rinfrescante" },
+      fr: { name: "Caramel iced coffee", description: "Caffè freddo Costadoro Lab con latte e sciroppo al caramello. Dolce e rinfrescante" },
     },
   },
   {
@@ -771,9 +771,9 @@ export const importedProducts: Product[] = [
     price: 2.5,
     available: true,
     translations: {
-      it: { name: "Caffè leccese", description: "Prodotto Caffè Torèt." },
-      en: { name: "Caffè leccese", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Caffè leccese", description: "Prodotto Caffè Torèt." },
+      it: { name: "Caffè leccese", description: "Caffè espresso Costadoro Lab con latte di mandorla e ghiaccio. Freschezza salentina in città" },
+      en: { name: "Caffè leccese", description: "Caffè espresso Costadoro Lab con latte di mandorla e ghiaccio. Freschezza salentina in città" },
+      fr: { name: "Caffè leccese", description: "Caffè espresso Costadoro Lab con latte di mandorla e ghiaccio. Freschezza salentina in città" },
     },
   },
   {
@@ -787,9 +787,9 @@ export const importedProducts: Product[] = [
     price: 3.5,
     available: true,
     translations: {
-      it: { name: "Espresso tonic", description: "Prodotto Caffè Torèt." },
-      en: { name: "Espresso tonic", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Espresso tonic", description: "Prodotto Caffè Torèt." },
+      it: { name: "Espresso tonic", description: "Espresso Costadoro Lab con tonica e ghiaccio. L'aperitivo che non ti aspetti" },
+      en: { name: "Espresso tonic", description: "Espresso Costadoro Lab con tonica e ghiaccio. L'aperitivo che non ti aspetti" },
+      fr: { name: "Espresso tonic", description: "Espresso Costadoro Lab con tonica e ghiaccio. L'aperitivo che non ti aspetti" },
     },
   },
   {
@@ -803,9 +803,9 @@ export const importedProducts: Product[] = [
     price: 4.0,
     available: true,
     translations: {
-      it: { name: "Crema caffè Grande", description: "Prodotto Caffè Torèt." },
-      en: { name: "Crema caffè Grande", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Crema caffè Grande", description: "Prodotto Caffè Torèt." },
+      it: { name: "Crema caffè Grande", description: "Crema d'oro Costadoro Lab in formato generoso. Un morbido abbraccio di caffè" },
+      en: { name: "Crema caffè Grande", description: "Crema d'oro Costadoro Lab in formato generoso. Un morbido abbraccio di caffè" },
+      fr: { name: "Crema caffè Grande", description: "Crema d'oro Costadoro Lab in formato generoso. Un morbido abbraccio di caffè" },
     },
   },
   {
@@ -819,9 +819,9 @@ export const importedProducts: Product[] = [
     price: 4.0,
     available: true,
     translations: {
-      it: { name: "Iced matcha latte", description: "Prodotto Caffè Torèt." },
-      en: { name: "Iced matcha latte", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Iced matcha latte", description: "Prodotto Caffè Torèt." },
+      it: { name: "Iced matcha latte", description: "Tè matcha giapponese, latte e ghiaccio. Energia pura e gusto raffinato" },
+      en: { name: "Iced matcha latte", description: "Tè matcha giapponese, latte e ghiaccio. Energia pura e gusto raffinato" },
+      fr: { name: "Iced matcha latte", description: "Tè matcha giapponese, latte e ghiaccio. Energia pura e gusto raffinato" },
     },
   },
   {
@@ -835,9 +835,9 @@ export const importedProducts: Product[] = [
     price: 4.0,
     available: true,
     translations: {
-      it: { name: "Iced chai latte", description: "Prodotto Caffè Torèt." },
-      en: { name: "Iced chai latte", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Iced chai latte", description: "Prodotto Caffè Torèt." },
+      it: { name: "Iced chai latte", description: "Chai tea speziato con latte e ghiaccio. Un viaggio tra Oriente e Occidente" },
+      en: { name: "Iced chai latte", description: "Chai tea speziato con latte e ghiaccio. Un viaggio tra Oriente e Occidente" },
+      fr: { name: "Iced chai latte", description: "Chai tea speziato con latte e ghiaccio. Un viaggio tra Oriente e Occidente" },
     },
   },
   {
@@ -851,9 +851,9 @@ export const importedProducts: Product[] = [
     price: 2.5,
     available: true,
     translations: {
-      it: { name: "Semidolce", description: "Prodotto Caffè Torèt." },
-      en: { name: "Semidolce", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Semidolce", description: "Prodotto Caffè Torèt." },
+      it: { name: "Semidolce", description: "Dolce al cucchiaio, cremoso e delicato. Per concludere il pasto in dolcezza" },
+      en: { name: "Semidolce", description: "Dolce al cucchiaio, cremoso e delicato. Per concludere il pasto in dolcezza" },
+      fr: { name: "Semidolce", description: "Dolce al cucchiaio, cremoso e delicato. Per concludere il pasto in dolcezza" },
     },
   },
   {
@@ -867,9 +867,9 @@ export const importedProducts: Product[] = [
     price: 5.0,
     available: true,
     translations: {
-      it: { name: "Piadina", description: "Prodotto Caffè Torèt." },
-      en: { name: "Piadina", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Piadina", description: "Prodotto Caffè Torèt." },
+      it: { name: "Piadina", description: "Piadina calda farcita con prosciutto, formaggio e rucola. Saporita e croccante" },
+      en: { name: "Piadina", description: "Piadina calda farcita con prosciutto, formaggio e rucola. Saporita e croccante" },
+      fr: { name: "Piadina", description: "Piadina calda farcita con prosciutto, formaggio e rucola. Saporita e croccante" },
     },
   },
   {
@@ -883,9 +883,9 @@ export const importedProducts: Product[] = [
     price: 4.0,
     available: true,
     translations: {
-      it: { name: "Spremuta melograno", description: "Prodotto Caffè Torèt." },
-      en: { name: "Spremuta melograno", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Spremuta melograno", description: "Prodotto Caffè Torèt." },
+      it: { name: "Spremuta melograno", description: "Spremuta di melograno fresco. Antiossidante naturale dal gusto inconfondibile" },
+      en: { name: "Spremuta melograno", description: "Spremuta di melograno fresco. Antiossidante naturale dal gusto inconfondibile" },
+      fr: { name: "Spremuta melograno", description: "Spremuta di melograno fresco. Antiossidante naturale dal gusto inconfondibile" },
     },
   },
   {
@@ -899,9 +899,9 @@ export const importedProducts: Product[] = [
     price: 2.5,
     available: true,
     translations: {
-      it: { name: "Caffè shakerato", description: "Prodotto Caffè Torèt." },
-      en: { name: "Caffè shakerato", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Caffè shakerato", description: "Prodotto Caffè Torèt." },
+      it: { name: "Caffè shakerato", description: "Espresso Costadoro Lab shakerato con ghiaccio. Schiumoso, freddo, intenso" },
+      en: { name: "Caffè shakerato", description: "Espresso Costadoro Lab shakerato con ghiaccio. Schiumoso, freddo, intenso" },
+      fr: { name: "Caffè shakerato", description: "Espresso Costadoro Lab shakerato con ghiaccio. Schiumoso, freddo, intenso" },
     },
   },
   {
@@ -915,9 +915,9 @@ export const importedProducts: Product[] = [
     price: 3.0,
     available: true,
     translations: {
-      it: { name: "Croissant salato", description: "Prodotto Caffè Torèt." },
-      en: { name: "Croissant salato", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Croissant salato", description: "Prodotto Caffè Torèt." },
+      it: { name: "Croissant salato", description: "Croissant sfogliato con ingredienti salati selezionati. Perfetto per una pausa gustosa" },
+      en: { name: "Croissant salato", description: "Croissant sfogliato con ingredienti salati selezionati. Perfetto per una pausa gustosa" },
+      fr: { name: "Croissant salato", description: "Croissant sfogliato con ingredienti salati selezionati. Perfetto per una pausa gustosa" },
     },
   },
   {
@@ -932,9 +932,9 @@ export const importedProducts: Product[] = [
     available: true,
     featured: true,
     translations: {
-      it: { name: "Cappuccino", description: "Prodotto Caffè Torèt." },
-      en: { name: "Cappuccino", description: "Prodotto Caffè Torèt." },
-      fr: { name: "Cappuccino", description: "Prodotto Caffè Torèt." },
+      it: { name: "Cappuccino", description: "Caffè Costadoro Lab, latte caldo e schiuma vellutata. Il rito della colazione all'italiana" },
+      en: { name: "Cappuccino", description: "Caffè Costadoro Lab, latte caldo e schiuma vellutata. Il rito della colazione all'italiana" },
+      fr: { name: "Cappuccino", description: "Caffè Costadoro Lab, latte caldo e schiuma vellutata. Il rito della colazione all'italiana" },
     },
   },
   {
