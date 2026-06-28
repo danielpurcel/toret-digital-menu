@@ -11,6 +11,7 @@ export interface Promo {
     it: { title: string; subtitle: string };
     en: { title: string; subtitle: string };
     fr: { title: string; subtitle: string };
+    es: { title: string; subtitle: string };
   };
 }
 
@@ -32,6 +33,7 @@ export const promos: Promo[] = [
       it: { title: "Promo Colazione", subtitle: "Caffè + Croissant + Spremuta" },
       en: { title: "Breakfast Special", subtitle: "Coffee + Croissant + Fresh Juice" },
       fr: { title: "Offre Petit-déjeuner", subtitle: "Café + Croissant + Jus pressé" },
+      es: { title: "Promo Desayuno", subtitle: "Café + Croissant + Zumo" },
     },
   },
   {
@@ -50,6 +52,7 @@ export const promos: Promo[] = [
       it: { title: "Promo Aperitivo", subtitle: "Drink + Tagliere Torèt" },
       en: { title: "Aperitivo Special", subtitle: "Drink + Torèt Board" },
       fr: { title: "Offre Apéritif", subtitle: "Cocktail + Planche Torèt" },
+      es: { title: "Promo Aperitivo", subtitle: "Cóctel + Tabla Torèt" },
     },
   },
 ];
