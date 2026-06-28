@@ -48,43 +48,45 @@ interface XanoListResponse {
  * restituisce category_id non elencati qui. In produzione, loggare
  * category_id sconosciuti e segnalarli.
  */
+/**
+ * Mappatura category_id Xano → macro-categoria + categoria frontend.
+ *
+ * I NUOVI ID corrispondono alla tabella menu_categories Xano.
+ * Vecchi ID (1,2,4) conservati solo per prodotti inattivi/legacy.
+ */
 const categoryMap: Record<number, { macroCategory: MacroCategory; category: string }> = {
-  // Colazione / Caffetteria
-  1:  { macroCategory: "colazione", category: "caffetteria" },
-  // Pranzo / Piatti caldi
-  2:  { macroCategory: "pranzo",    category: "piatti-caldi" },
-  // Aperitivo / Drink
-  3:  { macroCategory: "aperitivo", category: "drink" },
-  // Generali → skip (non vanno nel menu pubblico)
-  4:  { macroCategory: "pranzo",    category: "piatti-caldi" }, // placeholder, filtrato dopo
+  // --- VECCHI ID (legacy / inattivi) ---
+  1:  { macroCategory: "colazione", category: "caffetteria" },  // legacy
+  2:  { macroCategory: "pranzo",    category: "piatti-caldi" },  // legacy
+  4:  { macroCategory: "pranzo",    category: "piatti-caldi" },  // legacy
 
-  // --- NUOVI MAPPING ---
-  // Bevande calde / colazione (caffè lungo, ecc.)
-  5:  { macroCategory: "colazione", category: "caffetteria" },
-  // Dolci colazione (cornetti, brioche)
-  6:  { macroCategory: "colazione", category: "dolci" },
-  // Vini / Aperitivo
-  7:  { macroCategory: "aperitivo", category: "vini" },
-  // Analcolici (aperitivo)
-  8:  { macroCategory: "aperitivo", category: "analcolici" },
-  // Taglieri (aperitivo)
-  9:  { macroCategory: "aperitivo", category: "taglieri" },
-  // Panini (pranzo)
-  10: { macroCategory: "pranzo",    category: "panini" },
-  // Insalate (pranzo)
-  11: { macroCategory: "pranzo",    category: "insalate" },
-  // Dolci (pranzo)
-  12: { macroCategory: "pranzo",    category: "dolci" },
-  // Bevande (colazione — spremute, frullati)
-  13: { macroCategory: "colazione", category: "bevande" },
-  // Bevande (pranzo — acqua, bibite)
-  14: { macroCategory: "pranzo",    category: "bevande" },
-  // Salato (colazione — toast, tramezzini colazione)
-  15: { macroCategory: "colazione", category: "salato" },
+  // ☀️ COLAZIONE — menu_categories
+  3:  { macroCategory: "colazione", category: "caffetteria" },
+  5:  { macroCategory: "colazione", category: "dolci" },
+  6:  { macroCategory: "colazione", category: "bevande" },
+  7:  { macroCategory: "colazione", category: "colazione-salata" },
+
+  // 🍽️ PRANZO — menu_categories
+  8:  { macroCategory: "pranzo",    category: "menu-del-giorno" },
+  9:  { macroCategory: "pranzo",    category: "primi" },
+  10: { macroCategory: "pranzo",    category: "secondi" },
+  11: { macroCategory: "pranzo",    category: "contorni" },
+  12: { macroCategory: "pranzo",    category: "insalate" },
+  13: { macroCategory: "pranzo",    category: "panini" },
+  14: { macroCategory: "pranzo",    category: "taglieri" },
+
+  // 🍹 APERITIVO — menu_categories
+  15: { macroCategory: "aperitivo", category: "cocktail" },
+  16: { macroCategory: "aperitivo", category: "vini" },
+  17: { macroCategory: "aperitivo", category: "birre" },
+  18: { macroCategory: "aperitivo", category: "analcolici" },
+  19: { macroCategory: "aperitivo", category: "taglieri" },
+  20: { macroCategory: "aperitivo", category: "stuzzichini" },
 };
 
 /** ID da SKIPPARE (non vanno nel menu) */
-const CATEGORIES_TO_SKIP = new Set([4]); // Generali
+// Nessuna categoria da skippare — i prodotti inattivi sono filtrati da is_active
+const CATEGORIES_TO_SKIP = new Set<number>();
 
 /** Prodotti Xano da mostrare come featured (suggeriti) */
 const FEATURED_IDS = new Set([26, 28, 29, 44, 54, 70, 71, 75]);
