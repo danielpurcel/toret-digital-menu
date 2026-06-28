@@ -1,16 +1,17 @@
 import { useMemo, useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
+import { Coffee, Thermometer, CakeSlice, Apple, UtensilsCrossed, Sandwich, CupSoda, GlassWater, Wine, ChefHat } from "lucide-react";
 import { AppShell } from "@/components/layout/AppShell";
 import { ProductCard } from "@/components/menu/ProductCard";
 import { ProductModal } from "@/components/menu/ProductModal";
 import { PromoBanner } from "@/components/menu/PromoBanner";
 import { useLocale } from "@/i18n/LocaleContext";
 import {
-  categoriesByMacro,
   macroLabels,
   type MacroCategory,
   type Product,
 } from "@/data/menu";
+import { subcategoryConfig, macroForCategory } from "@/data/subcategoryConfig";
 import { byMacro, useMenuProducts } from "@/hooks/useMenuProducts";
 import { getPromoByMacro } from "@/data/promos";
 import catColazione from "@/assets/cat-colazione.jpg";
@@ -19,7 +20,24 @@ import catAperitivo from "@/assets/cat-aperitivo.jpg";
 
 const validMacros: MacroCategory[] = ["colazione", "pranzo", "aperitivo"];
 
-const macroMeta: Record<MacroCategory, { image: string; time: string; tagline: { it: string; en: string; fr: string } }> = {
+/** Mappa nome icona Lucide → componente */
+const iconMap: Record<string, React.FC<{ size?: number; className?: string }>> = {
+  coffee: Coffee,
+  thermometer: Thermometer,
+  "cake-slice": CakeSlice,
+  apple: Apple,
+  "utensils-crossed": UtensilsCrossed,
+  sandwich: Sandwich,
+  "cup-soda": CupSoda,
+  "glass-water": GlassWater,
+  wine: Wine,
+  "chef-hat": ChefHat,
+};
+
+const macroMeta: Record<
+  MacroCategory,
+  { image: string; time: string; tagline: { it: string; en: string; fr: string; es: string } }
+> = {
   colazione: {
     image: catColazione,
     time: "07:30 – 11:00",
@@ -27,6 +45,7 @@ const macroMeta: Record<MacroCategory, { image: string; time: string; tagline: {
       it: "Caffè della casa, croissant freschi e spremute di stagione.",
       en: "House coffee, fresh croissants and seasonal juices.",
       fr: "Café maison, croissants frais et jus de saison.",
+      es: "Café de la casa, cruasanes frescos y zumos de temporada.",
     },
   },
   pranzo: {
@@ -36,6 +55,7 @@ const macroMeta: Record<MacroCategory, { image: string; time: string; tagline: {
       it: "Cucina piemontese del giorno, pasta fresca, secondi della tradizione.",
       en: "Daily Piedmontese cuisine, fresh pasta, traditional mains.",
       fr: "Cuisine piémontaise du jour, pâtes fraîches, plats de tradition.",
+      es: "Cocina piamontesa del día, pasta fresca, platos tradicionales.",
     },
   },
   aperitivo: {
@@ -45,28 +65,49 @@ const macroMeta: Record<MacroCategory, { image: string; time: string; tagline: {
       it: "Vermouth torinese, vini del territorio e taglieri della casa.",
       en: "Turin vermouth, local wines and house charcuterie boards.",
       fr: "Vermouth turinois, vins du terroir et planches maison.",
+      es: "Vermú turinés, vinos del territorio y tablas de la casa.",
     },
   },
 };
+
+const isMacro = (m: unknown): m is MacroCategory => validMacros.includes(m as MacroCategory);
 
 const MacroPage = () => {
   const { macro } = useParams<{ macro: string }>();
   const { locale, t } = useLocale();
   const [selected, setSelected] = useState<Product | null>(null);
-  const [category, setCategory] = useState("all");
+  const [categoryId, setCategoryId] = useState<number | "all">("all");
   const { data: allProducts, isFetching } = useMenuProducts();
-  const macroKey = validMacros.includes(macro as MacroCategory)
-    ? (macro as MacroCategory)
-    : "colazione";
+  const macroKey = isMacro(macro) ? macro : "colazione";
   const meta = macroMeta[macroKey];
+
+  // Sottocategorie dinamiche derivate dai category_id + subcategoryConfig
+  const subcategories = useMemo(() => {
+    const cats: { id: number; icon: string }[] = [];
+    for (const [catId, info] of Object.entries(subcategoryConfig)) {
+      const id = Number(catId);
+      if (macroForCategory(id) === macroKey) {
+        cats.push({ id, icon: info.icon });
+      }
+    }
+    // Ordina per category_id
+    cats.sort((a, b) => a.id - b.id);
+    return cats;
+  }, [macroKey]);
+
+  // Prodotti filtrati per macro + sottocategoria, ordinati per sortOrder
   const products = useMemo(() => {
-    const macroProducts = byMacro(allProducts, macroKey);
-    if (category === "all") return macroProducts;
-    return macroProducts.filter((p) => p.category === category);
-  }, [allProducts, macroKey, category]);
+    let filtered = byMacro(allProducts, macroKey);
+    if (categoryId !== "all") {
+      filtered = filtered.filter((p) => p.categoryId === categoryId);
+    }
+    // Ordina per sortOrder (chi ha sortOrder undefined va in fondo)
+    return filtered.sort((a, b) => (a.sortOrder ?? 999) - (b.sortOrder ?? 999));
+  }, [allProducts, macroKey, categoryId]);
+
   const promo = getPromoByMacro(macroKey);
 
-  if (!macro || !validMacros.includes(macro as MacroCategory)) {
+  if (!macro || !isMacro(macro)) {
     return <Navigate to="/menu" replace />;
   }
 
@@ -95,32 +136,54 @@ const MacroPage = () => {
 
       <div className="px-5 py-4 space-y-3">
         <div className="flex gap-2 overflow-x-auto no-scrollbar pb-1" aria-label={t("menu")}>
-          {categoriesByMacro[macroKey].map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => setCategory(item.id)}
-              className={`shrink-0 rounded-full px-3.5 py-2 text-[12px] font-semibold warm-border transition-colors ${
-                category === item.id
-                  ? "bg-toret-green text-toret-paper"
-                  : "bg-toret-paper text-toret-ink-soft"
-              }`}
-            >
-              {item.label[locale]}
-            </button>
-          ))}
+          {/* Pulsante "Tutti" */}
+          <button
+            type="button"
+            onClick={() => setCategoryId("all")}
+            className={`shrink-0 rounded-full px-3.5 py-2 text-[12px] font-semibold warm-border transition-colors flex items-center gap-1.5 ${
+              categoryId === "all"
+                ? "bg-toret-green text-toret-paper"
+                : "bg-toret-paper text-toret-ink-soft"
+            }`}
+          >
+            {t("all")}
+          </button>
+
+          {subcategories.map(({ id, icon }) => {
+            const info = subcategoryConfig[id];
+            const Icon = iconMap[icon];
+            return (
+              <button
+                key={id}
+                type="button"
+                onClick={() => setCategoryId(id)}
+                className={`shrink-0 rounded-full px-3.5 py-2 text-[12px] font-semibold warm-border transition-colors flex items-center gap-1.5 ${
+                  categoryId === id
+                    ? "bg-toret-green text-toret-paper"
+                    : "bg-toret-paper text-toret-ink-soft"
+                }`}
+              >
+                {Icon && <Icon size={16} className="shrink-0" />}
+                {info.name[locale]}
+              </button>
+            );
+          })}
         </div>
+
         {isFetching && (
           <p className="text-[12px] text-toret-ink-muted px-1">{t("updatingMenu")}</p>
         )}
+
         {promo && (
           <div className="mb-2">
             <PromoBanner promo={promo} />
           </div>
         )}
+
         {products.map((p) => (
           <ProductCard key={p.id} product={p} onOpen={setSelected} />
         ))}
+
         {products.length === 0 && (
           <p className="text-center text-toret-ink-muted py-10 text-sm">—</p>
         )}

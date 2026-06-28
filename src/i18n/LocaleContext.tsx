@@ -41,6 +41,7 @@ const dict = {
     from: "da",
     pairWithPromo: "Abbinalo alla promo",
     updatingMenu: "Aggiorno il menu reale...",
+    all: "Tutti",
   },
   en: {
     home: "Home",
@@ -79,6 +80,7 @@ const dict = {
     from: "from",
     pairWithPromo: "Pair it with the deal",
     updatingMenu: "Updating the live menu...",
+    all: "All",
   },
   fr: {
     home: "Accueil",
@@ -117,6 +119,7 @@ const dict = {
     from: "à partir de",
     pairWithPromo: "Associez-le à l'offre",
     updatingMenu: "Mise à jour du menu réel...",
+    all: "Tous",
   },
   es: {
     home: "Inicio",
@@ -155,6 +158,7 @@ const dict = {
     from: "desde",
     pairWithPromo: "Combínalo con la oferta",
     updatingMenu: "Actualizando el menú real...",
+    all: "Todos",
   },
 } as const;
 

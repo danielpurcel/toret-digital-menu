@@ -28,6 +28,7 @@ export interface Product {
   source?: "static" | "xano" | "xano-import";
   macroCategory: MacroCategory;
   category: string; // e.g. "caffetteria", "dolci"
+  categoryId?: number; // ID numerico sottocategoria da Xano
   name: string;
   description: string;
   price: number;
@@ -36,6 +37,7 @@ export interface Product {
   allergens?: string[];
   available: boolean;
   featured?: boolean;
+  sortOrder?: number; // Ordine dentro la sottocategoria
   translations: Translations;
 }
 

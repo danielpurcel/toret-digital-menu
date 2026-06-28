@@ -32,6 +32,7 @@ interface XanoProduct {
   description_en?: string | null;
   description_fr?: string | null;
   description_es?: string | null;
+  sort_order?: number | null;
 }
 
 interface XanoListResponse {
@@ -136,6 +137,8 @@ const toProduct = (item: XanoProduct): Product | null => {
     image: item.image_url || undefined,
     available: true,
     featured: FEATURED_IDS.has(item.id),
+    categoryId: item.category_id,
+    sortOrder: item.sort_order,
     allergens: parseAllergens(item.allergens),
     translations: {
       it: { name: item.name, description },
