@@ -86,7 +86,7 @@ export const products: Product[] = [
       it: { name: "Espresso Torèt", description: "La nostra miscela 100% Arabica, tostata artigianalmente a Torino." },
       en: { name: "Espresso Torèt", description: "Our 100% Arabica blend, artisanally roasted in Turin." },
       fr: { name: "Espresso Torèt", description: "Notre mélange 100% Arabica, torréfié artisanalement à Turin." },
-      es: { name: "Espresso Torèt", description: "Notre mélange 100% Arabica, torréfié artisanalement à Turin." },
+      es: { name: "Cappuccino", description: "Espresso y leche vaporizada con espuma cremosa." },
     },
   },
   {
@@ -104,7 +104,7 @@ export const products: Product[] = [
       it: { name: "Cappuccino", description: "Espresso e latte montato a vapore, schiuma cremosa." },
       en: { name: "Cappuccino", description: "Espresso and steamed milk with creamy foam." },
       fr: { name: "Cappuccino", description: "Espresso et lait vapeur, mousse onctueuse." },
-      es: { name: "Cappuccino", description: "Espresso et lait vapeur, mousse onctueuse." },
+      es: { name: "Croissant Clásico", description: "Hojaldre dorado con mantequilla francesa, horneado del día." },
     },
   },
   {
@@ -122,7 +122,7 @@ export const products: Product[] = [
       it: { name: "Croissant Classico", description: "Sfoglia dorata al burro francese, cotta in giornata." },
       en: { name: "Classic Croissant", description: "Golden French butter pastry, freshly baked." },
       fr: { name: "Croissant Classique", description: "Feuilleté doré au beurre français, cuit du jour." },
-      es: { name: "Croissant Classique", description: "Feuilleté doré au beurre français, cuit du jour." },
+      es: { name: "Croissant de Pistacho", description: "Relleno de crema de pistacho de Bronte y granillo crujiente." },
     },
   },
   {
@@ -139,7 +139,7 @@ export const products: Product[] = [
       it: { name: "Croissant Pistacchio", description: "Farcito con crema di pistacchio di Bronte, granella croccante." },
       en: { name: "Pistachio Croissant", description: "Filled with Bronte pistachio cream and crunchy grains." },
       fr: { name: "Croissant Pistache", description: "Garni de crème de pistache de Bronte et éclats croquants." },
-      es: { name: "Croissant Pistache", description: "Garni de crème de pistache de Bronte et éclats croquants." },
+      es: { name: "Croissant de Crema", description: "Crema pastelera de vainilla bourbon, espolvoreado con azúcar glas." },
     },
   },
   {
@@ -156,7 +156,7 @@ export const products: Product[] = [
       it: { name: "Croissant Crema", description: "Crema pasticcera alla vaniglia bourbon, zucchero a velo." },
       en: { name: "Cream Croissant", description: "Bourbon vanilla pastry cream, dusted with icing sugar." },
       fr: { name: "Croissant Crème", description: "Crème pâtissière à la vanille bourbon, sucre glace." },
-      es: { name: "Croissant Crème", description: "Crème pâtissière à la vanille bourbon, sucre glace." },
+      es: { name: "Zumo de Naranja", description: "Naranjas frescas de temporada, exprimidas al momento." },
     },
   },
   {
@@ -173,7 +173,7 @@ export const products: Product[] = [
       it: { name: "Spremuta d'Arancia", description: "Arance fresche di stagione, spremute al momento." },
       en: { name: "Fresh Orange Juice", description: "Seasonal oranges, freshly squeezed." },
       fr: { name: "Jus d'Orange Pressé", description: "Oranges de saison, pressées à la minute." },
-      es: { name: "Jus d'Orange Pressé", description: "Oranges de saison, pressées à la minute." },
+      es: { name: "Bowl de Arroz, Quinoa y Bulgur", description: "Plato frío con cereales, verduras de temporada y aliño de hierbas." },
     },
   },
 
@@ -192,7 +192,7 @@ export const products: Product[] = [
       it: { name: "Bowl Riso, Quinoa e Bulgur", description: "Piatto freddo con cereali, verdure di stagione e condimento alle erbe." },
       en: { name: "Rice, Quinoa & Bulgur Bowl", description: "Cold dish with grains, seasonal vegetables and herb dressing." },
       fr: { name: "Bowl Riz, Quinoa & Boulgour", description: "Plat froid aux céréales, légumes de saison et vinaigrette aux herbes." },
-      es: { name: "Bowl Riz, Quinoa & Boulgour", description: "Plat froid aux céréales, légumes de saison et vinaigrette aux herbes." },
+      es: { name: "Scaloppine al Limón", description: "Filetes de ternera en salsa de limón y perejil, guarnición del día." },
     },
   },
   {
@@ -208,7 +208,7 @@ export const products: Product[] = [
       it: { name: "Scaloppine al Limone", description: "Fettine di vitello in salsa al limone e prezzemolo, contorno del giorno." },
       en: { name: "Veal Scaloppine with Lemon", description: "Veal in lemon and parsley sauce, side of the day." },
       fr: { name: "Escalopes au Citron", description: "Veau en sauce citron-persil, garniture du jour." },
-      es: { name: "Escalopes au Citron", description: "Veau en sauce citron-persil, garniture du jour." },
+      es: { name: "Frittata con Guarniciones", description: "Frittata de temporada con dos guarniciones a elegir." },
     },
   },
   {
@@ -225,7 +225,7 @@ export const products: Product[] = [
       it: { name: "Frittata con Contorni", description: "Frittata di stagione con due contorni a scelta." },
       en: { name: "Frittata with Sides", description: "Seasonal frittata with two side dishes of your choice." },
       fr: { name: "Frittata avec Garnitures", description: "Frittata de saison avec deux garnitures au choix." },
-      es: { name: "Frittata avec Garnitures", description: "Frittata de saison avec deux garnitures au choix." },
+      es: { name: "Frittata de la Casa", description: "Huevos frescos, hierbas aromáticas, queso añejo." },
     },
   },
   {
@@ -242,7 +242,7 @@ export const products: Product[] = [
       it: { name: "Frittata della Casa", description: "Uova fresche, erbe aromatiche, formaggio stagionato." },
       en: { name: "House Frittata", description: "Fresh eggs, herbs and aged cheese." },
       fr: { name: "Frittata Maison", description: "Œufs frais, herbes aromatiques, fromage affiné." },
-      es: { name: "Frittata Maison", description: "Œufs frais, herbes aromatiques, fromage affiné." },
+      es: { name: "Cóctel de la Casa", description: "Nuestra firma: vermú turinés, cítricos, bitter artesanal." },
     },
   },
 
@@ -261,7 +261,7 @@ export const products: Product[] = [
       it: { name: "Drink della Casa", description: "La nostra signature: vermouth torinese, agrumi, bitter artigianale." },
       en: { name: "House Signature Drink", description: "Our signature: Torinese vermouth, citrus, artisanal bitter." },
       fr: { name: "Cocktail Maison", description: "Notre signature : vermouth turinois, agrumes, bitter artisanal." },
-      es: { name: "Cocktail Maison", description: "Notre signature : vermouth turinois, agrumes, bitter artisanal." },
+      es: { name: "Cóctel Clásico", description: "Negroni, Americano, Spritz: a tu elección." },
     },
   },
   {
@@ -277,7 +277,7 @@ export const products: Product[] = [
       it: { name: "Drink Classico", description: "Negroni, Americano, Spritz: a tua scelta." },
       en: { name: "Classic Drink", description: "Negroni, Americano, Spritz: your choice." },
       fr: { name: "Cocktail Classique", description: "Negroni, Americano, Spritz : au choix." },
-      es: { name: "Cocktail Classique", description: "Negroni, Americano, Spritz : au choix." },
+      es: { name: "Copa de Vino", description: "Selección rotativa de tintos y blancos piamonteses." },
     },
   },
   {
@@ -293,7 +293,7 @@ export const products: Product[] = [
       it: { name: "Calice di Vino", description: "Selezione di rossi e bianchi piemontesi a rotazione." },
       en: { name: "Glass of Wine", description: "Rotating selection of Piedmontese reds and whites." },
       fr: { name: "Verre de Vin", description: "Sélection tournante de rouges et blancs du Piémont." },
-      es: { name: "Verre de Vin", description: "Sélection tournante de rouges et blancs du Piémont." },
+      es: { name: "Tabla Torèt", description: "Selección de embutidos piamonteses, quesos añejos, miel y mostaza." },
     },
   },
   {
@@ -311,7 +311,7 @@ export const products: Product[] = [
       it: { name: "Tagliere Torèt", description: "Selezione di salumi piemontesi, formaggi stagionati, miele e mostarde." },
       en: { name: "Torèt Charcuterie Board", description: "Piedmontese cured meats, aged cheeses, honey and mostarda." },
       fr: { name: "Planche Torèt", description: "Charcuterie piémontaise, fromages affinés, miel et moutarde." },
-      es: { name: "Planche Torèt", description: "Charcuterie piémontaise, fromages affinés, miel et moutarde." },
+      es: { name: "Aperitivos", description: "Aceitunas taggiasche, focaccia crujiente, frutos secos tostados." },
     },
   },
   {
@@ -327,7 +327,7 @@ export const products: Product[] = [
       it: { name: "Stuzzichini", description: "Olive taggiasche, focaccia croccante, frutta secca tostata." },
       en: { name: "Bar Snacks", description: "Taggiasca olives, crunchy focaccia, toasted nuts." },
       fr: { name: "Amuse-bouches", description: "Olives taggiasca, focaccia croquante, fruits secs grillés." },
-      es: { name: "Amuse-bouches", description: "Olives taggiasca, focaccia croquante, fruits secs grillés." },
+      es: { name: "Aperitivos", description: "Aceitunas taggiasche, focaccia crujiente, frutos secos tostados." },
     },
   },
 ];
