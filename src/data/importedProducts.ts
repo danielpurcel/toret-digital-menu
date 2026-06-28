@@ -15,6 +15,7 @@ export const importedProducts: Product[] = [
       it: { name: "Riso basmati, quinoa e bulgur con rucola, bresaola e grana", description: "Acqua, limone fresco e menta. La nostra acqua Torèt Fresh, dissetante e naturale" },
       en: { name: "Riso basmati, quinoa e bulgur con rucola, bresaola e grana", description: "Acqua, limone fresco e menta. La nostra acqua Torèt Fresh, dissetante e naturale" },
       fr: { name: "Riso basmati, quinoa e bulgur con rucola, bresaola e grana", description: "Acqua, limone fresco e menta. La nostra acqua Torèt Fresh, dissetante e naturale" },
+      es: { name: "Riso basmati, quinoa e bulgur con rucola, bresaola e grana", description: "Acqua, limone fresco e menta. La nostra acqua Torèt Fresh, dissetante e naturale" },
     },
   },
   {
@@ -31,6 +32,7 @@ export const importedProducts: Product[] = [
       it: { name: "Scaloppine di vitello, grana, rucola e pomodori", description: "Scaloppine di vitello saltate in padella con grana, rucola e pomodori. Un grande classico" },
       en: { name: "Scaloppine di vitello, grana, rucola e pomodori", description: "Scaloppine di vitello saltate in padella con grana, rucola e pomodori. Un grande classico" },
       fr: { name: "Scaloppine di vitello, grana, rucola e pomodori", description: "Scaloppine di vitello saltate in padella con grana, rucola e pomodori. Un grande classico" },
+      es: { name: "Scaloppine di vitello, grana, rucola e pomodori", description: "Scaloppine di vitello saltate in padella con grana, rucola e pomodori. Un grande classico" },
     },
   },
   {
@@ -47,6 +49,7 @@ export const importedProducts: Product[] = [
       it: { name: "Frittata più contorni", description: "Frittata fresca accompagnata da una selezione di contorni di stagione" },
       en: { name: "Frittata più contorni", description: "Frittata fresca accompagnata da una selezione di contorni di stagione" },
       fr: { name: "Frittata più contorni", description: "Frittata fresca accompagnata da una selezione di contorni di stagione" },
+      es: { name: "Frittata più contorni", description: "Frittata fresca accompagnata da una selezione di contorni di stagione" },
     },
   },
   {
@@ -63,6 +66,7 @@ export const importedProducts: Product[] = [
       it: { name: "GOJ Barbera DOC Frizzante - Bicchiere", description: "Barbera M.to DOC Frizzante 2024, bicchiere 150ml" },
       en: { name: "GOJ Barbera DOC Frizzante - Bicchiere", description: "Barbera M.to DOC Frizzante 2024, bicchiere 150ml" },
       fr: { name: "GOJ Barbera DOC Frizzante - Bicchiere", description: "Barbera M.to DOC Frizzante 2024, bicchiere 150ml" },
+      es: { name: "GOJ Barbera DOC Frizzante - Bicchiere", description: "Barbera M.to DOC Frizzante 2024, bicchiere 150ml" },
     },
   },
   {
@@ -80,6 +84,7 @@ export const importedProducts: Product[] = [
       it: { name: "Cocktail", description: "I nostri cocktail preparati al momento con ingredienti freschi. Scegli il tuo preferito" },
       en: { name: "Cocktail", description: "I nostri cocktail preparati al momento con ingredienti freschi. Scegli il tuo preferito" },
       fr: { name: "Cocktail", description: "I nostri cocktail preparati al momento con ingredienti freschi. Scegli il tuo preferito" },
+      es: { name: "Cocktail", description: "I nostri cocktail preparati al momento con ingredienti freschi. Scegli il tuo preferito" },
     },
   },
   {
@@ -96,6 +101,7 @@ export const importedProducts: Product[] = [
       it: { name: "Caffè Decaffeinato", description: "Tutto l'aroma del nostro espresso Costadoro Lab, senza caffeina. Decaffeinato naturale" },
       en: { name: "Caffè Decaffeinato", description: "Tutto l'aroma del nostro espresso Costadoro Lab, senza caffeina. Decaffeinato naturale" },
       fr: { name: "Caffè Decaffeinato", description: "Tutto l'aroma del nostro espresso Costadoro Lab, senza caffeina. Decaffeinato naturale" },
+      es: { name: "Caffè Decaffeinato", description: "Tutto l'aroma del nostro espresso Costadoro Lab, senza caffeina. Decaffeinato naturale" },
     },
   },
   {
@@ -112,6 +118,7 @@ export const importedProducts: Product[] = [
       it: { name: "Frittata", description: "Frittata fresca preparata con uova di qualità. Semplice, genuina e gustosa" },
       en: { name: "Frittata", description: "Frittata fresca preparata con uova di qualità. Semplice, genuina e gustosa" },
       fr: { name: "Frittata", description: "Frittata fresca preparata con uova di qualità. Semplice, genuina e gustosa" },
+      es: { name: "Frittata", description: "Frittata fresca preparata con uova di qualità. Semplice, genuina e gustosa" },
     },
   },
   {
@@ -128,6 +135,7 @@ export const importedProducts: Product[] = [
       it: { name: "Vaniglia iced coffee", description: "Caffè freddo Costadoro Lab con latte e vaniglia. Cremoso, rinfrescante e avvolgente" },
       en: { name: "Vaniglia iced coffee", description: "Caffè freddo Costadoro Lab con latte e vaniglia. Cremoso, rinfrescante e avvolgente" },
       fr: { name: "Vaniglia iced coffee", description: "Caffè freddo Costadoro Lab con latte e vaniglia. Cremoso, rinfrescante e avvolgente" },
+      es: { name: "Vaniglia iced coffee", description: "Caffè freddo Costadoro Lab con latte e vaniglia. Cremoso, rinfrescante e avvolgente" },
     },
   },
   {
@@ -144,6 +152,7 @@ export const importedProducts: Product[] = [
       it: { name: "Mignon", description: "Porzione piccola e sfiziosa, ideale per un morso goloso in ogni momento" },
       en: { name: "Mignon", description: "Porzione piccola e sfiziosa, ideale per un morso goloso in ogni momento" },
       fr: { name: "Mignon", description: "Porzione piccola e sfiziosa, ideale per un morso goloso in ogni momento" },
+      es: { name: "Mignon", description: "Porzione piccola e sfiziosa, ideale per un morso goloso in ogni momento" },
     },
   },
   {
@@ -160,6 +169,7 @@ export const importedProducts: Product[] = [
       it: { name: "Panino carne", description: "Panino farcito con carne, insalata e pomodoro. Saporito e sostanzioso" },
       en: { name: "Panino carne", description: "Panino farcito con carne, insalata e pomodoro. Saporito e sostanzioso" },
       fr: { name: "Panino carne", description: "Panino farcito con carne, insalata e pomodoro. Saporito e sostanzioso" },
+      es: { name: "Panino carne", description: "Panino farcito con carne, insalata e pomodoro. Saporito e sostanzioso" },
     },
   },
   {
@@ -176,6 +186,7 @@ export const importedProducts: Product[] = [
       it: { name: "Tramezzino", description: "Tramezzino fresco farcito con ingredienti di qualità. Leggero e gustoso" },
       en: { name: "Tramezzino", description: "Tramezzino fresco farcito con ingredienti di qualità. Leggero e gustoso" },
       fr: { name: "Tramezzino", description: "Tramezzino fresco farcito con ingredienti di qualità. Leggero e gustoso" },
+      es: { name: "Tramezzino", description: "Tramezzino fresco farcito con ingredienti di qualità. Leggero e gustoso" },
     },
   },
   {
@@ -192,6 +203,7 @@ export const importedProducts: Product[] = [
       it: { name: "Prosecco DOC Extra Dry", description: "Prosecco DOC Extra Dry, fresco e frizzante. Il calice perfetto per l'aperitivo" },
       en: { name: "Prosecco DOC Extra Dry", description: "Prosecco DOC Extra Dry, fresco e frizzante. Il calice perfetto per l'aperitivo" },
       fr: { name: "Prosecco DOC Extra Dry", description: "Prosecco DOC Extra Dry, fresco e frizzante. Il calice perfetto per l'aperitivo" },
+      es: { name: "Prosecco DOC Extra Dry", description: "Prosecco DOC Extra Dry, fresco e frizzante. Il calice perfetto per l'aperitivo" },
     },
   },
   {
@@ -209,6 +221,7 @@ export const importedProducts: Product[] = [
       it: { name: "Caffè", description: "Espresso 100% Arabica Costadoro Lab, estratto al momento per un gusto intenso e avvolgente" },
       en: { name: "Caffè", description: "Espresso 100% Arabica Costadoro Lab, estratto al momento per un gusto intenso e avvolgente" },
       fr: { name: "Caffè", description: "Espresso 100% Arabica Costadoro Lab, estratto al momento per un gusto intenso e avvolgente" },
+      es: { name: "Caffè", description: "Espresso 100% Arabica Costadoro Lab, estratto al momento per un gusto intenso e avvolgente" },
     },
   },
   {
@@ -225,6 +238,7 @@ export const importedProducts: Product[] = [
       it: { name: "Acqua 1,5L", description: "Prodotto Caffè Torèt." },
       en: { name: "Acqua 1,5L", description: "Prodotto Caffè Torèt." },
       fr: { name: "Acqua 1,5L", description: "Prodotto Caffè Torèt." },
+      es: { name: "Acqua 1,5L", description: "Prodotto Caffè Torèt." },
     },
   },
   {
@@ -241,6 +255,7 @@ export const importedProducts: Product[] = [
       it: { name: "Prosecco DOCG Extra Dry 2025", description: "Naonis Prosecco Spumante DOCG Extra Dry, bicchiere 150ml" },
       en: { name: "Prosecco DOCG Extra Dry 2025", description: "Naonis Prosecco Spumante DOCG Extra Dry, bicchiere 150ml" },
       fr: { name: "Prosecco DOCG Extra Dry 2025", description: "Naonis Prosecco Spumante DOCG Extra Dry, bicchiere 150ml" },
+      es: { name: "Prosecco DOCG Extra Dry 2025", description: "Naonis Prosecco Spumante DOCG Extra Dry, bicchiere 150ml" },
     },
   },
   {
@@ -257,6 +272,7 @@ export const importedProducts: Product[] = [
       it: { name: "Prosecco DOC Brut", description: "Naonis Prosecco Spumante DOC Brut, bicchiere 150ml" },
       en: { name: "Prosecco DOC Brut", description: "Naonis Prosecco Spumante DOC Brut, bicchiere 150ml" },
       fr: { name: "Prosecco DOC Brut", description: "Naonis Prosecco Spumante DOC Brut, bicchiere 150ml" },
+      es: { name: "Prosecco DOC Brut", description: "Naonis Prosecco Spumante DOC Brut, bicchiere 150ml" },
     },
   },
   {
@@ -273,6 +289,7 @@ export const importedProducts: Product[] = [
       it: { name: "Latte macchiato", description: "Latte caldo e cremoso con una macchia di caffè. Morbido e avvolgente" },
       en: { name: "Latte macchiato", description: "Latte caldo e cremoso con una macchia di caffè. Morbido e avvolgente" },
       fr: { name: "Latte macchiato", description: "Latte caldo e cremoso con una macchia di caffè. Morbido e avvolgente" },
+      es: { name: "Latte macchiato", description: "Latte caldo e cremoso con una macchia di caffè. Morbido e avvolgente" },
     },
   },
   {
@@ -289,6 +306,7 @@ export const importedProducts: Product[] = [
       it: { name: "Crema caffè Piccola", description: "Crema d'oro Costadoro Lab, una deliziosa mousse di caffè da gustare al cucchiaio" },
       en: { name: "Crema caffè Piccola", description: "Crema d'oro Costadoro Lab, una deliziosa mousse di caffè da gustare al cucchiaio" },
       fr: { name: "Crema caffè Piccola", description: "Crema d'oro Costadoro Lab, una deliziosa mousse di caffè da gustare al cucchiaio" },
+      es: { name: "Crema caffè Piccola", description: "Crema d'oro Costadoro Lab, una deliziosa mousse di caffè da gustare al cucchiaio" },
     },
   },
   {
@@ -305,6 +323,7 @@ export const importedProducts: Product[] = [
       it: { name: "Acqua 0,5L", description: "Acqua in bottiglia 0,5L" },
       en: { name: "Acqua 0,5L", description: "Acqua in bottiglia 0,5L" },
       fr: { name: "Acqua 0,5L", description: "Acqua in bottiglia 0,5L" },
+      es: { name: "Acqua 0,5L", description: "Acqua in bottiglia 0,5L" },
     },
   },
   {
@@ -321,6 +340,7 @@ export const importedProducts: Product[] = [
       it: { name: "Birra Menabrea", description: "Birra Menabrea 33cl" },
       en: { name: "Birra Menabrea", description: "Birra Menabrea 33cl" },
       fr: { name: "Birra Menabrea", description: "Birra Menabrea 33cl" },
+      es: { name: "Birra Menabrea", description: "Birra Menabrea 33cl" },
     },
   },
   {
@@ -337,6 +357,7 @@ export const importedProducts: Product[] = [
       it: { name: "Caffè corretto", description: "Caffè con liquore" },
       en: { name: "Caffè corretto", description: "Caffè con liquore" },
       fr: { name: "Caffè corretto", description: "Caffè con liquore" },
+      es: { name: "Caffè corretto", description: "Caffè con liquore" },
     },
   },
   {
@@ -354,6 +375,7 @@ export const importedProducts: Product[] = [
       it: { name: "Spremuta", description: "Spremuta d'arancia fresca preparata al momento. Vitamina C allo stato puro" },
       en: { name: "Spremuta", description: "Spremuta d'arancia fresca preparata al momento. Vitamina C allo stato puro" },
       fr: { name: "Spremuta", description: "Spremuta d'arancia fresca preparata al momento. Vitamina C allo stato puro" },
+      es: { name: "Spremuta", description: "Spremuta d'arancia fresca preparata al momento. Vitamina C allo stato puro" },
     },
   },
   {
@@ -370,6 +392,7 @@ export const importedProducts: Product[] = [
       it: { name: "Orzo/Ginseng Piccolo", description: "Orzo o ginseng caldo e avvolgente. L'alternativa dolce al caffè" },
       en: { name: "Orzo/Ginseng Piccolo", description: "Orzo o ginseng caldo e avvolgente. L'alternativa dolce al caffè" },
       fr: { name: "Orzo/Ginseng Piccolo", description: "Orzo o ginseng caldo e avvolgente. L'alternativa dolce al caffè" },
+      es: { name: "Orzo/Ginseng Piccolo", description: "Orzo o ginseng caldo e avvolgente. L'alternativa dolce al caffè" },
     },
   },
   {
@@ -386,6 +409,7 @@ export const importedProducts: Product[] = [
       it: { name: "PannaToret Piccolo", description: "Prodotto Caffè Torèt." },
       en: { name: "PannaToret Piccolo", description: "Prodotto Caffè Torèt." },
       fr: { name: "PannaToret Piccolo", description: "Prodotto Caffè Torèt." },
+      es: { name: "PannaToret Piccolo", description: "Prodotto Caffè Torèt." },
     },
   },
   {
@@ -402,6 +426,7 @@ export const importedProducts: Product[] = [
       it: { name: "Tè/Infuso", description: "Selezione di tè e infusi caldi, per una pausa leggera e profumata" },
       en: { name: "Tè/Infuso", description: "Selezione di tè e infusi caldi, per una pausa leggera e profumata" },
       fr: { name: "Tè/Infuso", description: "Selezione di tè e infusi caldi, per una pausa leggera e profumata" },
+      es: { name: "Tè/Infuso", description: "Selezione di tè e infusi caldi, per una pausa leggera e profumata" },
     },
   },
   {
@@ -418,6 +443,7 @@ export const importedProducts: Product[] = [
       it: { name: "Frullato di frutta fresca", description: "Frullato cremoso preparato al momento con frutta fresca di stagione. Tutta la bontà della natura" },
       en: { name: "Frullato di frutta fresca", description: "Frullato cremoso preparato al momento con frutta fresca di stagione. Tutta la bontà della natura" },
       fr: { name: "Frullato di frutta fresca", description: "Frullato cremoso preparato al momento con frutta fresca di stagione. Tutta la bontà della natura" },
+      es: { name: "Frullato di frutta fresca", description: "Frullato cremoso preparato al momento con frutta fresca di stagione. Tutta la bontà della natura" },
     },
   },
   {
@@ -434,6 +460,7 @@ export const importedProducts: Product[] = [
       it: { name: "Pranzo", description: "Piatti del giorno" },
       en: { name: "Pranzo", description: "Piatti del giorno" },
       fr: { name: "Pranzo", description: "Piatti del giorno" },
+      es: { name: "Pranzo", description: "Piatti del giorno" },
     },
   },
   {
@@ -450,6 +477,7 @@ export const importedProducts: Product[] = [
       it: { name: "Succo frutta", description: "Succo di frutta di alta qualità, perfetto per una pausa leggera e dissetante" },
       en: { name: "Succo frutta", description: "Succo di frutta di alta qualità, perfetto per una pausa leggera e dissetante" },
       fr: { name: "Succo frutta", description: "Succo di frutta di alta qualità, perfetto per una pausa leggera e dissetante" },
+      es: { name: "Succo frutta", description: "Succo di frutta di alta qualità, perfetto per una pausa leggera e dissetante" },
     },
   },
   {
@@ -467,6 +495,7 @@ export const importedProducts: Product[] = [
       it: { name: "Tagliere", description: "Tagliere di salumi e formaggi" },
       en: { name: "Tagliere", description: "Tagliere di salumi e formaggi" },
       fr: { name: "Tagliere", description: "Tagliere di salumi e formaggi" },
+      es: { name: "Tagliere", description: "Tagliere di salumi e formaggi" },
     },
   },
   {
@@ -483,6 +512,7 @@ export const importedProducts: Product[] = [
       it: { name: "Toast", description: "Toast caldo croccante con prosciutto cotto e formaggio filante. Sempre una garanzia" },
       en: { name: "Toast", description: "Toast caldo croccante con prosciutto cotto e formaggio filante. Sempre una garanzia" },
       fr: { name: "Toast", description: "Toast caldo croccante con prosciutto cotto e formaggio filante. Sempre una garanzia" },
+      es: { name: "Toast", description: "Toast caldo croccante con prosciutto cotto e formaggio filante. Sempre una garanzia" },
     },
   },
   {
@@ -499,6 +529,7 @@ export const importedProducts: Product[] = [
       it: { name: "Latte Bianco", description: "Latte F.R.A.Q Bar 150ml" },
       en: { name: "Latte Bianco", description: "Latte F.R.A.Q Bar 150ml" },
       fr: { name: "Latte Bianco", description: "Latte F.R.A.Q Bar 150ml" },
+      es: { name: "Latte Bianco", description: "Latte F.R.A.Q Bar 150ml" },
     },
   },
   {
@@ -515,6 +546,7 @@ export const importedProducts: Product[] = [
       it: { name: "Marocchino", description: "Espresso + cacao + schiuma latte" },
       en: { name: "Marocchino", description: "Espresso + cacao + schiuma latte" },
       fr: { name: "Marocchino", description: "Espresso + cacao + schiuma latte" },
+      es: { name: "Marocchino", description: "Espresso + cacao + schiuma latte" },
     },
   },
   {
@@ -531,6 +563,7 @@ export const importedProducts: Product[] = [
       it: { name: "Pasta zucchine e prosciutto crudo", description: "Menu del giorno 16/06/2026" },
       en: { name: "Pasta zucchine e prosciutto crudo", description: "Menu del giorno 16/06/2026" },
       fr: { name: "Pasta zucchine e prosciutto crudo", description: "Menu del giorno 16/06/2026" },
+      es: { name: "Pasta zucchine e prosciutto crudo", description: "Menu del giorno 16/06/2026" },
     },
   },
   {
@@ -547,6 +580,7 @@ export const importedProducts: Product[] = [
       it: { name: "Riso alla cantonese", description: "Menu del giorno 16/06/2026" },
       en: { name: "Riso alla cantonese", description: "Menu del giorno 16/06/2026" },
       fr: { name: "Riso alla cantonese", description: "Menu del giorno 16/06/2026" },
+      es: { name: "Riso alla cantonese", description: "Menu del giorno 16/06/2026" },
     },
   },
   {
@@ -563,6 +597,7 @@ export const importedProducts: Product[] = [
       it: { name: "Petto di pollo rucola grana e pomodori", description: "Menu del giorno 16/06/2026" },
       en: { name: "Petto di pollo rucola grana e pomodori", description: "Menu del giorno 16/06/2026" },
       fr: { name: "Petto di pollo rucola grana e pomodori", description: "Menu del giorno 16/06/2026" },
+      es: { name: "Petto di pollo rucola grana e pomodori", description: "Menu del giorno 16/06/2026" },
     },
   },
   {
@@ -579,6 +614,7 @@ export const importedProducts: Product[] = [
       it: { name: "Crudo e melone", description: "Menu del giorno 16/06/2026" },
       en: { name: "Crudo e melone", description: "Menu del giorno 16/06/2026" },
       fr: { name: "Crudo e melone", description: "Menu del giorno 16/06/2026" },
+      es: { name: "Crudo e melone", description: "Menu del giorno 16/06/2026" },
     },
   },
   {
@@ -596,6 +632,7 @@ export const importedProducts: Product[] = [
       it: { name: "Caffè Torèt Piccolo", description: "Caffè Torèt speciale" },
       en: { name: "Caffè Torèt Piccolo", description: "Caffè Torèt speciale" },
       fr: { name: "Caffè Torèt Piccolo", description: "Caffè Torèt speciale" },
+      es: { name: "Caffè Torèt Piccolo", description: "Caffè Torèt speciale" },
     },
   },
   {
@@ -613,6 +650,7 @@ export const importedProducts: Product[] = [
       it: { name: "Caffè Torèt Grande", description: "Caffè Torèt speciale grande" },
       en: { name: "Caffè Torèt Grande", description: "Caffè Torèt speciale grande" },
       fr: { name: "Caffè Torèt Grande", description: "Caffè Torèt speciale grande" },
+      es: { name: "Caffè Torèt Grande", description: "Caffè Torèt speciale grande" },
     },
   },
   {
@@ -629,6 +667,7 @@ export const importedProducts: Product[] = [
       it: { name: "Panna Piccola", description: "Produzione propria" },
       en: { name: "Panna Piccola", description: "Produzione propria" },
       fr: { name: "Panna Piccola", description: "Produzione propria" },
+      es: { name: "Panna Piccola", description: "Produzione propria" },
     },
   },
   {
@@ -645,6 +684,7 @@ export const importedProducts: Product[] = [
       it: { name: "Panna Grande", description: "Produzione propria" },
       en: { name: "Panna Grande", description: "Produzione propria" },
       fr: { name: "Panna Grande", description: "Produzione propria" },
+      es: { name: "Panna Grande", description: "Produzione propria" },
     },
   },
   {
@@ -661,6 +701,7 @@ export const importedProducts: Product[] = [
       it: { name: "Zabaione", description: "Fatto al momento" },
       en: { name: "Zabaione", description: "Fatto al momento" },
       fr: { name: "Zabaione", description: "Fatto al momento" },
+      es: { name: "Zabaione", description: "Fatto al momento" },
     },
   },
   {
@@ -678,6 +719,7 @@ export const importedProducts: Product[] = [
       it: { name: "Bicerin", description: "Storico bicerin torinese: caffè Costadoro Lab, cioccolata e crema di latte. Dal 1763, una tradizione" },
       en: { name: "Bicerin", description: "Storico bicerin torinese: caffè Costadoro Lab, cioccolata e crema di latte. Dal 1763, una tradizione" },
       fr: { name: "Bicerin", description: "Storico bicerin torinese: caffè Costadoro Lab, cioccolata e crema di latte. Dal 1763, una tradizione" },
+      es: { name: "Bicerin", description: "Storico bicerin torinese: caffè Costadoro Lab, cioccolata e crema di latte. Dal 1763, una tradizione" },
     },
   },
   {
@@ -694,6 +736,7 @@ export const importedProducts: Product[] = [
       it: { name: "Cioccolata calda", description: "Cioccolata calda densa e avvolgente, preparata con cacao pregiato. Una coccola vera" },
       en: { name: "Cioccolata calda", description: "Cioccolata calda densa e avvolgente, preparata con cacao pregiato. Una coccola vera" },
       fr: { name: "Cioccolata calda", description: "Cioccolata calda densa e avvolgente, preparata con cacao pregiato. Una coccola vera" },
+      es: { name: "Cioccolata calda", description: "Cioccolata calda densa e avvolgente, preparata con cacao pregiato. Una coccola vera" },
     },
   },
   {
@@ -710,6 +753,7 @@ export const importedProducts: Product[] = [
       it: { name: "Cioccolata calda con panna", description: "Cioccolata calda arricchita con panna montata fresca. Il massimo della golosità" },
       en: { name: "Cioccolata calda con panna", description: "Cioccolata calda arricchita con panna montata fresca. Il massimo della golosità" },
       fr: { name: "Cioccolata calda con panna", description: "Cioccolata calda arricchita con panna montata fresca. Il massimo della golosità" },
+      es: { name: "Cioccolata calda con panna", description: "Cioccolata calda arricchita con panna montata fresca. Il massimo della golosità" },
     },
   },
   {
@@ -726,6 +770,7 @@ export const importedProducts: Product[] = [
       it: { name: "Orzo/Ginseng Grande", description: "Orzo o ginseng caldo in formato grande. Gusto pieno e avvolgente" },
       en: { name: "Orzo/Ginseng Grande", description: "Orzo o ginseng caldo in formato grande. Gusto pieno e avvolgente" },
       fr: { name: "Orzo/Ginseng Grande", description: "Orzo o ginseng caldo in formato grande. Gusto pieno e avvolgente" },
+      es: { name: "Orzo/Ginseng Grande", description: "Orzo o ginseng caldo in formato grande. Gusto pieno e avvolgente" },
     },
   },
   {
@@ -742,6 +787,7 @@ export const importedProducts: Product[] = [
       it: { name: "Cappuccino soia/vena", description: "Cappuccino con latte di soia o avena. Leggero e gustoso, per ogni esigenza" },
       en: { name: "Cappuccino soia/vena", description: "Cappuccino con latte di soia o avena. Leggero e gustoso, per ogni esigenza" },
       fr: { name: "Cappuccino soia/vena", description: "Cappuccino con latte di soia o avena. Leggero e gustoso, per ogni esigenza" },
+      es: { name: "Cappuccino soia/vena", description: "Cappuccino con latte di soia o avena. Leggero e gustoso, per ogni esigenza" },
     },
   },
   {
@@ -758,6 +804,7 @@ export const importedProducts: Product[] = [
       it: { name: "Caramel iced coffee", description: "Caffè freddo Costadoro Lab con latte e sciroppo al caramello. Dolce e rinfrescante" },
       en: { name: "Caramel iced coffee", description: "Caffè freddo Costadoro Lab con latte e sciroppo al caramello. Dolce e rinfrescante" },
       fr: { name: "Caramel iced coffee", description: "Caffè freddo Costadoro Lab con latte e sciroppo al caramello. Dolce e rinfrescante" },
+      es: { name: "Caramel iced coffee", description: "Caffè freddo Costadoro Lab con latte e sciroppo al caramello. Dolce e rinfrescante" },
     },
   },
   {
@@ -774,6 +821,7 @@ export const importedProducts: Product[] = [
       it: { name: "Caffè leccese", description: "Caffè espresso Costadoro Lab con latte di mandorla e ghiaccio. Freschezza salentina in città" },
       en: { name: "Caffè leccese", description: "Caffè espresso Costadoro Lab con latte di mandorla e ghiaccio. Freschezza salentina in città" },
       fr: { name: "Caffè leccese", description: "Caffè espresso Costadoro Lab con latte di mandorla e ghiaccio. Freschezza salentina in città" },
+      es: { name: "Caffè leccese", description: "Caffè espresso Costadoro Lab con latte di mandorla e ghiaccio. Freschezza salentina in città" },
     },
   },
   {
@@ -790,6 +838,7 @@ export const importedProducts: Product[] = [
       it: { name: "Espresso tonic", description: "Espresso Costadoro Lab con tonica e ghiaccio. L'aperitivo che non ti aspetti" },
       en: { name: "Espresso tonic", description: "Espresso Costadoro Lab con tonica e ghiaccio. L'aperitivo che non ti aspetti" },
       fr: { name: "Espresso tonic", description: "Espresso Costadoro Lab con tonica e ghiaccio. L'aperitivo che non ti aspetti" },
+      es: { name: "Espresso tonic", description: "Espresso Costadoro Lab con tonica e ghiaccio. L'aperitivo che non ti aspetti" },
     },
   },
   {
@@ -806,6 +855,7 @@ export const importedProducts: Product[] = [
       it: { name: "Crema caffè Grande", description: "Crema d'oro Costadoro Lab in formato generoso. Un morbido abbraccio di caffè" },
       en: { name: "Crema caffè Grande", description: "Crema d'oro Costadoro Lab in formato generoso. Un morbido abbraccio di caffè" },
       fr: { name: "Crema caffè Grande", description: "Crema d'oro Costadoro Lab in formato generoso. Un morbido abbraccio di caffè" },
+      es: { name: "Crema caffè Grande", description: "Crema d'oro Costadoro Lab in formato generoso. Un morbido abbraccio di caffè" },
     },
   },
   {
@@ -822,6 +872,7 @@ export const importedProducts: Product[] = [
       it: { name: "Iced matcha latte", description: "Tè matcha giapponese, latte e ghiaccio. Energia pura e gusto raffinato" },
       en: { name: "Iced matcha latte", description: "Tè matcha giapponese, latte e ghiaccio. Energia pura e gusto raffinato" },
       fr: { name: "Iced matcha latte", description: "Tè matcha giapponese, latte e ghiaccio. Energia pura e gusto raffinato" },
+      es: { name: "Iced matcha latte", description: "Tè matcha giapponese, latte e ghiaccio. Energia pura e gusto raffinato" },
     },
   },
   {
@@ -838,6 +889,7 @@ export const importedProducts: Product[] = [
       it: { name: "Iced chai latte", description: "Chai tea speziato con latte e ghiaccio. Un viaggio tra Oriente e Occidente" },
       en: { name: "Iced chai latte", description: "Chai tea speziato con latte e ghiaccio. Un viaggio tra Oriente e Occidente" },
       fr: { name: "Iced chai latte", description: "Chai tea speziato con latte e ghiaccio. Un viaggio tra Oriente e Occidente" },
+      es: { name: "Iced chai latte", description: "Chai tea speziato con latte e ghiaccio. Un viaggio tra Oriente e Occidente" },
     },
   },
   {
@@ -854,6 +906,7 @@ export const importedProducts: Product[] = [
       it: { name: "Semidolce", description: "Dolce al cucchiaio, cremoso e delicato. Per concludere il pasto in dolcezza" },
       en: { name: "Semidolce", description: "Dolce al cucchiaio, cremoso e delicato. Per concludere il pasto in dolcezza" },
       fr: { name: "Semidolce", description: "Dolce al cucchiaio, cremoso e delicato. Per concludere il pasto in dolcezza" },
+      es: { name: "Semidolce", description: "Dolce al cucchiaio, cremoso e delicato. Per concludere il pasto in dolcezza" },
     },
   },
   {
@@ -870,6 +923,7 @@ export const importedProducts: Product[] = [
       it: { name: "Piadina", description: "Piadina calda farcita con prosciutto, formaggio e rucola. Saporita e croccante" },
       en: { name: "Piadina", description: "Piadina calda farcita con prosciutto, formaggio e rucola. Saporita e croccante" },
       fr: { name: "Piadina", description: "Piadina calda farcita con prosciutto, formaggio e rucola. Saporita e croccante" },
+      es: { name: "Piadina", description: "Piadina calda farcita con prosciutto, formaggio e rucola. Saporita e croccante" },
     },
   },
   {
@@ -886,6 +940,7 @@ export const importedProducts: Product[] = [
       it: { name: "Spremuta melograno", description: "Spremuta di melograno fresco. Antiossidante naturale dal gusto inconfondibile" },
       en: { name: "Spremuta melograno", description: "Spremuta di melograno fresco. Antiossidante naturale dal gusto inconfondibile" },
       fr: { name: "Spremuta melograno", description: "Spremuta di melograno fresco. Antiossidante naturale dal gusto inconfondibile" },
+      es: { name: "Spremuta melograno", description: "Spremuta di melograno fresco. Antiossidante naturale dal gusto inconfondibile" },
     },
   },
   {
@@ -902,6 +957,7 @@ export const importedProducts: Product[] = [
       it: { name: "Caffè shakerato", description: "Espresso Costadoro Lab shakerato con ghiaccio. Schiumoso, freddo, intenso" },
       en: { name: "Caffè shakerato", description: "Espresso Costadoro Lab shakerato con ghiaccio. Schiumoso, freddo, intenso" },
       fr: { name: "Caffè shakerato", description: "Espresso Costadoro Lab shakerato con ghiaccio. Schiumoso, freddo, intenso" },
+      es: { name: "Caffè shakerato", description: "Espresso Costadoro Lab shakerato con ghiaccio. Schiumoso, freddo, intenso" },
     },
   },
   {
@@ -918,6 +974,7 @@ export const importedProducts: Product[] = [
       it: { name: "Croissant salato", description: "Croissant sfogliato con ingredienti salati selezionati. Perfetto per una pausa gustosa" },
       en: { name: "Croissant salato", description: "Croissant sfogliato con ingredienti salati selezionati. Perfetto per una pausa gustosa" },
       fr: { name: "Croissant salato", description: "Croissant sfogliato con ingredienti salati selezionati. Perfetto per una pausa gustosa" },
+      es: { name: "Croissant salato", description: "Croissant sfogliato con ingredienti salati selezionati. Perfetto per una pausa gustosa" },
     },
   },
   {
@@ -935,6 +992,7 @@ export const importedProducts: Product[] = [
       it: { name: "Cappuccino", description: "Caffè Costadoro Lab, latte caldo e schiuma vellutata. Il rito della colazione all'italiana" },
       en: { name: "Cappuccino", description: "Caffè Costadoro Lab, latte caldo e schiuma vellutata. Il rito della colazione all'italiana" },
       fr: { name: "Cappuccino", description: "Caffè Costadoro Lab, latte caldo e schiuma vellutata. Il rito della colazione all'italiana" },
+      es: { name: "Cappuccino", description: "Caffè Costadoro Lab, latte caldo e schiuma vellutata. Il rito della colazione all'italiana" },
     },
   },
   {
@@ -951,6 +1009,7 @@ export const importedProducts: Product[] = [
       it: { name: "Coca Cola 33cl vetro", description: "Bottiglia vetro 33cl" },
       en: { name: "Coca Cola 33cl vetro", description: "Bottiglia vetro 33cl" },
       fr: { name: "Coca Cola 33cl vetro", description: "Bottiglia vetro 33cl" },
+      es: { name: "Coca Cola 33cl vetro", description: "Bottiglia vetro 33cl" },
     },
   },
   {
@@ -967,6 +1026,7 @@ export const importedProducts: Product[] = [
       it: { name: "Fanta 33cl vetro", description: "Fanta bottiglia vetro 33cl" },
       en: { name: "Fanta 33cl vetro", description: "Fanta bottiglia vetro 33cl" },
       fr: { name: "Fanta 33cl vetro", description: "Fanta bottiglia vetro 33cl" },
+      es: { name: "Fanta 33cl vetro", description: "Fanta bottiglia vetro 33cl" },
     },
   },
   {
@@ -983,6 +1043,7 @@ export const importedProducts: Product[] = [
       it: { name: "Coca Cola Zero 33cl vetro", description: "Coca Cola Zero bottiglia vetro 33cl" },
       en: { name: "Coca Cola Zero 33cl vetro", description: "Coca Cola Zero bottiglia vetro 33cl" },
       fr: { name: "Coca Cola Zero 33cl vetro", description: "Coca Cola Zero bottiglia vetro 33cl" },
+      es: { name: "Coca Cola Zero 33cl vetro", description: "Coca Cola Zero bottiglia vetro 33cl" },
     },
   },
   {
@@ -999,6 +1060,7 @@ export const importedProducts: Product[] = [
       it: { name: "Acqua Torèt Fresh", description: "Acqua, limone fresco e menta" },
       en: { name: "Acqua Torèt Fresh", description: "Acqua, limone fresco e menta" },
       fr: { name: "Acqua Torèt Fresh", description: "Acqua, limone fresco e menta" },
+      es: { name: "Acqua Torèt Fresh", description: "Acqua, limone fresco e menta" },
     },
   },
 ];

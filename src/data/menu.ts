@@ -19,6 +19,7 @@ export interface Translations {
   it: { name: string; description: string };
   en: { name: string; description: string };
   fr: { name: string; description: string };
+  es: { name: string; description: string };
 }
 
 export interface Product {
@@ -38,35 +39,35 @@ export interface Product {
   translations: Translations;
 }
 
-export const categoriesByMacro: Record<MacroCategory, { id: string; label: { it: string; en: string; fr: string } }[]> = {
+export const categoriesByMacro: Record<MacroCategory, { id: string; label: { it: string; en: string; fr: string; es: string } }[]> = {
   colazione: [
-    { id: "all", label: { it: "Tutti", en: "All", fr: "Tous" } },
-    { id: "caffetteria", label: { it: "Caffetteria", en: "Coffee", fr: "Café" } },
-    { id: "dolci", label: { it: "Dolci", en: "Sweet", fr: "Sucré" } },
-    { id: "salato", label: { it: "Salato", en: "Savoury", fr: "Salé" } },
-    { id: "bevande", label: { it: "Bevande", en: "Drinks", fr: "Boissons" } },
+    { id: "all", label: { it: "Tutti", en: "All", fr: "Tous", es: "Todos" } },
+    { id: "caffetteria", label: { it: "Caffetteria", en: "Coffee", fr: "Café", es: "Cafetería" } },
+    { id: "dolci", label: { it: "Dolci", en: "Sweet", fr: "Sucré", es: "Dulces" } },
+    { id: "salato", label: { it: "Salato", en: "Savoury", fr: "Salé", es: "Salado" } },
+    { id: "bevande", label: { it: "Bevande", en: "Drinks", fr: "Boissons", es: "Bebidas" } },
   ],
   pranzo: [
-    { id: "all", label: { it: "Tutti", en: "All", fr: "Tous" } },
-    { id: "piatti-caldi", label: { it: "MENU DEL GIORNO", en: "Daily Menu", fr: "Menu du Jour" } },
-    { id: "panini", label: { it: "Panini & Snack", en: "Sandwiches & Snacks", fr: "Sandwichs" } },
-    { id: "insalate", label: { it: "Insalate", en: "Salads", fr: "Salades" } },
-    { id: "dolci", label: { it: "Dolci", en: "Sweet", fr: "Sucré" } },
-    { id: "bevande", label: { it: "Bevande", en: "Drinks", fr: "Boissons" } },
+    { id: "all", label: { it: "Tutti", en: "All", fr: "Tous", es: "Todos" } },
+    { id: "piatti-caldi", label: { it: "MENU DEL GIORNO", en: "Daily Menu", fr: "Menu du Jour", es: "Menú del Día" } },
+    { id: "panini", label: { it: "Panini & Snack", en: "Sandwiches & Snacks", fr: "Sandwichs", es: "Sándwiches" } },
+    { id: "insalate", label: { it: "Insalate", en: "Salads", fr: "Salades", es: "Ensaladas" } },
+    { id: "dolci", label: { it: "Dolci", en: "Sweet", fr: "Sucré", es: "Dulces" } },
+    { id: "bevande", label: { it: "Bevande", en: "Drinks", fr: "Boissons", es: "Bebidas" } },
   ],
   aperitivo: [
-    { id: "all", label: { it: "Tutti", en: "All", fr: "Tous" } },
-    { id: "drink", label: { it: "Drink", en: "Drinks", fr: "Cocktails" } },
-    { id: "vini", label: { it: "Vini", en: "Wines", fr: "Vins" } },
-    { id: "analcolici", label: { it: "Analcolici", en: "Non-alcoholic", fr: "Sans alcool" } },
-    { id: "taglieri", label: { it: "Taglieri", en: "Boards", fr: "Planches" } },
+    { id: "all", label: { it: "Tutti", en: "All", fr: "Tous", es: "Todos" } },
+    { id: "drink", label: { it: "Drink", en: "Drinks", fr: "Cocktails", es: "Cócteles" } },
+    { id: "vini", label: { it: "Vini", en: "Wines", fr: "Vins", es: "Vinos" } },
+    { id: "analcolici", label: { it: "Analcolici", en: "Non-alcoholic", fr: "Sans alcool", es: "Sin alcohol" } },
+    { id: "taglieri", label: { it: "Taglieri", en: "Boards", fr: "Planches", es: "Tablas" } },
   ],
 };
 
-export const macroLabels: Record<MacroCategory, { it: string; en: string; fr: string }> = {
-  colazione: { it: "Colazione", en: "Breakfast", fr: "Petit-déjeuner" },
-  pranzo: { it: "Pranzo", en: "Lunch", fr: "Déjeuner" },
-  aperitivo: { it: "Aperitivo", en: "Aperitivo", fr: "Apéritif" },
+export const macroLabels: Record<MacroCategory, { it: string; en: string; fr: string; es: string }> = {
+  colazione: { it: "Colazione", en: "Breakfast", fr: "Petit-déjeuner", es: "Desayuno" },
+  pranzo: { it: "Pranzo", en: "Lunch", fr: "Déjeuner", es: "Almuerzo" },
+  aperitivo: { it: "Aperitivo", en: "Aperitivo", fr: "Apéritif", es: "Aperitivo" },
 };
 
 export const products: Product[] = [
@@ -85,6 +86,7 @@ export const products: Product[] = [
       it: { name: "Espresso Torèt", description: "La nostra miscela 100% Arabica, tostata artigianalmente a Torino." },
       en: { name: "Espresso Torèt", description: "Our 100% Arabica blend, artisanally roasted in Turin." },
       fr: { name: "Espresso Torèt", description: "Notre mélange 100% Arabica, torréfié artisanalement à Turin." },
+      es: { name: "Espresso Torèt", description: "Notre mélange 100% Arabica, torréfié artisanalement à Turin." },
     },
   },
   {
@@ -102,6 +104,7 @@ export const products: Product[] = [
       it: { name: "Cappuccino", description: "Espresso e latte montato a vapore, schiuma cremosa." },
       en: { name: "Cappuccino", description: "Espresso and steamed milk with creamy foam." },
       fr: { name: "Cappuccino", description: "Espresso et lait vapeur, mousse onctueuse." },
+      es: { name: "Cappuccino", description: "Espresso et lait vapeur, mousse onctueuse." },
     },
   },
   {
@@ -119,6 +122,7 @@ export const products: Product[] = [
       it: { name: "Croissant Classico", description: "Sfoglia dorata al burro francese, cotta in giornata." },
       en: { name: "Classic Croissant", description: "Golden French butter pastry, freshly baked." },
       fr: { name: "Croissant Classique", description: "Feuilleté doré au beurre français, cuit du jour." },
+      es: { name: "Croissant Classique", description: "Feuilleté doré au beurre français, cuit du jour." },
     },
   },
   {
@@ -135,6 +139,7 @@ export const products: Product[] = [
       it: { name: "Croissant Pistacchio", description: "Farcito con crema di pistacchio di Bronte, granella croccante." },
       en: { name: "Pistachio Croissant", description: "Filled with Bronte pistachio cream and crunchy grains." },
       fr: { name: "Croissant Pistache", description: "Garni de crème de pistache de Bronte et éclats croquants." },
+      es: { name: "Croissant Pistache", description: "Garni de crème de pistache de Bronte et éclats croquants." },
     },
   },
   {
@@ -151,6 +156,7 @@ export const products: Product[] = [
       it: { name: "Croissant Crema", description: "Crema pasticcera alla vaniglia bourbon, zucchero a velo." },
       en: { name: "Cream Croissant", description: "Bourbon vanilla pastry cream, dusted with icing sugar." },
       fr: { name: "Croissant Crème", description: "Crème pâtissière à la vanille bourbon, sucre glace." },
+      es: { name: "Croissant Crème", description: "Crème pâtissière à la vanille bourbon, sucre glace." },
     },
   },
   {
@@ -167,6 +173,7 @@ export const products: Product[] = [
       it: { name: "Spremuta d'Arancia", description: "Arance fresche di stagione, spremute al momento." },
       en: { name: "Fresh Orange Juice", description: "Seasonal oranges, freshly squeezed." },
       fr: { name: "Jus d'Orange Pressé", description: "Oranges de saison, pressées à la minute." },
+      es: { name: "Jus d'Orange Pressé", description: "Oranges de saison, pressées à la minute." },
     },
   },
 
@@ -185,6 +192,7 @@ export const products: Product[] = [
       it: { name: "Bowl Riso, Quinoa e Bulgur", description: "Piatto freddo con cereali, verdure di stagione e condimento alle erbe." },
       en: { name: "Rice, Quinoa & Bulgur Bowl", description: "Cold dish with grains, seasonal vegetables and herb dressing." },
       fr: { name: "Bowl Riz, Quinoa & Boulgour", description: "Plat froid aux céréales, légumes de saison et vinaigrette aux herbes." },
+      es: { name: "Bowl Riz, Quinoa & Boulgour", description: "Plat froid aux céréales, légumes de saison et vinaigrette aux herbes." },
     },
   },
   {
@@ -200,6 +208,7 @@ export const products: Product[] = [
       it: { name: "Scaloppine al Limone", description: "Fettine di vitello in salsa al limone e prezzemolo, contorno del giorno." },
       en: { name: "Veal Scaloppine with Lemon", description: "Veal in lemon and parsley sauce, side of the day." },
       fr: { name: "Escalopes au Citron", description: "Veau en sauce citron-persil, garniture du jour." },
+      es: { name: "Escalopes au Citron", description: "Veau en sauce citron-persil, garniture du jour." },
     },
   },
   {
@@ -216,6 +225,7 @@ export const products: Product[] = [
       it: { name: "Frittata con Contorni", description: "Frittata di stagione con due contorni a scelta." },
       en: { name: "Frittata with Sides", description: "Seasonal frittata with two side dishes of your choice." },
       fr: { name: "Frittata avec Garnitures", description: "Frittata de saison avec deux garnitures au choix." },
+      es: { name: "Frittata avec Garnitures", description: "Frittata de saison avec deux garnitures au choix." },
     },
   },
   {
@@ -232,6 +242,7 @@ export const products: Product[] = [
       it: { name: "Frittata della Casa", description: "Uova fresche, erbe aromatiche, formaggio stagionato." },
       en: { name: "House Frittata", description: "Fresh eggs, herbs and aged cheese." },
       fr: { name: "Frittata Maison", description: "Œufs frais, herbes aromatiques, fromage affiné." },
+      es: { name: "Frittata Maison", description: "Œufs frais, herbes aromatiques, fromage affiné." },
     },
   },
 
@@ -250,6 +261,7 @@ export const products: Product[] = [
       it: { name: "Drink della Casa", description: "La nostra signature: vermouth torinese, agrumi, bitter artigianale." },
       en: { name: "House Signature Drink", description: "Our signature: Torinese vermouth, citrus, artisanal bitter." },
       fr: { name: "Cocktail Maison", description: "Notre signature : vermouth turinois, agrumes, bitter artisanal." },
+      es: { name: "Cocktail Maison", description: "Notre signature : vermouth turinois, agrumes, bitter artisanal." },
     },
   },
   {
@@ -265,6 +277,7 @@ export const products: Product[] = [
       it: { name: "Drink Classico", description: "Negroni, Americano, Spritz: a tua scelta." },
       en: { name: "Classic Drink", description: "Negroni, Americano, Spritz: your choice." },
       fr: { name: "Cocktail Classique", description: "Negroni, Americano, Spritz : au choix." },
+      es: { name: "Cocktail Classique", description: "Negroni, Americano, Spritz : au choix." },
     },
   },
   {
@@ -280,6 +293,7 @@ export const products: Product[] = [
       it: { name: "Calice di Vino", description: "Selezione di rossi e bianchi piemontesi a rotazione." },
       en: { name: "Glass of Wine", description: "Rotating selection of Piedmontese reds and whites." },
       fr: { name: "Verre de Vin", description: "Sélection tournante de rouges et blancs du Piémont." },
+      es: { name: "Verre de Vin", description: "Sélection tournante de rouges et blancs du Piémont." },
     },
   },
   {
@@ -297,6 +311,7 @@ export const products: Product[] = [
       it: { name: "Tagliere Torèt", description: "Selezione di salumi piemontesi, formaggi stagionati, miele e mostarde." },
       en: { name: "Torèt Charcuterie Board", description: "Piedmontese cured meats, aged cheeses, honey and mostarda." },
       fr: { name: "Planche Torèt", description: "Charcuterie piémontaise, fromages affinés, miel et moutarde." },
+      es: { name: "Planche Torèt", description: "Charcuterie piémontaise, fromages affinés, miel et moutarde." },
     },
   },
   {
@@ -312,6 +327,7 @@ export const products: Product[] = [
       it: { name: "Stuzzichini", description: "Olive taggiasche, focaccia croccante, frutta secca tostata." },
       en: { name: "Bar Snacks", description: "Taggiasca olives, crunchy focaccia, toasted nuts." },
       fr: { name: "Amuse-bouches", description: "Olives taggiasca, focaccia croquante, fruits secs grillés." },
+      es: { name: "Amuse-bouches", description: "Olives taggiasca, focaccia croquante, fruits secs grillés." },
     },
   },
 ];

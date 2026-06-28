@@ -14,6 +14,7 @@ const locales: { code: Locale; label: string }[] = [
   { code: "it", label: "Italiano" },
   { code: "en", label: "English" },
   { code: "fr", label: "Français" },
+  { code: "es", label: "Español" },
 ];
 
 export const Header = ({ transparent }: { transparent?: boolean }) => {
