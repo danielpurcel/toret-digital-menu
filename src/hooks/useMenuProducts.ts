@@ -10,9 +10,10 @@ export const useMenuProducts = () =>
   useQuery({
     queryKey: ["menu-products"],
     queryFn: fetchXanoMenuProducts,
-    staleTime: 1000 * 60 * 10,
-    gcTime: 1000 * 60 * 30,
-    retry: 1,
+    staleTime: 1000 * 30,  // 30 secondi — aggiornamento rapido da Xano
+    gcTime: 1000 * 60 * 5,  // 5 minuti cache
+    refetchOnWindowFocus: true,
+    retry: 2,
     initialData: importedProducts,
   });
 
