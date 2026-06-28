@@ -167,16 +167,27 @@ const fetchPage = async (page: number) => {
 };
 
 export const fetchXanoMenuProducts = async () => {
-  const items: XanoProduct[] = [];
-  let page = 1;
+  try {
+    const items: XanoProduct[] = [];
+    let page = 1;
 
-  for (let guard = 0; guard < 20; guard += 1) {
-    const data = await fetchPage(page);
-    items.push(...(data.items ?? []));
-    if (!data.nextPage) break;
-    page = data.nextPage;
+    for (let guard = 0; guard < 20; guard += 1) {
+      const data = await fetchPage(page);
+      items.push(...(data.items ?? []));
+      if (!data.nextPage) break;
+      page = data.nextPage;
+    }
+
+    const mapped = items.map(toProduct).filter((item): item is Product => !!item);
+    if (mapped.length > 0) {
+      console.log(`[Xano] Caricati ${mapped.length} prodotti dal proxy`);
+      return mapped;
+    }
+  } catch (err) {
+    console.warn('[Xano] Proxy fetch fallito:', err instanceof Error ? err.message : String(err));
   }
-
-  const mapped = items.map(toProduct).filter((item): item is Product => !!item);
-  return mapped.length > 0 ? mapped : fallbackProducts;
+  
+  // Fallback offline se Xano non risponde
+  console.log('[Xano] Uso fallback importedProducts');
+  return fallbackProducts;
 };
