@@ -11,7 +11,7 @@ import {
   type MacroCategory,
   type Product,
 } from "@/data/menu";
-import { subcategoryConfig, macroForCategory } from "@/data/subcategoryConfig";
+import { useMenuCategories } from "@/hooks/useMenuCategories";
 import { byMacro, useMenuProducts } from "@/hooks/useMenuProducts";
 import { getPromoByMacro } from "@/data/promos";
 import catColazione from "@/assets/cat-colazione.jpg";
@@ -87,22 +87,21 @@ const MacroPage = () => {
   const [selected, setSelected] = useState<Product | null>(null);
   const [categoryId, setCategoryId] = useState<number | "all">("all");
   const { data: allProducts, isFetching } = useMenuProducts();
+  const { categories: xanoCats, categoryMap, macroForCategory } = useMenuCategories();
   const macroKey = isMacro(macro) ? macro : "colazione";
   const meta = macroMeta[macroKey];
 
-  // Sottocategorie dinamiche derivate dai category_id + subcategoryConfig
+  // Sottocategorie dinamiche da Xano (menu_categories) filtrate per macro
   const subcategories = useMemo(() => {
     const cats: { id: number; icon: string }[] = [];
-    for (const [catId, info] of Object.entries(subcategoryConfig)) {
-      const id = Number(catId);
-      if (macroForCategory(id) === macroKey) {
-        cats.push({ id, icon: info.icon });
+    for (const cat of xanoCats) {
+      if ((cat.macro || "").toLowerCase() === macroKey) {
+        cats.push({ id: cat.id, icon: cat.icon || "help-circle" });
       }
     }
-    // Ordina per category_id
     cats.sort((a, b) => a.id - b.id);
     return cats;
-  }, [macroKey]);
+  }, [xanoCats, macroKey]);
 
   // Prodotti filtrati per macro + sottocategoria, ordinati per sortOrder
   const products = useMemo(() => {
@@ -159,7 +158,7 @@ const MacroPage = () => {
           </button>
 
           {subcategories.map(({ id, icon }) => {
-            const info = subcategoryConfig[id];
+            const info = categoryMap[id];
             const Icon = iconMap[icon];
             return (
               <button

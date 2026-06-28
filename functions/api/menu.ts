@@ -65,21 +65,21 @@ export async function onRequest(context: {
   const limit = parseInt(url.searchParams.get('limit') || '100', 10);
   const offset = parseInt(url.searchParams.get('offset') || '0', 10);
 
-  // Endpoint Xano ERP — usa sempre POST con action:list
-  const xanoEndpoint = env.XANO_ERP_ENDPOINT || 'https://x8ki-letl-twmt.n7.xano.io/api:gubKa7ve/Erp';
+  // Endpoint Xano ERP (nuovo, supporta menu_products + menu_categories)
+  const xanoEndpoint = env.XANO_ERP_ENDPOINT || 'https://x8ki-letl-twmt.n7.xano.io/api:erp-api/Erp';
 
   try {
     const response = await fetch(xanoEndpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': apiKey,
       },
       body: JSON.stringify({
         action: 'list',
         table: 'menu_products',
         limit,
         offset,
+        data_json: '{}',
       }),
     });
 
