@@ -117,7 +117,7 @@ const toProduct = (item: XanoProduct): Product | null => {
   if (!category || CATEGORIES_TO_SKIP.has(item.category_id ?? 0)) return null;
 
   const price = Number(item.price ?? 0);
-  const description = item.description || "Prodotto del giorno Caffè Torèt.";
+  const description = item.description || "Specialità del giorno Caffè Torèt.";
   const id = `xano-${item.id}-${slugify(item.name)}`;
 
   const nameEN = item.name_en?.trim() || item.name;

@@ -214,7 +214,7 @@ export const importedProducts: Product[] = [
     category: "caffetteria",
     name: "Caffè",
     description: "Espresso 100% Arabica Costadoro Lab, estratto al momento per un gusto intenso e avvolgente",
-    price: 1.3,
+    price: 2,
     available: true,
     featured: true,
     translations: {
