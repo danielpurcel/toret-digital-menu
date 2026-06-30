@@ -1,5 +1,6 @@
 import type { Product } from "@/data/menu";
-// Generated from Xano menu_products on 2026-06-30.
+import cetriolino from "@/assets/p-cetriolino-contorno.png";
+// Generated from Xano menu_products on 2026-06-30. + manual aggiunta cetriolino
 export const importedProducts: Product[] = [
   {
     id: "xano-22-acqua-1-5l",
@@ -1166,6 +1167,26 @@ export const importedProducts: Product[] = [
       en: { name: "Agua Torèt Fresh", description: "Water, fresh lemon and mint. Our Torèt Fresh water, thirst-quenching and natural." },
       fr: { name: "Eau Torèt Fresh", description: "Eau, citron frais et menthe. Notre eau Torèt Fresh, désaltérante et naturelle." },
       es: { name: "Agua Torèt Fresh", description: "Agua, limón fresco y menta. Nuestra agua Torèt Fresh, refrescante y natural." },
+    },
+  },
+  {
+    id: "xano-95-cetriolino-sottaceto",
+    xanoId: 95,
+    source: "xano-import",
+    macroCategory: "pranzo",
+    category: "contorni",
+    categoryId: 11,
+    sortOrder: 10,
+    name: "Cetriolino sottaceto",
+    description: "Cetriolino artigianale in agrodolce, croccante e saporito.",
+    price: 3,
+    available: true,
+    image: cetriolino,
+    translations: {
+      it: { name: "Cetriolino sottaceto", description: "Cetriolino artigianale in agrodolce, croccante e saporito." },
+      en: { name: "Pickled gherkin", description: "Artisanal sweet-sour pickled gherkin, crunchy and tasty." },
+      fr: { name: "Cornichon mariné", description: "Cornichon artisanal aigre-doux, croquant et savoureux." },
+      es: { name: "Pepinillo encurtido", description: "Pepinillo artesanal agridulce, crujiente y sabroso." },
     },
   },
 ];
