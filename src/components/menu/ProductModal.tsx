@@ -7,6 +7,68 @@ import { Drawer, DrawerContent, DrawerTitle, DrawerDescription } from "@/compone
 import { getPromoForProduct } from "@/data/promos";
 import { AllergenBadge } from "@/components/menu/AllergenBadge";
 
+const noAllergenMessages: Record<string, Record<string, string>> = {
+  caffetteria: {
+    it: "Puro caffè 100% Arabica Costadoro. Solo aroma, nient'altro. ☕",
+    en: "Pure 100% Arabica Costadoro coffee. Nothing but aroma.",
+    fr: "Pur café 100% Arabica Costadoro. Rien que de l'arôme.",
+    es: "Café puro 100% Arábica Costadoro. Solo aroma.",
+  },
+  dolci: {
+    it: "Dolcezza senza allergeni. Solo gusto. 🍰",
+    en: "Sweetness without allergens. Pure taste.",
+    fr: "Douceur sans allergènes. Rien que du goût.",
+    es: "Dulzura sin alérgenos. Solo sabor.",
+  },
+  bevande: {
+    it: "Frutta fresca e ingredienti naturali. Zero allergeni. 🍊",
+    en: "Fresh fruit and natural ingredients. Zero allergens.",
+    fr: "Fruits frais et ingrédients naturels. Zéro allergènes.",
+    es: "Fruta fresca e ingredientes naturales. Cero alérgenos.",
+  },
+  "menu-del-giorno": {
+    it: "Prodotti semplici e genuini. Nessun allergene. 🥗",
+    en: "Simple, genuine ingredients. No allergens.",
+    fr: "Produits simples et authentiques. Aucun allergène.",
+    es: "Productos sencillos y genuinos. Sin alérgenos.",
+  },
+  primi: {
+    it: "Pasta e riso, semplici e genuini. Senza allergeni. 🍝",
+    en: "Pasta and rice, simple and genuine. No allergens.",
+    fr: "Pâtes et riz, simples et authentiques. Sans allergènes.",
+    es: "Pasta y arroz, sencillos y genuinos. Sin alérgenos.",
+  },
+  secondi: {
+    it: "Piatto unico senza allergeni. Buon appetito! 🥩",
+    en: "No allergens in this dish. Enjoy!",
+    fr: "Aucun allergène dans ce plat. Bon appétit!",
+    es: "Sin alérgenos en este plato. ¡Buen provecho!",
+  },
+  analcolici: {
+    it: "Bevanda fresca e dissetante. Senza allergeni. 🥤",
+    en: "Fresh and refreshing drink. No allergens.",
+    fr: "Boisson fraîche et désaltérante. Sans allergènes.",
+    es: "Bebida fresca y refrescante. Sin alérgenos.",
+  },
+  panini: {
+    it: "Semplicemente buono. Nessun allergene. 🥪",
+    en: "Simply good. No allergens.",
+    fr: "Simplement bon. Aucun allergène.",
+    es: "Simplemente bueno. Sin alérgenos.",
+  },
+};
+
+const noAllergenMessage = (category: string, locale: string): string => {
+  const msg = noAllergenMessages[category];
+  if (msg) return msg[locale] || msg.it;
+  return {
+    it: "Prodotto senza allergeni tra i 14 UE. Gustalo in serenità. 🍀",
+    en: "No EU-regulated allergens. Enjoy with peace of mind.",
+    fr: "Aucun allergène réglementé par l'UE. Dégustez sereinement.",
+    es: "Sin alérgenos de los 14 UE. Disfrútalo con tranquilidad.",
+  }[locale] || "Prodotto senza allergeni tra i 14 UE. Gustalo in serenità. 🍀";
+};
+
 const formatPrice = (price: number) =>
   `€ ${price.toFixed(2).replace(".", ",")}`;
 
@@ -107,7 +169,7 @@ export const ProductModal = ({ product, onClose }: Props) => {
                 </div>
               </div>
 
-              {product.allergens && product.allergens.length > 0 && (
+              {product.allergens && product.allergens.length > 0 ? (
                 <div className="mt-6">
                   <p className="eyebrow mb-2">{t("allergens")}</p>
                   <div className="flex flex-wrap items-center gap-2">
@@ -115,6 +177,13 @@ export const ProductModal = ({ product, onClose }: Props) => {
                       <AllergenBadge key={a} allergen={a} locale={locale} />
                     ))}
                   </div>
+                </div>
+              ) : (
+                <div className="mt-6">
+                  <p className="eyebrow mb-2">{t("allergens")}</p>
+                  <p className="text-[13px] text-toret-ink-muted leading-snug italic">
+                    {noAllergenMessage(product.category, locale)}
+                  </p>
                 </div>
               )}
 
