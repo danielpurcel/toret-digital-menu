@@ -7,66 +7,38 @@ import { Drawer, DrawerContent, DrawerTitle, DrawerDescription } from "@/compone
 import { getPromoForProduct } from "@/data/promos";
 import { AllergenBadge } from "@/components/menu/AllergenBadge";
 
-const noAllergenMessages: Record<string, Record<string, string>> = {
-  caffetteria: {
-    it: "Puro caffè 100% Arabica Costadoro. Solo aroma, nient'altro. ☕",
-    en: "Pure 100% Arabica Costadoro coffee. Nothing but aroma.",
-    fr: "Pur café 100% Arabica Costadoro. Rien que de l'arôme.",
-    es: "Café puro 100% Arábica Costadoro. Solo aroma.",
-  },
-  dolci: {
-    it: "Dolcezza senza allergeni. Solo gusto. 🍰",
-    en: "Sweetness without allergens. Pure taste.",
-    fr: "Douceur sans allergènes. Rien que du goût.",
-    es: "Dulzura sin alérgenos. Solo sabor.",
-  },
-  bevande: {
-    it: "Frutta fresca e ingredienti naturali. Zero allergeni. 🍊",
-    en: "Fresh fruit and natural ingredients. Zero allergens.",
-    fr: "Fruits frais et ingrédients naturels. Zéro allergènes.",
-    es: "Fruta fresca e ingredientes naturales. Cero alérgenos.",
-  },
-  "menu-del-giorno": {
-    it: "Prodotti semplici e genuini. Nessun allergene. 🥗",
-    en: "Simple, genuine ingredients. No allergens.",
-    fr: "Produits simples et authentiques. Aucun allergène.",
-    es: "Productos sencillos y genuinos. Sin alérgenos.",
-  },
-  primi: {
-    it: "Pasta e riso, semplici e genuini. Senza allergeni. 🍝",
-    en: "Pasta and rice, simple and genuine. No allergens.",
-    fr: "Pâtes et riz, simples et authentiques. Sans allergènes.",
-    es: "Pasta y arroz, sencillos y genuinos. Sin alérgenos.",
-  },
-  secondi: {
-    it: "Piatto unico senza allergeni. Buon appetito! 🥩",
-    en: "No allergens in this dish. Enjoy!",
-    fr: "Aucun allergène dans ce plat. Bon appétit!",
-    es: "Sin alérgenos en este plato. ¡Buen provecho!",
-  },
-  analcolici: {
-    it: "Bevanda fresca e dissetante. Senza allergeni. 🥤",
-    en: "Fresh and refreshing drink. No allergens.",
-    fr: "Boisson fraîche et désaltérante. Sans allergènes.",
-    es: "Bebida fresca y refrescante. Sin alérgenos.",
-  },
-  panini: {
-    it: "Semplicemente buono. Nessun allergene. 🥪",
-    en: "Simply good. No allergens.",
-    fr: "Simplement bon. Aucun allergène.",
-    es: "Simplemente bueno. Sin alérgenos.",
-  },
+const noAllergenProductMessages: Record<number, Record<string, string>> = {
+  26: { it: "Caffè 100% Arabica Costadoro. Puro, intenso, senza allergeni. ☕", en: "100% Arabica Costadoro coffee. Pure, intense, allergen-free.", fr: "Café 100% Arabica Costadoro. Pur, intense, sans allergènes.", es: "Café 100% Arábica Costadoro. Puro, intenso, sin alérgenos." },
+  27: { it: "Tutto l'aroma del nostro espresso, senza caffeina e senza allergeni.", en: "All the aroma of our espresso, caffeine-free and allergen-free.", fr: "Tout l'arôme de notre espresso, sans caféine et sans allergènes.", es: "Todo el aroma de nuestro espresso, sin cafeína y sin alérgenos." },
+  42: { it: "Caffè con liquore. Nessun allergene tra i 14 UE. 🥃", en: "Coffee with liquor. No EU-regulated allergens.", fr: "Café avec liqueur. Aucun allergène réglementé par l'UE.", es: "Café con licor. Sin alérgenos de la UE." },
+  70: { it: "Caffè Costadoro nella nostra tazza Torèt. Puro piacere. ☕", en: "Costadoro coffee in our Torèt cup. Pure pleasure.", fr: "Café Costadoro dans notre tasse Torèt. Pur plaisir.", es: "Café Costadoro en nuestra taza Torèt. Puro placer." },
+  71: { it: "Doppio espresso Torèt. Più intensità, zero allergeni. ☕☕", en: "Double Torèt espresso. More intensity, zero allergens.", fr: "Double espresso Torèt. Plus d'intensité, zéro allergènes.", es: "Doble espresso Torèt. Más intensidad, cero alérgenos." },
+  92: { it: "Espresso shakerato con ghiaccio. Fresco, senza allergeni. 🧊", en: "Shaken espresso with ice. Fresh and allergen-free.", fr: "Espresso shakeré avec glace. Frais et sans allergènes.", es: "Espresso batido con hielo. Fresco, sin alérgenos." },
+  82: { it: "Espresso, tonica e ghiaccio. Fresco, senza allergeni. 🍸", en: "Espresso, tonic and ice. Fresh, allergen-free.", fr: "Espresso, tonique et glace. Frais, sans allergènes.", es: "Espresso, tónica y hielo. Fresco, sin alérgenos." },
+  47: { it: "Tè o infuso caldo. Nessun allergene, solo benessere. 🫖", en: "Hot tea or infusion. No allergens, just wellness.", fr: "Thé ou infusion chaud. Aucun allergène, rien que du bien-être.", es: "Té o infusión caliente. Sin alérgenos, solo bienestar." },
+  44: { it: "Spremuta fresca di arance siciliane. Solo vitamina C, zero allergeni. 🍊", en: "Fresh Sicilian orange juice. Just vitamin C, zero allergens.", fr: "Jus d'orange frais de Sicile. Rien que de la vitamine C, zéro allergènes.", es: "Zumo de naranja fresco de Sicilia. Solo vitamina C, cero alérgenos." },
+  50: { it: "Frullato cremoso di frutta fresca di stagione. Tutto naturale. 🥤", en: "Creamy smoothie with fresh seasonal fruit. All natural.", fr: "Smoothie crémeux aux fruits frais de saison. Tout naturel.", es: "Batido cremoso de fruta fresca de temporada. Todo natural." },
+  53: { it: "Succo di frutta. Fresco e senza allergeni. 🧃", en: "Fruit juice. Fresh and allergen-free.", fr: "Jus de fruits. Frais et sans allergènes.", es: "Zumo de fruta. Fresco y sin alérgenos." },
+  91: { it: "Spremuta fresca di melograno. Ricca di antiossidanti, zero allergeni. 💜", en: "Fresh pomegranate juice. Rich in antioxidants, zero allergens.", fr: "Jus de grenade frais. Riche en antioxydants, zéro allergènes.", es: "Zumo de granada fresca. Rico en antioxidantes, cero alérgenos." },
+  94: { it: "Acqua, limone fresco e menta. Il nostro fresh, naturale. 🌿", en: "Water, fresh lemon and mint. Our natural fresh.", fr: "Eau, citron frais et menthe. Notre fresh naturel.", es: "Agua, limón fresco y menta. Nuestro fresh natural." },
+  68: { it: "Prosciutto crudo e melone. Semplicità e gusto, zero allergeni. 🍈", en: "Raw ham and melon. Simple taste, zero allergens.", fr: "Jambon cru et melon. Simplicité et goût, zéro allergènes.", es: "Jamón y melón. Sencillez y sabor, cero alérgenos." },
+  22: { it: "Acqua minerale pura. Semplicemente acqua. 💧", en: "Pure mineral water. Simply water.", fr: "Eau minérale pure. Simplement de l'eau.", es: "Agua mineral pura. Simplemente agua." },
+  40: { it: "Acqua minerale pura. Semplicemente acqua. 💧", en: "Pure mineral water. Simply water.", fr: "Eau minérale pure. Simplement de l'eau.", es: "Agua mineral pura. Simplemente agua." },
+  57: { it: "Coca-Cola in bottiglia vetro. La pausa che conosci, nessun allergene. 🥤", en: "Coca-Cola in a glass bottle. No allergens.", fr: "Coca-Cola en bouteille verre. Aucun allergène.", es: "Coca-Cola en botella de vidrio. Sin alérgenos." },
+  58: { it: "Fanta in bottiglia vetro. Fresca e fruttata, senza allergeni. 🍊", en: "Fanta orange in a glass bottle. No allergens.", fr: "Fanta orange en bouteille verre. Sans allergènes.", es: "Fanta naranja en botella de vidrio. Sin alérgenos." },
+  59: { it: "Coca-Cola Zero. Tutto il gusto, zero zuccheri, zero allergeni. 🥤", en: "Coca-Cola Zero. All taste, zero sugar, zero allergens.", fr: "Coca-Cola Zéro. Tout le goût, zéro sucre, zéro allergènes.", es: "Coca-Cola Zero. Todo el sabor, cero azúcar, cero alérgenos." },
+  29: { it: "Preparato al momento con ingredienti freschi. Nessun allergene. 🍸", en: "Made fresh with quality ingredients. No allergens.", fr: "Préparé à la minute avec des ingrédients frais. Aucun allergène.", es: "Preparado al momento con ingredientes frescos. Sin alérgenos." },
 };
 
-const noAllergenMessage = (category: string, locale: string): string => {
-  const msg = noAllergenMessages[category];
+const noAllergenMessage = (xanoId: number, locale: string): string => {
+  const msg = noAllergenProductMessages[xanoId];
   if (msg) return msg[locale] || msg.it;
   return {
     it: "Prodotto senza allergeni tra i 14 UE. Gustalo in serenità. 🍀",
     en: "No EU-regulated allergens. Enjoy with peace of mind.",
     fr: "Aucun allergène réglementé par l'UE. Dégustez sereinement.",
     es: "Sin alérgenos de los 14 UE. Disfrútalo con tranquilidad.",
-  }[locale] || "Prodotto senza allergeni tra i 14 UE. Gustalo in serenità. 🍀";
+  }[locale] || "";
 };
 
 const formatPrice = (price: number) =>
@@ -182,7 +154,7 @@ export const ProductModal = ({ product, onClose }: Props) => {
                 <div className="mt-6">
                   <p className="eyebrow mb-2">{t("allergens")}</p>
                   <p className="text-[13px] text-toret-ink-muted leading-snug italic">
-                    {noAllergenMessage(product.category, locale)}
+                    {noAllergenMessage(product.xanoId, locale)}
                   </p>
                 </div>
               )}
