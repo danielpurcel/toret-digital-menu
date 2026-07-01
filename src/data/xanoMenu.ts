@@ -183,7 +183,23 @@ export const fetchXanoMenuProducts = async () => {
       page = data.nextPage;
     }
 
+    // Build fallback allergen map from importedProducts
+    const fallbackAllergenMap: Record<number, string[]> = {};
+    for (const fb of fallbackProducts) {
+      if (fb.allergens && fb.allergens.length > 0) {
+        fallbackAllergenMap[fb.xanoId] = fb.allergens;
+      }
+    }
+
     const mapped = items.map(toProduct).filter((item): item is Product => !!item);
+
+    // Merge allergeni dal fallback per i prodotti Xano che non li hanno
+    for (const p of mapped) {
+      if (!p.allergens && fallbackAllergenMap[p.xanoId]) {
+        p.allergens = fallbackAllergenMap[p.xanoId];
+      }
+    }
+
     if (mapped.length > 0) {
       console.log(`[Xano] Caricati ${mapped.length} prodotti dal proxy`);
       return mapped;

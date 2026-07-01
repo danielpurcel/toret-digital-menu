@@ -5,7 +5,6 @@ import { useLocale } from "@/i18n/LocaleContext";
 import type { Product } from "@/data/menu";
 import { Drawer, DrawerContent, DrawerTitle, DrawerDescription } from "@/components/ui/drawer";
 import { getPromoForProduct } from "@/data/promos";
-import { allergenFallback } from "@/data/allergens";
 import { AllergenBadge } from "@/components/menu/AllergenBadge";
 
 const formatPrice = (price: number) =>
@@ -108,20 +107,16 @@ export const ProductModal = ({ product, onClose }: Props) => {
                 </div>
               </div>
 
-              <div className="mt-6">
-                <p className="eyebrow mb-2">{t("allergens")}</p>
-                {product.allergens && product.allergens.length > 0 ? (
+              {product.allergens && product.allergens.length > 0 && (
+                <div className="mt-6">
+                  <p className="eyebrow mb-2">{t("allergens")}</p>
                   <div className="flex flex-wrap items-center gap-2">
                     {product.allergens.map((a) => (
                       <AllergenBadge key={a} allergen={a} locale={locale} />
                     ))}
                   </div>
-                ) : (
-                  <p className="text-[13px] text-toret-ink-muted leading-snug">
-                    {allergenFallback[locale]}
-                  </p>
-                )}
-              </div>
+                </div>
+              )}
 
               {promo && promoTr && (
                 <div className="mt-6">

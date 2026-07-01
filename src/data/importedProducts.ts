@@ -14,6 +14,7 @@ export const importedProducts: Product[] = [
     description: "Acqua naturale o frizzante in bottiglia da 1,5 litri.",
     price: 1.5,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Acqua 1,5L", description: "Acqua naturale o frizzante in bottiglia da 1,5 litri."
   },
@@ -35,9 +36,9 @@ export const importedProducts: Product[] = [
     price: 2,
     available: true,
     featured: true,
+        allergens: [],
     translations: {
       it: { name: "Caffè", description: "Estratto con macinatura fresca, servito in tazza. Caffè Costadoro 100% Arabica.",
-    allergens: []
   },
       en: { name: "Caffè", description: "100% Arabica Costadoro Lab espresso, freshly extracted for an intense and enveloping flavour." },
       fr: { name: "Caffè", description: "Espresso 100% Arabica Costadoro Lab, extrait à la minute pour un goût intense et enveloppant." },
@@ -56,9 +57,9 @@ export const importedProducts: Product[] = [
     description: "Caffè decaffeinato con metodo naturale, stesso aroma intenso. Caffè Costadoro 100% Arabica.",
     price: 1.5,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Caffè Decaffeinato", description: "Caffè decaffeinato con metodo naturale, stesso aroma intenso. Caffè Costadoro 100% Arabica.",
-    allergens: []
   },
       en: { name: "Caffè Decaffeinato", description: "All the aroma of our Costadoro Lab espresso, caffeine-free. Naturally decaffeinated." },
       fr: { name: "Caffè Decaffeinato", description: "Tout l'arôme de notre espresso Costadoro Lab, sans caféine. Décaféiné naturel." },
@@ -78,9 +79,9 @@ export const importedProducts: Product[] = [
     price: 1.5,
     available: true,
     featured: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Cappuccino", description: "Caffè espresso con schiuma di latte fresco, spolverato di cacao. Caffè Costadoro 100% Arabica.",
-    allergens: []
   },
       en: { name: "Cappuccino", description: "Costadoro Lab espresso, hot milk and velvety foam. The Italian breakfast ritual." },
       fr: { name: "Cappuccino", description: "Espresso Costadoro Lab, lait chaud et mousse veloutée. Le rituel du petit-déjeuner italien." },
@@ -100,9 +101,9 @@ export const importedProducts: Product[] = [
     price: 6,
     available: true,
     featured: true,
+        allergens: [],
     translations: {
       it: { name: "Cocktail", description: "Cocktail analcolico o alcolico, preparato al momento a scelta.",
-    allergens: ["latte"]
   },
       en: { name: "Cocktail", description: "Our cocktails freshly made with fresh ingredients. Choose your favourite." },
       fr: { name: "Cocktail", description: "Nos cocktails préparés à la minute avec des ingrédients frais. Choisissez votre préféré." },
@@ -121,9 +122,9 @@ export const importedProducts: Product[] = [
     description: "Frittata leggera con uova fresche, cotta al momento.",
     price: 6,
     available: true,
+        allergens: ["uova"],
     translations: {
       it: { name: "Frittata", description: "Frittata leggera con uova fresche, cotta al momento.",
-    allergens: []
   },
       en: { name: "Frittata", description: "Fresh frittata made with quality eggs. Simple, genuine and tasty." },
       fr: { name: "Frittata", description: "Frittata fraîche préparée avec des œufs de qualité. Simple, authentique et savoureuse." },
@@ -142,9 +143,9 @@ export const importedProducts: Product[] = [
     description: "Latte caldo montato con un ristretto di caffè. Caffè Costadoro 100% Arabica.",
     price: 1.8,
     available: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Latte macchiato", description: "Latte caldo montato con un ristretto di caffè. Caffè Costadoro 100% Arabica.",
-    allergens: ["uova"]
   },
       en: { name: "Latte macchiato", description: "Costadoro 100% Arabica espresso with hot creamy milk. Soft and comforting." },
       fr: { name: "Latte macchiato", description: "Espresso Costadoro 100% Arabica avec du lait chaud crémeux. Doux et réconfortant." },
@@ -163,9 +164,9 @@ export const importedProducts: Product[] = [
     description: "Panino sfoglia ripieno di acciughe, salsa tonnata o mozzarella.",
     price: 2.5,
     available: true,
+        allergens: ["glutine","latte","uova"],
     translations: {
       it: { name: "Mignon", description: "Panino sfoglia ripieno di acciughe, salsa tonnata o mozzarella.",
-    allergens: ["latte"]
   },
       en: { name: "Mignon", description: "Puff pastry mignons with savoury filling. Perfect for an aperitivo or quick snack." },
       fr: { name: "Mignon", description: "Mignons feuilletés à la garniture salée. Parfaits pour l'apéritif ou une pause rapide." },
@@ -184,9 +185,9 @@ export const importedProducts: Product[] = [
     description: "Panino farcito con carne tagliata al momento, insalata e salsa.",
     price: 5,
     available: true,
+        allergens: ["glutine","latte"],
     translations: {
       it: { name: "Panino carne", description: "Panino farcito con carne tagliata al momento, insalata e salsa.",
-    allergens: ["glutine","latte","uova"]
   },
       en: { name: "Panino carne", description: "Sandwich filled with meat, cheese and fresh vegetables. A classic." },
       fr: { name: "Panino carne", description: "Sandwich garni de viande, fromage et légumes frais. Un grand classique." },
@@ -205,9 +206,9 @@ export const importedProducts: Product[] = [
     description: "Tramezzino con pane in cassetta farcito a scelta, fresco e leggero.",
     price: 2.5,
     available: true,
+        allergens: ["glutine","latte"],
     translations: {
       it: { name: "Tramezzino", description: "Tramezzino con pane in cassetta farcito a scelta, fresco e leggero.",
-    allergens: ["glutine","latte"]
   },
       en: { name: "Tramezzino", description: "Fresh tramezzino filled with quality ingredients. Light and tasty." },
       fr: { name: "Tramezzino", description: "Tramezzino frais garni d'ingrédients de qualité. Léger et savoureux." },
@@ -226,9 +227,9 @@ export const importedProducts: Product[] = [
     description: "Prosecco DOC Extra Dry, bollicine eleganti, servito a calice.",
     price: 3.5,
     available: true,
+        allergens: ["solfiti"],
     translations: {
       it: { name: "Prosecco DOC Extra Dry", description: "Prosecco DOC Extra Dry, bollicine eleganti, servito a calice.",
-    allergens: ["glutine","latte"]
   },
       en: { name: "Prosecco DOC Extra Dry", description: "Prosecco DOC Extra Dry, 150ml glass." },
       fr: { name: "Prosecco DOC Extra Dry", description: "Prosecco DOC Extra Dry, verre de 150ml." },
@@ -247,9 +248,9 @@ export const importedProducts: Product[] = [
     description: "Tavola calda - tutti i giorni",
     price: 8,
     available: true,
+        allergens: ["glutine","latte"],
     translations: {
       it: { name: "Riso basmati, quinoa e bulgur con rucola, bresaola e grana", description: "Tavola calda - tutti i giorni",
-    allergens: ["solfiti"]
   },
       en: { name: "Riso basmati, quinoa e bulgur con rucola, bresaola e grana", description: "Basmati rice, quinoa and bulgur with rocket, bresaola and grana. A wholesome and tasty salad." },
       fr: { name: "Riso basmati, quinoa e bulgur con rucola, bresaola e grana", description: "Riz basmati, quinoa et boulgour à la roquette, bresaola et grana. Une salade complète et savoureuse." },
@@ -268,9 +269,9 @@ export const importedProducts: Product[] = [
     description: "Tavola calda - tutti i giorni",
     price: 9,
     available: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Scaloppine di vitello, grana, rucola e pomodori", description: "Tavola calda - tutti i giorni",
-    allergens: ["glutine","latte"]
   },
       en: { name: "Scaloppine di vitello, grana, rucola e pomodori", description: "Veal escalopes pan-fried with grana cheese, rocket and tomatoes. A true classic." },
       fr: { name: "Scaloppine di vitello, grana, rucola e pomodori", description: "Escalopes de veau sautées au grana, roquette et tomates. Un grand classique." },
@@ -289,9 +290,9 @@ export const importedProducts: Product[] = [
     description: "Tavola calda - tutti i giorni",
     price: 6,
     available: true,
+        allergens: ["uova"],
     translations: {
       it: { name: "Frittata più contorni", description: "Tavola calda - tutti i giorni",
-    allergens: ["latte"]
   },
       en: { name: "Omelette plus vegetable side dishes", description: "Fresh frittata served with a selection of seasonal side dishes." },
       fr: { name: "Frittata più contorni", description: "Frittata fraîche accompagnée d'une sélection de garnitures de saison." },
@@ -310,10 +311,10 @@ export const importedProducts: Product[] = [
     description: "Acqua in bottiglia 0,5L",
     price: 1,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Acqua 0,5L", description: "Acqua in bottiglia 0,5L" },
       en: { name: "Agua 0,5L", description: "Still or sparkling mineral water in 0.5L bottle.",
-    allergens: ["uova"]
   },
       fr: { name: "Eau 0,5L", description: "Eau minérale naturelle ou gazeuse en bouteille 0,5L." },
       es: { name: "Agua 0,5L", description: "Agua mineral natural o con gas en botella de 0,5L." },
@@ -331,10 +332,10 @@ export const importedProducts: Product[] = [
     description: "Birra Menabrea 33cl",
     price: 3.5,
     available: true,
+        allergens: ["glutine"],
     translations: {
       it: { name: "Birra Menabrea", description: "Birra Menabrea 33cl" },
       en: { name: "Birra Menabrea", description: "Menabrea 150° Bionda. Premium Italian lager since 1846, Biella.",
-    allergens: []
   },
       fr: { name: "Birra Menabrea", description: "Menabrea 150° Bionda. Bière italienne premium depuis 1846, Biella." },
       es: { name: "Cerveza Menabrea", description: "Menabrea 150° Bionda. Cerveza italiana premium desde 1846, Biella." },
@@ -352,10 +353,10 @@ export const importedProducts: Product[] = [
     description: "Caffè con liquore",
     price: 1.6,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Caffè corretto", description: "Caffè con liquore" },
       en: { name: "Caffè corretto", description: "Costadoro 100% Arabica espresso with a shot of liquor. Pure pleasure.",
-    allergens: ["glutine"]
   },
       fr: { name: "Caffè corretto", description: "Espresso Costadoro 100% Arabica avec une goutte de liqueur. Pur plaisir." },
       es: { name: "Café Corregido", description: "Espresso Costadoro 100% Arábica con un toque de licor. Puro placer." },
@@ -374,9 +375,9 @@ export const importedProducts: Product[] = [
     price: 3.5,
     available: true,
     featured: true,
+        allergens: [],
     translations: {
       it: { name: "Spremuta", description: "Spremuta fresca di arance siciliane, servita fredda.",
-    allergens: []
   },
       en: { name: "Fresh Orange Juice", description: "Freshly squeezed orange juice." },
       fr: { name: "Jus d'Orange Pressé", description: "Jus d'orange frais, pressé à la minute." },
@@ -395,9 +396,9 @@ export const importedProducts: Product[] = [
     description: "Caffè d'orzo o ginseng solubile, servito caldo in tazza piccola.",
     price: 1.4,
     available: true,
+        allergens: ["glutine"],
     translations: {
       it: { name: "Orzo/Ginseng Piccolo", description: "Caffè d'orzo o ginseng solubile, servito caldo in tazza piccola.",
-    allergens: []
   },
       en: { name: "Barley/Ginseng Small", description: "Hot barley or ginseng, comforting and smooth. The sweet alternative to coffee." },
       fr: { name: "Orge/Ginseng Petit", description: "Orge ou ginseng chaud et réconfortant. L'alternative douce au café." },
@@ -416,9 +417,9 @@ export const importedProducts: Product[] = [
     description: "Panna fresca montata spolverata di cacao amaro. Caffè Costadoro 100% Arabica.",
     price: 2,
     available: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "PannaToret Piccolo", description: "Panna fresca montata spolverata di cacao amaro. Caffè Costadoro 100% Arabica.",
-    allergens: ["glutine"]
   },
       en: { name: "PannaToret Small", description: "Fresh whipped cream dusted with bitter cocoa powder." },
       fr: { name: "PannaToret Petit", description: "Crème fouettée fraîche saupoudrée de cacao amer en poudre." },
@@ -437,9 +438,9 @@ export const importedProducts: Product[] = [
     description: "Tè o infuso caldo a scelta, servito con zucchero a parte.",
     price: 2.5,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Tè/Infuso", description: "Tè o infuso caldo a scelta, servito con zucchero a parte.",
-    allergens: ["latte"]
   },
       en: { name: "Tea/Infusion", description: "A wide selection of teas and herbal infusions, hot and fragrant." },
       fr: { name: "Thé/Infusion", description: "Large choix de thés et infusions, chauds et parfumés." },
@@ -458,9 +459,9 @@ export const importedProducts: Product[] = [
     description: "Frullato cremoso di frutta fresca di stagione.",
     price: 5,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Frullato di frutta fresca", description: "Frullato cremoso di frutta fresca di stagione.",
-    allergens: []
   },
       en: { name: "Frullato di frutta fresca", description: "Creamy smoothie made with fresh seasonal fruit." },
       fr: { name: "Frullato di frutta fresca", description: "Smoothie crémeux préparé avec des fruits frais de saison." },
@@ -479,9 +480,9 @@ export const importedProducts: Product[] = [
     description: "Succo di frutta in bottiglia, servito fresco.",
     price: 2.5,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Succo frutta", description: "Succo di frutta in bottiglia, servito fresco.",
-    allergens: []
   },
       en: { name: "Fruit Juice", description: "High quality fruit juice, perfect for a light and refreshing break." },
       fr: { name: "Jus de Fruits", description: "Jus de fruits de haute qualité, parfait pour une pause légère et rafraîchissante." },
@@ -501,10 +502,10 @@ export const importedProducts: Product[] = [
     price: 5,
     available: true,
     featured: true,
+        allergens: ["latte","solfiti"],
     translations: {
       it: { name: "Tagliere", description: "Tagliere di salumi e formaggi" },
       en: { name: "Tagliere", description: "Board of cured meats and cheeses.",
-    allergens: []
   },
       fr: { name: "Tagliere", description: "Planche de charcuterie et fromages." },
       es: { name: "Tabla de Embutidos", description: "Tabla de embutidos y quesos." },
@@ -522,9 +523,9 @@ export const importedProducts: Product[] = [
     description: "Toast caldo farcito con prosciutto cotto e formaggio filante.",
     price: 4,
     available: true,
+        allergens: ["glutine","latte"],
     translations: {
       it: { name: "Toast", description: "Toast caldo farcito con prosciutto cotto e formaggio filante.",
-    allergens: ["latte","solfiti"]
   },
       en: { name: "Toast", description: "Toast caldo croccante con prosciutto cotto e formaggio filante. Sempre una garanzia" },
       fr: { name: "Toast", description: "Toast caldo croccante con prosciutto cotto e formaggio filante. Sempre una garanzia" },
@@ -543,9 +544,9 @@ export const importedProducts: Product[] = [
     description: "Barbera M.to DOC Frizzante 2024, bicchiere 150 ml.",
     price: 3.5,
     available: true,
+        allergens: ["solfiti"],
     translations: {
       it: { name: "GOJ Barbera DOC Frizzante - Bicchiere", description: "Barbera M.to DOC Frizzante 2024, bicchiere 150 ml.",
-    allergens: ["glutine","latte"]
   },
       en: { name: "GOJ Barbera DOC Frizzante - Bicchiere", description: "Barbera M.to DOC Frizzante 2024, 150ml glass." },
       fr: { name: "GOJ Barbera DOC Frizzante - Bicchiere", description: "Barbera M.to DOC Frizzante 2024, verre de 150ml." },
@@ -564,10 +565,10 @@ export const importedProducts: Product[] = [
     description: "Bottiglia vetro 33cl",
     price: 3,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Coca Cola 33cl vetro", description: "Bottiglia vetro 33cl" },
       en: { name: "Coca Cola 33cl vetro", description: "Coca-Cola in a 33cl glass bottle. Ice-cold refreshment.",
-    allergens: ["solfiti"]
   },
       fr: { name: "Coca Cola 33cl vetro", description: "Coca-Cola en bouteille verre 33cl. Fraîcheur glacée." },
       es: { name: "Coca Cola 33cl vetro", description: "Coca-Cola en botella de vidrio 33cl. Frescor helado." },
@@ -585,10 +586,10 @@ export const importedProducts: Product[] = [
     description: "Fanta bottiglia vetro 33cl",
     price: 3,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Fanta 33cl vetro", description: "Fanta bottiglia vetro 33cl" },
       en: { name: "Fanta 33cl vetro", description: "Fanta orange in a 33cl bottle. Refreshingly fruity.",
-    allergens: []
   },
       fr: { name: "Fanta 33cl vetro", description: "Fanta orange en bouteille 33cl. Fruité et rafraîchissant." },
       es: { name: "Fanta 33cl vetro", description: "Fanta naranja en botella 33cl. Refrescante y afrutado." },
@@ -606,9 +607,9 @@ export const importedProducts: Product[] = [
     description: "Coca Cola Zero bottiglia vetro 33cl",
     price: 3,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Coca Cola Zero 33cl vetro", description: "Coca Cola Zero bottiglia vetro 33cl",
-    allergens: []
   },
       en: { name: "Coca Cola Zero 33cl vetro", description: "Coca Cola Zero bottiglia vetro 33cl" },
       fr: { name: "Coca Cola Zero 33cl vetro", description: "Coca Cola Zero bottiglia vetro 33cl" },
@@ -627,9 +628,9 @@ export const importedProducts: Product[] = [
     description: "Naonis Prosecco Spumante DOCG Extra Dry, bollicine pregiate.",
     price: 5,
     available: true,
+        allergens: ["solfiti"],
     translations: {
       it: { name: "Prosecco DOCG Extra Dry 2025", description: "Naonis Prosecco Spumante DOCG Extra Dry, bollicine pregiate.",
-    allergens: []
   },
       en: { name: "Prosecco DOCG Extra Dry 2025", description: "Naonis Prosecco Spumante DOCG Extra Dry, bicchiere 150ml" },
       fr: { name: "Prosecco DOCG Extra Dry 2025", description: "Naonis Prosecco Spumante DOCG Extra Dry, bicchiere 150ml" },
@@ -648,9 +649,9 @@ export const importedProducts: Product[] = [
     description: "Naonis Prosecco Spumante DOC Brut, bollicine secche.",
     price: 3.5,
     available: true,
+        allergens: ["solfiti"],
     translations: {
       it: { name: "Prosecco DOC Brut", description: "Naonis Prosecco Spumante DOC Brut, bollicine secche.",
-    allergens: ["solfiti"]
   },
       en: { name: "Prosecco DOC Brut", description: "Naonis Prosecco Spumante DOC Brut, bicchiere 150ml" },
       fr: { name: "Prosecco DOC Brut", description: "Naonis Prosecco Spumante DOC Brut, bicchiere 150ml" },
@@ -669,10 +670,10 @@ export const importedProducts: Product[] = [
     description: "Latte F.R.A.Q Bar 150ml",
     price: 1.43,
     available: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Latte Bianco", description: "Latte F.R.A.Q Bar 150ml" },
       en: { name: "Latte Bianco", description: "Fresh hot or cold white milk. Simple and comforting.",
-    allergens: ["solfiti"]
   },
       fr: { name: "Latte Bianco", description: "Lait blanc chaud ou froid. Simple et réconfortant." },
       es: { name: "Leche Blanca", description: "Leche blanca caliente o fría. Simple y reconfortante." },
@@ -690,10 +691,10 @@ export const importedProducts: Product[] = [
     description: "Espresso + cacao + schiuma latte",
     price: 2,
     available: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Marocchino", description: "Espresso + cacao + schiuma latte" },
       en: { name: "Marocchino", description: "Costadoro 100% Arabica espresso with cocoa and foam. A Piemontese icon.",
-    allergens: ["latte"]
   },
       fr: { name: "Marocchino", description: "Espresso Costadoro 100% Arabica, cacao et mousse de lait. Une icône piémontaise." },
       es: { name: "Marocchino", description: "Espresso Costadoro 100% Arábica, cacao y espuma. Un icono piamontés." },
@@ -711,9 +712,9 @@ export const importedProducts: Product[] = [
     description: "Menu del giorno 16/06/2026",
     price: 7,
     available: true,
+        allergens: ["glutine"],
     translations: {
       it: { name: "Pasta zucchine e prosciutto crudo", description: "Menu del giorno 16/06/2026",
-    allergens: ["latte"]
   },
       en: { name: "Pasta with courgettes and raw ham", description: "Menu del giorno 16/06/2026" },
       fr: { name: "Pasta zucchine e prosciutto crudo", description: "Menu del giorno 16/06/2026" },
@@ -732,10 +733,10 @@ export const importedProducts: Product[] = [
     description: "Menu del giorno 16/06/2026",
     price: 7,
     available: true,
+        allergens: ["uova","soia"],
     translations: {
       it: { name: "Riso alla cantonese", description: "Menu del giorno 16/06/2026" },
       en: { name: "Cantonese rice", description: "Menu del giorno 16/06/2026",
-    allergens: ["glutine"]
   },
       fr: { name: "Riso alla cantonese", description: "Menu del giorno 16/06/2026" },
       es: { name: "Arroz a la Cantonés", description: "Menu del giorno 16/06/2026" },
@@ -753,9 +754,9 @@ export const importedProducts: Product[] = [
     description: "Menu del giorno 16/06/2026",
     price: 8.5,
     available: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Petto di pollo rucola grana e pomodori", description: "Menu del giorno 16/06/2026",
-    allergens: ["uova","soia"]
   },
       en: { name: "Chicken breast with rocket, parmesan and tomatoes", description: "Menu del giorno 16/06/2026" },
       fr: { name: "Petto di pollo rucola grana e pomodori", description: "Menu del giorno 16/06/2026" },
@@ -774,10 +775,10 @@ export const importedProducts: Product[] = [
     description: "Menu del giorno 16/06/2026",
     price: 8.9,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Crudo e melone", description: "Menu del giorno 16/06/2026" },
       en: { name: "Raw ham and melon", description: "Menu del giorno 16/06/2026",
-    allergens: ["latte"]
   },
       fr: { name: "Crudo e melone", description: "Menu del giorno 16/06/2026" },
       es: { name: "Jamón y Melón", description: "Menu del giorno 16/06/2026" },
@@ -796,10 +797,10 @@ export const importedProducts: Product[] = [
     price: 2,
     available: true,
     featured: true,
+        allergens: [],
     translations: {
       it: { name: "Caffè Torèt Piccolo", description: "Caffè Torèt speciale" },
       en: { name: "Caffè Torèt Small", description: "Costadoro 100% Arabica espresso in our Torèt cup. Great coffee tradition.",
-    allergens: []
   },
       fr: { name: "Café Torèt Petit", description: "Espresso Costadoro 100% Arabica dans notre tasse Torèt. La tradition du bon café." },
       es: { name: "Café Torèt Pequeño", description: "Espresso Costadoro 100% Arábica en nuestra taza Torèt. La tradición del buen café." },
@@ -818,10 +819,10 @@ export const importedProducts: Product[] = [
     price: 2.5,
     available: true,
     featured: true,
+        allergens: [],
     translations: {
       it: { name: "Caffè Torèt Grande", description: "Caffè Torèt speciale grande" },
       en: { name: "Caffè Torèt Large", description: "Double Costadoro 100% Arabica espresso in the large Torèt cup. Bold and intense.",
-    allergens: []
   },
       fr: { name: "Café Torèt Grand", description: "Double espresso Costadoro 100% Arabica dans la grande tasse Torèt. Corsé et intense." },
       es: { name: "Café Torèt Grande", description: "Doble espresso Costadoro 100% Arábica en la taza Torèt grande. Intenso y audaz." },
@@ -839,10 +840,10 @@ export const importedProducts: Product[] = [
     description: "Produzione propria",
     price: 2,
     available: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Panna Piccola", description: "Produzione propria" },
       en: { name: "Panna Piccola", description: "Light and airy fresh whipped cream. The perfect topping.",
-    allergens: []
   },
       fr: { name: "Panna Piccola", description: "Crème fouettée fraîche, légère et aérienne. La touche parfaite." },
       es: { name: "Nata Pequeña", description: "Nata montada fresca, ligera y deliciosa. El toque perfecto." },
@@ -860,10 +861,10 @@ export const importedProducts: Product[] = [
     description: "Produzione propria",
     price: 4,
     available: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Panna Grande", description: "Produzione propria" },
       en: { name: "Panna Grande", description: "Generous fresh whipped cream for the sweet-toothed.",
-    allergens: ["latte"]
   },
       fr: { name: "Panna Grande", description: "Crème fouettée fraîche en format généreux. Un vrai plaisir." },
       es: { name: "Nata Grande", description: "Nata montada fresca en formato grande. Todo un placer." },
@@ -881,10 +882,10 @@ export const importedProducts: Product[] = [
     description: "Fatto al momento",
     price: 3.5,
     available: true,
+        allergens: ["uova"],
     translations: {
       it: { name: "Zabaione", description: "Fatto al momento" },
       en: { name: "Zabaione", description: "Velvety zabaione, a Piemontese classic made fresh daily.",
-    allergens: ["latte"]
   },
       fr: { name: "Zabaione", description: "Onctueux zabaione, un classique piémontais fait maison chaque jour." },
       es: { name: "Zabaione", description: "Zabaione cremoso, un clásico piamontés hecho fresco cada día." },
@@ -903,9 +904,9 @@ export const importedProducts: Product[] = [
     price: 3.5,
     available: true,
     featured: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Bicerin", description: "Cioccolato caldo, caffè e panna montata: il bicchiere torinese. Caffè Costadoro 100% Arabica.",
-    allergens: ["uova"]
   },
       en: { name: "Bicerin", description: "Storico bicerin torinese: caffè Costadoro Lab, cioccolata e crema di latte. Dal 1763, una tradizione" },
       fr: { name: "Bicerin", description: "Storico bicerin torinese: caffè Costadoro Lab, cioccolata e crema di latte. Dal 1763, una tradizione" },
@@ -924,9 +925,9 @@ export const importedProducts: Product[] = [
     description: "Cioccolata calda densa e avvolgente, servita in tazza.",
     price: 3.5,
     available: true,
+        allergens: ["latte","soia"],
     translations: {
       it: { name: "Cioccolata calda", description: "Cioccolata calda densa e avvolgente, servita in tazza.",
-    allergens: ["latte"]
   },
       en: { name: "Cioccolata calda", description: "Thick and enveloping hot chocolate. The perfect comfort drink." },
       fr: { name: "Cioccolata calda", description: "Chocolat chaud épais et enveloppant. Le réconfort parfait à tout moment." },
@@ -945,9 +946,9 @@ export const importedProducts: Product[] = [
     description: "Cioccolata calda densa con panna montata fresca.",
     price: 4,
     available: true,
+        allergens: ["latte","soia"],
     translations: {
       it: { name: "Cioccolata calda con panna", description: "Cioccolata calda densa con panna montata fresca.",
-    allergens: ["latte","soia"]
   },
       en: { name: "Hot Chocolate with Cream", description: "Hot chocolate enriched with fresh whipped cream. The ultimate indulgence." },
       fr: { name: "Chocolat Chaud Chantilly", description: "Chocolat chaud enrichi de crème fouettée fraîche. Le summum de la gourmandise." },
@@ -966,9 +967,9 @@ export const importedProducts: Product[] = [
     description: "Caffè d'orzo o ginseng solubile, servito caldo in tazza grande.",
     price: 1.6,
     available: true,
+        allergens: ["glutine"],
     translations: {
       it: { name: "Orzo/Ginseng Grande", description: "Caffè d'orzo o ginseng solubile, servito caldo in tazza grande.",
-    allergens: ["latte","soia"]
   },
       en: { name: "Orzo/Ginseng Grande", description: "Hot barley or ginseng, large size. The sweet coffee alternative." },
       fr: { name: "Orzo/Ginseng Grande", description: "Orge ou ginseng chaud, grand format. L'alternative douce au café." },
@@ -987,10 +988,10 @@ export const importedProducts: Product[] = [
     description: "deck/ginseng/orzo",
     price: 1.7,
     available: true,
+        allergens: ["soia"],
     translations: {
       it: { name: "Cappuccino soia/vena", description: "deck/ginseng/orzo" },
       en: { name: "Cappuccino soia/vena", description: "Costadoro 100% Arabica with soya or oat milk. Light, tasty, and dairy-free.",
-    allergens: ["glutine"]
   },
       fr: { name: "Cappuccino soia/vena", description: "Costadoro 100% Arabica au lait de soja ou d'avoine. Léger, savoureux et sans lactose." },
       es: { name: "Cappuccino de Soja/Avena", description: "Costadoro 100% Arábica con leche de soja o avena. Ligero, sabroso y sin lactosa." },
@@ -1008,9 +1009,9 @@ export const importedProducts: Product[] = [
     description: "Caffè espresso raffreddato su ghiaccio, sciroppo al caramello. Caffè Costadoro 100% Arabica.",
     price: 2.5,
     available: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Caramel iced coffee", description: "Caffè espresso raffreddato su ghiaccio, sciroppo al caramello. Caffè Costadoro 100% Arabica.",
-    allergens: ["soia"]
   },
       en: { name: "Caramel iced coffee", description: "Costadoro Lab iced coffee with milk and vanilla. Creamy, refreshing and smooth." },
       fr: { name: "Caramel iced coffee", description: "Café glacé Costadoro Lab au lait et vanille. Crémeux, rafraîchissant et enveloppant." },
@@ -1029,9 +1030,9 @@ export const importedProducts: Product[] = [
     description: "Caffè espresso versato su ghiaccio con latte di mandorla. Caffè Costadoro 100% Arabica.",
     price: 2.5,
     available: true,
+        allergens: ["frutta a guscio"],
     translations: {
       it: { name: "Caffè leccese", description: "Caffè espresso versato su ghiaccio con latte di mandorla. Caffè Costadoro 100% Arabica.",
-    allergens: ["latte"]
   },
       en: { name: "Caffè leccese", description: "Costadoro Lab espresso shaken with ice. Fresh, intense and invigorating." },
       fr: { name: "Caffè leccese", description: "Espresso Costadoro Lab shakeré avec glace. Frais, intense et vigoureux." },
@@ -1050,9 +1051,9 @@ export const importedProducts: Product[] = [
     description: "Espresso lungo con tonica e ghiaccio, twist agrumato. Caffè Costadoro 100% Arabica.",
     price: 3.5,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Espresso tonic", description: "Espresso lungo con tonica e ghiaccio, twist agrumato. Caffè Costadoro 100% Arabica.",
-    allergens: ["frutta a guscio"]
   },
       en: { name: "Espresso tonic", description: "Costadoro 100% Arabica espresso, tonic water and ice. A unique twist." },
       fr: { name: "Espresso tonic", description: "Espresso Costadoro 100% Arabica, eau tonique et glace. Une touche unique." },
@@ -1071,9 +1072,9 @@ export const importedProducts: Product[] = [
     description: "Caffè con ghiaccio e sciroppo alla vaniglia. Caffè Costadoro 100% Arabica.",
     price: 2.5,
     available: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Vaniglia iced coffee", description: "Caffè con ghiaccio e sciroppo alla vaniglia. Caffè Costadoro 100% Arabica.",
-    allergens: []
   },
       en: { name: "Vaniglia iced coffee", description: "Costadoro Lab iced coffee with milk and vanilla. Creamy, refreshing and smooth." },
       fr: { name: "Vaniglia iced coffee", description: "Café glacé Costadoro Lab au lait et vanille. Crémeux, rafraîchissant et enveloppant." },
@@ -1092,9 +1093,9 @@ export const importedProducts: Product[] = [
     description: "Crema di caffè zuccherata e montata, servita fredda. Caffè Costadoro 100% Arabica.",
     price: 2.5,
     available: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Crema caffè Piccola", description: "Crema di caffè zuccherata e montata, servita fredda. Caffè Costadoro 100% Arabica.",
-    allergens: ["latte"]
   },
       en: { name: "Crema di Caffè Small", description: "Costadoro Lab coffee cream. A velvety spoonful of pure bliss." },
       fr: { name: "Crème de Café Petite", description: "Crème de café Costadoro Lab. Une cuillerée veloutée de pur bonheur." },
@@ -1113,9 +1114,9 @@ export const importedProducts: Product[] = [
     description: "Crema di caffè zuccherata e montata, formato maxi. Caffè Costadoro 100% Arabica.",
     price: 4,
     available: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Crema caffè Grande", description: "Crema di caffè zuccherata e montata, formato maxi. Caffè Costadoro 100% Arabica.",
-    allergens: ["latte"]
   },
       en: { name: "Crema di Caffè Large", description: "Costadoro Lab coffee cream in generous large size. Pure indulgence." },
       fr: { name: "Crème de Café Grande", description: "Crème de café Costadoro Lab en grand format. Pure gourmandise." },
@@ -1134,9 +1135,9 @@ export const importedProducts: Product[] = [
     description: "Tè matcha giapponese sciolto nel latte freddo, servito con ghiaccio.",
     price: 4,
     available: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Iced matcha latte", description: "Tè matcha giapponese sciolto nel latte freddo, servito con ghiaccio.",
-    allergens: ["latte"]
   },
       en: { name: "Iced matcha latte", description: "Japanese matcha tea with fresh milk and ice. Refreshing and antioxidant-rich." },
       fr: { name: "Iced matcha latte", description: "Thé matcha japonais au lait frais et glace. Rafraîchissant et antioxydant." },
@@ -1155,9 +1156,9 @@ export const importedProducts: Product[] = [
     description: "Chai latte speziato con ghiaccio, aromi di cannella e cardamomo.",
     price: 4,
     available: true,
+        allergens: ["latte"],
     translations: {
       it: { name: "Iced chai latte", description: "Chai latte speziato con ghiaccio, aromi di cannella e cardamomo.",
-    allergens: ["latte"]
   },
       en: { name: "Iced Chai Latte", description: "Spiced chai tea with milk and ice. A journey between East and West." },
       fr: { name: "Iced Chai Latte", description: "Thé chai épicé au lait et glace. Un voyage entre Orient et Occident." },
@@ -1176,9 +1177,9 @@ export const importedProducts: Product[] = [
     description: "Dolce al cucchiaio tradizionale allo zabaione, preparato al momento.",
     price: 2.5,
     available: true,
+        allergens: ["glutine"],
     translations: {
       it: { name: "Semidolce", description: "Dolce al cucchiaio tradizionale allo zabaione, preparato al momento.",
-    allergens: ["latte"]
   },
       en: { name: "Semidolce", description: "A creamy, delicate spoon dessert. The perfect sweet ending to your meal." },
       fr: { name: "Semidolce", description: "Dessert à la cuillère, crémeux et délicat. Pour terminer le repas en douceur." },
@@ -1197,9 +1198,9 @@ export const importedProducts: Product[] = [
     description: "Piadina calda farcita: crudo, bresaola o vegetariana.",
     price: 5,
     available: true,
+        allergens: ["glutine","latte"],
     translations: {
       it: { name: "Piadina", description: "Piadina calda farcita: crudo, bresaola o vegetariana.",
-    allergens: ["glutine"]
   },
       en: { name: "Piadina", description: "Warm piadina filled with cured ham, rocket and grana shavings." },
       fr: { name: "Piadina", description: "Piadina chaude garnie de jambon cru, roquette et copeaux de grana." },
@@ -1218,9 +1219,9 @@ export const importedProducts: Product[] = [
     description: "Spremuta fresca di melograno, ricca di antiossidanti.",
     price: 4,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Spremuta melograno", description: "Spremuta fresca di melograno, ricca di antiossidanti.",
-    allergens: ["glutine","latte"]
   },
       en: { name: "Pomegranate juice", description: "Fresh pomegranate juice, rich in antioxidants." },
       fr: { name: "Spremuta melograno", description: "Jus de grenade frais, riche en antioxydants." },
@@ -1239,9 +1240,9 @@ export const importedProducts: Product[] = [
     description: "Caffè espresso shakerato con ghiaccio, servito freddo. Caffè Costadoro 100% Arabica.",
     price: 2.5,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Caffè shakerato", description: "Caffè espresso shakerato con ghiaccio, servito freddo. Caffè Costadoro 100% Arabica.",
-    allergens: []
   },
       en: { name: "Caffè shakerato", description: "Costadoro Lab espresso with a splash of liquor. For a moment of pure pleasure." },
       fr: { name: "Caffè shakerato", description: "Espresso Costadoro Lab avec une touche de liqueur. Pour un moment de pur plaisir." },
@@ -1260,9 +1261,9 @@ export const importedProducts: Product[] = [
     description: "Croissant di pasta sfoglia ripieno di prosciutto, formaggio o verdure.",
     price: 3,
     available: true,
+        allergens: ["glutine","latte","uova"],
     translations: {
       it: { name: "Croissant salato", description: "Croissant di pasta sfoglia ripieno di prosciutto, formaggio o verdure.",
-    allergens: []
   },
       en: { name: "Savoury Croissant", description: "Flaky croissant with selected savoury ingredients. Perfect for a tasty break." },
       fr: { name: "Croissant Salé", description: "Croissant feuilleté aux ingrédients salés sélectionnés. Parfait pour une pause gourmande." },
@@ -1281,10 +1282,10 @@ export const importedProducts: Product[] = [
     description: "Acqua, limone fresco e menta",
     price: 2.5,
     available: true,
+        allergens: [],
     translations: {
       it: { name: "Acqua Torèt Fresh", description: "Acqua, limone fresco e menta" },
       en: { name: "Agua Torèt Fresh", description: "Water, fresh lemon and mint. Our Torèt Fresh water, thirst-quenching and natural.",
-    allergens: ["glutine","latte","uova"]
   },
       fr: { name: "Eau Torèt Fresh", description: "Eau, citron frais et menthe. Notre eau Torèt Fresh, désaltérante et naturelle." },
       es: { name: "Agua Torèt Fresh", description: "Agua, limón fresco y menta. Nuestra agua Torèt Fresh, refrescante y natural." },
@@ -1309,7 +1310,5 @@ export const importedProducts: Product[] = [
       fr: { name: "Cornichon mariné", description: "Cornichon artisanal aigre-doux, croquant et savoureux." },
       es: { name: "Pepinillo encurtido", description: "Pepinillo artesanal agridulce, crujiente y sabroso." },
     },
-
-    allergens: []
   },
 ];
