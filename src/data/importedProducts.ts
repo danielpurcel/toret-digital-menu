@@ -544,6 +544,7 @@ export const importedProducts: Product[] = [
     description: "GOJ — Barbera DOC Frizzante. Fresco, brioso, mette allegria. Dalla cantina Cascina Castlèt, Costigliole d'Asti. Gradazione: 12% vol.",
     price: 3.5,
     bottlePrice: 15,
+    image: "https://www.cascinacastlet.com/sites/default/files/goj-social.jpg",
     available: true,
         allergens: ["solfiti"],
     translations: {
@@ -1324,6 +1325,7 @@ export const importedProducts: Product[] = [
     description: "Barbera d'Asti Superiore DOCG. Uve appassite. Denso e suadente.",
     price: 5,
     bottlePrice: 30,
+    image: "https://www.cascinacastlet.com/sites/default/files/passum-social.jpg",
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1344,6 +1346,7 @@ export const importedProducts: Product[] = [
     description: "Monferrato Rosso DOC. Barbera e Cabernet Sauvignon. Moderno.",
     price: 4,
     bottlePrice: 24,
+    image: "https://www.cascinacastlet.com/sites/default/files/policalpo-social.jpg",
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1364,6 +1367,7 @@ export const importedProducts: Product[] = [
     description: "Barbera d'Asti Superiore DOCG. Omaggio alla zia Litina.",
     price: 4,
     bottlePrice: 24,
+    image: "https://www.cascinacastlet.com/sites/default/files/litina-social.jpg",
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1384,6 +1388,7 @@ export const importedProducts: Product[] = [
     description: "Monferrato Rosso DOC. Uvalino, vitigno autoctono riscoperto.",
     price: 5,
     bottlePrice: 30,
+    image: "https://www.cascinacastlet.com/sites/default/files/uceline-social.jpg",
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1404,6 +1409,7 @@ export const importedProducts: Product[] = [
     description: "Chardonnay. Parole e sapori che attraversano il tempo.",
     price: 4,
     bottlePrice: 15,
+    image: "https://www.cascinacastlet.com/sites/default/files/ataj-social_0.jpg",
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1424,6 +1430,7 @@ export const importedProducts: Product[] = [
     description: "Rosé da Barbera. Rosa allegria, promessa e speranza.",
     price: 4,
     bottlePrice: 15,
+    image: "https://www.cascinacastlet.com/sites/default/files/rose-social.jpg",
     available: true,
     allergens: ["solfiti"],
     translations: {
