@@ -544,6 +544,7 @@ export const importedProducts: Product[] = [
     description: "GOJ — Barbera DOC Frizzante. Fresco, brioso, mette allegria. Dalla cantina Cascina Castlèt, Costigliole d'Asti. Gradazione: 12% vol.",
     price: 3.5,
     bottlePrice: 15,
+    image: "https://www.cascinacastlet.com/sites/default/files/goj-social.jpg",
     available: true,
         allergens: ["solfiti"],
     translations: {
