@@ -57,9 +57,9 @@ export const ProductCard = ({ product, onOpen, badge }: Props) => {
           <span className="price-tag text-[15px]">
   {product.bottlePrice ? (
     <div className="flex items-center gap-2">
-              <span className="flex items-center gap-1">{formatPrice(product.price)}<svg className="h-3.5 w-3.5 text-toret-gold-warm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2h12l-1.5 19.5A3 3 0 0113.5 22h-3a3 3 0 01-3-3L6 2z"/><path d="M8 10h8"/></svg></span>
+              <span className="flex items-center gap-1">{formatPrice(product.price)}<svg className="h-3.5 w-3.5 text-toret-gold-warm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M10 2a2 2 0 0 1 4 0v7a4 4 0 0 1-3 3.9V21a1 1 0 0 1-2 0v-8.1a4 4 0 0 1-3-3.8V2z"/><path d="M8 2h8"/></svg></span>
               <span className="h-3 w-px bg-toret-ink-muted/30"></span>
-              <span className="flex items-center gap-1">{formatPrice(product.bottlePrice)}<Wine className="h-3.5 w-3.5 text-toret-gold-warm" strokeWidth={1.5} /></span>
+              <span className="flex items-center gap-1">{formatPrice(product.bottlePrice)}<svg className="h-3.5 w-3.5 text-toret-gold-warm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22c-4.4 0-8-1.8-8-4V6c0-2.2 3.6-4 8-4s8 1.8 8 4v12c0 2.2-3.6 4-8 4z"/><path d="M4 6c0 2.2 3.6 4 8 4s8-1.8 8-4"/><path d="M4 12c0 2.2 3.6 4 8 4s8-1.8 8-4"/></svg></span>
             </div>
   ) : product.largePrice ? (
     <div className="flex items-center gap-1.5">
