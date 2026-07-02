@@ -19,6 +19,7 @@ export const siteConfig = {
     label: { it: "Lun – Sab", en: "Mon – Sat", fr: "Lun – Sam", es: "Lun – Sáb" },
     time: "7:00 – 20:00",
     closed: { it: "Domenica chiuso", en: "Closed on Sunday", fr: "Fermé le dimanche", es: "Domingo cerrado" },
+    thursday: { it: "Giovedì: 7:00 – 15:00", en: "Thursday: 7:00 AM – 3:00 PM", fr: "Jeudi: 7:00 – 15:00", es: "Jueves: 7:00 – 15:00" },
   },
   contact: {
     phone: "+39\u00a0 351 767 9689",
