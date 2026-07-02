@@ -132,8 +132,8 @@ export const ProductModal = ({ product, onClose }: Props) => {
                   >
                     {product.bottlePrice ? (
   <div className="flex flex-col gap-1">
-    <span className="flex items-center gap-1.5 text-[16px]">{formatPrice(product.price)}<svg className="h-4 w-4 text-toret-gold-warm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M10 2a2 2 0 0 1 4 0v7a4 4 0 0 1-3 3.9V21a1 1 0 0 1-2 0v-8.1a4 4 0 0 1-3-3.8V2z"/><path d="M8 2h8"/></svg><span className="text-[11px] font-normal text-toret-ink-muted">calice</span></span>
-    <span className="flex items-center gap-1.5 text-[16px]">{formatPrice(product.bottlePrice)}<svg className="h-4 w-4 text-toret-gold-warm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22c-4.4 0-8-1.8-8-4V6c0-2.2 3.6-4 8-4s8 1.8 8 4v12c0 2.2-3.6 4-8 4z"/><path d="M4 6c0 2.2 3.6 4 8 4s8-1.8 8-4"/><path d="M4 12c0 2.2 3.6 4 8 4s8-1.8 8-4"/></svg><span className="text-[11px] font-normal text-toret-ink-muted">bottiglia</span></span>
+    <span className="flex items-center gap-1.5 text-[16px]">{formatPrice(product.price)}<svg className="h-4 w-4 text-toret-gold-warm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 3c0 5 2 7 3 11h4c1-4 3-6 3-11Z"/><line x1="11" y1="14" x2="11" y2="19"/><line x1="7" y1="19" x2="15" y2="19"/></svg><span className="text-[11px] font-normal text-toret-ink-muted">calice</span></span>
+    <span className="flex items-center gap-1.5 text-[16px]">{formatPrice(product.bottlePrice)}<svg className="h-4 w-4 text-toret-gold-warm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M10 2h4v2c0 1 2 1.5 2 4v10.5a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 8 18.5V8c0-2.5 2-3 2-4V2Z"/></svg><span className="text-[11px] font-normal text-toret-ink-muted">bottiglia</span></span>
   </div>
 ) : product.largePrice ? (
   <div className="flex flex-col gap-1">
