@@ -11,7 +11,8 @@ const noAllergenProductMessages: Record<number, Record<string, string>> = {
   26: { it: "Caffè 100% Arabica Costadoro. Puro, intenso, senza allergeni. ☕", en: "100% Arabica Costadoro coffee. Pure, intense, allergen-free.", fr: "Café 100% Arabica Costadoro. Pur, intense, sans allergènes.", es: "Café 100% Arábica Costadoro. Puro, intenso, sin alérgenos." },
   27: { it: "Tutto l'aroma del nostro espresso, senza caffeina e senza allergeni.", en: "All the aroma of our espresso, caffeine-free and allergen-free.", fr: "Tout l'arôme de notre espresso, sans caféine et sans allergènes.", es: "Todo el aroma de nuestro espresso, sin cafeína y sin alérgenos." },
   42: { it: "Caffè con liquore. Nessun allergene tra i 14 UE. 🥃", en: "Coffee with liquor. No EU-regulated allergens.", fr: "Café avec liqueur. Aucun allergène réglementé par l'UE.", es: "Café con licor. Sin alérgenos de la UE." },
-  70: { it: "Caffè Torèt — piccolo o grande. Costadoro nella nostra tazza. ☕", en: "Caffè Torèt — small or large. Costadoro in our cup.", fr: "Café Torèt — petit ou grand. Costadoro dans notre tasse.", es: "Café Torèt — pequeño o grande. Costadoro en nuestra taza." },
+  70: { it: "Caffè Costadoro nella nostra tazza Torèt. Puro piacere. ☕", en: "Costadoro coffee in our Torèt cup. Pure pleasure.", fr: "Café Costadoro dans notre tasse Torèt. Pur plaisir.", es: "Café Costadoro en nuestra taza Torèt. Puro placer." },
+  71: { it: "Doppio espresso Torèt. Più intensità, zero allergeni. ☕☕", en: "Double Torèt espresso. More intensity, zero allergens.", fr: "Double espresso Torèt. Plus d'intensité, zéro allergènes.", es: "Doble espresso Torèt. Más intensidad, cero alérgenos." },
   92: { it: "Espresso shakerato con ghiaccio. Fresco, senza allergeni. 🧊", en: "Shaken espresso with ice. Fresh and allergen-free.", fr: "Espresso shakeré avec glace. Frais et sans allergènes.", es: "Espresso batido con hielo. Fresco, sin alérgenos." },
   82: { it: "Espresso, tonica e ghiaccio. Fresco, senza allergeni. 🍸", en: "Espresso, tonic and ice. Fresh, allergen-free.", fr: "Espresso, tonique et glace. Frais, sans allergènes.", es: "Espresso, tónica y hielo. Fresco, sin alérgenos." },
   47: { it: "Tè o infuso caldo. Nessun allergene, solo benessere. 🫖", en: "Hot tea or infusion. No allergens, just wellness.", fr: "Thé ou infusion chaud. Aucun allergène, rien que du bien-être.", es: "Té o infusión caliente. Sin alérgenos, solo bienestar." },
@@ -134,11 +135,6 @@ export const ProductModal = ({ product, onClose }: Props) => {
   <div className="flex flex-col gap-1">
     <span className="flex items-center gap-1.5 text-[16px]">{formatPrice(product.price)}<svg className="h-4 w-4 text-toret-gold-warm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2h12l-1.5 19.5A3 3 0 0113.5 22h-3a3 3 0 01-3-3L6 2z"/><path d="M8 10h8"/></svg><span className="text-[11px] font-normal text-toret-ink-muted">calice</span></span>
     <span className="flex items-center gap-1.5 text-[16px]">{formatPrice(product.bottlePrice)}<Wine className="h-4 w-4 text-toret-gold-warm" strokeWidth={1.5} /><span className="text-[11px] font-normal text-toret-ink-muted">bottiglia</span></span>
-  </div>
-) : product.largePrice ? (
-  <div className="flex flex-col gap-1">
-    <span className="flex items-center gap-1.5 text-[16px]">{formatPrice(product.price)} <span className="text-[11px] font-normal text-toret-ink-muted">piccolo</span></span>
-    <span className="flex items-center gap-1.5 text-[16px]">{formatPrice(product.largePrice)} <span className="text-[11px] font-normal text-toret-ink-muted">grande</span></span>
   </div>
 ) : (
   formatPrice(product.price)

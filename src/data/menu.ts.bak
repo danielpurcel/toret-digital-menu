@@ -33,7 +33,6 @@ export interface Product {
   description: string;
   price: number;
   bottlePrice?: number; // Prezzo bottiglia (per vini)
-  largePrice?: number; // Prezzo formato grande (es. Caffè Torèt)
   image?: string;
   tags?: string[];
   allergens?: string[];
