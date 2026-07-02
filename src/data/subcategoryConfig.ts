@@ -48,16 +48,16 @@ export const subcategoryConfig: Record<number, SubcategoryInfo> = {
     icon: "clipboard-list",
   },
   9: {
-    name: { it: "Primi", en: "First Courses", fr: "Entrées", es: "Primeros Platos" },
-    icon: "utensils-crossed",
+    name: { it: "Menu del Giorno", en: "Daily Menu", fr: "Menu du Jour", es: "Menú del Día" },
+    icon: "clipboard-list",
   },
   10: {
-    name: { it: "Secondi", en: "Main Courses", fr: "Plats Principaux", es: "Segundos Platos" },
-    icon: "beef",
+    name: { it: "Menu del Giorno", en: "Daily Menu", fr: "Menu du Jour", es: "Menú del Día" },
+    icon: "clipboard-list",
   },
   11: {
-    name: { it: "Contorni", en: "Side Dishes", fr: "Accompagnements", es: "Guarniciones" },
-    icon: "carrot",
+    name: { it: "Menu del Giorno", en: "Daily Menu", fr: "Menu du Jour", es: "Menú del Día" },
+    icon: "clipboard-list",
   },
   12: {
     name: { it: "Insalate", en: "Salads", fr: "Salades", es: "Ensaladas" },
