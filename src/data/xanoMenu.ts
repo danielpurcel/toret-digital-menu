@@ -68,9 +68,9 @@ const categoryMap: Record<number, { macroCategory: MacroCategory; category: stri
 
   // 🍽️ PRANZO — menu_categories
   8:  { macroCategory: "pranzo",    category: "menu-del-giorno" },
-  9:  { macroCategory: "pranzo",    category: "primi" },
-  10: { macroCategory: "pranzo",    category: "secondi" },
-  11: { macroCategory: "pranzo",    category: "contorni" },
+  9:  { macroCategory: "pranzo",    category: "menu-del-giorno" },
+  10: { macroCategory: "pranzo",    category: "menu-del-giorno" },
+  11: { macroCategory: "pranzo",    category: "menu-del-giorno" },
   12: { macroCategory: "pranzo",    category: "insalate" },
   13: { macroCategory: "pranzo",    category: "panini" },
   14: { macroCategory: "pranzo",    category: "taglieri" },
