@@ -1,7 +1,7 @@
 import type { Product } from "@/data/menu";
 import cetriolino from "@/assets/p-cetriolino-contorno.png";
 import caffeImg from "@/assets/p-espresso-costadoro.jpg";
-import cremaCaffeImg from "@/assets/p-crema-caffe-final.jpg";
+import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
 // Generated from Xano menu_products on 2026-06-30. + manual aggiunta cetriolino
 export const importedProducts: Product[] = [
   {
