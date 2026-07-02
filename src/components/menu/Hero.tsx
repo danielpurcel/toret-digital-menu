@@ -10,7 +10,7 @@ export const Hero = () => {
         src={heroInterno}
         alt="Caffè Torèt — interno"
         className="absolute inset-0 h-full w-full object-cover object-center"
-        fetchpriority="high"
+        fetchPriority="high"
       />
       <div
         className="absolute inset-0 pointer-events-none"
