@@ -183,26 +183,60 @@ export const fetchXanoMenuProducts = async () => {
       page = data.nextPage;
     }
 
-    // Build fallback allergen map from importedProducts
-    const fallbackAllergenMap: Record<number, string[]> = {};
-    for (const fb of fallbackProducts) {
-      if (fb.allergens && fb.allergens.length > 0) {
-        fallbackAllergenMap[fb.xanoId] = fb.allergens;
+    const xanoMapped = items.map(toProduct).filter((item): item is Product => !!item);
+
+    // Crea mappa: xanoId → prodotto Xano
+    const xanoMap: Record<number, Product> = {};
+    for (const p of xanoMapped) {
+      if (p.xanoId) xanoMap[p.xanoId] = p;
+    }
+
+    // Crea mappa: xanoId → prodotto statico (fallback)
+    const staticMap: Record<number, Product> = {};
+    for (const p of fallbackProducts) {
+      if (p.xanoId) staticMap[p.xanoId] = p;
+    }
+
+    // MERGE: per ogni prodotto Xano, unisci con i dati statici
+    // Xano vince su: price, description, categoryId, sortOrder, available
+    // Statici mantengono: image, bottlePrice, largePrice, featured, translations extra
+    const merged: Product[] = [];
+    const seenXanoIds = new Set<number>();
+
+    for (const xp of xanoMapped) {
+      const sp = xp.xanoId ? staticMap[xp.xanoId] : undefined;
+      if (xp.xanoId) seenXanoIds.add(xp.xanoId);
+      
+      // Allergeni: Xano se li ha, altrimenti dal fallback
+      if (!xp.allergens && sp?.allergens) {
+        xp.allergens = sp.allergens;
+      }
+      
+      // Mantieni image dal prodotto statico
+      if (sp?.image && !xp.image) {
+        xp.image = sp.image;
+      }
+      
+      // Mantieni bottlePrice e largePrice dal prodotto statico
+      if (sp?.bottlePrice) xp.bottlePrice = sp.bottlePrice;
+      if (sp?.largePrice) xp.largePrice = sp.largePrice;
+      
+      // Mantieni featured
+      if (sp?.featured) xp.featured = sp.featured;
+      
+      merged.push(xp);
+    }
+
+    // Aggiungi i prodotti statici che NON sono in Xano
+    for (const sp of fallbackProducts) {
+      if (!sp.xanoId || !seenXanoIds.has(sp.xanoId)) {
+        merged.push(sp);
       }
     }
 
-    const mapped = items.map(toProduct).filter((item): item is Product => !!item);
-
-    // Merge allergeni dal fallback per i prodotti Xano che non li hanno
-    for (const p of mapped) {
-      if (!p.allergens && fallbackAllergenMap[p.xanoId]) {
-        p.allergens = fallbackAllergenMap[p.xanoId];
-      }
-    }
-
-    if (mapped.length > 0) {
-      console.log(`[Xano] Caricati ${mapped.length} prodotti dal proxy`);
-      return mapped;
+    if (merged.length > 0) {
+      console.log(`[Xano] Caricati ${xanoMapped.length} Xano + ${merged.length - xanoMapped.length} statici = ${merged.length} prodotti`);
+      return merged;
     }
   } catch (err) {
     console.warn('[Xano] Proxy fetch fallito:', err instanceof Error ? err.message : String(err));
