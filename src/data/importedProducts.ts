@@ -226,7 +226,6 @@ export const importedProducts: Product[] = [
     name: "Prosecco DOC Extra Dry",
     description: "Naonis Prosecco DOC Extra Dry — Giallo paglierino, perlage fine e persistente. Rotondo, fresco. Gradazione: 11% vol.",
     price: 3.5,
-    image: "https://www.ladelizia.com/wp-content/uploads/2023/01/prosecco_doc_extra_dry.png",
     available: true,
         allergens: ["solfiti"],
     translations: {
@@ -545,7 +544,6 @@ export const importedProducts: Product[] = [
     description: "GOJ — Barbera DOC Frizzante. Fresco, brioso, mette allegria. Dalla cantina Cascina Castlèt, Costigliole d'Asti. Gradazione: 12% vol.",
     price: 3.5,
     bottlePrice: 15,
-    image: "https://www.cascinacastlet.com/sites/default/files/goj-social.jpg",
     available: true,
         allergens: ["solfiti"],
     translations: {
@@ -630,7 +628,6 @@ export const importedProducts: Product[] = [
     name: "Prosecco DOCG Extra Dry 2025",
     description: "Naonis Prosecco DOCG Extra Dry — Bollicine pregiate DOCG. Giallo paglierino, profumi fruttati e floreali. Gradazione: 11% vol.",
     price: 5,
-    image: "https://www.ladelizia.com/wp-content/uploads/2023/01/prosecco_doc_extra_dry.png",
     available: true,
         allergens: ["solfiti"],
     translations: {
@@ -652,7 +649,6 @@ export const importedProducts: Product[] = [
     name: "Prosecco DOC Brut",
     description: "Naonis Prosecco DOC Brut — Intenso e fruttato, perlage fine. Gusto fresco e fragrante. Gradazione: 11% vol.",
     price: 3.5,
-    image: "https://www.ladelizia.com/wp-content/uploads/2023/01/prosecco_doc_brut.png",
     available: true,
         allergens: ["solfiti"],
     translations: {
@@ -1328,7 +1324,6 @@ export const importedProducts: Product[] = [
     description: "Barbera d'Asti Superiore DOCG. Uve appassite. Denso e suadente.",
     price: 5,
     bottlePrice: 30,
-    image: "https://www.cascinacastlet.com/sites/default/files/passum-social.jpg",
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1349,7 +1344,6 @@ export const importedProducts: Product[] = [
     description: "Monferrato Rosso DOC. Barbera e Cabernet Sauvignon. Moderno.",
     price: 4,
     bottlePrice: 24,
-    image: "https://www.cascinacastlet.com/sites/default/files/policalpo-social.jpg",
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1370,7 +1364,6 @@ export const importedProducts: Product[] = [
     description: "Barbera d'Asti Superiore DOCG. Omaggio alla zia Litina.",
     price: 4,
     bottlePrice: 24,
-    image: "https://www.cascinacastlet.com/sites/default/files/litina-social.jpg",
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1391,7 +1384,6 @@ export const importedProducts: Product[] = [
     description: "Monferrato Rosso DOC. Uvalino, vitigno autoctono riscoperto.",
     price: 5,
     bottlePrice: 30,
-    image: "https://www.cascinacastlet.com/sites/default/files/uceline-social.jpg",
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1412,7 +1404,6 @@ export const importedProducts: Product[] = [
     description: "Chardonnay. Parole e sapori che attraversano il tempo.",
     price: 4,
     bottlePrice: 15,
-    image: "https://www.cascinacastlet.com/sites/default/files/ataj-social_0.jpg",
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1433,7 +1424,6 @@ export const importedProducts: Product[] = [
     description: "Rosé da Barbera. Rosa allegria, promessa e speranza.",
     price: 4,
     bottlePrice: 15,
-    image: "https://www.cascinacastlet.com/sites/default/files/rose-social.jpg",
     available: true,
     allergens: ["solfiti"],
     translations: {
