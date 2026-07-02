@@ -227,7 +227,6 @@ export const importedProducts: Product[] = [
     description: "Naonis Prosecco DOC Extra Dry — Giallo paglierino brillante, perlage fine e persistente. Profumo intenso e complesso, fine e fruttato. Al palato rotondo, fresco e fragrante. Perfetto come aperitivo. Gradazione: 11% vol.",
     price: 3.5,
     bottlePrice: 15,
-    image: "https://www.ladelizia.com/wp-content/uploads/2023/01/prosecco_doc_extra_dry.png",
     available: true,
         allergens: ["solfiti"],
     translations: {
@@ -655,7 +654,6 @@ export const importedProducts: Product[] = [
     description: "Naonis Prosecco DOC Brut — Giallo paglierino con riflessi verdognoli. Profumo intenso, fine, fruttato e floreale. Palato fresco e fragrante. Perlage fine. Gradazione: 11% vol.",
     price: 3.5,
     bottlePrice: 15,
-    image: "https://www.ladelizia.com/wp-content/uploads/2023/01/prosecco_doc_brut.png",
     available: true,
         allergens: ["solfiti"],
     translations: {
