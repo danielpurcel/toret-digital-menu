@@ -957,7 +957,7 @@ export const importedProducts: Product[] = [
     available: true,
         allergens: ["soia"],
     translations: {
-      it: { name: "Cappuccino soia/vena", description: "deck/ginseng/orzo. Costadoro Lab: 100% Arabica d'eccellenza. 4 medaglie oro International Coffee Tasting." },
+      it: { name: "Cappuccino soia/vena", description: "Cappuccino con latte di soia o avena. Caffè Costadoro 100% Arabica. Costadoro Lab: 100% Arabica d'eccellenza. 4 medaglie oro International Coffee Tasting." },
       en: { name: "Cappuccino soia/vena", description: "Costadoro 100% Arabica with soya or oat milk. Light, tasty, and dairy-free. Costadoro Lab: 100% Arabica excellence. 4 Gold Medals International Coffee Tasting.",
   },
       fr: { name: "Cappuccino soia/vena", description: "Costadoro 100% Arabica au lait de soja ou d'avoine. Léger, savoureux et sans lactose. Costadoro Lab: 100% Arabica d'excellence. 4 médailles d'or International Coffee Tasting." },
