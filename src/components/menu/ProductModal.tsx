@@ -1,4 +1,4 @@
-import { Heart, X, Share2, Star, Utensils } from "lucide-react";
+import { Heart, X, Share2, Star, Utensils, Wine } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useLocale } from "@/i18n/LocaleContext";
@@ -133,8 +133,8 @@ export const ProductModal = ({ product, onClose }: Props) => {
                   >
                     {product.bottlePrice ? (
   <div className="flex flex-col gap-0.5">
-    <span>{formatPrice(product.price)} <span className="text-[13px] font-normal text-toret-ink-muted">bicchiere</span></span>
-    <span>{formatPrice(product.bottlePrice)} <span className="text-[13px] font-normal text-toret-ink-muted">bottiglia</span></span>
+    <span className="inline-flex items-center gap-1.5">{formatPrice(product.price)}<svg className="h-4 w-4 text-toret-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2h12l-1.5 19.5A3 3 0 0113.5 22h-3a3 3 0 01-3-3L6 2z"/><path d="M8 10h8"/></svg></span>
+    <span className="inline-flex items-center gap-1.5">{formatPrice(product.bottlePrice)}<Wine className="h-4 w-4 text-toret-ink-muted" strokeWidth={1.5} /></span>
   </div>
 ) : (
   formatPrice(product.price)
