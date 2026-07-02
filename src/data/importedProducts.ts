@@ -2,6 +2,14 @@ import type { Product } from "@/data/menu";
 import cetriolino from "@/assets/p-cetriolino-contorno.png";
 import caffeImg from "@/assets/p-espresso-costadoro.jpg";
 import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
+import vinoGoj from "@/assets/p-vino-goj.jpg";
+import vinoPassum from "@/assets/p-vino-passum.jpg";
+import vinoPolicalpo from "@/assets/p-vino-policalpo.jpg";
+import vinoLitina from "@/assets/p-vino-litina.jpg";
+import vinoUceline from "@/assets/p-vino-uceline.jpg";
+import vinoAtaj from "@/assets/p-vino-ataj.jpg";
+import vinoRose from "@/assets/p-vino-rose.jpg";
+import vinoProseccoDocg from "@/assets/p-vino-prosecco-docg.jpg";
 // Generated from Xano menu_products on 2026-06-30. + manual aggiunta cetriolino
 export const importedProducts: Product[] = [
   {
@@ -548,7 +556,7 @@ export const importedProducts: Product[] = [
     description: "GOJ - Barbera DOC Frizzante. Fresco, brioso, mette allegria. Dalla cantina Cascina Castlèt, Costigliole d'Asti. Gradazione: 12% vol.",
     price: 3.5,
     bottlePrice: 15,
-    image: "https://www.cascinacastlet.com/sites/default/files/goj-social.jpg",
+    image: vinoGoj,
     available: true,
         allergens: ["solfiti"],
     translations: {
@@ -634,7 +642,7 @@ export const importedProducts: Product[] = [
     description: "Naonis Valdobbiadene Prosecco Superiore DOCG Millesimato. 100% Glera. Affinamento sui lieviti. Giallo paglierino scarico, perlage fine e persistente. Fresco ed equilibrato. Gradazione: 11,5% vol.",
     price: 5,
     bottlePrice: 24,
-    image: "https://egress.storeden.net/jpg/673ee9d3be7ea00453a39587/file.jpg",
+    image: vinoProseccoDocg,
     available: true,
         allergens: ["solfiti"],
     translations: {
@@ -1272,7 +1280,7 @@ export const importedProducts: Product[] = [
     description: "Barbera d'Asti Superiore DOCG. Uve appassite. Denso e suadente.",
     price: 5,
     bottlePrice: 30,
-    image: "https://www.cascinacastlet.com/sites/default/files/passum-social.jpg",
+    image: vinoPassum,
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1293,7 +1301,7 @@ export const importedProducts: Product[] = [
     description: "Monferrato Rosso DOC. Barbera e Cabernet Sauvignon. Moderno.",
     price: 4,
     bottlePrice: 24,
-    image: "https://www.cascinacastlet.com/sites/default/files/policalpo-social.jpg",
+    image: vinoPolicalpo,
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1314,7 +1322,7 @@ export const importedProducts: Product[] = [
     description: "Barbera d'Asti Superiore DOCG. Omaggio alla zia Litina.",
     price: 4,
     bottlePrice: 24,
-    image: "https://www.cascinacastlet.com/sites/default/files/litina-social.jpg",
+    image: vinoLitina,
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1335,7 +1343,7 @@ export const importedProducts: Product[] = [
     description: "Monferrato Rosso DOC. Uvalino, vitigno autoctono riscoperto.",
     price: 5,
     bottlePrice: 30,
-    image: "https://www.cascinacastlet.com/sites/default/files/uceline-social.jpg",
+    image: vinoUceline,
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1356,7 +1364,7 @@ export const importedProducts: Product[] = [
     description: "Chardonnay. Parole e sapori che attraversano il tempo.",
     price: 4,
     bottlePrice: 15,
-    image: "https://www.cascinacastlet.com/sites/default/files/ataj-social_0.jpg",
+    image: vinoAtaj,
     available: true,
     allergens: ["solfiti"],
     translations: {
@@ -1377,7 +1385,7 @@ export const importedProducts: Product[] = [
     description: "Rosé da Barbera. Rosa allegria, promessa e speranza.",
     price: 4,
     bottlePrice: 15,
-    image: "https://www.cascinacastlet.com/sites/default/files/rose-social.jpg",
+    image: vinoRose,
     available: true,
     allergens: ["solfiti"],
     translations: {
