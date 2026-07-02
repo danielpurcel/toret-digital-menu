@@ -56,7 +56,11 @@ export const ProductCard = ({ product, onOpen, badge }: Props) => {
         <div className="flex items-center justify-between mt-2">
           <span className="price-tag text-[15px]">
   {product.bottlePrice ? (
-    <><span className="inline-flex items-center gap-0.5">{formatPrice(product.price)}<svg className="h-3 w-3 text-toret-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2h12l-1.5 19.5A3 3 0 0113.5 22h-3a3 3 0 01-3-3L6 2z"/><path d="M8 10h8"/></svg></span> <span className="text-toret-ink-muted">·</span> <span className="inline-flex items-center gap-0.5">{formatPrice(product.bottlePrice)}<Wine className="h-3 w-3 text-toret-ink-muted" strokeWidth={1.5} /></span></>
+    <div className="flex items-center gap-2">
+              <span className="flex items-center gap-1">{formatPrice(product.price)}<svg className="h-3.5 w-3.5 text-toret-gold-warm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2h12l-1.5 19.5A3 3 0 0113.5 22h-3a3 3 0 01-3-3L6 2z"/><path d="M8 10h8"/></svg></span>
+              <span className="h-3 w-px bg-toret-ink-muted/30"></span>
+              <span className="flex items-center gap-1">{formatPrice(product.bottlePrice)}<Wine className="h-3.5 w-3.5 text-toret-gold-warm" strokeWidth={1.5} /></span>
+            </div>
   ) : (
     formatPrice(product.price)
   )}
