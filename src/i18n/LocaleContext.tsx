@@ -28,7 +28,7 @@ const dict = {
     openingHours: "Orari di apertura",
     chooseMoment: "Scegli il momento",
     openNow: "Aperto ora",
-    kitchenUntil: "cucina fino alle 22:30",
+    kitchenUntil: "fino alle 20:00",
     goodMorning: "Buongiorno",
     bistrotTagline: "Caffeteria · colazione, pranzo e aperitivo dal mattino alla sera",
     turin: "Turin",
