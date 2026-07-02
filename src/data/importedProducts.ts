@@ -1,6 +1,7 @@
 import type { Product } from "@/data/menu";
 import cetriolino from "@/assets/p-cetriolino-contorno.png";
 import caffeImg from "@/assets/p-espresso-costadoro.jpg";
+import cremaCaffeImg from "@/assets/p-crema-caffe-1.jpg";
 // Generated from Xano menu_products on 2026-06-30. + manual aggiunta cetriolino
 export const importedProducts: Product[] = [
   {
@@ -1060,13 +1061,14 @@ export const importedProducts: Product[] = [
     description: "Crema di caffè zuccherata e montata, servita fredda. Piccola o grande.",
     price: 2.5,
     largePrice: 4,
+    image: cremaCaffeImg,
     available: true,
         allergens: ["latte"],
     translations: {
-      it: { name: "Crema caffè", description: "Crema di caffè zuccherata e montata, servita fredda. Piccola o grande. Costadoro Lab: 100% Arabica d'eccellenza. 4 medaglie oro International Coffee Tasting." },
-      en: { name: "Crema di Caffè", description: "Costadoro Lab sweet coffee cream, served cold. Small or large. A velvety spoonful of pure bliss. Costadoro Lab: 100% Arabica excellence. 4 Gold Medals International Coffee Tasting." },
-      fr: { name: "Crème de Café", description: "Crème de café sucrée Costadoro Lab, servie froide. Petite ou grande. Une cuillerée veloutée de pur bonheur. Costadoro Lab: 100% Arabica d'excellence. 4 médailles d'or International Coffee Tasting." },
-      es: { name: "Crema de Café", description: "Crema de café dulce Costadoro Lab, servida fría. Pequeña o grande. Una cucharada aterciopelada de placer. Costadoro Lab: 100% Arábica de excelencia. 4 medallas de oro International Coffee Tasting." },
+      it: { name: "Crema caffè", description: "Crema di caffè Costadoro Lab, zuccherata e montata a neve, servita fredda. Una nuvola morbida con cacao amaro in superficie. Piccola o grande. Costadoro Lab: 100% Arabica d'eccellenza. 4 medaglie oro International Coffee Tasting." },
+      en: { name: "Crema di Caffè", description: "Costadoro Lab sweet coffee cream, whipped and served cold. A soft cloud topped with bitter cocoa. Small or large. Costadoro Lab: 100% Arabica excellence. 4 Gold Medals International Coffee Tasting." },
+      fr: { name: "Crème de Café", description: "Crème de café Costadoro Lab sucrée et montée en neige, servie froide. Un nuage moelleux saupoudré de cacao amer. Petite ou grande. Costadoro Lab: 100% Arabica d'excellence. 4 médailles d'or International Coffee Tasting." },
+      es: { name: "Crema de Café", description: "Crema de café Costadoro Lab, dulce y montada, servida fría. Una nube suave con cacao amargo en la superficie. Pequeña o grande. Costadoro Lab: 100% Arábica de excelencia. 4 medallas de oro International Coffee Tasting." },
     },
   },
 
