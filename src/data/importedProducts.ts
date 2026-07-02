@@ -1,5 +1,6 @@
 import type { Product } from "@/data/menu";
 import cetriolino from "@/assets/p-cetriolino-contorno.png";
+import caffeImg from "@/assets/p-espresso-costadoro.jpg";
 // Generated from Xano menu_products on 2026-06-30. + manual aggiunta cetriolino
 export const importedProducts: Product[] = [
   {
@@ -34,6 +35,7 @@ export const importedProducts: Product[] = [
     name: "Caffè",
     description: "Estratto con macinatura fresca, servito in tazza. Caffè Costadoro 100% Arabica.",
     price: 2,
+    image: caffeImg,
     available: true,
     featured: true,
         allergens: [],
