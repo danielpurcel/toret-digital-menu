@@ -131,7 +131,14 @@ export const ProductModal = ({ product, onClose }: Props) => {
                     className="font-sans text-[28px] font-semibold text-toret-ink"
                     style={{ fontVariantNumeric: "tabular-nums" }}
                   >
-                    {formatPrice(product.price)}
+                    {product.bottlePrice ? (
+  <div className="flex flex-col gap-0.5">
+    <span>{formatPrice(product.price)} <span className="text-[13px] font-normal text-toret-ink-muted">bicchiere</span></span>
+    <span>{formatPrice(product.bottlePrice)} <span className="text-[13px] font-normal text-toret-ink-muted">bottiglia</span></span>
+  </div>
+) : (
+  formatPrice(product.price)
+)}
                   </span>
                   <span className="inline-flex items-center gap-1.5 text-[12px] text-toret-ink-muted">
                     <Star className="h-3.5 w-3.5 fill-toret-gold text-toret-gold-warm" strokeWidth={1.5} />

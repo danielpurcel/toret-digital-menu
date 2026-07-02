@@ -54,7 +54,13 @@ export const ProductCard = ({ product, onOpen, badge }: Props) => {
           {tr.description}
         </p>
         <div className="flex items-center justify-between mt-2">
-          <span className="price-tag text-[15px]">{formatPrice(product.price)}</span>
+          <span className="price-tag text-[15px]">
+  {product.bottlePrice ? (
+    <>{formatPrice(product.price)} <span className="text-[11px] text-toret-ink-muted font-normal">bicch.</span> · {formatPrice(product.bottlePrice)} <span className="text-[11px] text-toret-ink-muted font-normal">bott.</span></>
+  ) : (
+    formatPrice(product.price)
+  )}
+</span>
           <button
             aria-label="Favorite"
             onClick={(e) => {

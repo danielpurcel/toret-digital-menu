@@ -32,6 +32,7 @@ export interface Product {
   name: string;
   description: string;
   price: number;
+  bottlePrice?: number; // Prezzo bottiglia (per vini)
   image?: string;
   tags?: string[];
   allergens?: string[];
