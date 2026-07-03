@@ -818,7 +818,7 @@ export const importedProducts: Product[] = [
     largePrice: 2.5,
     available: true,
     featured: true,
-        allergens: [],
+        allergens: ["latte"],
     translations: {
       it: { name: "Caffè Torèt", description: "Il nostro espresso signature con panna montata al momento. 100% Arabica Costadoro Lab, 4 medaglie oro. Piccolo o grande." },
       en: { name: "Caffè Torèt", description: "Our signature espresso with fresh whipped cream. 100% Arabica Costadoro Lab, 4 Gold Medals. Small or large." },

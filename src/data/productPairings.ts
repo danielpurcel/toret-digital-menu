@@ -21,7 +21,7 @@ export const productPairings: Record<string, string[]> = {
   "xano-47-te-infuso": ["xano-88-semidolce", "xano-72-panna-piccola"],
   "xano-62-latte-bianco": ["xano-26-caffe", "xano-72-panna-piccola"],
   "xano-63-marocchino": ["xano-88-semidolce", "xano-72-panna-piccola"],
-  "xano-70-caffe-toret": ["xano-72-panna-piccola", "xano-88-semidolce"],
+  "xano-70-caffe-toret": ["xano-88-semidolce", "xano-44-spremuta"],
   "xano-75-bicerin": ["xano-72-panna-piccola", "xano-88-semidolce"],
   "xano-76-cioccolata-calda": ["xano-72-panna-piccola", "xano-88-semidolce"],
   "xano-77-cioccolata-calda-con-panna": ["xano-88-semidolce"],
