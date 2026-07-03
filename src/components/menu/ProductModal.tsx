@@ -69,25 +69,13 @@ export const ProductModal = ({ product, onClose }: Props) => {
       <DrawerContent className="bg-toret-paper text-toret-ink border-t-0 h-[100dvh] max-h-[100dvh] mt-0 rounded-none p-0 overflow-hidden">
         {product && tr && (
           <div className="mx-auto w-full max-w-[440px] flex flex-col h-[100dvh]">
-            <div className="relative h-[28vh] min-h-[180px] shrink-0 bg-toret-cream overflow-hidden">
+            <div className="relative h-auto min-h-[0] shrink-0 bg-toret-cream flex items-center justify-center py-4 px-6">
               {product.image ? (
-                <>
-                  {/* Sfondo sfocato */}
-                  <img
-                    src={product.image}
-                    alt=""
-                    aria-hidden="true"
-                    className="absolute inset-0 h-full w-full object-cover scale-110 blur-lg opacity-60"
-                  />
-                  {/* Foto prodotto centrata e rimpicciolita */}
-                  <div className="absolute inset-0 flex items-center justify-center p-3">
-                    <img
-                      src={product.image}
-                      alt={tr.name}
-                      className="max-h-[70%] max-w-[85%] w-auto h-auto object-contain rounded-lg shadow-[var(--shadow-3)]"
-                    />
-                  </div>
-                </>
+                <img
+                  src={product.image}
+                  alt={tr.name}
+                  className="h-[120px] w-auto max-w-[160px] object-contain rounded-xl"
+                />
               ) : (
                 <div className="absolute inset-0 grid place-items-center text-toret-gold-warm">
                   <Utensils className="h-12 w-12" strokeWidth={1.5} aria-hidden="true" />
