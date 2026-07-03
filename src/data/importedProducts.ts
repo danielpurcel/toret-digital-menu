@@ -12,7 +12,6 @@ import vinoRose from "@/assets/p-vino-rose.jpg";
 import vinoProseccoDocg from "@/assets/p-vino-prosecco-docg.jpg";
 // Generated from Xano menu_products on 2026-06-30. + manual aggiunta cetriolino
 export const importedProducts: Product[] = [
-  // --- refresh 2026-07-03 ---
   {
     id: "xano-22-acqua-1-5l",
     xanoId: 22,
