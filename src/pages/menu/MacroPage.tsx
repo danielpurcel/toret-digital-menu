@@ -200,7 +200,7 @@ const MacroPage = () => {
         )}
       </div>
 
-      <ProductModal product={selected} onClose={() => setSelected(null)} />
+      <ProductModal product={selected} onClose={() => setSelected(null)} onSelectProduct={setSelected} />
     </AppShell>
   );
 };

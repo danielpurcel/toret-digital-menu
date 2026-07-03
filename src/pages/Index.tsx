@@ -106,7 +106,7 @@ const Index = () => {
         </section>
       )}
 
-      <ProductModal product={selected} onClose={() => setSelected(null)} />
+      <ProductModal product={selected} onClose={() => setSelected(null)} onSelectProduct={setSelected} />
     </AppShell>
   );
 };

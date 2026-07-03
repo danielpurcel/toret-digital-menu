@@ -49,9 +49,10 @@ const formatPrice = (price: number) =>
 interface Props {
   product: Product | null;
   onClose: () => void;
+  onSelectProduct?: (product: Product) => void;
 }
 
-export const ProductModal = ({ product, onClose }: Props) => {
+export const ProductModal = ({ product, onClose, onSelectProduct }: Props) => {
   const { locale, t } = useLocale();
   const { isFavorite, toggle } = useFavorites();
 
@@ -188,7 +189,8 @@ export const ProductModal = ({ product, onClose }: Props) => {
                       return (
                         <div
                           key={s.id}
-                          className="flex items-center gap-3 bg-toret-cream/60 warm-border rounded-2xl p-3"
+                          className="flex items-center gap-3 bg-toret-cream/60 warm-border rounded-2xl p-3 cursor-pointer active:bg-toret-cream transition-colors"
+                          onClick={() => { onClose(); setTimeout(() => onSelectProduct?.(s), 100); }}
                         >
                           {s.image ? (
                             <img
