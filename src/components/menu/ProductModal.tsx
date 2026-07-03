@@ -1,11 +1,14 @@
-import { Heart, X, Share2, Star, Utensils } from "lucide-react";
+import { Heart, X, Share2, Star, Utensils, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useLocale } from "@/i18n/LocaleContext";
 import type { Product } from "@/data/menu";
 import { Drawer, DrawerContent, DrawerTitle, DrawerDescription } from "@/components/ui/drawer";
 import { getPromoForProduct } from "@/data/promos";
+import { getPairings } from "@/data/productPairings";
 import { AllergenBadge } from "@/components/menu/AllergenBadge";
+import { importedProducts } from "@/data/importedProducts";
+import { products as staticProducts } from "@/data/menu";
 
 const noAllergenProductMessages: Record<number, Record<string, string>> = {
   26: { it: "Caffè 100% Arabica Costadoro. Puro, intenso, senza allergeni. ☕", en: "100% Arabica Costadoro coffee. Pure, intense, allergen-free.", fr: "Café 100% Arabica Costadoro. Pur, intense, sans allergènes.", es: "Café 100% Arábica Costadoro. Puro, intenso, sin alérgenos." },
@@ -52,11 +55,14 @@ export const ProductModal = ({ product, onClose }: Props) => {
   const { locale, t } = useLocale();
   const { isFavorite, toggle } = useFavorites();
 
+  const allProducts = [...importedProducts, ...staticProducts];
+
   const open = !!product;
   const tr = product?.translations[locale];
   const fav = product ? isFavorite(product.id) : false;
   const promo = product ? getPromoForProduct(product.id) : undefined;
   const promoTr = promo?.translations[locale];
+  const suggestions = product ? getPairings(product.id, allProducts) : [];
 
   return (
     <Drawer open={open} onOpenChange={(o) => !o && onClose()}>
@@ -167,6 +173,51 @@ export const ProductModal = ({ product, onClose }: Props) => {
                   <p className="text-[13px] text-toret-ink-muted leading-snug italic">
                     {noAllergenMessage(product.xanoId, locale)}
                   </p>
+                </div>
+              )}
+
+              {suggestions.length > 0 && (
+                <div className="mt-6">
+                  <p className="eyebrow mb-2 flex items-center gap-1.5">
+                    <Sparkles className="h-3.5 w-3.5 text-toret-gold-warm" strokeWidth={1.5} />
+                    {t("tryThese")}
+                  </p>
+                  <div className="flex flex-col gap-2">
+                    {suggestions.map((s) => {
+                      const st = s.translations[locale];
+                      return (
+                        <div
+                          key={s.id}
+                          className="flex items-center gap-3 bg-toret-cream/60 warm-border rounded-2xl p-3"
+                        >
+                          {s.image ? (
+                            <img
+                              src={s.image}
+                              alt={st?.name || s.name}
+                              className="h-14 w-14 rounded-xl object-cover flex-none"
+                            />
+                          ) : (
+                            <div className="h-14 w-14 rounded-xl bg-toret-cream grid place-items-center flex-none">
+                              <Utensils className="h-5 w-5 text-toret-gold-warm" strokeWidth={1.5} />
+                            </div>
+                          )}
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-[14px] font-medium text-toret-ink truncate">
+                              {st?.name || s.name}
+                            </h3>
+                            {st?.description && (
+                              <p className="text-[11px] text-toret-ink-muted leading-snug mt-0.5 truncate">
+                                {st.description}
+                              </p>
+                            )}
+                          </div>
+                          <span className="price-tag text-[14px] whitespace-nowrap">
+                            {formatPrice(s.price)}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               )}
 
