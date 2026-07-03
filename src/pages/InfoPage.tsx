@@ -27,7 +27,7 @@ const InfoPage = () => {
             <span className="text-toret-ink-muted"> · {siteConfig.hours.time}</span>
           </p>
           <p className="text-toret-ink-muted text-[13px]">{siteConfig.hours.closed[locale]}</p>
-          <p className="text-toret-ink-muted text-[13px] mt-1">{siteConfig.hours.thursday[locale]}</p>
+          {/* Giovedì rimosso: orario uniforme Lun-Sab 7:00-20:00 */}
         </InfoCard>
 
         <InfoCard icon={<MapPin className="h-4 w-4" />} title={t("address")}>

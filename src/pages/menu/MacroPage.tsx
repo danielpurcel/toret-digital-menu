@@ -92,10 +92,13 @@ const MacroPage = () => {
   const meta = macroMeta[macroKey];
 
   // Sottocategorie dinamiche da Xano (menu_categories) filtrate per macro
+  // Nel pranzo: nascondiamo Primi (9), Secondi (10), Contorni (11) — unificati in Menu del Giorno
+  const HIDDEN_PRANZO_CATS = new Set([9, 10, 11]);
   const subcategories = useMemo(() => {
     const cats: { id: number; icon: string }[] = [];
     for (const cat of xanoCats) {
       if ((cat.macro || "").toLowerCase() === macroKey) {
+        if (macroKey === "pranzo" && HIDDEN_PRANZO_CATS.has(cat.id)) continue;
         cats.push({ id: cat.id, icon: cat.icon || "help-circle" });
       }
     }

@@ -43,7 +43,7 @@ export const importedProducts: Product[] = [
     sortOrder: 1,
     name: "Caffè",
     description: "Estratto con macinatura fresca, servito in tazza.",
-    price: 2,
+    price: 1.3,
     image: caffeImg,
     available: true,
     featured: true,
