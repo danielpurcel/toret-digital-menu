@@ -71,11 +71,13 @@ export const ProductModal = ({ product, onClose }: Props) => {
           <div className="mx-auto w-full max-w-[440px] flex flex-col h-[100dvh]">
             <div className="relative h-[34vh] min-h-[220px] shrink-0 bg-toret-cream">
               {product.image ? (
-                <img
-                  src={product.image}
-                  alt={tr.name}
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
+                <div className="absolute inset-0 flex items-center justify-center p-6">
+                  <img
+                    src={product.image}
+                    alt={tr.name}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
               ) : (
                 <div className="absolute inset-0 grid place-items-center text-toret-gold-warm">
                   <Utensils className="h-12 w-12" strokeWidth={1.5} aria-hidden="true" />
