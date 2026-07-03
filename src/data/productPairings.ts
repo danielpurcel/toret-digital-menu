@@ -37,7 +37,6 @@ export const productPairings: Record<string, string[]> = {
 
   // Dolci → Caffè / Spremuta
   "xano-72-panna-piccola": ["xano-28-cappuccino", "xano-26-caffe", "xano-44-spremuta"],
-  "xano-73-panna-grande": ["xano-28-cappuccino", "xano-44-spremuta"],
   "xano-74-zabaione": ["xano-26-caffe", "xano-70-caffe-toret"],
   "xano-88-semidolce": ["xano-28-cappuccino", "xano-26-caffe", "xano-44-spremuta"],
 
