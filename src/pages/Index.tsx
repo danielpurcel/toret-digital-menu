@@ -7,6 +7,7 @@ import { PromoBanner } from "@/components/menu/PromoBanner";
 import { ProductCard } from "@/components/menu/ProductCard";
 import { ProductModal } from "@/components/menu/ProductModal";
 import { useLocale } from "@/i18n/LocaleContext";
+import { useIsOpen } from "@/hooks/useIsOpen";
 import { macroLabels, type Product } from "@/data/menu";
 import { featuredProducts, useMenuProducts } from "@/hooks/useMenuProducts";
 import { getPromoByMacro } from "@/data/promos";
@@ -16,6 +17,7 @@ import catAperitivo from "@/assets/cat-aperitivo.jpg";
 
 const Index = () => {
   const { locale, t } = useLocale();
+  const { isOpen, closesAt, reopensAt } = useIsOpen();
   const [selected, setSelected] = useState<Product | null>(null);
   const { data: products } = useMenuProducts();
   const featured = featuredProducts(products);
@@ -38,8 +40,14 @@ const Index = () => {
             <Clock className="h-3.5 w-3.5 text-toret-green" strokeWidth={1.5} />
           </span>
           <p className="text-[13px] text-toret-ink-soft">
-            <span className="font-semibold text-toret-green">{t("openNow")}</span>
-            <span className="text-toret-ink-muted"> · {t("kitchenUntil")}</span>
+            <span className={`font-semibold ${isOpen ? "text-toret-green" : "text-red-500"}`}>
+              {isOpen ? "🟢" : "🔴"} {isOpen ? t("openNow") : t("closed")}
+            </span>
+            {isOpen ? (
+              <span className="text-toret-ink-muted"> · {t("kitchenUntil")} {closesAt}</span>
+            ) : (
+              <span className="text-toret-ink-muted"> · riapriamo {reopensAt}</span>
+            )}
           </p>
         </div>
       </section>
