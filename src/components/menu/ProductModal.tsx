@@ -69,13 +69,25 @@ export const ProductModal = ({ product, onClose }: Props) => {
       <DrawerContent className="bg-toret-paper text-toret-ink border-t-0 h-[100dvh] max-h-[100dvh] mt-0 rounded-none p-0 overflow-hidden">
         {product && tr && (
           <div className="mx-auto w-full max-w-[440px] flex flex-col h-[100dvh]">
-            <div className="relative h-[28vh] min-h-[180px] shrink-0 bg-toret-cream">
+            <div className="relative h-[28vh] min-h-[180px] shrink-0 bg-toret-cream overflow-hidden">
               {product.image ? (
-                <img
-                  src={product.image}
-                  alt={tr.name}
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
+                <>
+                  {/* Sfondo sfocato */}
+                  <img
+                    src={product.image}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 h-full w-full object-cover scale-110 blur-lg opacity-60"
+                  />
+                  {/* Foto prodotto centrata e rimpicciolita */}
+                  <div className="absolute inset-0 flex items-center justify-center p-3">
+                    <img
+                      src={product.image}
+                      alt={tr.name}
+                      className="max-h-[70%] max-w-[85%] w-auto h-auto object-contain rounded-lg shadow-[var(--shadow-3)]"
+                    />
+                  </div>
+                </>
               ) : (
                 <div className="absolute inset-0 grid place-items-center text-toret-gold-warm">
                   <Utensils className="h-12 w-12" strokeWidth={1.5} aria-hidden="true" />
