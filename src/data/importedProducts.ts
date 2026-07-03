@@ -3,6 +3,7 @@ import cetriolino from "@/assets/p-cetriolino-contorno.png";
 import caffeImg from "@/assets/p-espresso-costadoro.jpg";
 import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
 import vinoGoj from "@/assets/p-vino-goj.jpg";
+import birraMenabrea from "@/assets/p-birra-menabrea.jpg";
 import vinoPassum from "@/assets/p-vino-passum.jpg";
 import vinoPolicalpo from "@/assets/p-vino-policalpo.jpg";
 import vinoLitina from "@/assets/p-vino-litina.jpg";
@@ -342,7 +343,7 @@ export const importedProducts: Product[] = [
     sortOrder: 1,
     name: "Birra Menabrea",
     description: "Birra Menabrea 33cl",
-    image: vinoGoj,
+    image: birraMenabrea,
     price: 3.5,
     available: true,
         allergens: ["glutine"],
