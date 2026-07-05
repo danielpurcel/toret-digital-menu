@@ -431,7 +431,7 @@ export const importedProducts: Product[] = [
     name: "PannaToret Piccolo",
     description: "Panna fresca montata spolverata di cacao amaro.",
     price: 2,
-    available: true,
+    available: false,
         allergens: ["latte"],
     translations: {
       it: { name: "PannaToret Piccolo", description: "Panna fresca montata spolverata di cacao amaro. Costadoro Lab: 100% Arabica d'eccellenza. 4 medaglie oro International Coffee Tasting.",
