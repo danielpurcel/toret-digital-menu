@@ -8,6 +8,7 @@ import cappuccinoImg from "@/assets/p-cappuccino.jpg";
 import coronaImg from "@/assets/p-corona.jpg";
 import caffeDecaImg from "@/assets/p-caffe-deca.jpg";
 import proseccoBrutImg from "@/assets/p-prosecco-brut.jpg";
+import proseccoExtraDryImg from "@/assets/p-prosecco-extra-dry.jpg";
 import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
 import vinoGoj from "@/assets/p-vino-goj.jpg";
 import birraMenabrea from "@/assets/p-birra-menabrea.jpg";
