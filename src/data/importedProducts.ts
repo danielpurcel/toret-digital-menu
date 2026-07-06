@@ -5,6 +5,7 @@ import bruttiBuoniImg from "@/assets/p-brutti-ma-buoni.jpg";
 import tramezzinoImg from "@/assets/p-tramezzino.jpg";
 import focacciaBresaolaImg from "@/assets/p-focaccia-bresaola.jpg";
 import cappuccinoImg from "@/assets/p-cappuccino.jpg";
+import coronaImg from "@/assets/p-corona.jpg";
 import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
 import vinoGoj from "@/assets/p-vino-goj.jpg";
 import birraMenabrea from "@/assets/p-birra-menabrea.jpg";
@@ -359,6 +360,27 @@ export const importedProducts: Product[] = [
   },
       fr: { name: "Eau", description: "Eau minérale en bouteille. 0,5L ou 1,5L." },
       es: { name: "Agua", description: "Agua mineral en botella. 0,5L o 1,5L." },
+    },
+  },
+  {
+    id: "xano-100-corona",
+    xanoId: 100,
+    source: "xano-import",
+    macroCategory: "aperitivo",
+    category: "birre",
+    categoryId: 17,
+    sortOrder: 2,
+    name: "Corona con sale e limone",
+    description: "La classica birra messicana servita con ghiaccio, sale e una fetta di limone fresco. Fresca, leggera, perfetta per l'aperitivo.",
+    price: 4,
+    available: true,
+    image: coronaImg,
+        allergens: ["glutine"],
+    translations: {
+      it: { name: "Corona con sale e limone", description: "La classica birra messicana servita con ghiaccio, sale e una fetta di limone fresco. Fresca, leggera, perfetta per l'aperitivo." },
+      en: { name: "Corona with salt and lime", description: "The classic Mexican beer served with ice, salt and a slice of fresh lime. Crisp, light, perfect for aperitivo." },
+      fr: { name: "Corona avec sel et citron", description: "La classique bière mexicaine servie avec de la glace, du sel et une tranche de citron frais. Fraîche, légère, parfaite pour l'apéritif." },
+      es: { name: "Corona con sal y limón", description: "La clásica cerveza mexicana servida con hielo, sal y una rodaja de limón fresco. Fresca, ligera, perfecta para el aperitivo." },
     },
   },
   {
