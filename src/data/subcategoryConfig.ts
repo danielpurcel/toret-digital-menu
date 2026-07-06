@@ -30,12 +30,12 @@ export const subcategoryConfig: Record<number, SubcategoryInfo> = {
     icon: "thermometer",
   },
   5: {
-    name: { it: "Dolci", en: "Desserts", fr: "Desserts", es: "Postres" },
-    icon: "cake-slice",
+    name: { it: "Iced & Fresh", en: "Iced & Fresh", fr: "Iced & Fresh", es: "Iced & Fresh" },
+    icon: "snowflake",
   },
   6: {
-    name: { it: "Bevande", en: "Drinks", fr: "Boissons", es: "Bebidas" },
-    icon: "cup-soda",
+    name: { it: "Dolci", en: "Desserts", fr: "Desserts", es: "Postres" },
+    icon: "cake-slice",
   },
   7: {
     name: { it: "Colazione Salata", en: "Savory Breakfast", fr: "Petit Déjeuner Salé", es: "Desayuno Salado" },
