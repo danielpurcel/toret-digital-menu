@@ -1,5 +1,4 @@
 import type { Product } from "@/data/menu";
-import cetriolino from "@/assets/p-cetriolino-contorno.png";
 import caffeImg from "@/assets/p-espresso-costadoro.jpg";
 import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
 import vinoGoj from "@/assets/p-vino-goj.jpg";
@@ -1229,26 +1228,7 @@ export const importedProducts: Product[] = [
       es: { name: "Agua Torèt Fresh", description: "Agua, limón fresco y menta. Nuestra agua Torèt Fresh, refrescante y natural." },
     },
   },
-  {
-    id: "xano-95-cetriolino-sottaceto",
-    xanoId: 95,
-    source: "xano-import",
-    macroCategory: "pranzo",
-    category: "menu-del-giorno",
-    categoryId: 7,
-    sortOrder: 10,
-    name: "Cetriolino sottaceto",
-    description: "Cetriolino artigianale in agrodolce, croccante e saporito.",
-    price: 3,
-    available: true,
-    image: cetriolino,
-    translations: {
-      it: { name: "Cetriolino sottaceto", description: "Cetriolino artigianale in agrodolce, croccante e saporito." },
-      en: { name: "Pickled gherkin", description: "Artisanal sweet-sour pickled gherkin, crunchy and tasty." },
-      fr: { name: "Cornichon mariné", description: "Cornichon artisanal aigre-doux, croquant et savoureux." },
-      es: { name: "Pepinillo encurtido", description: "Pepinillo artesanal agridulce, crujiente y sabroso." },
-    },
-  },
+
   // ===== VINI CASCINA CASTLÈT =====
   {
     id: "cascina-passum",
