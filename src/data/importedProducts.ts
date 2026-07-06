@@ -3,6 +3,7 @@ import caffeImg from "@/assets/p-espresso-costadoro.jpg";
 import baciDamaImg from "@/assets/p-baci-dama.jpg";
 import bruttiBuoniImg from "@/assets/p-brutti-ma-buoni.jpg";
 import tramezzinoImg from "@/assets/p-tramezzino.jpg";
+import focacciaBresaolaImg from "@/assets/p-focaccia-bresaola.jpg";
 import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
 import vinoGoj from "@/assets/p-vino-goj.jpg";
 import birraMenabrea from "@/assets/p-birra-menabrea.jpg";
@@ -185,6 +186,27 @@ export const importedProducts: Product[] = [
       en: { name: "Mignon", description: "Puff pastry mignons with savoury filling. Perfect for an aperitivo or quick snack." },
       fr: { name: "Mignon", description: "Mignons feuilletés à la garniture salée. Parfaits pour l'apéritif ou une pause rapide." },
       es: { name: "Mignon", description: "Mignons de hojaldre con relleno salado. Perfectos para un aperitivo o un tentempié rápido." },
+    },
+  },
+  {
+    id: "xano-34-panino-carne",
+    xanoId: 34,
+    source: "xano-import",
+    macroCategory: "pranzo",
+    category: "panini",
+    categoryId: 13,
+    sortOrder: 1,
+    name: "Focaccia bresaola, grana e rucola",
+    description: "Focaccia farcita con bresaola, grana padano e rucola fresca. Il gusto deciso della tradizione.",
+    price: 5,
+    available: true,
+    image: focacciaBresaolaImg,
+        allergens: ["glutine","latte"],
+    translations: {
+      it: { name: "Focaccia bresaola, grana e rucola", description: "Focaccia farcita con bresaola, grana padano e rucola fresca. Il gusto deciso della tradizione." },
+      en: { name: "Focaccia bresaola, grana and rocket", description: "Focaccia filled with bresaola cured beef, grana cheese and fresh rocket. A bold traditional flavour." },
+      fr: { name: "Focaccia bresaola, grana et roquette", description: "Focaccia garnie de bresaola, grana padano et roquette fraîche. Une saveur traditionnelle intense." },
+      es: { name: "Focaccia bresaola, grana y rúcula", description: "Focaccia rellena de bresaola, grana padano y rúcula fresca. El sabor intenso de la tradición." },
     },
   },
   {
