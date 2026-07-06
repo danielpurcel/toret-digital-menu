@@ -817,7 +817,7 @@ export const importedProducts: Product[] = [
     price: 2,
     largePrice: 2.5,
     available: true,
-    featured: true,
+    featured: false,
         allergens: ["latte"],
     translations: {
       it: { name: "Caffè Torèt", description: "Il nostro espresso signature con panna montata al momento. 100% Arabica Costadoro Lab, 4 medaglie oro. Piccolo o grande." },
@@ -1108,6 +1108,7 @@ export const importedProducts: Product[] = [
   {
     id: "xano-87-iced-chai-latte",
     xanoId: 87,
+    featured: true,
     source: "xano-import",
     macroCategory: "colazione",
     category: "bevande",
