@@ -6,6 +6,7 @@ import tramezzinoImg from "@/assets/p-tramezzino.jpg";
 import focacciaBresaolaImg from "@/assets/p-focaccia-bresaola.jpg";
 import cappuccinoImg from "@/assets/p-cappuccino.jpg";
 import coronaImg from "@/assets/p-corona.jpg";
+import caffeDecaImg from "@/assets/p-caffe-deca.jpg";
 import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
 import vinoGoj from "@/assets/p-vino-goj.jpg";
 import birraMenabrea from "@/assets/p-birra-menabrea.jpg";
@@ -73,6 +74,7 @@ export const importedProducts: Product[] = [
     name: "Caffè Decaffeinato",
     description: "Caffè decaffeinato con metodo naturale, stesso aroma intenso.",
     price: 1.5,
+    image: caffeDecaImg,
     available: true,
         allergens: [],
     translations: {
