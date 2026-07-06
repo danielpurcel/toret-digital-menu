@@ -4,6 +4,7 @@ import baciDamaImg from "@/assets/p-baci-dama.jpg";
 import bruttiBuoniImg from "@/assets/p-brutti-ma-buoni.jpg";
 import tramezzinoImg from "@/assets/p-tramezzino.jpg";
 import focacciaBresaolaImg from "@/assets/p-focaccia-bresaola.jpg";
+import cappuccinoImg from "@/assets/p-cappuccino.jpg";
 import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
 import vinoGoj from "@/assets/p-vino-goj.jpg";
 import birraMenabrea from "@/assets/p-birra-menabrea.jpg";
@@ -92,6 +93,7 @@ export const importedProducts: Product[] = [
     name: "Cappuccino",
     description: "Caffè espresso con schiuma di latte fresco, spolverato di cacao.",
     price: 1.5,
+    image: cappuccinoImg,
     available: true,
     featured: true,
         allergens: ["latte"],
