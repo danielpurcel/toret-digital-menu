@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
-import { Coffee, Thermometer, CakeSlice, Apple, UtensilsCrossed, Sandwich, CupSoda, GlassWater, Wine, ChefHat, Egg, ClipboardList, Beef, Carrot, Salad, HandPlatter, Martini, Beer, Cookie, Citrus } from "lucide-react";
+import { Coffee, Thermometer, CakeSlice, Apple, UtensilsCrossed, Sandwich, CupSoda, GlassWater, Wine, ChefHat, Egg, ClipboardList, Beef, Carrot, Salad, HandPlatter, Martini, Beer, Cookie, Citrus, Snowflake } from "lucide-react";
 import { AppShell } from "@/components/layout/AppShell";
 import { ProductCard } from "@/components/menu/ProductCard";
 import { ProductModal } from "@/components/menu/ProductModal";
@@ -41,6 +41,7 @@ const iconMap: Record<string, React.FC<{ size?: number; className?: string }>> =
   martini: Martini,
   beer: Beer,
   cookie: Cookie,
+  snowflake: Snowflake,
 };
 
 const macroMeta: Record<
