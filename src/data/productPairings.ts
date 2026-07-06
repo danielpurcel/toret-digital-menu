@@ -46,15 +46,11 @@ export const productPairings: Record<string, string[]> = {
 
   // ===== PRANZO =====
   // Primi → Secondi
-  "xano-65-pasta-zucchine-e-prosciutto-crudo": ["xano-66-riso-alla-cantonese", "xano-38-scaloppine-di-vitello", "xano-67-petto-di-pollo"],
-  "xano-66-riso-alla-cantonese": ["xano-65-pasta-zucchine-e-prosciutto-crudo", "xano-67-petto-di-pollo", "xano-38-scaloppine-di-vitello"],
-  "xano-68-crudo-e-melone": ["xano-65-pasta-zucchine-e-prosciutto-crudo"],
-  "xano-67-petto-di-pollo": ["xano-65-pasta-zucchine-e-prosciutto-crudo", "xano-66-riso-alla-cantonese"],
-  "xano-38-scaloppine-di-vitello": ["xano-65-pasta-zucchine-e-prosciutto-crudo", "xano-66-riso-alla-cantonese"],
+  "xano-95-spaghetti-zucchine-speck": ["xano-96-pollo-funghi-contorno"],
+  "xano-96-pollo-funghi-contorno": ["xano-95-spaghetti-zucchine-speck"],
   "xano-31-frittata": [],
   "xano-39-frittata-piu-contorni": [],
   "xano-37-riso-basmati-quinoa": [],
-  "xano-95-cetriolino-sottaceto": [],
 
   // Panini → Bevande
   "xano-33-mignon": ["xano-40-acqua-0-5l", "xano-44-spremuta"],
