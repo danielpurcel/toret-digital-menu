@@ -34,8 +34,8 @@ export const subcategoryConfig: Record<number, SubcategoryInfo> = {
     icon: "cake-slice",
   },
   6: {
-    name: { it: "Bevande", en: "Drinks", fr: "Boissons", es: "Bebidas" },
-    icon: "cup-soda",
+    name: { it: "Croissant", en: "Croissant", fr: "Croissant", es: "Croissant" },
+    icon: "croissant",
   },
   21: {
     name: { it: "Iced & Fresh", en: "Iced & Fresh", fr: "Iced & Fresh", es: "Iced & Fresh" },

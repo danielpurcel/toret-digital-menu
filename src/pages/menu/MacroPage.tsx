@@ -42,6 +42,27 @@ const iconMap: Record<string, React.FC<{ size?: number; className?: string }>> =
   beer: Beer,
   cookie: Cookie,
   snowflake: Snowflake,
+  croissant: ({ size, className }) => (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      width={size ?? 24}
+      height={size ?? 24}
+      className={className}
+    >
+      <path d="M3 15c0-2 1.5-4 3-5 1.5-1 3.5-1.5 5-2l.5-1.5" />
+      <path d="M21 15c0-2-1.5-4-3-5-1.5-1-3.5-1.5-5-2l-.5-1.5" />
+      <path d="M12 6.5c.5-1 1.5-2 3-2.5 1.5-.5 3-.5 4.5 0 1.5.5 2.5 1.5 3 3" />
+      <path d="M12 6.5c-.5-1-1.5-2-3-2.5-1.5-.5-3-.5-4.5 0-1.5.5-2.5 1.5-3 3" />
+      <path d="M3 15c0 2 1.5 3 3 3h12c1.5 0 3-1 3-3" />
+      <path d="M6 18c0 1.5 1 2 2 2h8c1 0 2-.5 2-2" />
+      <path d="M8 20c0 .5.5 1 1 1h6c.5 0 1-.5 1-1" />
+    </svg>
+  ),
 };
 
 const macroMeta: Record<
