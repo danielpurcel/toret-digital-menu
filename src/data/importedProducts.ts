@@ -1,5 +1,7 @@
 import type { Product } from "@/data/menu";
 import caffeImg from "@/assets/p-espresso-costadoro.jpg";
+import baciDamaImg from "@/assets/p-baci-dama.jpg";
+import bruttiBuoniImg from "@/assets/p-brutti-ma-buoni.jpg";
 import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
 import vinoGoj from "@/assets/p-vino-goj.jpg";
 import birraMenabrea from "@/assets/p-birra-menabrea.jpg";
@@ -1121,6 +1123,48 @@ export const importedProducts: Product[] = [
       en: { name: "Semidolce", description: "A creamy, delicate spoon dessert. The perfect sweet ending to your meal." },
       fr: { name: "Semidolce", description: "Dessert à la cuillère, crémeux et délicat. Pour terminer le repas en douceur." },
       es: { name: "Semidulce", description: "Dolce al cucchiaio, cremoso e delicato. Per concludere il pasto in dolcezza" },
+    },
+  },
+  {
+    id: "xano-98-baci-dama",
+    xanoId: 98,
+    source: "xano-import",
+    macroCategory: "colazione",
+    category: "dolci",
+    categoryId: 5,
+    sortOrder: 7,
+    name: "Baci di Dama",
+    description: "Classico dolce piemontese: due morbide calotte di pasta alle nocciole unite da cioccolato fondente. €0,60/pezzo.",
+    price: 0.6,
+    available: true,
+    image: baciDamaImg,
+        allergens: ["frutta a guscio","latte"],
+    translations: {
+      it: { name: "Baci di Dama", description: "Classico dolce piemontese: due morbide calotte di pasta alle nocciole unite da cioccolato fondente. €0,60/pezzo." },
+      en: { name: "Baci di Dama", description: "Classic Piemontese sweet: two soft hazelnut cookie halves joined with dark chocolate. €0,60/each." },
+      fr: { name: "Baci di Dama", description: "Classique piémontais: deux coques aux noisettes unies par du chocolat noir. €0,60/pièce." },
+      es: { name: "Baci di Dama", description: "Clásico piamontés: dos conchas de avellana unidas con chocolate negro. €0,60/unidad." },
+    },
+  },
+  {
+    id: "xano-99-brutti-ma-buoni",
+    xanoId: 99,
+    source: "xano-import",
+    macroCategory: "colazione",
+    category: "dolci",
+    categoryId: 5,
+    sortOrder: 8,
+    name: "Brut ma Bun",
+    description: "Brutti ma Buoni artigianali alle nocciole: croccanti fuori, morbidi dentro. Il classico intramontabile. €0,60/pezzo.",
+    price: 0.6,
+    available: true,
+    image: bruttiBuoniImg,
+        allergens: ["frutta a guscio"],
+    translations: {
+      it: { name: "Brut ma Bun", description: "Brutti ma Buoni artigianali alle nocciole: croccanti fuori, morbidi dentro. Il classico intramontabile. €0,60/pezzo." },
+      en: { name: "Brut ma Bun", description: "Artisanal hazelnut meringue cookies: crunchy outside, soft inside. The timeless classic. €0,60/each." },
+      fr: { name: "Brut ma Bun", description: "Brutti ma Buoni aux noisettes: croquants dehors, moelleux dedans. Le classique intemporel. €0,60/pièce." },
+      es: { name: "Brut ma Bun", description: "Brutti ma Buoni de avellana: crujientes fuera, suaves dentro. El clásico eterno. €0,60/unidad." },
     },
   },
   {
