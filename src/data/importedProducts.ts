@@ -8,6 +8,7 @@ import cappuccinoImg from "@/assets/p-cappuccino.jpg";
 import coronaImg from "@/assets/p-corona.jpg";
 import caffeDecaImg from "@/assets/p-caffe-deca.jpg";
 import campariSpritzImg from "@/assets/p-campari-spritz.jpg";
+import aperolSpritzImg from "@/assets/p-aperol-spritz.jpg";
 import proseccoBrutImg from "@/assets/p-prosecco-brut.jpg";
 import proseccoExtraDryImg from "@/assets/p-prosecco-extra-dry.jpg";
 import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
@@ -152,6 +153,27 @@ export const importedProducts: Product[] = [
       en: { name: "Campari Spritz", description: "Campari, prosecco and soda: the ruby red aperitivo that made history. Fresh, bitter and irresistible." },
       fr: { name: "Campari Spritz", description: "Campari, prosecco et soda: l'apéritif rouge rubis qui a fait l'histoire. Frais, amer et irrésistible." },
       es: { name: "Campari Spritz", description: "Campari, prosecco y soda: el aperitivo rojo rubí que hizo historia. Fresco, amargo e irresistible." },
+    },
+  },
+  {
+    id: "xano-102-aperol-spritz",
+    xanoId: 102,
+    source: "xano-import",
+    macroCategory: "aperitivo",
+    category: "cocktail",
+    categoryId: 15,
+    sortOrder: 3,
+    name: "Aperol Spritz",
+    description: "Aperol, prosecco e soda: il simbolo dell'aperitivo italiano. Dolce, fresco, dal colore arancio che illumina il tramonto.",
+    price: 6,
+    available: true,
+    image: aperolSpritzImg,
+        allergens: ["solfiti"],
+    translations: {
+      it: { name: "Aperol Spritz", description: "Aperol, prosecco e soda: il simbolo dell'aperitivo italiano. Dolce, fresco, dal colore arancio che illumina il tramonto." },
+      en: { name: "Aperol Spritz", description: "Aperol, prosecco and soda: the symbol of Italian aperitivo. Sweet, fresh, with an orange glow that lights up the sunset." },
+      fr: { name: "Aperol Spritz", description: "Aperol, prosecco et soda: le symbole de l'apéritif italien. Doux, frais, à la couleur orange qui illumine le coucher de soleil." },
+      es: { name: "Aperol Spritz", description: "Aperol, prosecco y soda: el símbolo del aperitivo italiano. Dulce, fresco, con el color naranja que ilumina el atardecer." },
     },
   },
   {
