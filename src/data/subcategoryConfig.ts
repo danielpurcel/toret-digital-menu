@@ -30,12 +30,16 @@ export const subcategoryConfig: Record<number, SubcategoryInfo> = {
     icon: "thermometer",
   },
   5: {
-    name: { it: "Iced & Fresh", en: "Iced & Fresh", fr: "Iced & Fresh", es: "Iced & Fresh" },
-    icon: "snowflake",
-  },
-  6: {
     name: { it: "Dolci", en: "Desserts", fr: "Desserts", es: "Postres" },
     icon: "cake-slice",
+  },
+  6: {
+    name: { it: "Bevande", en: "Drinks", fr: "Boissons", es: "Bebidas" },
+    icon: "cup-soda",
+  },
+  21: {
+    name: { it: "Iced & Fresh", en: "Iced & Fresh", fr: "Iced & Fresh", es: "Iced & Fresh" },
+    icon: "snowflake",
   },
   7: {
     name: { it: "Colazione Salata", en: "Savory Breakfast", fr: "Petit Déjeuner Salé", es: "Desayuno Salado" },
@@ -104,7 +108,7 @@ export const subcategoryConfig: Record<number, SubcategoryInfo> = {
  * Colazione, Pranzo, Aperitivo.
  */
 const categoryMacroMap: Record<number, MacroCategory> = {
-  3: "colazione", 4: "colazione", 5: "colazione", 6: "colazione", 7: "colazione",
+  3: "colazione", 4: "colazione", 5: "colazione", 6: "colazione", 7: "colazione", 21: "colazione",
   8: "pranzo", 9: "pranzo", 10: "pranzo", 11: "pranzo", 12: "pranzo",
   13: "pranzo", 14: "pranzo",
   15: "aperitivo", 16: "aperitivo", 17: "aperitivo", 18: "aperitivo", 19: "aperitivo", 20: "aperitivo",
