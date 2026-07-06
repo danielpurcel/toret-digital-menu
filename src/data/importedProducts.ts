@@ -1140,10 +1140,10 @@ export const importedProducts: Product[] = [
     image: baciDamaImg,
         allergens: ["frutta a guscio","latte"],
     translations: {
-      it: { name: "Baci di Dama", description: "Classico dolce piemontese: due morbide calotte di pasta alle nocciole unite da cioccolato fondente. €0,60/pezzo." },
-      en: { name: "Baci di Dama", description: "Classic Piemontese sweet: two soft hazelnut cookie halves joined with dark chocolate. €0,60/each." },
-      fr: { name: "Baci di Dama", description: "Classique piémontais: deux coques aux noisettes unies par du chocolat noir. €0,60/pièce." },
-      es: { name: "Baci di Dama", description: "Clásico piamontés: dos conchas de avellana unidas con chocolate negro. €0,60/unidad." },
+      it: { name: "Baci di Dama", description: "Classico dolce piemontese: due morbide calotte di pasta alle nocciole unite da cioccolato fondente." },
+      en: { name: "Baci di Dama", description: "Classic Piemontese sweet: two soft hazelnut cookie halves joined with dark chocolate." },
+      fr: { name: "Baci di Dama", description: "Classique piémontais: deux coques aux noisettes unies par du chocolat noir." },
+      es: { name: "Baci di Dama", description: "Clásico piamontés: dos conchas de avellana unidas con chocolate negro." },},{
     },
   },
   {
@@ -1161,10 +1161,10 @@ export const importedProducts: Product[] = [
     image: bruttiBuoniImg,
         allergens: ["frutta a guscio"],
     translations: {
-      it: { name: "Brut ma Bun", description: "Brutti ma Buoni artigianali alle nocciole: croccanti fuori, morbidi dentro. Il classico intramontabile. €0,60/pezzo." },
-      en: { name: "Brut ma Bun", description: "Artisanal hazelnut meringue cookies: crunchy outside, soft inside. The timeless classic. €0,60/each." },
-      fr: { name: "Brut ma Bun", description: "Brutti ma Buoni aux noisettes: croquants dehors, moelleux dedans. Le classique intemporel. €0,60/pièce." },
-      es: { name: "Brut ma Bun", description: "Brutti ma Buoni de avellana: crujientes fuera, suaves dentro. El clásico eterno. €0,60/unidad." },
+      it: { name: "Brut ma Bun", description: "Brutti ma Buoni artigianali alle nocciole: croccanti fuori, morbidi dentro. Il classico intramontabile." },
+      en: { name: "Brut ma Bun", description: "Artisanal hazelnut meringue cookies: crunchy outside, soft inside. The timeless classic." },
+      fr: { name: "Brut ma Bun", description: "Brutti ma Buoni aux noisettes: croquants dehors, moelleux dedans. Le classique intemporel." },
+      es: { name: "Brut ma Bun", description: "Brutti ma Buoni de avellana: crujientes fuera, suaves dentro. El clásico eterno." },
     },
   },
   {
