@@ -1143,7 +1143,7 @@ export const importedProducts: Product[] = [
       it: { name: "Baci di Dama", description: "Classico dolce piemontese: due morbide calotte di pasta alle nocciole unite da cioccolato fondente." },
       en: { name: "Baci di Dama", description: "Classic Piemontese sweet: two soft hazelnut cookie halves joined with dark chocolate." },
       fr: { name: "Baci di Dama", description: "Classique piémontais: deux coques aux noisettes unies par du chocolat noir." },
-      es: { name: "Baci di Dama", description: "Clásico piamontés: dos conchas de avellana unidas con chocolate negro." },},{
+      es: { name: "Baci di Dama", description: "Clásico piamontés: dos conchas de avellana unidas con chocolate negro." },
     },
   },
   {
