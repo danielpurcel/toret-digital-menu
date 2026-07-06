@@ -2,6 +2,7 @@ import type { Product } from "@/data/menu";
 import caffeImg from "@/assets/p-espresso-costadoro.jpg";
 import baciDamaImg from "@/assets/p-baci-dama.jpg";
 import bruttiBuoniImg from "@/assets/p-brutti-ma-buoni.jpg";
+import tramezzinoImg from "@/assets/p-tramezzino.jpg";
 import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
 import vinoGoj from "@/assets/p-vino-goj.jpg";
 import birraMenabrea from "@/assets/p-birra-menabrea.jpg";
@@ -217,6 +218,7 @@ export const importedProducts: Product[] = [
     sortOrder: 4,
     name: "Tramezzino",
     description: "Tramezzino con pane in cassetta farcito a scelta, fresco e leggero.",
+    image: tramezzinoImg,
     price: 2.5,
     available: true,
         allergens: ["glutine","latte"],
