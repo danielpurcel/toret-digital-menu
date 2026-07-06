@@ -7,6 +7,7 @@ import focacciaBresaolaImg from "@/assets/p-focaccia-bresaola.jpg";
 import cappuccinoImg from "@/assets/p-cappuccino.jpg";
 import coronaImg from "@/assets/p-corona.jpg";
 import caffeDecaImg from "@/assets/p-caffe-deca.jpg";
+import campariSpritzImg from "@/assets/p-campari-spritz.jpg";
 import proseccoBrutImg from "@/assets/p-prosecco-brut.jpg";
 import proseccoExtraDryImg from "@/assets/p-prosecco-extra-dry.jpg";
 import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
@@ -130,6 +131,27 @@ export const importedProducts: Product[] = [
       en: { name: "Cocktail", description: "Our cocktails freshly made with fresh ingredients. Choose your favourite." },
       fr: { name: "Cocktail", description: "Nos cocktails préparés à la minute avec des ingrédients frais. Choisissez votre préféré." },
       es: { name: "Cóctel", description: "Nuestros cócteles preparados al momento con ingredientes frescos. Elige tu favorito." },
+    },
+  },
+  {
+    id: "xano-101-campari-spritz",
+    xanoId: 101,
+    source: "xano-import",
+    macroCategory: "aperitivo",
+    category: "cocktail",
+    categoryId: 15,
+    sortOrder: 2,
+    name: "Campari Spritz",
+    description: "Campari, prosecco e soda: l'aperitivo rosso rubino che ha fatto la storia. Fresco, amaro e irresistibile.",
+    price: 6,
+    available: true,
+    image: campariSpritzImg,
+        allergens: ["solfiti"],
+    translations: {
+      it: { name: "Campari Spritz", description: "Campari, prosecco e soda: l'aperitivo rosso rubino che ha fatto la storia. Fresco, amaro e irresistibile." },
+      en: { name: "Campari Spritz", description: "Campari, prosecco and soda: the ruby red aperitivo that made history. Fresh, bitter and irresistible." },
+      fr: { name: "Campari Spritz", description: "Campari, prosecco et soda: l'apéritif rouge rubis qui a fait l'histoire. Frais, amer et irrésistible." },
+      es: { name: "Campari Spritz", description: "Campari, prosecco y soda: el aperitivo rojo rubí que hizo historia. Fresco, amargo e irresistible." },
     },
   },
   {
