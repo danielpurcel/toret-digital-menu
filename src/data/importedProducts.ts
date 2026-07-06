@@ -7,6 +7,7 @@ import focacciaBresaolaImg from "@/assets/p-focaccia-bresaola.jpg";
 import cappuccinoImg from "@/assets/p-cappuccino.jpg";
 import coronaImg from "@/assets/p-corona.jpg";
 import caffeDecaImg from "@/assets/p-caffe-deca.jpg";
+import proseccoBrutImg from "@/assets/p-prosecco-brut.jpg";
 import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
 import vinoGoj from "@/assets/p-vino-goj.jpg";
 import birraMenabrea from "@/assets/p-birra-menabrea.jpg";
@@ -718,6 +719,7 @@ export const importedProducts: Product[] = [
     name: "Prosecco DOC Brut",
     description: "Naonis Prosecco DOC Brut - Giallo paglierino con riflessi verdognoli. Profumo intenso, fine, fruttato e floreale. Palato fresco e fragrante. Perlage fine. Gradazione: 11% vol.",
     price: 3.5,
+    image: proseccoBrutImg,
     bottlePrice: 15,
     available: true,
         allergens: ["solfiti"],
