@@ -269,6 +269,7 @@ export const importedProducts: Product[] = [
     name: "Prosecco DOC Extra Dry",
     description: "Naonis Prosecco DOC Extra Dry - Giallo paglierino brillante, perlage fine e persistente. Profumo intenso e complesso, fine e fruttato. Al palato rotondo, fresco e fragrante. Perfetto come aperitivo. Gradazione: 11% vol.",
     price: 3.5,
+    image: proseccoExtraDryImg,
     bottlePrice: 15,
     available: true,
         allergens: ["solfiti"],
