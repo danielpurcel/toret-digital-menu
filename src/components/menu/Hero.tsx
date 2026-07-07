@@ -9,8 +9,7 @@ export const Hero = () => {
       <img
         src={heroInterno}
         alt="Caffè Torèt — interno"
-        className="absolute inset-0 h-full w-full object-cover"
-        style={{ objectPosition: "center 80%" }}
+        className="absolute top-[-60px] left-0 w-full h-[calc(100%+60px)] object-cover"
         fetchPriority="high"
       />
       <div
