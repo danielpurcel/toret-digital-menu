@@ -10,11 +10,18 @@ import {
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 
+const flag: Record<Locale, string> = {
+  it: "🇮🇹",
+  en: "🇬🇧",
+  fr: "🇫🇷",
+  es: "🇪🇸",
+};
+
 const locales: { code: Locale; label: string }[] = [
-  { code: "it", label: "Italiano" },
-  { code: "en", label: "English" },
-  { code: "fr", label: "Français" },
-  { code: "es", label: "Español" },
+  { code: "it", label: "🇮🇹 Italiano" },
+  { code: "en", label: "🇬🇧 English" },
+  { code: "fr", label: "🇫🇷 Français" },
+  { code: "es", label: "🇪🇸 Español" },
 ];
 
 export const Header = ({ transparent }: { transparent?: boolean }) => {
@@ -89,10 +96,7 @@ export const Header = ({ transparent }: { transparent?: boolean }) => {
                 transparent && "bg-toret-paper/90",
               )}
             >
-              <Globe className="h-[14px] w-[14px] text-toret-ink-soft" strokeWidth={1.5} />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-toret-ink">
-                {locale}
-              </span>
+              <span className="text-lg leading-none">{flag[locale]}</span>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="bg-toret-paper text-toret-ink warm-border">
               {locales.map((l) => (
