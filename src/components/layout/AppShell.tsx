@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { Header } from "./Header";
 import { BottomNav } from "./BottomNav";
+import { BackToTop } from "@/components/ui/BackToTop";
 
 export const AppShell = ({
   children,
@@ -17,6 +18,7 @@ export const AppShell = ({
       <Header transparent={transparentHeader} />
       <main className={cn("flex-1 pb-32", !noTopPadding && "pt-[96px]")}>{children}</main>
       <BottomNav />
+      <BackToTop />
     </div>
   );
 };
