@@ -1,9 +1,11 @@
-## Modifica altezza e comportamento immagine nel modale prodotto
+## Pianificazione
 
-**File:** `src/components/menu/ProductModal.tsx`
+**Obiettivo:** Alzare l'immagine hero tagliando una parte del soffitto in alto, mostrando più del centro-basso del locale.
 
-**Cambiamenti:**
-1. All'immagine hero (riga 78) riportare `object-cover` invece di `object-contain`.
-2. Al contenitore dell'immagine (riga 73) aumentare l'altezza da `h-[34vh] min-h-[220px]` a `h-[44vh] min-h-[280px]`.
+**File coinvolto:** `src/components/menu/Hero.tsx`
 
-**Risultato atteso:** l'immagine torna a riempire l'intero riquadro con `object-cover`, ma grazie all'altezza maggiore (44vh) l'eventuale ritaglio è meno aggressivo e la foto si vede meglio.
+**Modifica:**
+- Riga 12: cambiare `object-center` in `object-[center_60%]` (o un valore simile da affinare in base al risultato visivo).
+- Questo sposta il punto focale dell'immagine verso il basso, riducendo la visibilità del soffitto e mostrando più tavoli/pareti.
+
+**Verifica:** controllare nel preview che il soffitto venga parzialmente tagliato e che la parte interessante del locale sia più visibile.
