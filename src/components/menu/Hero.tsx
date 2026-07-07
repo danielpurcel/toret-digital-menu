@@ -16,16 +16,16 @@ export const Hero = () => {
         className="absolute inset-0 pointer-events-none"
         style={{ background: "var(--gradient-hero)" }}
       />
-      <div className="relative h-full flex flex-col justify-end px-6 pb-[140px] text-toret-paper">
+      <div className="relative h-full flex flex-col justify-center px-6 pt-24 pb-6 text-toret-paper">
         <span className="eyebrow text-[11px] !text-[hsl(var(--toret-gold))] mb-1">
           {"\n"}
         </span>
-        <h1 className="font-serif text-[2.6rem] sm:text-[3.25rem] leading-[1.0] font-normal mb-2">
+        <h1 className="font-serif text-[2.4rem] sm:text-[3rem] leading-[1.0] font-normal mb-2">
           {t("goodMorningPre")}
           <span className="text-toret-gold">{t("goodMorningGold")}</span>
           {t("goodMorningPost")}
         </h1>
-        <p className="text-[15px] text-toret-paper/85 max-w-[26rem] leading-relaxed">
+        <p className="text-[16px] text-toret-paper/85 max-w-[26rem] leading-relaxed">
           {t("bistrotTagline")}
         </p>
       </div>
