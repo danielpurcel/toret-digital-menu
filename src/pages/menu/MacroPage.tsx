@@ -21,7 +21,7 @@ import catAperitivo from "@/assets/cat-aperitivo.jpg";
 const validMacros: MacroCategory[] = ["colazione", "pranzo", "aperitivo"];
 
 /** Mappa nome icona Lucide → componente */
-const iconMap: Record<string, React.FC<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   coffee: Coffee,
   thermometer: Thermometer,
   "cake-slice": CakeSlice,
