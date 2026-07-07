@@ -10,7 +10,7 @@ export const Hero = () => {
         src={heroInterno}
         alt="Caffè Torèt — interno"
         className="absolute inset-0 h-full w-full object-cover"
-        style={{ objectPosition: "center 0%" }}
+        style={{ objectPosition: "center 80%" }}
         fetchPriority="high"
       />
       <div
