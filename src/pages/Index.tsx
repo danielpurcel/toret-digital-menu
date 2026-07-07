@@ -26,7 +26,7 @@ const Index = () => {
   const cats = [
     { id: "colazione", image: catColazione, to: "/menu/colazione", time: "07:30 – 11:00" },
     { id: "pranzo", image: catPranzo, to: "/menu/pranzo", time: "12:00 – 15:00" },
-    { id: "aperitivo", image: catAperitivo, to: "/menu/aperitivo", time: "18:00 – 22:00" },
+    { id: "aperitivo", image: catAperitivo, to: "/menu/aperitivo", time: "18:00 – 20:00" },
   ] as const;
 
   return (
