@@ -9,7 +9,7 @@ export const Hero = () => {
       <img
         src={heroInterno}
         alt="Caffè Torèt — interno"
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className="absolute inset-0 h-full w-full object-cover object-[center_60%]"
         fetchPriority="high"
       />
       <div
