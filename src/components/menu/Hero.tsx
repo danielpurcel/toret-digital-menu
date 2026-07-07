@@ -21,7 +21,9 @@ export const Hero = () => {
           {"\n"}
         </span>
         <h1 className="font-serif text-[2rem] sm:text-[2.75rem] leading-[1.0] font-normal mb-3">
-          {t("goodMorning")}
+          {t("goodMorningPre")}
+          <span className="text-toret-gold">{t("goodMorningGold")}</span>
+          {t("goodMorningPost")}
         </h1>
         <p className="text-sm text-toret-paper/85 max-w-[22rem] leading-relaxed">
           {t("bistrotTagline")}
