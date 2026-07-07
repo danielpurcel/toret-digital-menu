@@ -1,17 +1,17 @@
-## Miglioramento icone allergeni
+## Problema
+L'immagine nel modale prodotto usa `object-cover`, che ritaglia l'immagine per riempire l'area. L'utente vuole vedere l'intera foto senza tagli.
 
-Il componente `AllergenBadge` mostra icone allergeni circolari (40px / 36px in modalità compact) con sfondo paper e nessun bordo esplicito. Le immagini PNG hanno stili variabili e mancano di contrasto sullo sfondo chiaro.
+## Soluzione
+Nel componente `ProductModal.tsx`, modificare l'immagine prodotto in cima al drawer:
 
-### Modifiche
-1. **Aggiungere bordo visibile** a ogni icona: `warm-border-strong` o bordo dorato sottile per definirla chiaramente.
-2. **Aggiungere padding interno** (2-3px) tra il bordo e l'immagine, riducendo leggermente la dimensione effettiva dell'immagine all'interno del contenitore.
-3. **Aggiungere ombra leggera** (`shadow-1`) per dare profondità e separazione dallo sfondo.
-4. **Migliorare allineamento** nel container flex: aumentare leggermente il `gap` da `1.5` a `2` per evitare sovrapposizioni visive, e assicurare `items-center`.
-5. **Mantenere le dimensioni attuali** (non ingrandire) come richiesto.
+1. **Sostituire `object-cover` con `object-contain`** — mostra l'intera foto, rispettando le proporzioni.
+2. **Aggiungere un background uniforme** (`bg-toret-cream`) alla shell dell'immagine, così gli eventuali spazi vuoti lasciati da `object-contain` non risultano brutti.
+3. **Mantenere l'altezza dell'area** (`h-[34vh] min-h-[220px]`) perché con `object-contain` l'immagine si adatta da sola; se l'utente poi chiede più spazio, si può aumentare in un secondo step.
 
-### File coinvolti
-- `src/components/menu/AllergenBadge.tsx` — stile badge e contenitore immagine
-- `src/components/menu/ProductModal.tsx` — gap del flex container allergeni
-- `src/pages/InfoPage.tsx` — gap del flex container allergeni (sezione info)
+## File da modificare
+- `src/components/menu/ProductModal.tsx` (unico file)
 
-Nessuna modifica alle immagini PNG esistenti, solo restyling CSS del componente.
+## Note tecniche
+- Nessuna dipendenza aggiuntiva.
+- Il resto del layout (testo, prezzo, allergeni, abbinamenti) rimane invariato.
+- Se l'immagine è in landscape, `object-contain` la farà apparire più bassa; il background nasconde lo spazio vuoto.
