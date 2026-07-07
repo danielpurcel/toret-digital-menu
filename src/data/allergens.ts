@@ -78,6 +78,7 @@ export const allergenDescriptions: Record<Allergen, { it: string; en: string; fr
     it: "Uova e prodotti a base di uova.",
     en: "Eggs and products based on eggs.",
     fr: "Oeufs et produits a base d'oeufs.",
+    es: "Huevos y productos a base de huevos.",
   },
   pesce: {
     it: "Pesce e prodotti a base di pesce.",
