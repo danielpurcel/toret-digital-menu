@@ -90,6 +90,7 @@ export const allergenDescriptions: Record<Allergen, { it: string; en: string; fr
     it: "Arachidi e prodotti a base di arachidi.",
     en: "Peanuts and products based on peanuts.",
     fr: "Arachides et produits a base d'arachides.",
+    es: "Cacahuetes y productos a base de cacahuetes.",
   },
   soia: {
     it: "Soia e prodotti a base di soia.",
