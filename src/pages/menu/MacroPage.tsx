@@ -93,7 +93,7 @@ const macroMeta: Record<
   },
   aperitivo: {
     image: catAperitivo,
-    time: "18:00 – 22:00",
+    time: "18:00 – 20:00",
     tagline: {
       it: "Vermouth torinese, vini del territorio e taglieri della casa.",
       en: "Turin vermouth, local wines and house charcuterie boards.",
