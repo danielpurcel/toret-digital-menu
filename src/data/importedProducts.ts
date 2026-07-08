@@ -23,6 +23,7 @@ import vinoRose from "@/assets/p-vino-rose.jpg";
 import vinoProseccoDocg from "@/assets/p-vino-prosecco-docg.jpg";
 import shakeratoImg from "@/assets/shakerato.jpg";
 import spremutaImg from "@/assets/spremuta.jpg";
+import melogranoImg from "@/assets/spremuta-melograno.jpg";
 // Generated from Xano menu_products on 2026-06-30. + manual aggiunta cetriolino
 export const importedProducts: Product[] = [
   {
@@ -1281,13 +1282,14 @@ export const importedProducts: Product[] = [
     description: "Spremuta fresca di melograno, ricca di antiossidanti.",
     price: 4,
     available: true,
+    image: melogranoImg,
         allergens: [],
     translations: {
-      it: { name: "Spremuta melograno", description: "Spremuta fresca di melograno, ricca di antiossidanti.",
+      it: { name: "Spremuta melograno", description: "Il rosso vivo del melograno spremuto al momento. Antiossidanti naturali, gusto inconfondibile.",
   },
-      en: { name: "Pomegranate juice", description: "Fresh pomegranate juice, rich in antioxidants." },
-      fr: { name: "Spremuta melograno", description: "Jus de grenade frais, riche en antioxydants." },
-      es: { name: "Zumo de Granada", description: "Zumo de granada fresca. Antioxidante natural con un sabor inconfundible." },
+      en: { name: "Pomegranate juice", description: "Vibrant pomegranate squeezed to order. Natural antioxidants, unforgettable taste." },
+      fr: { name: "Spremuta melograno", description: "Le rouge vif de la grenade pressée minute. Antioxydants naturels, goût inoubliable." },
+      es: { name: "Zumo de Granada", description: "El rojo vivo de la granada exprimida al momento. Antioxidantes naturales, sabor inconfundible." },
     },
   },
   {
