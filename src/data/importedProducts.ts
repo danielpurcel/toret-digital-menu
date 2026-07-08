@@ -22,6 +22,7 @@ import vinoAtaj from "@/assets/p-vino-ataj.jpg";
 import vinoRose from "@/assets/p-vino-rose.jpg";
 import vinoProseccoDocg from "@/assets/p-vino-prosecco-docg.jpg";
 import shakeratoImg from "@/assets/shakerato.jpg";
+import spremutaImg from "@/assets/spremuta.jpg";
 // Generated from Xano menu_products on 2026-06-30. + manual aggiunta cetriolino
 export const importedProducts: Product[] = [
   {
@@ -469,13 +470,14 @@ export const importedProducts: Product[] = [
     price: 3.5,
     available: true,
     featured: true,
+    image: spremutaImg,
         allergens: [],
     translations: {
-      it: { name: "Spremuta", description: "Spremuta fresca di arance siciliane, servita fredda.",
+      it: { name: "Spremuta", description: "Arance siciliane spremute al momento. Un concentrato di vitamina C e sole.",
   },
-      en: { name: "Fresh Orange Juice", description: "Freshly squeezed orange juice." },
-      fr: { name: "Jus d'Orange Pressé", description: "Jus d'orange frais, pressé à la minute." },
-      es: { name: "Zumo de Naranja", description: "Zumo de naranja fresca preparado al momento. Vitamina C en estado puro." },
+      en: { name: "Fresh Orange Juice", description: "Sicilian oranges squeezed to order. A shot of vitamin C and sunshine." },
+      fr: { name: "Jus d'Orange Pressé", description: "Oranges siciliennes pressées minute. Un concentré de vitamine C et de soleil." },
+      es: { name: "Zumo de Naranja", description: "Naranjas sicilianas exprimidas al momento. Vitamina C pura con sabor a sol." },
     },
   },
   {
