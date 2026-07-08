@@ -49,7 +49,7 @@ export const categoriesByMacro: Record<MacroCategory, { id: string; label: { it:
     { id: "caffetteria", label: { it: "Caffetteria", en: "Coffee", fr: "Café", es: "Cafetería" } },
     { id: "dolci", label: { it: "Dolci", en: "Sweet", fr: "Sucré", es: "Dulces" } },
     { id: "salato", label: { it: "Salato", en: "Savoury", fr: "Salé", es: "Salado" } },
-    { id: "bevande", label: { it: "Bevande", en: "Drinks", fr: "Boissons", es: "Bebidas" } },
+    { id: "bevande", label: { it: "Specialità Torèt", en: "Torèt Specialties", fr: "Spécialités Torèt", es: "Especialidades Torèt" } },
   ],
   pranzo: [
     { id: "all", label: { it: "Tutti", en: "All", fr: "Tous", es: "Todos" } },

@@ -89,7 +89,7 @@ const categoryMap: Record<number, { macroCategory: MacroCategory; category: stri
 const CATEGORIES_TO_SKIP = new Set<number>();
 
 /** Prodotti Xano da mostrare come featured (suggeriti) */
-const FEATURED_IDS = new Set([26, 28, 29, 44, 54, 70, 71, 75]);
+const FEATURED_IDS = new Set([26, 28, 44, 54, 70, 75, 87, 102]);
 
 const slugify = (value: string) =>
   value

@@ -162,7 +162,7 @@ const dict = {
     tryThese: "Combínalo con…",
     goodMorningPre: "El sabor justo, en ",
     goodMorningGold: "cada",
-    goodMorningPost: " momento."
+    goodMorningPost: " momento.",
     bistrotTagline: "Desde el primer café de la mañana hasta el último brindis de la noche.",
     turin: "Turín",
     open: "Abierto",

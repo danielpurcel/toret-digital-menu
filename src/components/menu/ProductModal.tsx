@@ -63,7 +63,7 @@ export const ProductModal = ({ product, onClose, onSelectProduct }: Props) => {
   const fav = product ? isFavorite(product.id) : false;
   const promo = product ? getPromoForProduct(product.id) : undefined;
   const promoTr = promo?.translations[locale];
-  const suggestions = product ? getPairings(product.id, allProducts) : [];
+  const suggestions = product ? getPairings(product, allProducts) : [];
 
   return (
     <Drawer open={open} onOpenChange={(o) => !o && onClose()}>

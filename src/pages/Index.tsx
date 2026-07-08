@@ -20,7 +20,53 @@ const Index = () => {
   const { isOpen, closesAt, reopensAt } = useIsOpen();
   const [selected, setSelected] = useState<Product | null>(null);
   const { data: products } = useMenuProducts();
-  const featured = featuredProducts(products);
+  // Da non perdere: 1 alcolico + 1 analcolico + 1 specialità + 1 wildcard
+  // Ordinati per prezzo più alto (per alzare scontrino medio)
+  // Periodo corrente
+  const currentHour = new Date().getHours();
+  const period: Record<string, string[]> = {
+    colazione: [7, 8, 9, 10],
+    pranzo: [11, 12, 13, 14, 15],
+    aperitivo: [16, 17, 18, 19, 20],
+  };
+  const currentPeriod = Object.entries(period).find(([, hours]) => hours.includes(currentHour))?.[0] || "aperitivo";
+
+  const isAlcoholic = (p: Product) => ["cocktail", "vini", "birre"].includes(p.category);
+  const isNonAlcoholic = (p: Product) => ["caffetteria", "bevande"].includes(p.category);
+  const isSpecial = (p: Product) => p.categoryId === 4; // Specialità Torèt
+
+  const timeBonus = (p: Product) => (p.macroCategory === currentPeriod ? 100 : 0);
+
+  // Ordina per: periodo corrente (priorità) + prezzo più alto
+  const order = (arr: Product[]) =>
+    arr.sort((a, b) => {
+      const aScore = timeBonus(a) + Math.max(a.price, a.largePrice || 0, a.bottlePrice || 0) * 10;
+      const bScore = timeBonus(b) + Math.max(b.price, b.largePrice || 0, b.bottlePrice || 0) * 10;
+      return bScore - aScore;
+    });
+
+  const allFeatured = featuredProducts(products);
+  order(allFeatured);
+
+  const alcoholic = order(allFeatured.filter(isAlcoholic));
+  const nonAlcoholic = order(allFeatured.filter(isNonAlcoholic));
+  const special = order(allFeatured.filter(isSpecial));
+  const others = order(allFeatured.filter((p) => !isAlcoholic(p) && !isNonAlcoholic(p) && !isSpecial(p)));
+
+  const featured: Product[] = [];
+  const seen = new Set<string>();
+  const add = (arr: Product[]) => {
+    for (const p of arr) {
+      if (featured.length >= 4) break;
+      if (seen.has(p.id)) continue;
+      seen.add(p.id);
+      featured.push(p);
+    }
+  };
+  add(alcoholic);
+  add(nonAlcoholic);
+  add(special);
+  add(others);
   const promo = getPromoByMacro("colazione");
 
   const cats = [

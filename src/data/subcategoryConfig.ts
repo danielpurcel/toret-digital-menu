@@ -26,7 +26,7 @@ export const subcategoryConfig: Record<number, SubcategoryInfo> = {
     icon: "coffee",
   },
   4: {
-    name: { it: "Bevande Calde", en: "Hot Drinks", fr: "Boissons Chaudes", es: "Bebidas Calientes" },
+    name: { it: "Specialità Torèt", en: "Torèt Specialties", fr: "Spécialités Torèt", es: "Especialidades Torèt" },
     icon: "thermometer",
   },
   5: {
