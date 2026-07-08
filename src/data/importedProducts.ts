@@ -24,6 +24,7 @@ import vinoProseccoDocg from "@/assets/p-vino-prosecco-docg.jpg";
 import shakeratoImg from "@/assets/shakerato.jpg";
 import spremutaImg from "@/assets/spremuta.jpg";
 import melogranoImg from "@/assets/spremuta-melograno.jpg";
+import toastImg from "@/assets/toast.jpg";
 // Generated from Xano menu_products on 2026-06-30. + manual aggiunta cetriolino
 export const importedProducts: Product[] = [
   {
@@ -620,13 +621,14 @@ export const importedProducts: Product[] = [
     description: "Toast caldo farcito con prosciutto cotto e formaggio filante.",
     price: 4,
     available: true,
+    image: toastImg,
         allergens: ["glutine","latte"],
     translations: {
-      it: { name: "Toast", description: "Toast caldo farcito con prosciutto cotto e formaggio filante.",
+      it: { name: "Toast", description: "Croccante fuori, filante dentro. Prosciutto cotto e formaggio, la perfezione non ha segreti.",
   },
-      en: { name: "Toast", description: "Toast caldo croccante con prosciutto cotto e formaggio filante. Sempre una garanzia" },
-      fr: { name: "Toast", description: "Toast caldo croccante con prosciutto cotto e formaggio filante. Sempre una garanzia" },
-      es: { name: "Tostada", description: "Toast caldo croccante con prosciutto cotto e formaggio filante. Sempre una garanzia" },
+      en: { name: "Toast", description: "Golden outside, melty inside. Cooked ham and cheese, a timeless classic." },
+      fr: { name: "Toast", description: "Croustillant dehors, filant dedans. Jambon cuit et fromage, la perfection sans mystère." },
+      es: { name: "Tostada", description: "Crujiente por fuera, fundente por dentro. Jamón cocido y queso, la perfección sin secretos." },
     },
   },
   {
