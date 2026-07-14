@@ -1,8 +1,6 @@
 import espresso from "@/assets/p-espresso.jpg";
 import cappuccino from "@/assets/p-cappuccino.jpg";
-import croissant from "@/assets/p-croissant.jpg";
-import croissantPistacchio from "@/assets/p-croissant-pistacchio.jpg";
-import croissantCrema from "@/assets/p-croissant-crema.jpg";
+
 import spremuta from "@/assets/p-spremuta.jpg";
 import bowl from "@/assets/p-bowl.jpg";
 import scaloppine from "@/assets/p-scaloppine.jpg";
@@ -110,58 +108,6 @@ export const products: Product[] = [
       en: { name: "Cappuccino", description: "Espresso and steamed milk with creamy foam." },
       fr: { name: "Cappuccino", description: "Espresso et lait vapeur, mousse onctueuse." },
       es: { name: "Croissant Clásico", description: "Hojaldre dorado con mantequilla francesa, horneado del día." },
-    },
-  },
-  {
-    id: "croissant-classico",
-    macroCategory: "colazione",
-    category: "dolci",
-    name: "Croissant Classico",
-    description: "Sfoglia dorata al burro francese, cotta in giornata.",
-    price: 1.5,
-    image: croissant,
-    available: true,
-    featured: true,
-    allergens: ["glutine", "latte", "uova"],
-    translations: {
-      it: { name: "Croissant Classico", description: "Sfoglia dorata al burro francese, cotta in giornata." },
-      en: { name: "Classic Croissant", description: "Golden French butter pastry, freshly baked." },
-      fr: { name: "Croissant Classique", description: "Feuilleté doré au beurre français, cuit du jour." },
-      es: { name: "Croissant de Pistacho", description: "Relleno de crema de pistacho de Bronte y granillo crujiente." },
-    },
-  },
-  {
-    id: "croissant-pistacchio",
-    macroCategory: "colazione",
-    category: "dolci",
-    name: "Croissant Pistacchio",
-    description: "Farcito con crema di pistacchio di Bronte, granella croccante.",
-    price: 2.5,
-    image: croissantPistacchio,
-    available: true,
-    allergens: ["glutine", "latte", "uova", "frutta a guscio"],
-    translations: {
-      it: { name: "Croissant Pistacchio", description: "Farcito con crema di pistacchio di Bronte, granella croccante." },
-      en: { name: "Pistachio Croissant", description: "Filled with Bronte pistachio cream and crunchy grains." },
-      fr: { name: "Croissant Pistache", description: "Garni de crème de pistache de Bronte et éclats croquants." },
-      es: { name: "Croissant de Crema", description: "Crema pastelera de vainilla bourbon, espolvoreado con azúcar glas." },
-    },
-  },
-  {
-    id: "croissant-crema",
-    macroCategory: "colazione",
-    category: "dolci",
-    name: "Croissant Crema",
-    description: "Crema pasticcera alla vaniglia bourbon, zucchero a velo.",
-    price: 2.0,
-    image: croissantCrema,
-    available: true,
-    allergens: ["glutine", "latte", "uova"],
-    translations: {
-      it: { name: "Croissant Crema", description: "Crema pasticcera alla vaniglia bourbon, zucchero a velo." },
-      en: { name: "Cream Croissant", description: "Bourbon vanilla pastry cream, dusted with icing sugar." },
-      fr: { name: "Croissant Crème", description: "Crème pâtissière à la vanille bourbon, sucre glace." },
-      es: { name: "Zumo de Naranja", description: "Naranjas frescas de temporada, exprimidas al momento." },
     },
   },
   {
