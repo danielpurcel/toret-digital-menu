@@ -16,7 +16,7 @@ import type { Product } from "@/data/menu";
  */
 
 const DRINK_CATS = ["caffetteria", "bevande", "cocktail", "vini", "birre"];
-const FOOD_CATS = ["dolci", "panini", "menu-del-giorno", "taglieri"];
+const FOOD_CATS = ["dolci", "panini", "menu-del-giorno", "taglieri", "croissant"];
 
 interface PairingTarget {
   macroCategory: string[];
