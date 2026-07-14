@@ -18,6 +18,17 @@ import type { Product } from "@/data/menu";
 const DRINK_CATS = ["caffetteria", "bevande", "cocktail", "vini", "birre"];
 const FOOD_CATS = ["dolci", "panini", "menu-del-giorno", "taglieri", "croissant"];
 
+/**
+ * Cibo solido masticabile — abbinabile a qualsiasi bevanda.
+ * Esclude dolci al cucchiaio (zabaione, semidolce, panna).
+ */
+const PAIRABLE_FOOD = ["panini", "menu-del-giorno", "taglieri", "croissant"];
+
+/**
+ * Categoria dolci: include tutto (anche panna, zabaione, semidolce).
+ */
+const SWEET_CATS = ["dolci"];
+
 interface PairingTarget {
   macroCategory: string[];
   category: string[];
@@ -32,7 +43,9 @@ interface PairingRule {
 
 const rules: PairingRule[] = [
   // ===== COLAZIONE =====
-  { sourceMacro: "colazione", sourceCategory: DRINK_CATS, target: { macroCategory: ["colazione"], category: FOOD_CATS, max: 3 } },
+  // Bevanda → cibo solido (croissant, dolci da forno, non creme/zabaione)
+  { sourceMacro: "colazione", sourceCategory: DRINK_CATS, target: { macroCategory: ["colazione"], category: [...PAIRABLE_FOOD, ...SWEET_CATS], max: 3 } },
+  // Cibo → bevande (tutto)
   { sourceMacro: "colazione", sourceCategory: FOOD_CATS, target: { macroCategory: ["colazione"], category: DRINK_CATS, max: 3 } },
 
   // ===== PRANZO (tutto il cibo: panini, menu del giorno, taglieri) → bevande aperitivo =====
@@ -142,7 +155,7 @@ function isNonAlcoholic(p: Product): boolean {
 /**
  * Bevande calde da non abbinare ad altre bevande (cioccolata, zabaione, ecc.).
  */
-const HOT_DRINK_NAMES = ["cioccolata calda", "zabaione"];
+const HOT_DRINK_NAMES = ["cioccolata calda", "zabaione", "semidolce"];
 
 function isHotDrink(p: Product): boolean {
   const n = p.name.toLowerCase();

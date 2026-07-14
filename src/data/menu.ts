@@ -1,7 +1,6 @@
 import espresso from "@/assets/p-espresso.jpg";
 import cappuccino from "@/assets/p-cappuccino.jpg";
 
-import spremuta from "@/assets/p-spremuta.jpg";
 import bowl from "@/assets/p-bowl.jpg";
 import scaloppine from "@/assets/p-scaloppine.jpg";
 import frittata from "@/assets/p-frittata.jpg";
@@ -108,23 +107,6 @@ export const products: Product[] = [
       en: { name: "Cappuccino", description: "Espresso and steamed milk with creamy foam." },
       fr: { name: "Cappuccino", description: "Espresso et lait vapeur, mousse onctueuse." },
       es: { name: "Croissant Clásico", description: "Hojaldre dorado con mantequilla francesa, horneado del día." },
-    },
-  },
-  {
-    id: "spremuta",
-    macroCategory: "colazione",
-    category: "bevande",
-    name: "Spremuta d'Arancia",
-    description: "Arance fresche di stagione, spremute al momento.",
-    price: 3.5,
-    image: spremuta,
-    available: true,
-    featured: true,
-    translations: {
-      it: { name: "Spremuta d'Arancia", description: "Arance fresche di stagione, spremute al momento." },
-      en: { name: "Fresh Orange Juice", description: "Seasonal oranges, freshly squeezed." },
-      fr: { name: "Jus d'Orange Pressé", description: "Oranges de saison, pressées à la minute." },
-      es: { name: "Bowl de Arroz, Quinoa y Bulgur", description: "Plato frío con cereales, verduras de temporada y aliño de hierbas." },
     },
   },
 
