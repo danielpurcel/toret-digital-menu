@@ -140,6 +140,16 @@ function isNonAlcoholic(p: Product): boolean {
 }
 
 /**
+ * Bevande calde da non abbinare ad altre bevande (cioccolata, zabaione, ecc.).
+ */
+const HOT_DRINK_NAMES = ["cioccolata calda", "zabaione"];
+
+function isHotDrink(p: Product): boolean {
+  const n = p.name.toLowerCase();
+  return HOT_DRINK_NAMES.some((h) => n.includes(h));
+}
+
+/**
  * Liste di ingredienti che non devono ripetersi tra abbinamenti.
  * Se il prodotto sorgente ha "panna", non suggerire altri prodotti con panna.
  */
@@ -196,6 +206,8 @@ export function getPairings(product: Product, allProducts: Product[]): Product[]
         if (seen.has(p.id)) return false;
         // Stesso ingrediente chiave (es. panna con panna) — vietato
         if (shareIngredient(product, p)) return false;
+        // Se il sorgente è una bevanda, non abbinare altre bevande calde
+        if (DRINK_CATS.includes(product.category) && isHotDrink(p)) return false;
         return (
           rule.target.macroCategory.includes(p.macroCategory) &&
           rule.target.category.includes(p.category)
