@@ -1611,7 +1611,7 @@ export const importedProducts: Product[] = [
     sortOrder: 16,
     name: "Croissant al Cioccolato",
     description: "Croissant farcito con crema al cioccolato. Pasticceria Amore.",
-    price: 1.5,
+    price: 2.0,
     available: true,
     allergens: ["glutine","latte"],
     translations: {
