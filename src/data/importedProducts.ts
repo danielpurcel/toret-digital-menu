@@ -81,7 +81,7 @@ export const importedProducts: Product[] = [
     sortOrder: 2,
     name: "Caffè Decaffeinato",
     description: "Caffè decaffeinato con metodo naturale, stesso aroma intenso.",
-    price: 2.0,
+    price: 1.5,
     image: caffeDecaImg,
     available: true,
         allergens: [],
