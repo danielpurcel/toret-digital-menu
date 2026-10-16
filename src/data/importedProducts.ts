@@ -418,6 +418,7 @@ export const importedProducts: Product[] = [
     price: 4,
     available: true,
     image: coronaImg,
+    imageFit: "cover",
         allergens: ["glutine"],
     translations: {
       it: { name: "Corona con sale e limone", description: "La classica birra messicana servita con ghiaccio, sale e una fetta di limone fresco. Fresca, leggera, perfetta per l'aperitivo." },
@@ -437,6 +438,7 @@ export const importedProducts: Product[] = [
     name: "Birra Menabrea",
     description: "Birra Menabrea 33cl",
     image: birraMenabrea,
+    imageFit: "cover",
     price: 3.5,
     available: true,
         allergens: ["glutine"],
