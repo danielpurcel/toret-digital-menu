@@ -144,8 +144,8 @@ export const ProductModal = ({ product, onClose, onSelectProduct }: Props) => {
   </div>
 ) : product.largePrice ? (
   <div className="flex flex-col gap-1">
-    <span className="flex items-center gap-1.5 text-[16px]">{formatPrice(product.price)} <span className="text-[11px] font-normal text-toret-ink-muted">piccolo</span></span>
-    <span className="flex items-center gap-1.5 text-[16px]">{formatPrice(product.largePrice)} <span className="text-[11px] font-normal text-toret-ink-muted">grande</span></span>
+    <span className="flex items-center gap-1.5 text-[16px]">{formatPrice(product.price)} <span className="text-[11px] font-normal text-toret-ink-muted">{product.priceLabel ?? "piccolo"}</span></span>
+    <span className="flex items-center gap-1.5 text-[16px]">{formatPrice(product.largePrice)} <span className="text-[11px] font-normal text-toret-ink-muted">{product.largePriceLabel ?? "grande"}</span></span>
   </div>
 ) : (
   formatPrice(product.price)

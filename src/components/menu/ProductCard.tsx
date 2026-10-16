@@ -63,9 +63,9 @@ export const ProductCard = ({ product, onOpen, badge }: Props) => {
             </div>
   ) : product.largePrice ? (
     <div className="flex items-center gap-1.5">
-      <span className="flex items-center gap-0.5">{formatPrice(product.price)}<span className="text-[10px] text-toret-ink-muted font-normal">piccolo</span></span>
+      <span className="flex items-center gap-0.5">{formatPrice(product.price)}<span className="text-[10px] text-toret-ink-muted font-normal">{product.priceLabel ?? "piccolo"}</span></span>
       <span className="h-3 w-px bg-toret-ink-muted/30"></span>
-      <span className="flex items-center gap-0.5">{formatPrice(product.largePrice)}<span className="text-[10px] text-toret-ink-muted font-normal">grande</span></span>
+      <span className="flex items-center gap-0.5">{formatPrice(product.largePrice)}<span className="text-[10px] text-toret-ink-muted font-normal">{product.largePriceLabel ?? "grande"}</span></span>
     </div>
   ) : (
     formatPrice(product.price)

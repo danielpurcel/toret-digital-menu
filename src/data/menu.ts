@@ -31,6 +31,8 @@ export interface Product {
   price: number;
   bottlePrice?: number; // Prezzo bottiglia (per vini)
   largePrice?: number; // Prezzo formato grande (es. Caffè Torèt)
+  priceLabel?: string; // Etichetta formato base (es. "33cl") — default UI: "piccolo"
+  largePriceLabel?: string; // Etichetta formato grande (es. "75cl") — default UI: "grande"
   image?: string;
   tags?: string[];
   allergens?: string[];
