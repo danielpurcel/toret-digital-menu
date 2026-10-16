@@ -7,6 +7,7 @@ import focacciaBresaolaImg from "@/assets/p-focaccia-bresaola.jpg";
 import cappuccinoImg from "@/assets/p-cappuccino.jpg";
 import coronaImg from "@/assets/p-corona.jpg";
 import caffeDecaImg from "@/assets/p-caffe-deca.jpg";
+import caffeToretImg from "@/assets/p-caffe-toret.jpg";
 import campariSpritzImg from "@/assets/p-campari-spritz.jpg";
 import aperolSpritzImg from "@/assets/p-aperol-spritz.jpg";
 import proseccoBrutImg from "@/assets/p-prosecco-brut.jpg";
@@ -888,6 +889,7 @@ export const importedProducts: Product[] = [
     description: "Il nostro espresso signature con panna montata al momento. 100% Arabica Costadoro Lab, 4 medaglie oro. Piccolo o grande.",
     price: 2,
     largePrice: 2.5,
+    image: caffeToretImg,
     available: true,
     featured: false,
         allergens: ["latte"],
