@@ -75,7 +75,7 @@ export const ProductModal = ({ product, onClose, onSelectProduct }: Props) => {
                 <img
                   src={product.image}
                   alt={tr.name}
-                  className="absolute inset-0 h-full w-full object-contain p-4"
+                  className="absolute inset-0 m-auto h-[88%] w-auto max-w-[62%] object-contain drop-shadow-[0_18px_28px_rgba(0,0,0,0.18)]"
                 />
               ) : (
                 <div className="absolute inset-0 grid place-items-center text-toret-gold-warm">
