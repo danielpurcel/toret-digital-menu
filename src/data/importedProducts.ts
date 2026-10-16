@@ -418,7 +418,6 @@ export const importedProducts: Product[] = [
     price: 4,
     available: true,
     image: coronaImg,
-    imageFit: "cover",
         allergens: ["glutine"],
     translations: {
       it: { name: "Corona con sale e limone", description: "La classica birra messicana servita con ghiaccio, sale e una fetta di limone fresco. Fresca, leggera, perfetta per l'aperitivo." },
@@ -438,7 +437,6 @@ export const importedProducts: Product[] = [
     name: "Birra Menabrea",
     description: "Birra Menabrea 33cl",
     image: birraMenabrea,
-    imageFit: "cover",
     price: 3.5,
     available: true,
         allergens: ["glutine"],
@@ -1706,6 +1704,7 @@ export const importedProducts: Product[] = [
     priceLabel: "33cl",
     largePriceLabel: "75cl",
     image: metzgerHelles,
+    imageFit: "contain",
     available: true,
     allergens: ["glutine"],
     translations: {
@@ -1730,6 +1729,7 @@ export const importedProducts: Product[] = [
     priceLabel: "33cl",
     largePriceLabel: "75cl",
     image: metzgerWeiss,
+    imageFit: "contain",
     available: true,
     allergens: ["glutine"],
     translations: {
@@ -1754,6 +1754,7 @@ export const importedProducts: Product[] = [
     priceLabel: "33cl",
     largePriceLabel: "75cl",
     image: metzgerBock,
+    imageFit: "contain",
     available: true,
     allergens: ["glutine"],
     translations: {
@@ -1778,6 +1779,7 @@ export const importedProducts: Product[] = [
     priceLabel: "33cl",
     largePriceLabel: "75cl",
     image: metzgerDoppelbock,
+    imageFit: "contain",
     available: true,
     allergens: ["glutine"],
     translations: {
@@ -1799,6 +1801,7 @@ export const importedProducts: Product[] = [
     description: "IPA ad alta fermentazione, delicate tonalità ambrate. 6,1% vol. Luppolatura con profumi agrumati e tropicali.",
     price: 4,
     image: metzgerIpa,
+    imageFit: "contain",
     available: true,
     allergens: ["glutine"],
     translations: {
@@ -1820,6 +1823,7 @@ export const importedProducts: Product[] = [
     description: "Pils a bassa fermentazione senza glutine, 100% malto Pilsner e luppoli nobili europei. 5,2% vol.",
     price: 4,
     image: metzgerPils,
+    imageFit: "contain",
     available: true,
     allergens: [],
     translations: {
@@ -1841,6 +1845,7 @@ export const importedProducts: Product[] = [
     description: "Vienna Lager a bassa fermentazione, ambrato carico e schiuma color crema. 5,2% vol.",
     price: 4,
     image: metzgerVienna,
+    imageFit: "contain",
     available: true,
     allergens: ["glutine"],
     translations: {
@@ -1862,6 +1867,7 @@ export const importedProducts: Product[] = [
     description: "Session IPA ad alta fermentazione di ispirazione anglosassone, malto pale e luppoli americani. 3,8% vol.",
     price: 4,
     image: metzgerSummer,
+    imageFit: "contain",
     available: true,
     allergens: ["glutine"],
     translations: {
@@ -1910,7 +1916,6 @@ export const importedProducts: Product[] = [
     priceLabel: "20cl",
     largePriceLabel: "40cl",
     image: metzgerIpaSpina,
-    imageFit: "cover",
     available: true,
     allergens: ["glutine"],
     translations: {
@@ -1935,7 +1940,6 @@ export const importedProducts: Product[] = [
     priceLabel: "20cl",
     largePriceLabel: "40cl",
     image: metzgerBockSpina,
-    imageFit: "cover",
     available: true,
     allergens: ["glutine"],
     translations: {
