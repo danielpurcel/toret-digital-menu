@@ -33,6 +33,7 @@ export interface Product {
   largePrice?: number; // Prezzo formato grande (es. Caffè Torèt)
   priceLabel?: string; // Etichetta formato base (es. "33cl") — default UI: "piccolo"
   largePriceLabel?: string; // Etichetta formato grande (es. "75cl") — default UI: "grande"
+  imageFit?: "contain" | "cover"; // Come adattare la foto al riquadro (default: contain)
   image?: string;
   tags?: string[];
   allergens?: string[];

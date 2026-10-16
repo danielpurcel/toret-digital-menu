@@ -1908,6 +1908,7 @@ export const importedProducts: Product[] = [
     priceLabel: "20cl",
     largePriceLabel: "40cl",
     image: metzgerIpaSpina,
+    imageFit: "cover",
     available: true,
     allergens: ["glutine"],
     translations: {
@@ -1932,6 +1933,7 @@ export const importedProducts: Product[] = [
     priceLabel: "20cl",
     largePriceLabel: "40cl",
     image: metzgerBockSpina,
+    imageFit: "cover",
     available: true,
     allergens: ["glutine"],
     translations: {
