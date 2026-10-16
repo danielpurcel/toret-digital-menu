@@ -24,6 +24,7 @@ import metzgerVienna from "@/assets/p-metzger-vienna.png";
 import metzgerSummer from "@/assets/p-metzger-summer.png";
 import metzgerIpaSpina from "@/assets/p-metzger-ipa-spina.jpg";
 import metzgerBockSpina from "@/assets/p-metzger-bock-spina.jpg";
+import metzgerHellesSpina from "@/assets/p-metzger-helles-spina.jpg";
 import vinoPassum from "@/assets/p-vino-passum.jpg";
 import vinoPolicalpo from "@/assets/p-vino-policalpo.jpg";
 import vinoLitina from "@/assets/p-vino-litina.jpg";
@@ -1892,6 +1893,7 @@ export const importedProducts: Product[] = [
     largePrice: 5.5,
     priceLabel: "20cl",
     largePriceLabel: "40cl",
+    image: metzgerHellesSpina,
     available: true,
     allergens: ["glutine"],
     translations: {
