@@ -70,12 +70,12 @@ export const ProductModal = ({ product, onClose, onSelectProduct }: Props) => {
       <DrawerContent className="bg-toret-paper text-toret-ink border-t-0 h-[100dvh] max-h-[100dvh] mt-0 rounded-none p-0 overflow-hidden">
         {product && tr && (
           <div className="mx-auto w-full max-w-[440px] flex flex-col h-[100dvh]">
-            <div className="relative h-[34vh] min-h-[240px] sm:min-h-[300px] shrink-0 bg-toret-cream">
+            <div className="relative h-[42vh] min-h-[280px] sm:min-h-[340px] shrink-0 bg-gradient-to-b from-toret-paper to-toret-cream">
               {product.image ? (
                 <img
                   src={product.image}
                   alt={tr.name}
-                  className="absolute inset-0 h-full w-full object-contain"
+                  className="absolute inset-0 h-full w-full object-contain p-4"
                 />
               ) : (
                 <div className="absolute inset-0 grid place-items-center text-toret-gold-warm">

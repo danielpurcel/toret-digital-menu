@@ -32,7 +32,7 @@ export const ProductCard = ({ product, onOpen, badge }: Props) => {
             src={product.image}
             alt={tr.name}
             loading="lazy"
-            className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
+            className="h-full w-full object-contain p-1 transition-transform duration-700 group-hover:scale-105"
           />
         ) : (
           <div className="h-full w-full grid place-items-center text-toret-gold-warm">
