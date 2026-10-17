@@ -132,7 +132,7 @@ const MacroPage = () => {
 
   // Prodotti filtrati per macro + sottocategoria, ordinati per sortOrder
   const products = useMemo(() => {
-    let filtered = byMacro(allProducts, macroKey);
+    let filtered = byMacro(allProducts ?? [], macroKey);
     if (categoryId !== "all") {
       filtered = filtered.filter((p) => p.categoryId === categoryId);
     }

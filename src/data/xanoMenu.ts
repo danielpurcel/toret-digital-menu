@@ -117,7 +117,8 @@ const toProduct = (item: XanoProduct): Product | null => {
   if (!category || CATEGORIES_TO_SKIP.has(item.category_id ?? 0)) return null;
 
   const price = Number(item.price ?? 0);
-  const description = item.description || "Specialità del giorno Caffè Torèt.";
+  const vino = VINO_FALLBACK[item.id];
+  const description = item.description || vino?.description || "Specialità del giorno Caffè Torèt.";
   const id = `xano-${item.id}-${slugify(item.name)}`;
 
   const nameEN = item.name_en?.trim() || item.name;
@@ -149,6 +150,40 @@ const toProduct = (item: XanoProduct): Product | null => {
       es: { name: nameES, description: descES },
     },
   };
+};
+
+/** Lista dei vini Cascina (Passum, Policalpo, ...): presenti in Xano ma senza voce statica */
+const VINO_FALLBACK: Record<number, { name: string; description: string; price: number }> = {
+  195: {
+    name: "Passum",
+    description: "Vino rosso Cascina. Corpo pieno e tannino morbido, da abbinare a piatti di carne.",
+    price: 5,
+  },
+  196: {
+    name: "Policalpo",
+    description: "Vino rosso Cascina. Fruttato e scorrevole, ideale per l'aperitivo.",
+    price: 4,
+  },
+  197: {
+    name: "Litina",
+    description: "Vino rosso Cascina. Fresco e fragrante, di facile beva.",
+    price: 4,
+  },
+  198: {
+    name: "Uceline",
+    description: "Vino rosso Cascina. Elegante e speziato, dal finale lungo.",
+    price: 5,
+  },
+  199: {
+    name: "Ataj",
+    description: "Vino rosso Cascina. Giovane e vivace, piacevole in ogni momento.",
+    price: 4,
+  },
+  200: {
+    name: "Castlèt Rosé",
+    description: "Vino rosé Cascina. Fresco e floreale, perfetto per l'aperitivo.",
+    price: 4,
+  },
 };
 
 const fetchPage = async (page: number) => {
@@ -200,10 +235,23 @@ export const fetchXanoMenuProducts = async () => {
     // MERGE: per ogni prodotto Xano, unisci con i dati statici
     // Xano vince su: price, description, categoryId, sortOrder, available
     // Statici mantengono: image, bottlePrice, largePrice, featured, translations extra
-    const merged: Product[] = [];
+    // Xano ha voci duplicate per lo stesso vino: teniamo solo la più recente per nome+categoria
+  const latestVino = new Map<string, number>();
+  for (const item of items) {
+    if (!VINO_FALLBACK[item.id] || !item.name) continue;
+    const key = `${item.category_id}|${item.name}`;
+    const prev = latestVino.get(key);
+    if (prev === undefined || item.id > prev) latestVino.set(key, item.id);
+  }
+
+  const merged: Product[] = [];
     const seenXanoIds = new Set<number>();
 
     for (const xp of xanoMapped) {
+      if (xp.xanoId && VINO_FALLBACK[xp.xanoId]) {
+        const keepId = latestVino.get(`${xp.categoryId}|${xp.name}`);
+        if (keepId !== undefined && keepId !== xp.xanoId) continue;
+      }
       const sp = xp.xanoId ? staticMap[xp.xanoId] : undefined;
       if (xp.xanoId) seenXanoIds.add(xp.xanoId);
       
@@ -220,6 +268,9 @@ export const fetchXanoMenuProducts = async () => {
       // Mantieni bottlePrice e largePrice dal prodotto statico
       if (sp?.bottlePrice) xp.bottlePrice = sp.bottlePrice;
       if (sp?.largePrice) xp.largePrice = sp.largePrice;
+
+      // "available" del fallback: Xano non ha un campo disponibilità separato da is_active
+      if (sp) xp.available = sp.available;
       
       // Mantieni featured
       if (sp?.featured) xp.featured = sp.featured;
@@ -235,7 +286,8 @@ export const fetchXanoMenuProducts = async () => {
     }
 
     if (merged.length > 0) {
-      console.log(`[Xano] Caricati ${xanoMapped.length} Xano + ${merged.length - xanoMapped.length} statici = ${merged.length} prodotti`);
+      const _vini = merged.filter((x) => x.categoryId === 16).map((x) => `${x.name}:${x.available}`);
+    console.log(`[Xano] Caricati ${xanoMapped.length} Xano + ${merged.length - xanoMapped.length} statici = ${merged.length} prodotti | VINI ${_vini.join(", ")}`);
       return merged;
     }
   } catch (err) {

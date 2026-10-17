@@ -14,7 +14,7 @@ export const useMenuProducts = () =>
     gcTime: 1000 * 60 * 5,  // 5 minuti cache
     refetchOnWindowFocus: true,
     retry: 2,
-    initialData: importedProducts,
+    placeholderData: importedProducts,
   });
 
 export const byMacro = (items: Product[], macro: MacroCategory) =>
