@@ -236,10 +236,13 @@ export const fetchXanoMenuProducts = async () => {
     // Xano vince su: price, description, categoryId, sortOrder, available
     // Statici mantengono: image, bottlePrice, largePrice, featured, translations extra
     // Xano ha voci duplicate per lo stesso vino: teniamo solo la più recente per nome+categoria
+  const xanoIds = new Set(items.map((item) => item.id));
   const latestVino = new Map<string, number>();
   for (const item of items) {
     if (!VINO_FALLBACK[item.id] || !item.name) continue;
     const key = `${item.category_id}|${item.name}`;
+    // tiene l'id più recente ancora attivo (le voci vecchie sono is_active=false)
+    if (item.is_active === false) continue;
     const prev = latestVino.get(key);
     if (prev === undefined || item.id > prev) latestVino.set(key, item.id);
   }
@@ -251,6 +254,19 @@ export const fetchXanoMenuProducts = async () => {
       if (xp.xanoId && VINO_FALLBACK[xp.xanoId]) {
         const keepId = latestVino.get(`${xp.categoryId}|${xp.name}`);
         if (keepId !== undefined && keepId !== xp.xanoId) continue;
+      }
+      // il prodotto statico è la versione "buona" (foto, descrizione, traduzioni)
+      const staticTwin = fallbackProducts.find((fp) => fp.name === xp.name && fp.categoryId === xp.categoryId);
+      if (staticTwin && !xp.image) {
+        merged.push({
+          ...staticTwin,
+          xanoId: xp.xanoId,
+          id: xp.id,
+          price: xp.price || staticTwin.price,
+          available: xp.available && staticTwin.available,
+        });
+        if (xp.xanoId) seenXanoIds.add(xp.xanoId);
+        continue;
       }
       const sp = xp.xanoId ? staticMap[xp.xanoId] : undefined;
       if (xp.xanoId) seenXanoIds.add(xp.xanoId);
