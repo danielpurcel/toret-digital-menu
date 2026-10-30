@@ -320,7 +320,7 @@ export const importedProducts: Product[] = [
     name: "Frittata",
     description: "Frittata leggera con uova fresche, cotta al momento.",
     price: 6,
-    available: false,
+    available: true,
     image: frittataImg,
         allergens: ["uova"],
     translations: {
@@ -363,7 +363,7 @@ export const importedProducts: Product[] = [
     name: "Mignon",
     description: "Panino sfoglia ripieno di acciughe, salsa tonnata o mozzarella.",
     price: 2.5,
-    available: false,
+    available: true,
         allergens: ["glutine","latte","uova"],
     translations: {
       it: { name: "Mignon", description: "Panino sfoglia ripieno di acciughe, salsa tonnata o mozzarella.",
@@ -384,7 +384,7 @@ export const importedProducts: Product[] = [
     name: "Panino carne",
     description: "Panino farcito con carne tagliata al momento, insalata e salsa.",
     price: 5,
-    available: false,
+    available: true,
     image: toastImg,
         allergens: ["glutine","latte"],
     translations: {
@@ -407,7 +407,7 @@ export const importedProducts: Product[] = [
     description: "Tramezzino con pane in cassetta farcito a scelta, fresco e leggero.",
     image: tramezzinoImg,
     price: 2.5,
-    available: false,
+    available: true,
         allergens: ["glutine","latte"],
     translations: {
       it: { name: "Tramezzino", description: "Tramezzino con pane in cassetta farcito a scelta, fresco e leggero.",
@@ -775,7 +775,7 @@ export const importedProducts: Product[] = [
     name: "Toast",
     description: "Toast caldo farcito con prosciutto cotto e formaggio filante.",
     price: 4,
-    available: false,
+    available: true,
     image: toastImg,
     image: toastImg,
         allergens: ["glutine","latte"],
@@ -1460,7 +1460,7 @@ export const importedProducts: Product[] = [
     name: "Piadina",
     description: "Piadina calda farcita: crudo, bresaola o vegetariana.",
     price: 5,
-    available: false,
+    available: true,
     image: tramezzinoImg2,
         allergens: ["glutine","latte"],
     translations: {
@@ -1526,7 +1526,7 @@ export const importedProducts: Product[] = [
     name: "Croissant salato",
     description: "Croissant di pasta sfoglia ripieno di prosciutto, formaggio o verdure.",
     price: 3,
-    available: false,
+    available: true,
     image: croissantImg,
         allergens: ["glutine","latte","uova"],
     translations: {
