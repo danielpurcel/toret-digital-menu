@@ -738,7 +738,7 @@ export const importedProducts: Product[] = [
     source: "xano-import",
     macroCategory: "pranzo",
     category: "taglieri",
-    categoryId: 19,
+    categoryId: 14,
     sortOrder: 1,
     name: "Tagliere",
     description: "Tagliere di salumi e formaggi",
