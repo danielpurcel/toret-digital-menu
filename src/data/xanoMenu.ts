@@ -58,13 +58,14 @@ const categoryMap: Record<number, { macroCategory: MacroCategory; category: stri
   // --- VECCHI ID (legacy / inattivi) ---
   1:  { macroCategory: "colazione", category: "caffetteria" },  // legacy
   2:  { macroCategory: "pranzo",    category: "piatti-caldi" },  // legacy
-  4:  { macroCategory: "pranzo",    category: "piatti-caldi" },  // legacy
+  4:  { macroCategory: "colazione", category: "bevande" },  // Specialità Torèt
 
   // ☀️ COLAZIONE — menu_categories
   3:  { macroCategory: "colazione", category: "caffetteria" },
   5:  { macroCategory: "colazione", category: "dolci" },
   6:  { macroCategory: "colazione", category: "bevande" },
   7:  { macroCategory: "colazione", category: "colazione-salata" },
+  21: { macroCategory: "colazione", category: "bevande" },  // Iced & Fresh
 
   // 🍽️ PRANZO — menu_categories
   8:  { macroCategory: "pranzo",    category: "menu-del-giorno" },
@@ -82,6 +83,7 @@ const categoryMap: Record<number, { macroCategory: MacroCategory; category: stri
   18: { macroCategory: "aperitivo", category: "analcolici" },
   19: { macroCategory: "aperitivo", category: "taglieri" },
   20: { macroCategory: "aperitivo", category: "stuzzichini" },
+  22: { macroCategory: "aperitivo", category: "analcolici" },  // Bevande
 };
 
 /** ID da SKIPPARE (non vanno nel menu) */
@@ -263,7 +265,7 @@ export const fetchXanoMenuProducts = async () => {
           xanoId: xp.xanoId,
           id: xp.id,
           price: xp.price || staticTwin.price,
-          available: xp.available && staticTwin.available,
+          available: xp.available,
         });
         if (xp.xanoId) seenXanoIds.add(xp.xanoId);
         continue;
@@ -285,8 +287,8 @@ export const fetchXanoMenuProducts = async () => {
       if (sp?.bottlePrice) xp.bottlePrice = sp.bottlePrice;
       if (sp?.largePrice) xp.largePrice = sp.largePrice;
 
-      // "available" del fallback: Xano non ha un campo disponibilità separato da is_active
-      if (sp) xp.available = sp.available;
+      // disponibilità: Xano è la fonte di verità (is_active → available).
+      // Il vecchio override con sp.available nascondeva prodotti attivi su Xano.
       
       // Mantieni featured
       if (sp?.featured) xp.featured = sp.featured;
@@ -294,11 +296,17 @@ export const fetchXanoMenuProducts = async () => {
       merged.push(xp);
     }
 
-    // Aggiungi i prodotti statici che NON sono in Xano
+    // Aggiungi SOLO i prodotti statici che non esistono affatto su Xano.
+    // Se un prodotto esiste su Xano ma è disattivato (is_active=false),
+    // NON va aggiunto: era la causa dei doppioni in Caffetteria.
+    const allXanoIds = new Set(items.map((i) => i.id));
+    const mergedNames = new Set(merged.map((m) => `${m.categoryId}|${m.name}`.toLowerCase()));
     for (const sp of fallbackProducts) {
-      if (!sp.xanoId || !seenXanoIds.has(sp.xanoId)) {
-        merged.push(sp);
-      }
+      if (sp.xanoId && allXanoIds.has(sp.xanoId)) continue; // esiste su Xano (anche se spento)
+      const key = `${sp.categoryId}|${sp.name}`.toLowerCase();
+      if (mergedNames.has(key)) continue; // già presente (stesso nome e categoria)
+      merged.push(sp);
+      mergedNames.add(key);
     }
 
     if (merged.length > 0) {
