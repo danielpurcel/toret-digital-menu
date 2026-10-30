@@ -7,6 +7,8 @@ export interface Promo {
   price: number;
   image: string;
   productIds: string[];
+  /** Se presente, la promo vale per tutti i prodotti di queste categorie Xano */
+  categoryIds?: number[];
   translations: {
     it: { title: string; subtitle: string };
     en: { title: string; subtitle: string };
@@ -41,15 +43,9 @@ export const promos: Promo[] = [
     macroCategory: "aperitivo",
     price: 15.0,
     image: promoAperitivo,
-    productIds: [
-      "xano-102-aperol-spritz",
-      "xano-101-campari-spritz",
-      "xano-60-prosecco-docg-extra-dry-2025",
-      "xano-61-prosecco-doc-brut",
-      "xano-36-prosecco-doc-extra-dry",
-      "xano-56-goj-barbera-doc-frizzante-bicchiere",
-      "xano-217-tagliere-aperitivo",
-    ],
+    productIds: ["xano-217-tagliere-aperitivo"],
+    // Drink validi: Cocktail(15), Vini(16), Birre(17), Analcolici(18) — tutto incluso
+    categoryIds: [15, 16, 17, 18],
     translations: {
       it: { title: "Promo Aperitivo", subtitle: "2 Drink + Tagliere Torèt" },
       en: { title: "Aperitivo Special", subtitle: "2 Drinks + Torèt Board" },
@@ -62,5 +58,9 @@ export const promos: Promo[] = [
 export const getPromoByMacro = (macro: Promo["macroCategory"]) =>
   promos.find((p) => p.macroCategory === macro);
 
-export const getPromoForProduct = (productId: string) =>
-  promos.find((p) => p.productIds.includes(productId));
+export const getPromoForProduct = (productId: string, categoryId?: number) =>
+  promos.find(
+    (p) =>
+      p.productIds.includes(productId) ||
+      (categoryId !== undefined && p.categoryIds?.includes(categoryId)),
+  );

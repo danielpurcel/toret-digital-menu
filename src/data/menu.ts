@@ -7,7 +7,6 @@ import frittata from "@/assets/p-frittata.jpg";
 import drinkCasa from "@/assets/p-drink-casa.jpg";
 import drinkClassico from "@/assets/p-drink-classico.jpg";
 import calice from "@/assets/p-calice.jpg";
-import tagliere from "@/assets/p-tagliere.jpg";
 import stuzzichini from "@/assets/p-stuzzichini.jpg";
 
 export type MacroCategory = "colazione" | "pranzo" | "aperitivo";
@@ -230,24 +229,6 @@ export const products: Product[] = [
       en: { name: "Glass of Wine", description: "Rotating selection of Piedmontese reds and whites." },
       fr: { name: "Verre de Vin", description: "Sélection tournante de rouges et blancs du Piémont." },
       es: { name: "Tabla Torèt", description: "Selección de embutidos piamonteses, quesos añejos, miel y mostaza." },
-    },
-  },
-  {
-    id: "tagliere-toret",
-    macroCategory: "aperitivo",
-    category: "taglieri",
-    name: "Tagliere Torèt",
-    description: "Selezione di salumi piemontesi, formaggi stagionati, miele e mostarde.",
-    price: 12.0,
-    image: tagliere,
-    available: true,
-    featured: true,
-    allergens: ["latte", "solfiti"],
-    translations: {
-      it: { name: "Tagliere Torèt", description: "Selezione di salumi piemontesi, formaggi stagionati, miele e mostarde." },
-      en: { name: "Torèt Charcuterie Board", description: "Piedmontese cured meats, aged cheeses, honey and mostarda." },
-      fr: { name: "Planche Torèt", description: "Charcuterie piémontaise, fromages affinés, miel et moutarde." },
-      es: { name: "Aperitivos", description: "Aceitunas taggiasche, focaccia crujiente, frutos secos tostados." },
     },
   },
   {

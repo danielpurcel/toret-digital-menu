@@ -61,7 +61,9 @@ export const ProductModal = ({ product, onClose, onSelectProduct }: Props) => {
   const open = !!product;
   const tr = product?.translations[locale];
   const fav = product ? isFavorite(product.id) : false;
-  const promo = product ? getPromoForProduct(product.id) : undefined;
+  const promo = product
+    ? (getPromoForProduct(product.id) ?? getPromoForProduct(product.id, product.categoryId))
+    : undefined;
   const promoTr = promo?.translations[locale];
   const suggestions = product ? getPairings(product, allProducts) : [];
 
