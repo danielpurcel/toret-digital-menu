@@ -38,6 +38,10 @@ import shakeratoImg from "@/assets/shakerato.jpg";
 import spremutaImg from "@/assets/spremuta.jpg";
 import melogranoImg from "@/assets/spremuta-melograno.jpg";
 import toastImg from "@/assets/toast.jpg";
+import frittataImg from "@/assets/p-frittata.jpg";
+import tramezzinoImg2 from "@/assets/p-tramezzino.jpg";
+import croissantImg from "@/assets/p-croissant.jpg";
+import scalaImg from "@/assets/p-scaloppine.jpg";
 // Generated from Xano menu_products on 2026-06-30. + manual aggiunta cetriolino
 export const importedProducts: Product[] = [
   {
@@ -317,6 +321,7 @@ export const importedProducts: Product[] = [
     description: "Frittata leggera con uova fresche, cotta al momento.",
     price: 6,
     available: false,
+    image: frittataImg,
         allergens: ["uova"],
     translations: {
       it: { name: "Frittata", description: "Frittata leggera con uova fresche, cotta al momento.",
@@ -376,31 +381,11 @@ export const importedProducts: Product[] = [
     category: "panini",
     categoryId: 13,
     sortOrder: 1,
-    name: "Focaccia bresaola, grana e rucola",
-    description: "Focaccia farcita con bresaola, grana padano e rucola fresca. Il gusto deciso della tradizione.",
-    price: 5,
-    available: false,
-    image: focacciaBresaolaImg,
-        allergens: ["glutine","latte"],
-    translations: {
-      it: { name: "Focaccia bresaola, grana e rucola", description: "Focaccia farcita con bresaola, grana padano e rucola fresca. Il gusto deciso della tradizione." },
-      en: { name: "Focaccia bresaola, grana and rocket", description: "Focaccia filled with bresaola cured beef, grana cheese and fresh rocket. A bold traditional flavour." },
-      fr: { name: "Focaccia bresaola, grana et roquette", description: "Focaccia garnie de bresaola, grana padano et roquette fraîche. Une saveur traditionnelle intense." },
-      es: { name: "Focaccia bresaola, grana y rúcula", description: "Focaccia rellena de bresaola, grana padano y rúcula fresca. El sabor intenso de la tradición." },
-    },
-  },
-  {
-    id: "xano-34-panino-carne",
-    xanoId: 34,
-    source: "xano-import",
-    macroCategory: "pranzo",
-    category: "panini",
-    categoryId: 13,
-    sortOrder: 1,
     name: "Panino carne",
     description: "Panino farcito con carne tagliata al momento, insalata e salsa.",
     price: 5,
     available: false,
+    image: toastImg,
         allergens: ["glutine","latte"],
     translations: {
       it: { name: "Panino carne", description: "Panino farcito con carne tagliata al momento, insalata e salsa.",
@@ -488,6 +473,7 @@ export const importedProducts: Product[] = [
     description: "Tavola calda - tutti i giorni",
     price: 9,
     available: true,
+    image: scalaImg,
         allergens: ["latte"],
     translations: {
       it: { name: "Scaloppine di vitello, grana, rucola e pomodori", description: "Tavola calda - tutti i giorni",
@@ -509,6 +495,7 @@ export const importedProducts: Product[] = [
     description: "Tavola calda - tutti i giorni",
     price: 6,
     available: true,
+    image: frittataImg,
         allergens: ["uova"],
     translations: {
       it: { name: "Frittata più contorni", description: "Tavola calda - tutti i giorni",
@@ -783,12 +770,13 @@ export const importedProducts: Product[] = [
     source: "xano-import",
     macroCategory: "pranzo",
     category: "panini",
-    categoryId: 8,
+    categoryId: 13,
     sortOrder: 2,
     name: "Toast",
     description: "Toast caldo farcito con prosciutto cotto e formaggio filante.",
     price: 4,
     available: false,
+    image: toastImg,
     image: toastImg,
         allergens: ["glutine","latte"],
     translations: {
@@ -1025,6 +1013,7 @@ export const importedProducts: Product[] = [
     description: "Frittata con contorni vari. Menu del giorno del 17/10/2026.",
     price: 6,
     available: true,
+    image: frittataImg,
     allergens: ["uova"],
     translations: {
       it: { name: "Frittata più contorni", description: "Frittata con contorni vari. Menu del giorno del 17/10/2026." },
@@ -1472,6 +1461,7 @@ export const importedProducts: Product[] = [
     description: "Piadina calda farcita: crudo, bresaola o vegetariana.",
     price: 5,
     available: false,
+    image: tramezzinoImg2,
         allergens: ["glutine","latte"],
     translations: {
       it: { name: "Piadina", description: "Piadina calda farcita: crudo, bresaola o vegetariana.",
@@ -1537,6 +1527,7 @@ export const importedProducts: Product[] = [
     description: "Croissant di pasta sfoglia ripieno di prosciutto, formaggio o verdure.",
     price: 3,
     available: false,
+    image: croissantImg,
         allergens: ["glutine","latte","uova"],
     translations: {
       it: { name: "Croissant salato", description: "Croissant di pasta sfoglia ripieno di prosciutto, formaggio o verdure.",
