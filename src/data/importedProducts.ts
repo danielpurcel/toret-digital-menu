@@ -14,6 +14,7 @@ import proseccoBrutImg from "@/assets/p-prosecco-brut.jpg";
 import proseccoExtraDryImg from "@/assets/p-prosecco-extra-dry.jpg";
 import cremaCaffeImg from "@/assets/p-crema-caffe-final.png";
 import vinoGoj from "@/assets/p-vino-goj.jpg";
+import tagliereImg from "@/assets/p-tagliere.jpg";
 import birraMenabrea from "@/assets/p-birra-menabrea.jpg";
 import metzgerHelles from "@/assets/p-metzger-helles.png";
 import metzgerWeiss from "@/assets/p-metzger-weiss.png";
@@ -744,6 +745,7 @@ export const importedProducts: Product[] = [
     price: 5,
     available: true,
     featured: true,
+    image: tagliereImg,
         allergens: ["latte","solfiti"],
     translations: {
       it: { name: "Tagliere", description: "Tagliere di salumi e formaggi" },
