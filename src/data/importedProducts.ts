@@ -1482,7 +1482,6 @@ export const importedProducts: Product[] = [
     description: "Piadina calda farcita: crudo, bresaola o vegetariana.",
     price: 5,
     available: true,
-    image: tramezzinoImg2,
         allergens: ["glutine","latte"],
     translations: {
       it: { name: "Piadina", description: "Piadina calda farcita: crudo, bresaola o vegetariana.",
