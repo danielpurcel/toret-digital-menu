@@ -11,6 +11,7 @@ import Favorites from "./pages/Favorites.tsx";
 import InfoPage from "./pages/InfoPage.tsx";
 import SearchPage from "./pages/SearchPage.tsx";
 import { LocaleProvider } from "./i18n/LocaleContext.tsx";
+import SeoHead from "./components/SeoHead.tsx";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <SeoHead />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/menu" element={<MenuIndex />} />
