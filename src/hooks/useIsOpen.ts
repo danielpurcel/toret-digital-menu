@@ -17,16 +17,16 @@ function getStatus(now: Date): OpenStatus {
     return { isOpen: false, closesAt: "", reopensAt: "lunedì alle 7:00" };
   }
 
+  // Lun-Sab 7:00-20:00, domenica chiuso (orario uniforme)
   const openAt = 7;
-  let closeAt = day === 4 ? 15 : 20; // Thursday closes at 15
+  const closeAt = 20;
 
   const isOpen = time >= openAt && time < closeAt;
   const closesAt = `${closeAt.toString().padStart(2, "0")}:00`;
 
   let reopensAt = "";
   if (!isOpen) {
-    if (day === 4 && time >= 15) reopensAt = "venerdì alle 7:00";
-    else if (day === 6 && time >= 20) reopensAt = "lunedì alle 7:00";
+    if (day === 6 && time >= 20) reopensAt = "lunedì alle 7:00";
     else reopensAt = "domani alle 7:00";
   }
 
